@@ -1,36 +1,36 @@
-id,name_th,zone,mapped,verified,coordinates_quality
-S1,"อาคารวิศวกรรมเครื่องกล 4",south,false,false,unverified
-S2,"อาคารจอดรถ",south,false,false,unverified
-S3,"อาคารสถาบันนวัตกรรมการเรียนรู้เฉลิมพระเกียรติ 80 พรรษา มูลนิธิไทยคม",south,true,false,approximate-third-party
-S4,"อาคารวิศววัฒนะ",south,false,false,unverified
-S5,"บ้านธรรมรักษา 2",south,false,false,unverified
-S6,"บ้านธรรมรักษา 1",south,false,false,unverified
-S7,"อาคารพัฒนาเด็กเล็ก มจธ.",south,false,false,unverified
-S8,"อาคารโรงประลองเทคโนโลยีและวัสดุ",south,false,false,unverified
-S9,"อาคารเรียนและปฏิบัติการคณะพลังงาน สิ่งแวดล้อมและวัสดุ",south,false,false,unverified
-S10,"อาคารสังคมสีเขียว มจธ.",south,false,false,unverified
-S11,"อาคารเรียนรวม 5",south,false,false,unverified
-S12,"อาคารเรียนรวม 4",south,false,false,unverified
-S13,"อาคารเรียนรวม 3",south,false,false,unverified
-S14,"อาคารพระจอมเกล้าราชานุสรณ์ 190 ปี",south,false,false,unverified
-S15,"อาคารภาควิชาวิศวกรรมเคมี",south,false,false,unverified
-N1,"อาคารศูนย์ต้อนรับ",north,false,false,unverified
-N2,"อาคารสำนักงานอธิการบดี",north,false,false,unverified
-N3,"อาคารภาควิชาเคมี",north,false,false,unverified
-N4,"อาคารภาควิชาฟิสิกส์ - คณิตศาสตร์",north,false,false,unverified
-N5,"อาคารศูนย์เครื่องมือวิทยาศาสตร์เพื่อมาตรฐานและอุตสาหกรรม",north,true,false,approximate-third-party
-N6,"อาคารภาควิชาจุลชีววิทยา",north,false,false,unverified
-N7,"อาคารปฏิบัติการพื้นฐานทางวิทยาศาสตร์",north,false,false,unverified
-N8,"สถานีสูบน้ำ",north,false,false,unverified
-N9,"อาคารสถาบันวิทยาการหุ่นยนต์ภาคสนาม",north,true,false,approximate-third-party
-N10,"อาคารสำนักหอสมุด",north,true,false,approximate-third-party
-N11,"อาคารคณะเทคโนโลยีสารสนเทศ",north,true,false,approximate-third-party
-N12,"อาคารอเนกประสงค์",north,false,false,unverified
-N13,"อาคาร Workshop & Greenhouse",north,false,false,unverified
-N14,"อาคารไฟฟ้าแรงสูง",north,false,false,unverified
-N15,"อาคารเรียนและปฏิบัติทางศิลปศาสตร์",north,false,false,unverified
-N16,"อาคารการเรียนรู้พหุวิทยาการ",north,false,false,unverified
-N17,"อาคารเรียนรวม 2",north,true,false,approximate-third-party
-N18,"อาคารปฏิบัติการทางวิศวกรรมอุตสาหการ 4",north,false,false,unverified
-N19,"อาคารปฏิบัติการทางวิศวกรรมอุตสาหการ 5",north,false,false,unverified
-N20,"อาคารเรียนรวม 1",north,true,false,approximate-third-party
+﻿"building_code","name_th","name_en","location_confidence","coordinate_status","accepted_footprint_id","candidate_footprint_id","last_verified_on"
+"S1","อาคารวิศวกรรมเครื่องกล 4","Mechanical Engineering Building 4","unverified","unmapped","","",""
+"S2","อาคารจอดรถ","Car Parking Building","unverified","unmapped","","",""
+"S3","อาคารสถาบันนวัตกรรมการเรียนรู้เฉลิมพระเกียรติ 80 พรรษา มูลนิธิไทยคม","Innovation Learning Institute of 80 Year Commemoration of King Rama IX","approximate","approximate-reference","","",""
+"S4","อาคารวิศววัฒนะ","Wissawa Wattana Engineering Building","unverified","unmapped","","",""
+"S5","บ้านธรรมรักษา 2","Dhammaraksa Residence Hall 2","unverified","unmapped","","",""
+"S6","บ้านธรรมรักษา 1","Dhammaraksa Residence Hall 1","unverified","unmapped","","",""
+"S7","อาคารพัฒนาเด็กเล็ก มจธ.","KMUTT Child Development Building","unverified","unmapped","","",""
+"S8","อาคารโรงประลองเทคโนโลยีและวัสดุ","Technology and Materials Workshop Building","unverified","unmapped","","",""
+"S9","อาคารเรียนและปฏิบัติการคณะพลังงาน สิ่งแวดล้อมและวัสดุ","School of Energy Environment and Materials Building","unverified","unmapped","","",""
+"S10","อาคารสังคมสีเขียว มจธ.","KMUTT Green Society Building","unverified","unmapped","","",""
+"S11","อาคารเรียนรวม 5","Classroom Building 5","unverified","unmapped","","",""
+"S12","อาคารเรียนรวม 4","Classroom Building 4","unverified","unmapped","","",""
+"S13","อาคารเรียนรวม 3","Classroom Building 3","unverified","unmapped","","",""
+"S14","อาคารพระจอมเกล้าราชานุสรณ์ 190 ปี","King Mongkut's 190th Anniversary Memorial Building","unverified","unmapped","","",""
+"S15","อาคารภาควิชาวิศวกรรมเคมี","Department of Chemical Engineering Building","unverified","unmapped","","",""
+"N1","อาคารศูนย์ต้อนรับ","Welcome Center Building","unverified","unmapped","","",""
+"N2","อาคารสำนักงานอธิการบดี","Office of The President Building","unverified","unmapped","","",""
+"N3","อาคารภาควิชาเคมี","Department of Chemistry Building","unverified","unmapped","","",""
+"N4","อาคารภาควิชาฟิสิกส์ - คณิตศาสตร์","Department of Physics - Mathematics Building","unverified","unmapped","","",""
+"N5","อาคารศูนย์เครื่องมือวิทยาศาสตร์เพื่อมาตรฐานและอุตสาหกรรม","Scientific Instrument Center for Standards and Industry Building","approximate","approximate-reference","","",""
+"N6","อาคารภาควิชาจุลชีววิทยา","Department of Microbiology Building","unverified","unmapped","","",""
+"N7","อาคารปฏิบัติการพื้นฐานทางวิทยาศาสตร์","Fundamental Science Laboratory Building","unverified","unmapped","","",""
+"N8","สถานีสูบน้ำ","Water Pump Building","unverified","unmapped","","",""
+"N9","อาคารสถาบันวิทยาการหุ่นยนต์ภาคสนาม","Institute of Field Robotics Building","approximate","approximate-reference","","",""
+"N10","อาคารสำนักหอสมุด","KMUTT Library Building","approximate","approximate-reference","","osm-way-311879209",""
+"N11","อาคารคณะเทคโนโลยีสารสนเทศ","School of Information Technology Building","approximate","approximate-reference","","",""
+"N12","อาคารอเนกประสงค์","Utility Exchange Building","unverified","unmapped","","",""
+"N13","อาคาร Workshop & Greenhouse","Workshop & Greenhouse Building","unverified","unmapped","","",""
+"N14","อาคารไฟฟ้าแรงสูง","High Voltage Building","unverified","unmapped","","",""
+"N15","อาคารเรียนและปฏิบัติทางศิลปศาสตร์","School of Liberal Arts Building","unverified","unmapped","","",""
+"N16","อาคารการเรียนรู้พหุวิทยาการ","Learning Exchange Building","unverified","unmapped","","",""
+"N17","อาคารเรียนรวม 2","Classroom Building 2","approximate","approximate-reference","","osm-way-420534143",""
+"N18","อาคารปฏิบัติการทางวิศวกรรมอุตสาหการ 4","Production Engineering Laboratory Building 4","unverified","unmapped","","",""
+"N19","อาคารปฏิบัติการทางวิศวกรรมอุตสาหการ 5","Production Engineering Laboratory Building 5","unverified","unmapped","","",""
+"N20","อาคารเรียนรวม 1","Classroom Building 1","approximate","approximate-reference","","osm-way-436983061",""

@@ -3,114 +3,135 @@
   "features": [
     {
       "type": "Feature",
+      "properties": {
+        "id": "S3",
+        "name_th": "อาคารสถาบันนวัตกรรมการเรียนรู้เฉลิมพระเกียรติ 80 พรรษา มูลนิธิไทยคม",
+        "name_en": "Innovation Learning Institute of 80 Year Commemoration of King Rama IX",
+        "location_quality": "approximate-third-party",
+        "location_source": "https://bangkok.worldplaces.me/th/review/86915165-innovative-learning-institute-li-80.html",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
           100.49518,
           13.64996
         ]
-      },
-      "properties": {
-        "id": "S3",
-        "name_th": "อาคารสถาบันนวัตกรรมการเรียนรู้เฉลิมพระเกียรติ 80 พรรษา มูลนิธิไทยคม",
-        "location_quality": "approximate-third-party",
-        "source": "https://bangkok.worldplaces.me/th/review/86915165-innovative-learning-institute-li-80.html"
       }
     },
     {
       "type": "Feature",
+      "properties": {
+        "id": "N5",
+        "name_th": "อาคารศูนย์เครื่องมือวิทยาศาสตร์เพื่อมาตรฐานและอุตสาหกรรม",
+        "name_en": "Scientific Instrument Center for Standards and Industry Building",
+        "location_quality": "approximate-third-party",
+        "location_source": "https://bangkok.worldplaces.me/th/review/193660603-kmutt.html",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
           100.49458,
           13.65314
         ]
-      },
-      "properties": {
-        "id": "N5",
-        "name_th": "อาคารศูนย์เครื่องมือวิทยาศาสตร์เพื่อมาตรฐานและอุตสาหกรรม",
-        "location_quality": "approximate-third-party",
-        "source": "https://bangkok.worldplaces.me/th/review/193660603-kmutt.html"
       }
     },
     {
       "type": "Feature",
+      "properties": {
+        "id": "N9",
+        "name_th": "อาคารสถาบันวิทยาการหุ่นยนต์ภาคสนาม",
+        "name_en": "Institute of Field Robotics Building",
+        "location_quality": "approximate-third-party",
+        "location_source": "https://bangkok.worldplaces.me/th/review/40052753.html",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
           100.49433,
           13.65439
         ]
-      },
-      "properties": {
-        "id": "N9",
-        "name_th": "อาคารสถาบันวิทยาการหุ่นยนต์ภาคสนาม",
-        "location_quality": "approximate-third-party",
-        "source": "https://bangkok.worldplaces.me/th/review/40052753.html"
       }
     },
     {
       "type": "Feature",
+      "properties": {
+        "id": "N10",
+        "name_th": "อาคารสำนักหอสมุด",
+        "name_en": "KMUTT Library Building",
+        "location_quality": "osm-centroid",
+        "location_source": "https://www.openstreetmap.org/way/311879209",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
           100.49389,
           13.65278
         ]
-      },
-      "properties": {
-        "id": "N10",
-        "name_th": "อาคารสำนักหอสมุด",
-        "location_quality": "osm-centroid",
-        "source": "https://www.openstreetmap.org/way/311879209"
       }
     },
     {
       "type": "Feature",
+      "properties": {
+        "id": "N11",
+        "name_th": "อาคารคณะเทคโนโลยีสารสนเทศ",
+        "name_en": "School of Information Technology Building",
+        "location_quality": "approximate-third-party",
+        "location_source": "https://bangkok.worldplaces.me/review/73405899-sit-school-of-information-technology.html",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
           100.49373,
           13.65256
         ]
-      },
-      "properties": {
-        "id": "N11",
-        "name_th": "อาคารคณะเทคโนโลยีสารสนเทศ",
-        "location_quality": "approximate-third-party",
-        "source": "https://bangkok.worldplaces.me/review/73405899-sit-school-of-information-technology.html"
       }
     },
     {
       "type": "Feature",
+      "properties": {
+        "id": "N17",
+        "name_th": "อาคารเรียนรวม 2",
+        "name_en": "Classroom Building 2",
+        "location_quality": "osm-centroid",
+        "location_source": "https://www.openstreetmap.org/way/420534143",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
           100.49393,
           13.65147
         ]
-      },
-      "properties": {
-        "id": "N17",
-        "name_th": "อาคารเรียนรวม 2",
-        "location_quality": "osm-centroid",
-        "source": "https://www.openstreetmap.org/way/420534143"
       }
     },
     {
       "type": "Feature",
+      "properties": {
+        "id": "N20",
+        "name_th": "อาคารเรียนรวม 1",
+        "name_en": "Classroom Building 1",
+        "location_quality": "osm-centroid",
+        "location_source": "https://www.openstreetmap.org/way/436983061",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
           100.49334,
           13.65152
         ]
-      },
-      "properties": {
-        "id": "N20",
-        "name_th": "อาคารเรียนรวม 1",
-        "location_quality": "osm-centroid",
-        "source": "https://www.openstreetmap.org/way/436983061"
       }
     }
   ]

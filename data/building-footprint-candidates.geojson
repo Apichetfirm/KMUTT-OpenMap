@@ -1,0 +1,381 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "osm-way-311879209",
+      "properties": {
+        "building_code": "N10",
+        "confidence": "approximate",
+        "review_status": "candidate-needs-independent-review",
+        "reference_point_inside": true,
+        "osm_name": "สำนักหอสมุด",
+        "osm_name_en": "KMUTT Library",
+        "osm_levels": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/311879209",
+          "license": "ODbL-1.0",
+          "method": "cross-source-name-match",
+          "checked_on": "2026-11-01",
+          "verified_on": null,
+          "reviewer": null,
+          "source_version": 6,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "association_basis": "Official N10 directory name agrees with the named OSM way and existing reference ID. Candidate only; independent association review pending.",
+          "limitations": "OSM geometry and levels are not field verified; wheelchair tags are not accepted as route evidence."
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.4938159,
+              13.6527578
+            ],
+            [
+              100.493818,
+              13.652797
+            ],
+            [
+              100.4936696,
+              13.6527907
+            ],
+            [
+              100.4936525,
+              13.6531715
+            ],
+            [
+              100.4941107,
+              13.6531909
+            ],
+            [
+              100.4941287,
+              13.65279
+            ],
+            [
+              100.4940489,
+              13.6527866
+            ],
+            [
+              100.4940672,
+              13.6523809
+            ],
+            [
+              100.4938358,
+              13.6523711
+            ],
+            [
+              100.493819,
+              13.6524521
+            ],
+            [
+              100.4938159,
+              13.6527578
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-420534143",
+      "properties": {
+        "building_code": "N17",
+        "confidence": "approximate",
+        "review_status": "candidate-needs-independent-review",
+        "reference_point_inside": true,
+        "osm_name": "อาคารเรียนรวม 2",
+        "osm_name_en": "Classroom Building 2 (CB2)",
+        "osm_levels": 6,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/420534143",
+          "license": "ODbL-1.0",
+          "method": "cross-source-name-match",
+          "checked_on": "2026-11-01",
+          "verified_on": null,
+          "reviewer": null,
+          "source_version": 6,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "association_basis": "Official N17 directory name agrees with the named OSM way and existing reference ID. Candidate only; independent association review pending.",
+          "limitations": "OSM geometry and levels are not field verified; wheelchair tags are not accepted as route evidence."
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.4935127,
+              13.6518295
+            ],
+            [
+              100.4935146,
+              13.651694
+            ],
+            [
+              100.4935411,
+              13.6516943
+            ],
+            [
+              100.4935414,
+              13.6516712
+            ],
+            [
+              100.4935762,
+              13.6516716
+            ],
+            [
+              100.4935763,
+              13.6516646
+            ],
+            [
+              100.4935224,
+              13.6516639
+            ],
+            [
+              100.4935231,
+              13.6516156
+            ],
+            [
+              100.4935784,
+              13.6516163
+            ],
+            [
+              100.4935786,
+              13.6515995
+            ],
+            [
+              100.4935793,
+              13.6515514
+            ],
+            [
+              100.4935801,
+              13.6514914
+            ],
+            [
+              100.4935537,
+              13.6514911
+            ],
+            [
+              100.4935555,
+              13.6513626
+            ],
+            [
+              100.4939093,
+              13.6513673
+            ],
+            [
+              100.493909,
+              13.6513852
+            ],
+            [
+              100.4939922,
+              13.6513863
+            ],
+            [
+              100.4939921,
+              13.6513957
+            ],
+            [
+              100.4940192,
+              13.651396
+            ],
+            [
+              100.4940235,
+              13.6511033
+            ],
+            [
+              100.4940441,
+              13.6511036
+            ],
+            [
+              100.4943444,
+              13.6511077
+            ],
+            [
+              100.4943411,
+              13.6513304
+            ],
+            [
+              100.4941744,
+              13.6513281
+            ],
+            [
+              100.494174,
+              13.6513549
+            ],
+            [
+              100.494247,
+              13.6513559
+            ],
+            [
+              100.4942448,
+              13.6515055
+            ],
+            [
+              100.4941722,
+              13.6515045
+            ],
+            [
+              100.4941718,
+              13.6515328
+            ],
+            [
+              100.4940531,
+              13.6515301
+            ],
+            [
+              100.4939944,
+              13.6515303
+            ],
+            [
+              100.4939942,
+              13.6515496
+            ],
+            [
+              100.4939493,
+              13.651549
+            ],
+            [
+              100.4939486,
+              13.6515974
+            ],
+            [
+              100.4938919,
+              13.6515966
+            ],
+            [
+              100.4938917,
+              13.6516082
+            ],
+            [
+              100.4937027,
+              13.6516056
+            ],
+            [
+              100.4937017,
+              13.6516741
+            ],
+            [
+              100.493731,
+              13.6516745
+            ],
+            [
+              100.4937346,
+              13.6516846
+            ],
+            [
+              100.493754,
+              13.6517051
+            ],
+            [
+              100.4937522,
+              13.6518327
+            ],
+            [
+              100.4935127,
+              13.6518295
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-436983061",
+      "properties": {
+        "building_code": "N20",
+        "confidence": "approximate",
+        "review_status": "candidate-needs-independent-review",
+        "reference_point_inside": true,
+        "osm_name": "อาคารเรียนรวม 1",
+        "osm_name_en": "Classroom Building 1 (CB1)",
+        "osm_levels": 5,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/436983061",
+          "license": "ODbL-1.0",
+          "method": "cross-source-name-match",
+          "checked_on": "2026-11-01",
+          "verified_on": null,
+          "reviewer": null,
+          "source_version": 5,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "association_basis": "Official N20 directory name agrees with the named OSM way and existing reference ID. Candidate only; independent association review pending.",
+          "limitations": "OSM geometry and levels are not field verified; wheelchair tags are not accepted as route evidence."
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.4931086,
+              13.651665
+            ],
+            [
+              100.4931115,
+              13.6515079
+            ],
+            [
+              100.4931962,
+              13.651509
+            ],
+            [
+              100.4931995,
+              13.6513631
+            ],
+            [
+              100.493481,
+              13.651367
+            ],
+            [
+              100.4934784,
+              13.651548
+            ],
+            [
+              100.4935793,
+              13.6515514
+            ],
+            [
+              100.4935786,
+              13.6515995
+            ],
+            [
+              100.4935022,
+              13.6515985
+            ],
+            [
+              100.4934794,
+              13.651599
+            ],
+            [
+              100.4934779,
+              13.6516848
+            ],
+            [
+              100.4932489,
+              13.6516815
+            ],
+            [
+              100.4932474,
+              13.6516411
+            ],
+            [
+              100.4932132,
+              13.6516414
+            ],
+            [
+              100.493213,
+              13.6516653
+            ],
+            [
+              100.4931086,
+              13.651665
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

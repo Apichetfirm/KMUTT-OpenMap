@@ -1,0 +1,52 @@
+{
+  "checked_on": "2026-11-01",
+  "sources": [
+    {
+      "url": "https://www.kmutt.ac.th/about-kmutt/campus/",
+      "status": "retrieved",
+      "supports": "Building codes/names only; no georeferenced entrances or measured heights."
+    },
+    {
+      "url": "https://bgm.kmutt.ac.th/MapNavi/MAPNAVI.html",
+      "status": "retrieved",
+      "supports": "Building codes/names only; no georeferenced entrances or measured heights."
+    },
+    {
+      "url": "https://overpass-api.de/api/interpreter",
+      "status": "blocked-http-406",
+      "supports": null
+    },
+    {
+      "url": "https://tiles.openfreemap.org/styles/liberty",
+      "status": "blocked-http-403",
+      "supports": null
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/way/311879209/full.json",
+      "status": "retrieved",
+      "supports": "Named candidate polygon only; no field verification."
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/way/420534143/full.json",
+      "status": "retrieved",
+      "supports": "Named candidate polygon only; no field verification."
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/way/436983061/full.json",
+      "status": "retrieved",
+      "supports": "Named candidate polygon only; no field verification."
+    },
+    {
+      "url": "https://github.com/microsoft/GlobalMLBuildingFootprints",
+      "status": "read-project-documentation",
+      "supports": "CDLA-Permissive-2.0 machine-derived footprints; no code/entrance verification. No data imported."
+    }
+  ],
+  "unresolved_names": [
+    "S1",
+    "S6",
+    "N19"
+  ],
+  "new_field_verified_claims": 0,
+  "candidate_footprints": 3
+}

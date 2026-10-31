@@ -1,6 +1,6 @@
 /** Deterministic bilingual ranking; exact building code outranks substring matches. */
 export function normalize(value) {
-  return String(value ?? '').toLocaleLowerCase('en').normalize('NFKC').replace(/[\s._-]+/gu, ' ').trim();
+  return String(value ?? '').toLocaleLowerCase('en').normalize('NFKC').replace(/[\p{P}\s]+/gu, ' ').trim();
 }
 export function scoreBuilding(building, text) {
   const q = normalize(text);
@@ -8,7 +8,7 @@ export function scoreBuilding(building, text) {
   const id = normalize(building.id);
   if (id === q.replace(/\s+/gu, '')) return 0;
   const aliases = (building.aliases || []).map(normalize);
-  if (aliases.includes(q)) return 1;
+  if (aliases.some(a => a.replace(/\s/gu, '') === q.replace(/\s/gu, ''))) return 1;
   const names = [building.name_th, building.name_en].map(normalize);
   if (names.includes(q)) return 2;
   if (id.startsWith(q)) return 3;
@@ -17,7 +17,7 @@ export function scoreBuilding(building, text) {
   return Number.POSITIVE_INFINITY;
 }
 export function searchBuildings(buildings, query = '', filter = 'all') {
-  return buildings.filter(b => filter === 'all' || (filter === 'mapped' ? Array.isArray(b.coordinates) : b.zone === filter))
+  return buildings.filter(b => filter === 'all' || (filter === 'mapped' ? validCoordinates(b.coordinates) : b.zone === filter))
     .map(b => ({b, s:scoreBuilding(b,query)})).filter(v => Number.isFinite(v.s))
     .sort((a,b) => a.s - b.s || a.b.id.localeCompare(b.b.id, 'en', {numeric:true}))
     .map(v => v.b);

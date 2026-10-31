@@ -1,107 +1,71 @@
-# KMUTT OpenMap 🗺️
+# KMUTT OpenMap
 
-> Open-source, community-driven 3D campus map **prototype** for KMUTT Bangmod — built by students, for everyone.
+Open-source, community-driven 3D map **preview** for KMUTT Bangmod.
 
-**Project initiator:** Firm Impulse · **FIBO FRAB11** · **Project:** KMUTT OpenMap · **Collaboration:** open to the KMUTT community.
+**Initiated by Firm Impulse · FIBO FRAB11**
 
-**GitHub account:** `Apichetfirm` (current account handle; distinct from the public display name **Firm Impulse**).
+This is a student community project, **not an official KMUTT service**. GitHub owner: `Apichetfirm`; public project initiator: Firm Impulse.
 
-**สถานะ:** Open-source student preview — building locations/heights are NOT field-verified; not an official KMUTT service.
+## v0.3 community preview
 
-## v0.2.1 — ปรับความสูง + ระบบจับคู่รหัสอาคาร (2026-11-01)
+Independent review and release evidence are recorded in [INDEPENDENT-REVIEW.md](docs/INDEPENDENT-REVIEW.md); the original implementer handoff remains historical evidence.
 
-- ป้องกันการวาดอาคาร extrusion ซ้อนกับเลเยอร์ 3D ที่อาจติดมาใน OpenFreeMap Liberty style
-- มี **2 โหมดความสูงสำหรับแสดงภาพเท่านั้น**: ลดค่าความสูงมากผิดปกติให้ไม่เกิน 55 เมตร และความสูงดิบจาก OSM; **ไม่มีโหมดไหนเป็นข้อมูลรังวัด**
-- แผนที่ความสูงที่ยังไม่ผ่านการยืนยันจะไม่ถูกเขียนเป็นค่าจริงลงฐานข้อมูล
-- จับคู่รหัสอาคารกับพิกัดบนแผนที่ผ่านปุ่ม **＋ เสนอพิกัดบนแผนที่** (เก็บใน Local Storage เท่านั้น)
-- ส่งออกไฟล์ `kmutt-openmap-unverified-proposals.json` เพื่อส่งตรวจและทำ Pull Request
-- เพิ่มพิกัดภายนอกอ้างอิงเป็น **7 อาคาร** (S3, N5, N9, N10, N11, N17, N20) ทุกจุดยังไม่ใช่ทางเข้าและยังไม่ได้สำรวจยืนยัน
-- เพิ่มจำนวนชั้น LX/N16 เป็น **15 ชั้นตามหน้าโครงการ LX ของ มจธ.** แต่ยังไม่มีข้อมูลความสูงเป็นเมตร จึงยังไม่บังคับการแสดงผล 3D
-- รายการครบ 35 รหัสและสถานะใน `data/mapping-status.csv`; 28 อาคารยังไม่มีพิกัดอ้างอิงที่เพียงพอ
-- Attribution อัปเดตเป็น **Initiated by Firm Impulse · FIBO FRAB11**
+- Search every original building code and Thai/English name; punctuation and alias spacing are tolerated. FIBO → N9, หอสมุด → N10, LX → N16.
+- Share a building with `?building=N9`, including under `/KMUTT-OpenMap/`. The card states location uncertainty, sources, name conflicts and height evidence.
+- Map labels use zoom/collision management; selection has a persistent marker. Layer reuse, clamped extrusion bases, 2D/3D, day/night and reduced motion improve rendering reliability.
+- Mobile directory and details scroll separately; search remains reachable and camera framing leaves room for the selected point.
+- Local coordinate proposals have preview/confirm, evidence notes, edit/delete/export and recovery protection. Published coordinates never change automatically.
+  Saving requires HTTPS/localhost and a browser with Web Locks. A stale tab is refused rather than overwriting newer proposals; copy preview coordinates and reload to retry.
+- One sourced approximate library POI, category filters and tested Bangkok recorded-hours logic. Other service categories remain empty until evidence exists.
+- Tested pedestrian graph/Dijkstra foundation; real internal and accessible routes remain disabled because paths and entrances are unverified.
+- Catalog remains usable if map/CDN or local storage fails. GPS is requested only after user action and is neither stored nor sent to the project.
 
-## มีอะไรแล้ว
+## Data accuracy
 
-- 3D building extrusions บนแผนที่ OpenFreeMap/OSM (ความสูงบางหลังเป็นค่า fallback เพื่อแสดงภาพ ไม่ใช่ความสูงจริง)
-- 35 รายการอาคารรหัส S1–S15 และ N1–N20 จาก [KMUTT Official Campus Directory](https://www.kmutt.ac.th/about-kmutt/campus/) (เว็บไซต์ระบุ 39 อาคารทั้งหมด แต่ไม่แจกแจงครบ 39 ในรายชื่อรหัสนี้)
-- ค้นหาไทย/อังกฤษ/ชื่อย่อ/รหัส (FIBO → N9, หอสมุด → N10, LX → N16)
-- โหมด 2D/3D, กลางวัน/กลางคืน, ตำแหน่งปัจจุบัน (ต้องขอสิทธิ์จากผู้ใช้), รองรับมือถือ
-- พิกัดอ้างอิงภายนอกเฉพาะ **7 อาคาร** (S3, N5, N9, N10, N11, N17, N20) — ไม่มีพิกัดที่อ้างได้จะไม่ปักหมุด
-- กดเปิด Google Maps เพื่อขอเส้นทางเดินจากปลายทางที่มีพิกัดได้ แต่ไม่ได้รับรองว่าเป็นเส้นทางในมหาวิทยาลัยที่ผ่านการตรวจสอบ
-- Node built-in tests: 11 tests
+| Data | Current status |
+| --- | --- |
+| Official directory | 35 original codes retained; S1/S6/N19 name/description conflicts remain |
+| Building coordinates | Seven approximate references; 28 unmapped |
+| Footprints | Three named OSM candidates; zero accepted/field-verified associations |
+| Heights | Zero measured heights; N16 has an existing university 15-floor reference |
+| Entrances / pedestrian routes | Zero verified; no internal routing advertised |
+| POIs | One approximate library point; zero verified places or documented schedules |
 
-## เริ่มใช้งานในเครื่อง
+An implemented feature, a passing software test and verified real-world data are different things. See [data status](docs/DATA-STATUS.md), [model and review process](docs/DATA-MODEL.md), [baseline audit](docs/BASELINE-AUDIT.md) and [engineering handoff](docs/IMPLEMENTATION-HANDOFF.md).
 
-Windows: ดับเบิลคลิก `START_WINDOWS.bat` ได้เลย (ต้องติดตั้ง Python 3)
+## Local development
 
-ต้องใช้ Python 3 และเบราว์เซอร์ที่รองรับ WebGL2 พร้อมอินเทอร์เน็ต (โหลด MapLibre JS และ OpenFreeMap tiles)
+Serving the website requires Python 3, a WebGL2-capable browser and internet for MapLibre/tiles; no npm runtime install is needed:
 
-```bash
-cd KMUTT-OpenMap
+```sh
 python -m http.server 8080
-# เปิด http://localhost:8080/
+# http://localhost:8080/
 ```
 
-การเปิด `index.html` ด้วย file:// โดยตรงจะไม่โหลด JSON เพราะข้อจำกัดเบราว์เซอร์
+Windows: `START_WINDOWS.bat`. Opening `index.html` directly as `file://` cannot fetch JSON.
 
-รันการตรวจสอบด้วย Node >=18:
+Tests/build tooling uses Node >=20 (CI: Node 22), pinned Playwright and MapLibre dev dependencies:
 
-```bash
-npm test
+```sh
+npm ci
 npm run check
+npm run validate-data
+npm test
+npx playwright install --with-deps chromium
+npm run test:e2e
+npm run build
 ```
 
-ไม่มีการติดตั้ง NPM dependencies สำหรับตัวเว็บนี้ เป็น static web ที่นำขึ้น GitHub Pages หรือ Cloudflare Pages ได้ (ตั้ง publish directory เป็น repository root)
+`npm run build` stages an allowlisted static website in `.site/`; npm dependencies and tests are excluded. On environments with system Chromium, set `OPENMAP_CHROMIUM=/usr/bin/chromium` for browser tests. Test fixtures use the real MapLibre library with controlled empty tiles; they do not prove live provider uptime or geographical truth. [Test report and actual screenshots](docs/TEST-RESULTS.md).
 
-## โครงสร้าง
+## Architecture and deployment
 
-```text
-index.html                 หน้าเว็บและ semantic markup
-src/main.mjs               MapLibre integration, UI, markers, search interactions
-src/search.mjs             Search ranking (testable pure functions)
-src/mapping.mjs            Validate/save/export location proposals
-src/heights.mjs            3D visualization-only height presets
-src/styles.css             Responsive UI
-favicon.svg                Logo for the prototype
-data/buildings.json        35 official code/name pairs + 7 sourced approximate geocodes
-data/buildings-geocoded.geojson  7 sourced points, no invented shapes
-data/mapping-status.csv     Coverage matrix to guide field validation
-data/walkways.geojson      Empty intentionally — no field-verified paths yet
-docs/SPEC.md               Product specification / scope
-docs/DATA-STATUS.md       Provenance, conflicts, limitations
-docs/FIELD-SURVEY.md      Survey and QA process before routing
-docs/ROADMAP.md           Release gates and beta plan
-tests/project.test.mjs     11 smoke/data/search/height/mapping checks
-docs/HEIGHT-QA.md          What to verify to fix the visual height problem
-docs/PUBLISH-GITHUB.md     Recommended publishing and security steps
-.github/                    CI and issue templates
-```
+The app stays framework-free: ES modules, HTML/CSS, MapLibre, OpenFreeMap/OSM and GeoJSON. `main.mjs` coordinates UI; `map.mjs` manages layers/camera; pure modules cover search, evidence/geometry, height, proposals, URLs, places/hours and navigation. See [architecture](docs/ARCHITECTURE.md).
 
-## สถานะความถูกต้องของข้อมูล
+GitHub Actions validates source/data, runs unit/browser tests and stages `.site/`. Pages publishes **main only** at https://apichetfirm.github.io/KMUTT-OpenMap/. This feature branch must be independently reviewed before merge. Existing main deployment was successful; no repository settings or production access changes are needed. [Deployment instructions](docs/PUBLISH-GITHUB.md).
 
-| Data | Status |
-|---|---|
-| Building codes, Thai/English names | Official KMUTT page (35 records) |
-| Geocoordinates | 7 approx., OSM/third-party centroids, NOT on-site verified |
-| Building heights | N16 floor count from KMUTT LX site; 0 verified heights in meters; both rendering modes are visualizations |
-| Entrances | Unknown for all |
-| Pedestrian paths | **0 verified**; app does not claim internal navigation |
-| Shop hours and community updates | Not implemented |
+## Contributing and licensing
 
-ชื่อและตำแหน่งเป็นคนละระดับหลักฐานกัน โปรดอ่าน [DATA-STATUS.md](docs/DATA-STATUS.md)
+Read [CONTRIBUTING.md](CONTRIBUTING.md), [field survey guidance](docs/FIELD-SURVEY.md) and [roadmap](docs/ROADMAP.md). Unknown locations remain searchable; suggestions need independent review and evidence. No analytics or location collection are included.
 
-## Contributing
-
-ยินดีรับการแก้ชื่ออาคาร พิกัด ทางเข้าจริง ข้อมูล accessibility และข้อมูลอาคารที่ยังขาด ผ่าน Pull Request/Issue พร้อมแหล่งอ้างอิง **อย่า**อัปโหลดข้อมูลส่วนบุคคล ภาพที่ไม่ได้รับอนุญาต หรือข้อมูลพื้นที่ควบคุม อ่าน [CONTRIBUTING.md](CONTRIBUTING.md) ก่อน
-
-## License & attribution
-
-- Source code written for this repository: [MIT](LICENSE)
-- Public geodata and map tiles have **separate licenses/conditions**; see [DATA-LICENSES.md](DATA-LICENSES.md)
-- © OpenStreetMap contributors (ODbL), rendered with MapLibre GL JS and OpenFreeMap.
-- KMUTT's official campus directory was used as a *reference for building names/codes*, not a grant to reuse graphics, photographs, logos or full site content.
-- This is a **community student project** and is not represented as an official KMUTT product.
-
-## Deployment
-
-This repository is published by Firm Impulse · FIBO FRAB11. The source code, CI and deployment workflow are pushed to `main`. GitHub Pages needs a one-time repository setting: **Settings → Pages → Source: GitHub Actions**. Then re-run the failed **Deploy GitHub Pages** action. The preview URL will be https://apichetfirm.github.io/KMUTT-OpenMap/ once the workflow reports success. Read [Publish instructions](docs/PUBLISH-GITHUB.md).
+Original code: [MIT](LICENSE). Imported OSM databases: ODbL, © OpenStreetMap contributors. MapLibre, OpenFreeMap and university references have separate conditions; see [DATA-LICENSES.md](DATA-LICENSES.md). No KMUTNB code/assets or protected university photographs/plans are copied.

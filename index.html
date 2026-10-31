@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#071522" />
-  <meta name="description" content="KMUTT OpenMap — โครงการแผนที่ 3D แบบเปิดของชุมชนนักศึกษา มจธ. บางมด" />
+  <meta name="theme-color" content="#102230" />
+  <meta name="description" content="KMUTT OpenMap — แผนที่ชุมชนนักศึกษา Initiated by Firm Impulse · FIBO FRAB11 ไม่ใช่บริการทางการของ มจธ." />
+  <meta name="author" content="Firm Impulse · FIBO FRAB11" />
   <title>KMUTT OpenMap · Explore Bangmod</title>
   <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
   <link rel="preconnect" href="https://tiles.openfreemap.org" crossorigin />
@@ -13,54 +14,44 @@
   <link rel="stylesheet" href="./src/styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#search">ข้ามไปค้นหาอาคาร</a>
   <div id="app">
-    <div id="map" role="region" aria-label="แผนที่ มจธ. บางมด พร้อมระบบเสนอพิกัดอาคาร"></div>
-    <div class="map-vignette" aria-hidden="true"></div>
+    <main id="map" role="region" aria-label="แผนที่ มจธ. บางมด"></main>
     <header class="topbar">
-      <div class="brand">
-        <div class="brand-icon" aria-hidden="true">
-          <svg viewBox="0 0 36 36" fill="none"><path d="M6 11 18 5l12 6v14l-12 6-12-6V11Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="m6 11 12 7 12-7M18 18v13" stroke="currentColor" stroke-width="2"/><path d="m13 15 5-3 5 3" stroke="#68E7C5" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        <div><div class="brand-name">KMUTT<span>OpenMap</span></div><div class="brand-subtitle">Explore Bangmod · Community Preview</div></div>
-      </div>
-      <div class="header-right">
-        <span class="header-status"><i></i> OPEN-SOURCE PROJECT</span>
-        <a class="github-link" href="https://github.com/Apichetfirm/KMUTT-OpenMap" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository ของ KMUTT OpenMap">GitHub <span aria-hidden="true">↗</span></a>
-      </div>
+      <div class="brand"><div class="brand-icon" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M6 11 18 5l12 6v14l-12 6-12-6V11Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="m6 11 12 7 12-7M18 18v13" stroke="currentColor" stroke-width="2"/></svg></div><div><div class="brand-name">KMUTT<span>OpenMap</span></div><div class="brand-subtitle">Explore Bangmod · Community Preview</div></div></div>
+      <div class="header-right"><span class="header-status">โครงการนักศึกษา · ไม่ใช่บริการทางการ</span><a class="github-link" href="https://github.com/Apichetfirm/KMUTT-OpenMap" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
     </header>
     <aside class="sidebar" aria-label="ค้นหาอาคาร">
+      <button id="mobile-drawer" class="mobile-drawer" aria-expanded="true" aria-controls="directory-body" aria-label="ย่อหรือขยายรายชื่ออาคาร"><span class="handle"></span><span class="sr-only">รายชื่ออาคาร</span></button>
       <div class="sidebar-scroll">
-        <div class="eyebrow"><span class="sparkle" aria-hidden="true">✦</span> DISCOVER YOUR CAMPUS</div>
-        <h1>มหาวิทยาลัย<br/><span>อยู่ใกล้กว่าที่คิด.</span></h1>
-        <p class="intro">ค้นหาอาคาร รู้จักพื้นที่ และสำรวจ มจธ. บางมด ผ่านแผนที่ 3D ที่ทุกคนช่วยกันพัฒนาได้</p>
-        <div class="search-wrap">
-          <label class="sr-only" for="search">ค้นหาชื่อหรือรหัสอาคาร</label>
-          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4" stroke="currentColor" stroke-width="2"/><path d="m16 16 4.4 4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <input id="search" type="search" autocomplete="off" spellcheck="false" placeholder="ค้นหา เช่น FIBO, N9, หอสมุด" />
-          <kbd> / </kbd>
+        <div class="eyebrow">EXPLORE BANGMOD</div>
+        <h1>ค้นหาอาคาร<br/><span>รู้จักมหาวิทยาลัย.</span></h1>
+        <p class="intro">ค้นหาด้วยรหัส ชื่อไทย หรือชื่อย่อ<br/>พิกัดโดยประมาณยังต้องช่วยกันตรวจสอบ</p>
+        <div class="search-wrap"><span class="search-icon" aria-hidden="true">⌕</span><label class="sr-only" for="search">ค้นหาชื่อหรือรหัสอาคาร</label><input id="search" type="search" autocomplete="off" spellcheck="false" placeholder="ค้นหา เช่น FIBO, N9, หอสมุด" aria-controls="places" aria-describedby="search-hint"/><kbd aria-hidden="true">/</kbd></div>
+        <div id="directory-body" class="directory-body">
+          <p id="search-hint" class="search-hint">Enter เลือกผลแรก · ↓ ไปที่รายชื่อ</p>
+          <div class="filters" role="group" aria-label="ตัวกรองอาคาร"><button class="filter active" data-filter="all" aria-pressed="true">ทั้งหมด <span id="count-total">—</span></button><button class="filter" data-filter="north" aria-pressed="false">เหนือ</button><button class="filter" data-filter="south" aria-pressed="false">ใต้</button><button class="filter" data-filter="mapped" aria-pressed="false">มีพิกัด</button></div>
+          <p id="coverage" class="coverage">กำลังโหลดรายชื่ออาคาร…</p>
+          <div id="storage-warning" class="notice hidden" role="status"></div>
+          <details class="campus-services"><summary>บริการในมหาวิทยาลัย <span class="muted">· ตามหลักฐานที่มี</span></summary><label for="poi-category">ประเภทบริการ</label><select id="poi-category"><option value="all">ทั้งหมด</option></select><label class="check-label"><input id="poi-open" type="checkbox"/> น่าจะเปิดตามเวลาที่บันทึก</label><div id="poi-results"></div><p id="poi-empty" class="hidden">ยังไม่มีข้อมูลในหมวดนี้หรือไม่ทราบเวลาทำการ</p><button id="suggest-place" class="secondary-action" type="button">เสนอข้อมูลบริการผ่าน GitHub ↗</button></details>
+          <div class="list-head"><span>รายชื่ออาคาร</span><span id="results-label" role="status" aria-live="polite">กำลังโหลด…</span></div>
+          <div id="places" class="places"></div><div id="empty" class="empty hidden">ไม่พบอาคารที่ตรงกับคำค้น ลองชื่อย่อหรือรหัสอาคาร</div><button id="retry-data" class="secondary-action hidden" type="button">โหลดรายชื่อใหม่</button>
+          <div class="contribution-tools"><button id="export-drafts" type="button" class="secondary-action" disabled>ส่งออกข้อเสนอ <span id="draft-count">0</span></button><button id="export-recovery" class="secondary-action hidden" type="button">ส่งออกสำเนากู้คืน</button></div>
         </div>
-        <div class="filters" role="group" aria-label="ตัวกรองอาคาร">
-          <button class="filter active" data-filter="all" aria-pressed="true">ทั้งหมด <span id="count-total">35</span></button>
-          <button class="filter" data-filter="north" aria-pressed="false">โซนเหนือ</button>
-          <button class="filter" data-filter="south" aria-pressed="false">โซนใต้</button>
-          <button class="filter" data-filter="mapped" aria-pressed="false">มีพิกัด</button>
-        </div>
-        <div class="list-head"><span>อาคารในมหาวิทยาลัย</span><span id="results-label">35 สถานที่</span></div>
-        <div class="survey-card"><div class="survey-icon">⌖</div><div><strong>ช่วยจับคู่รหัสอาคารกับตำแหน่งจริง</strong><small>เลือกอาคาร → กดเสนอพิกัด → แตะตึกบนแผนที่<br>ข้อเสนออยู่ในเครื่องนี้เท่านั้น รอตรวจสอบก่อนใช้งานจริง</small></div></div>
-        <div id="places" class="places" aria-live="polite"></div>
-        <div id="empty" class="empty hidden">ไม่พบสถานที่ที่ตรงกับคำค้น<br/><small>ลองค้นด้วยชื่อภาษาอังกฤษหรือรหัสอาคาร</small></div>
       </div>
-      <div class="sidebar-footer"><div class="tiny-icon">i</div><p><strong>Initiated by Firm Impulse · FIBO FRAB11</strong><br/>ข้อมูลชื่ออาคารจากเว็บไซต์ มจธ. • พิกัดบางจุดยังไม่ได้ตรวจหน้างาน<br/><a href="https://www.kmutt.ac.th/about-kmutt/campus/" target="_blank" rel="noopener noreferrer">แหล่งข้อมูลมหาวิทยาลัย ↗</a></p></div>
+      <footer class="sidebar-footer"><p><strong>Initiated by Firm Impulse · FIBO FRAB11</strong><br/>โครงการชุมชนนักศึกษา ไม่ใช่บริการทางการ<br/><a href="./docs/DATA-STATUS.md">หลักฐานและข้อจำกัดของข้อมูล ↗</a></p></footer>
     </aside>
-    <div class="map-tools">
-      <div class="height-select"><label for="height-mode">ความสูงอาคาร 3D <span>⚠ ยังไม่ยืนยัน</span></label><select id="height-mode"><option value="guarded">ลดค่าผิดปกติ (ภาพจำลอง)</option><option value="osm">ตามข้อมูล OSM (ภาพจำลอง)</option></select></div><div class="map-mode" role="group" aria-label="มุมมองแผนที่"><button id="toggle3d" class="mode active" aria-pressed="true">◈ <span>3D</span></button><button id="reset-view" class="mode" title="กลับไปดูทั้งมหาวิทยาลัย">⌖ <span>Reset</span></button></div>
-      <div class="tool-row"><button id="theme-toggle" class="round-tool" aria-label="เปลี่ยนสีพื้นแผนที่" title="กลางวัน / กลางคืน">☾</button><button id="locate" class="round-tool" aria-label="แสดงตำแหน่งปัจจุบัน" title="ตำแหน่งปัจจุบัน">◎</button></div>
+    <div class="map-tools" aria-label="เครื่องมือแผนที่">
+      <div class="height-select"><label for="height-mode">ความสูง 3D <span>ค่าประมาณเพื่อแสดงภาพ</span></label><select id="height-mode" disabled><option value="guarded">จำกัดค่าที่สูงผิดปกติ (ภาพจำลอง)</option><option value="osm">ค่าจากไทล์ OSM (อาจเป็นค่าประมาณ)</option></select></div>
+      <div class="map-mode" role="group" aria-label="มุมมองแผนที่"><button id="toggle3d" class="mode active" aria-pressed="true" disabled>3D</button><button id="reset-view" class="mode" disabled>กลับมุมเริ่มต้น</button></div>
+      <div class="tool-row"><button id="theme-toggle" class="round-tool" aria-label="แผนที่กลางคืน" aria-pressed="false" disabled>☾</button><button id="locate" class="round-tool" aria-label="แสดงตำแหน่งปัจจุบัน" disabled>◎</button></div>
     </div>
-    <div id="detail" class="detail hidden" aria-live="polite"><button id="close-detail" class="close-detail" aria-label="ปิดรายละเอียด">×</button><div class="detail-label">BUILDING INFORMATION <span class="dot-sep">·</span> BANGMOD</div><div class="detail-title-line"><div class="detail-code" id="detail-code">N9</div><h2 id="detail-name"></h2></div><p id="detail-en" class="detail-en"></p><div id="detail-location" class="detail-location"></div><div id="detail-height" class="detail-height">ความสูง: ยังไม่ทราบค่าที่ตรวจสอบแล้ว</div><div class="detail-actions"><button class="primary-action" id="focus-detail">⌖ ดูบนแผนที่</button><button class="secondary-action" id="directions">↗ เปิด Google Maps</button></div><p id="detail-caveat" class="detail-caveat"></p><div class="edit-actions"><button id="map-propose" type="button">＋ เสนอพิกัดบนแผนที่</button><button id="map-delete" type="button" class="hidden">ลบข้อเสนอในเครื่อง</button></div></div>
-    <div id="map-editor-banner" class="map-editor-banner hidden" role="status"><b>กำลังจับคู่ตำแหน่งอาคาร <span id="mapping-code"></span></b><span>คลิกบนอาคารในแผนที่เพื่อบันทึกข้อเสนอ (ยังไม่ยืนยัน)</span><button id="cancel-mapping" type="button">ยกเลิก ✕</button></div><button id="export-drafts" type="button" class="export-drafts">⬇ ส่งออกข้อเสนอ <span id="draft-count">0</span></button><div id="toast" class="toast hidden" role="status"></div>
-    <div class="bottom-status"><span class="status-indicator"></span><span id="map-status">กำลังโหลดแผนที่…</span><span class="separator">·</span><span>Preview v0.2</span><span class="status-right">Initiated by Firm Impulse · FIBO FRAB11 · Built for KMUTT <b>✳</b></span></div>
-    <button id="mobile-drawer" class="mobile-drawer" aria-expanded="true" aria-controls="places" aria-label="ย่อหรือขยายรายชื่ออาคาร"><span class="handle"></span></button>
+    <section id="detail" class="detail hidden" aria-labelledby="detail-name"><button id="close-detail" class="close-detail" aria-label="ปิดรายละเอียด">×</button><div class="detail-label">BUILDING · BANGMOD</div><div class="detail-title-line"><span class="detail-code" id="detail-code"></span><h2 id="detail-name" tabindex="-1"></h2></div><p id="detail-en" class="detail-en"></p><div id="detail-location" class="detail-location"></div><div id="detail-height" class="detail-height"></div><p id="detail-conflict" class="notice hidden">ชื่อหรือคำอธิบายต่างกันในแหล่งข้อมูลมหาวิทยาลัย กำลังรอตรวจสอบ</p><div id="detail-provenance" class="detail-provenance"></div><div class="detail-actions"><button class="primary-action" id="focus-detail" disabled>ดูบนแผนที่</button><button class="secondary-action" id="share-building">คัดลอกลิงก์</button></div><label class="sr-only" for="share-url">ลิงก์อาคาร</label><input id="share-url" class="hidden" readonly/><button class="secondary-action external-directions" id="directions" disabled>เปิดการนำทางภายนอก · Google Maps ↗</button><p id="detail-caveat" class="detail-caveat"></p><details class="contribution-detail"><summary>เสนอหรือแก้ไขตำแหน่ง</summary><p id="draft-info"></p><div class="edit-actions"><button id="map-propose" type="button" disabled>＋ เสนอพิกัด</button><button id="view-proposal" type="button" class="hidden">ดูข้อเสนอ</button><button id="map-delete" type="button" class="hidden">ลบข้อเสนอ</button></div><small>ข้อเสนออยู่ในเครื่องนี้และยังไม่ผ่านการตรวจสอบ ส่งออกได้ที่ท้ายรายชื่ออาคาร</small></details></section>
+    <section id="map-editor-banner" class="map-editor-banner hidden" aria-labelledby="proposal-title"><form id="proposal-form"><div class="editor-head"><strong id="proposal-title">เสนอพิกัด <span id="mapping-code"></span></strong><button id="cancel-mapping" type="button">ยกเลิก</button></div><p id="proposal-preview" role="status">แตะบนแผนที่เพื่อดูตัวอย่าง</p><div class="coordinate-inputs"><label>ละติจูด<input id="proposal-lat" type="number" step="any" min="13.61" max="13.69" required/></label><label>ลองจิจูด<input id="proposal-lng" type="number" step="any" min="100.45" max="100.54" required/></label></div><label for="proposal-evidence">หลักฐานหรือคำอธิบาย (ไม่บังคับ)</label><textarea id="proposal-evidence" maxlength="2000" rows="2" placeholder="ที่มา วันที่สังเกต หรือเหตุผลที่เสนอจุดนี้"></textarea><div class="edit-actions"><button id="preview-coordinates" type="button">ดูตัวอย่างพิกัด</button><button id="confirm-mapping" type="submit" disabled>ยืนยันข้อเสนอในเครื่อง</button></div></form></section>
+    <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+    <div class="bottom-status"><span id="map-status" role="status">กำลังโหลดแผนที่…</span><button id="retry-map" class="hidden" type="button">โหลดแผนที่ใหม่</button><span class="status-right">Initiated by Firm Impulse · FIBO FRAB11 · Preview v0.3</span></div>
   </div>
+  <noscript>เปิด JavaScript เพื่อค้นหารายชื่ออาคาร หรือดูข้อมูลใน GitHub ของโครงการ</noscript>
   <script type="module" src="./src/main.mjs"></script>
 </body>
 </html>

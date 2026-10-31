@@ -1,0 +1,612 @@
+{
+  "date": "2026-11-01",
+  "browser": "156.0.8078.4",
+  "conditions": "Windows headless Chromium, unthrottled local Node source server, live unmodified CDN/styles/tiles, fresh context per run; physical-device performance not measured",
+  "runs": [
+    {
+      "loaded": true,
+      "timing": {
+        "catalog_ms": 551.6000000014901,
+        "map_loaded_ms": 3711.699999999255,
+        "resources": [
+          {
+            "name": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.css",
+            "start": 52,
+            "duration": 237.89999999850988,
+            "bytes": 0,
+            "initiator": "link"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/styles.css",
+            "start": 52.19999999925494,
+            "duration": 29.600000001490116,
+            "bytes": 20179,
+            "initiator": "link"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/main.mjs",
+            "start": 52.399999998509884,
+            "duration": 31.5,
+            "bytes": 28245,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/search.mjs",
+            "start": 88.10000000149012,
+            "duration": 6.299999997019768,
+            "bytes": 1836,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/data.mjs",
+            "start": 88.19999999925494,
+            "duration": 6.400000002235174,
+            "bytes": 8117,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/heights.mjs",
+            "start": 88.30000000074506,
+            "duration": 8.599999997764826,
+            "bytes": 2662,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/mapping.mjs",
+            "start": 88.39999999850988,
+            "duration": 8.600000001490116,
+            "bytes": 4198,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/sharing.mjs",
+            "start": 88.5,
+            "duration": 9,
+            "bytes": 630,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/places.mjs",
+            "start": 88.60000000149012,
+            "duration": 9.099999997764826,
+            "bytes": 5442,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/map.mjs",
+            "start": 88.69999999925494,
+            "duration": 9.400000002235174,
+            "bytes": 5582,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/data/buildings.json",
+            "start": 514.8000000007451,
+            "duration": 9,
+            "bytes": 36721,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.mjs",
+            "start": 553.3999999985099,
+            "duration": 302.80000000074506,
+            "bytes": 0,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/data/building-footprints.geojson",
+            "start": 553.6999999992549,
+            "duration": 33.19999999925494,
+            "bytes": 356,
+            "initiator": "fetch"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/data/places.geojson",
+            "start": 554,
+            "duration": 32.69999999925494,
+            "bytes": 1363,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://tiles.openfreemap.org/styles/liberty",
+            "start": 1009.6999999992549,
+            "duration": 124.19999999925494,
+            "bytes": 0,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl-worker.mjs?v=6.16.0",
+            "start": 1136.199999999255,
+            "duration": 196.30000000074506,
+            "bytes": 0,
+            "initiator": "script"
+          },
+          {
+            "name": "https://tiles.openfreemap.org/planet",
+            "start": 1284.800000000745,
+            "duration": 198.39999999850988,
+            "bytes": 0,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+            "start": 1285.199999999255,
+            "duration": 175.90000000223517,
+            "bytes": 0,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+            "start": 1324.5,
+            "duration": 135.60000000149012,
+            "bytes": 0,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+            "start": 1947.6000000014901,
+            "duration": 35.099999997764826,
+            "bytes": 0,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+            "start": 2277.10000000149,
+            "duration": 158.5,
+            "bytes": 0,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+            "start": 2435.5,
+            "duration": 58.19999999925494,
+            "bytes": 0,
+            "initiator": "fetch"
+          }
+        ],
+        "heap": 24500000
+      },
+      "errors": [],
+      "warnings": [
+        "[.WebGL-0x2a1c00a34c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "[.WebGL-0x2a1c00a34c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+        "layers[highway-shield-non-us].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
+        "layers[highway-shield-us-interstate].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
+        "layers[road_shield_us].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
+        "Image \"office\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+        "Image \"sports_centre\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+        "Image \"lift_gate\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+        "Image \"swimming_pool\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+        "Image \"gate\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+        "Image \"wood-pattern\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style."
+      ],
+      "failed": [
+        {
+          "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/14/12765/7564.pbf",
+          "failure": "net::ERR_ABORTED"
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/14/12765/7564.pbf",
+          "failure": "net::ERR_ABORTED"
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/14/12765/7564.pbf",
+          "failure": "net::ERR_ABORTED"
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet/20261025_080012_pt/14/12765/7564.pbf",
+          "failure": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "loaded": true,
+      "timing": {
+        "catalog_ms": 375.5999999977648,
+        "map_loaded_ms": 2836.599999997765,
+        "resources": [
+          {
+            "name": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.css",
+            "start": 12.399999998509884,
+            "duration": 193.10000000149012,
+            "bytes": 0,
+            "initiator": "link"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/styles.css",
+            "start": 12.599999997764826,
+            "duration": 9.800000000745058,
+            "bytes": 20179,
+            "initiator": "link"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/main.mjs",
+            "start": 12.699999999254942,
+            "duration": 10.199999999254942,
+            "bytes": 28245,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/search.mjs",
+            "start": 26.599999997764826,
+            "duration": 6,
+            "bytes": 1836,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/heights.mjs",
+            "start": 26.799999997019768,
+            "duration": 6,
+            "bytes": 2662,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/data.mjs",
+            "start": 26.799999997019768,
+            "duration": 6,
+            "bytes": 8117,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/mapping.mjs",
+            "start": 26.899999998509884,
+            "duration": 7.699999999254942,
+            "bytes": 4198,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/sharing.mjs",
+            "start": 27,
+            "duration": 7.899999998509884,
+            "bytes": 630,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/places.mjs",
+            "start": 27.199999999254942,
+            "duration": 8,
+            "bytes": 5442,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/map.mjs",
+            "start": 27.5,
+            "duration": 8,
+            "bytes": 5582,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/data/buildings.json",
+            "start": 209.59999999776483,
+            "duration": 3.800000000745058,
+            "bytes": 36721,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.mjs",
+            "start": 376.3999999985099,
+            "duration": 260.5,
+            "bytes": 0,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/data/building-footprints.geojson",
+            "start": 376.79999999701977,
+            "duration": 4.700000002980232,
+            "bytes": 356,
+            "initiator": "fetch"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/data/places.geojson",
+            "start": 377.0999999977648,
+            "duration": 5.100000001490116,
+            "bytes": 1363,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://tiles.openfreemap.org/styles/liberty",
+            "start": 702.3999999985099,
+            "duration": 38.69999999925494,
+            "bytes": 0,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl-worker.mjs?v=6.16.0",
+            "start": 749.7999999970198,
+            "duration": 108.60000000149012,
+            "bytes": 0,
+            "initiator": "script"
+          },
+          {
+            "name": "https://tiles.openfreemap.org/planet",
+            "start": 829.7999999970198,
+            "duration": 18.100000001490116,
+            "bytes": 0,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+            "start": 830.1999999992549,
+            "duration": 23.599999997764826,
+            "bytes": 0,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+            "start": 835.0999999977648,
+            "duration": 22.100000001490116,
+            "bytes": 0,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+            "start": 1224.699999999255,
+            "duration": 36.69999999925494,
+            "bytes": 0,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+            "start": 1517.0999999977648,
+            "duration": 21.100000001490116,
+            "bytes": 0,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+            "start": 1599.5999999977648,
+            "duration": 18.199999999254942,
+            "bytes": 0,
+            "initiator": "fetch"
+          }
+        ],
+        "heap": 27600000
+      },
+      "errors": [],
+      "warnings": [
+        "layers[highway-shield-non-us].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
+        "layers[highway-shield-us-interstate].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
+        "layers[road_shield_us].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
+        "Image \"office\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+        "Image \"gate\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+        "Image \"sports_centre\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+        "Image \"lift_gate\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+        "Image \"swimming_pool\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style."
+      ],
+      "failed": []
+    },
+    {
+      "loaded": true,
+      "timing": {
+        "catalog_ms": 360.69999999925494,
+        "map_loaded_ms": 2864.699999999255,
+        "resources": [
+          {
+            "name": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.css",
+            "start": 13.599999997764826,
+            "duration": 165.90000000223517,
+            "bytes": 0,
+            "initiator": "link"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/styles.css",
+            "start": 14.300000000745058,
+            "duration": 11.199999999254942,
+            "bytes": 20179,
+            "initiator": "link"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/main.mjs",
+            "start": 14.5,
+            "duration": 11.599999997764826,
+            "bytes": 28245,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/search.mjs",
+            "start": 28.699999999254942,
+            "duration": 4.199999999254942,
+            "bytes": 1836,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/data.mjs",
+            "start": 28.899999998509884,
+            "duration": 4.699999999254942,
+            "bytes": 8117,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/heights.mjs",
+            "start": 28.899999998509884,
+            "duration": 7.5,
+            "bytes": 2662,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/mapping.mjs",
+            "start": 29,
+            "duration": 8,
+            "bytes": 4198,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/places.mjs",
+            "start": 29.099999997764826,
+            "duration": 8.800000000745058,
+            "bytes": 5442,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/sharing.mjs",
+            "start": 29.099999997764826,
+            "duration": 8.200000002980232,
+            "bytes": 630,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/src/map.mjs",
+            "start": 29.199999999254942,
+            "duration": 12.300000000745058,
+            "bytes": 5582,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/data/buildings.json",
+            "start": 338.80000000074506,
+            "duration": 3.399999998509884,
+            "bytes": 36721,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.mjs",
+            "start": 361.69999999925494,
+            "duration": 281.30000000074506,
+            "bytes": 0,
+            "initiator": "script"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/data/building-footprints.geojson",
+            "start": 362.19999999925494,
+            "duration": 3.800000000745058,
+            "bytes": 356,
+            "initiator": "fetch"
+          },
+          {
+            "name": "http://127.0.0.1:8082/KMUTT-OpenMap/data/places.geojson",
+            "start": 362.3999999985099,
+            "duration": 4.5,
+            "bytes": 1363,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://tiles.openfreemap.org/styles/liberty",
+            "start": 712.5,
+            "duration": 35.69999999925494,
+            "bytes": 0,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl-worker.mjs?v=6.16.0",
+            "start": 754.8000000007451,
+            "duration": 111.5,
+            "bytes": 0,
+            "initiator": "script"
+          },
+          {
+            "name": "https://tiles.openfreemap.org/planet",
+            "start": 817.6999999992549,
+            "duration": 15.300000000745058,
+            "bytes": 0,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+            "start": 818.1999999992549,
+            "duration": 15.600000001490116,
+            "bytes": 0,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+            "start": 822.5999999977648,
+            "duration": 26.900000002235174,
+            "bytes": 0,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+            "start": 1195.5,
+            "duration": 115.69999999925494,
+            "bytes": 0,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+            "start": 1417.199999999255,
+            "duration": 16.300000000745058,
+            "bytes": 0,
+            "initiator": "fetch"
+          },
+          {
+            "name": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+            "start": 1496.800000000745,
+            "duration": 24.199999999254942,
+            "bytes": 0,
+            "initiator": "fetch"
+          }
+        ],
+        "heap": 27600000
+      },
+      "errors": [],
+      "warnings": [
+        "layers[highway-shield-non-us].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
+        "layers[highway-shield-us-interstate].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
+        "layers[road_shield_us].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
+        "Image \"office\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+        "Image \"sports_centre\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+        "Image \"lift_gate\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+        "Image \"swimming_pool\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+        "Image \"gate\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style."
+      ],
+      "failed": []
+    }
+  ],
+  "portrait": {
+    "layout": {
+      "width": 390,
+      "scrollWidth": 390,
+      "detail": {
+        "x": 10,
+        "y": 347.09375,
+        "width": 370,
+        "height": 362.90625
+      },
+      "tools": {
+        "x": 95,
+        "y": 90,
+        "width": 285,
+        "height": 139.390625
+      }
+    },
+    "errors": []
+  },
+  "landscape": {
+    "layout": {
+      "width": 844,
+      "scrollWidth": 844,
+      "detail": {
+        "x": 504,
+        "y": 85,
+        "width": 330,
+        "height": 260
+      },
+      "tools": {
+        "x": 333.96875,
+        "y": 80,
+        "width": 160.03125,
+        "height": 124
+      }
+    },
+    "errors": []
+  },
+  "narrow": {
+    "layout": {
+      "width": 360,
+      "scrollWidth": 360,
+      "detail": {
+        "x": 10,
+        "y": 326,
+        "width": 340,
+        "height": 180
+      },
+      "tools": {
+        "x": 65,
+        "y": 90,
+        "width": 285,
+        "height": 139.390625
+      }
+    },
+    "errors": []
+  }
+}

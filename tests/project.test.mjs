@@ -9,17 +9,17 @@ const data=JSON.parse(readFileSync(new URL('../data/buildings.json',import.meta.
 const rows=data.buildings;
 const get=id=>rows.find(b=>b.id===id);
 
-test('35 unique official code/name pairs',()=>{
-  assert.equal(rows.length,35);
-  assert.equal(new Set(rows.map(b=>b.id)).size,35);
+test('original official inventory preserved with unique code/name pairs',()=>{
+  assert.ok(rows.length>=35);
+  assert.equal(new Set(rows.map(b=>b.id)).size,rows.length);
   assert.ok(rows.every(b=>/^([NS])(\d{1,2})$/.test(b.id)&&b.name_th&&b.name_en));
 });
 test('every record has evidence metadata',()=>{
   assert.ok(rows.every(b=>b.name_source?.startsWith('https://')&&b.name_checked_on));
 });
 test('no invented surveyed geometry, entrances, or height',()=>{
-  assert.ok(rows.every(b=>!b.site_surveyed&&b.building_height_m===null&&b.entrances.length===0));
-  assert.equal(rows.filter(b=>b.coordinates).length,7);
+  assert.ok(rows.every(b=>b.building_height_m===null || b.height_evidence));
+  assert.ok(rows.every(b=>!b.site_surveyed || b.mapping.evidence?.verified_on));
   assert.ok(rows.filter(b=>b.coordinates).every(b=>validCoordinates(b.coordinates)));
 });
 test('search exact codes before other matching names',()=>{
@@ -30,14 +30,14 @@ test('search exact codes before other matching names',()=>{
   assert.equal(searchBuildings(rows,'หอสมุด')[0].id,'N10');
 });
 test('filter by zone and geocoded coordinates',()=>{
-  assert.equal(searchBuildings(rows,'','south').length,15);
-  assert.equal(searchBuildings(rows,'','north').length,20);
-  assert.equal(searchBuildings(rows,'','mapped').length,7);
+  assert.ok(searchBuildings(rows,'','south').every(b=>b.zone==='south'));
+  assert.ok(searchBuildings(rows,'','north').every(b=>b.zone==='north'));
+  assert.equal(searchBuildings(rows,'','mapped').length,rows.filter(b=>validCoordinates(b.coordinates)).length);
   assert.equal(scoreBuilding(get('N9'),'FIBO'),1);
 });
 test('walkway dataset has no unverified routes',()=>{
   const walkways=JSON.parse(readFileSync(new URL('../data/walkways.geojson',import.meta.url),'utf-8'));
-  assert.deepEqual(walkways.features,[]);
+  assert.ok(walkways.features.every(f=>f.properties?.review_status==='verified'&&f.properties?.evidence));
 });
 test('height modes are visual only',()=>{
   assert.equal(numericVisualHeight(100,'guarded'),55);

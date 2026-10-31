@@ -1,0 +1,35 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "kmutt-library",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49389,
+          13.65278
+        ]
+      },
+      "properties": {
+        "name": "อาคารสำนักหอสมุด",
+        "name_en": "KMUTT Library Building",
+        "category": "library",
+        "building_code": "N10",
+        "description": "จุดอ้างอิงโดยประมาณของสำนักหอสมุด ไม่ใช่ทางเข้า",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/311879209",
+          "license": "ODbL-1.0",
+          "method": "osm-amenity-reference",
+          "checked_on": "2026-11-01",
+          "verified_on": null,
+          "reviewer": null
+        }
+      }
+    }
+  ]
+}
