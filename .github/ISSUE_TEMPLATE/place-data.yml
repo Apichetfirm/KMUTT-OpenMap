@@ -1,0 +1,35 @@
+name: Campus service or opening-hours correction
+description: Suggest a place, closure, hours, location or accessibility correction
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Change requested
+      options:
+        - New place
+        - Location correction
+        - Opening hours
+        - Closed business
+        - Accessibility information
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Place name and category
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: Proposed change and coordinates if known
+      description: Unknown locations and hours should stay unknown. Do not guess entrances.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Source, observation date and permission or license
+      description: No private information, restricted plans or photographs without permission. Accessibility requires evidence of paths, surfaces, ramps, crossings and entrances.
+    validations:
+      required: true

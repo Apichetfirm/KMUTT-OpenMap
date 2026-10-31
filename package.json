@@ -1,17 +1,25 @@
 {
   "name": "kmutt-openmap",
   "private": true,
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Open-source 3D campus map for KMUTT Bangmod",
   "type": "module",
   "scripts": {
     "test": "node --test tests/*.test.mjs",
-    "check": "node --check src/main.mjs && node --check src/search.mjs && node --check src/mapping.mjs && node --check src/heights.mjs",
-    "dev": "python -m http.server 8080"
+    "check": "node scripts/check.mjs",
+    "dev": "python -m http.server 8080",
+    "validate-data": "node scripts/validate-data.mjs",
+    "test:e2e": "playwright test",
+    "build": "node scripts/build.mjs",
+    "generate-data": "node scripts/generate-data.mjs"
   },
   "engines": {
     "node": ">=18"
   },
   "license": "MIT",
-  "author": "Firm Impulse · FIBO FRAB11"
+  "author": "Firm Impulse \u00b7 FIBO FRAB11",
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "maplibre-gl": "6.16.0"
+  }
 }
