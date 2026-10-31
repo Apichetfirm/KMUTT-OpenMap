@@ -5,8 +5,8 @@
     "layers[highway-shield-non-us].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
     "layers[highway-shield-us-interstate].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
     "layers[road_shield_us].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
-    "Image \"office\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
     "Image \"sports_centre\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+    "Image \"office\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
     "Image \"lift_gate\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
     "Image \"swimming_pool\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
     "Image \"gate\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
@@ -14,8 +14,6 @@
     "layers[road_shield_us].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
     "layers[highway-shield-us-interstate].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
     "layers[highway-shield-non-us].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
-    "Image \"bollard\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
-    "Image \"brownfield\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
     "Image \"running\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
     "Image \"motorcycle_parking\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style."
   ],
@@ -32,13 +30,13 @@
     "height": 390
   },
   "timings": {
-    "catalog_ms": 570.4000000000233,
-    "map_loaded_ms": 4099.199999999953,
-    "heap": 27576409
+    "catalog_ms": 580.9000000001397,
+    "map_loaded_ms": 3654.8000000000466,
+    "heap": 28407602
   },
   "searchTiming": {
     "median_ms": 0.19999999995343387,
-    "p95_ms": 0.40000000002328306
+    "p95_ms": 0.4000000001396984
   },
   "mobile_boxes": {
     "detail": {
@@ -55,13 +53,13 @@
     },
     "tools": {
       "x": 95,
-      "y": 72,
+      "y": 90,
       "w": 285,
       "h": 139.390625
     },
     "scrollWidth": 390,
     "width": 390
   },
-  "elapsed_ms": 26416,
+  "elapsed_ms": 28223,
   "browser": "154.0.8037.57"
 }

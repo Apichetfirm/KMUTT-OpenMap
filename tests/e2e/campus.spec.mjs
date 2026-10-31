@@ -83,6 +83,8 @@ test('reduced motion, responsive panels and denied geolocation',async({page,isMo
  await page.addInitScript(()=>navigator.geolocation.getCurrentPosition=(_ok,fail)=>fail({code:1}));
  await page.goto('/');await expect(page.locator('#toggle3d')).toBeEnabled();await searchSelect(page);
  expect(await page.evaluate(()=>window.__camera.duration)).toBe(0);
+ const zoom=await page.evaluate(()=>window.__map.getZoom());await page.getByRole('button',{name:'Zoom in',exact:true}).click();
+ await expect.poll(()=>page.evaluate(()=>window.__map.getZoom())).toBeGreaterThan(zoom);
  if(isMobile){
   const detail=await page.locator('#detail').boundingBox(),sidebar=await page.locator('.sidebar').boundingBox();expect(detail.y+detail.height).toBeLessThan(sidebar.y);
   await expect.poll(async()=>{const pin=await page.locator('.selected-pin').boundingBox();return pin&&pin.y>=60&&pin.y+pin.height<detail.y;}).toBe(true);

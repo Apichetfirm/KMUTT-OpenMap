@@ -26,9 +26,9 @@ Browser fixture tests load the **real pinned MapLibre** library with controlled 
 
 ## Measured performance and limits
 
-Two live cloud runs: catalog ready 546–570 ms; map `load` event 4,099–4,447 ms from navigation start. This does **not** achieve the approximate 3-second map target. These are single-session, unthrottled cloud timings, not controlled mobile-network benchmarks. The load event is distinct from a formally defined first-interactive-map metric.
+Three live cloud runs: catalog ready 546–581 ms; map `load` event 3,655–4,447 ms from navigation start. This does **not** achieve the approximate 3-second map target. These are single-session, unthrottled cloud timings, not controlled mobile-network benchmarks. The load event is distinct from a formally defined first-interactive-map metric.
 
-500 local search calls over 35 entries: median about 0.2 ms, p95 about 0.4 ms in the recorded run. Initial JS heap snapshot approximately 27.6 MB; one sample cannot establish absence of long-term memory growth. Label/layer reuse and selected-marker count are regression checked. No representative-phone 30 FPS or long-session memory claim is made. Live warnings and raw measurements are in [qa/live-metrics.json](qa/live-metrics.json).
+500 local search calls over 35 entries: median about 0.2 ms, p95 about 0.4 ms in the recorded run. Initial JS heap snapshot approximately 28.4 MB; one sample cannot establish absence of long-term memory growth. Label/layer reuse and selected-marker count are regression checked. No representative-phone 30 FPS or long-session memory claim is made. Live warnings and raw measurements are in [qa/live-metrics.json](qa/live-metrics.json).
 
 ## Commands
 

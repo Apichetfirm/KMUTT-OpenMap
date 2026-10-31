@@ -174,7 +174,7 @@ async function initMap() {
         }catch(error){state.mapReady=false;setMapControls(false);$('map-status').textContent='การแสดงแผนที่ยังไม่พร้อม';$('retry-map').classList.remove('hidden');toast('ค้นหารายชื่อยังใช้ได้ โปรดลองโหลดแผนที่ใหม่');}
       });
       map.on('error',()=>{$('map-status').textContent='บางส่วนของแผนที่โหลดไม่ได้ · รายชื่อยังค้นหาได้';$('retry-map').classList.remove('hidden');});
-      map.addControl(new state.maplibre.NavigationControl({showCompass:true}),'bottom-right');
+      map.addControl(new state.maplibre.NavigationControl({showCompass:true}),'top-left');
       map.once('load',()=>{performance.mark('openmap-map-loaded');});
     }catch {
       state.mapReady=false;setMapControls(false);$('map-status').textContent='โหลดแผนที่ไม่ได้ · ยังค้นหาและแชร์อาคารได้';$('retry-map').classList.remove('hidden');

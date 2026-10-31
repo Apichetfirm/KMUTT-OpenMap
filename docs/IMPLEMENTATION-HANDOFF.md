@@ -22,7 +22,7 @@ A typed evidence model, three sourced OSM footprint candidates, geometry validat
 | 3 Search/UX | Core flows implemented/tested | Physical-device/screen-reader acceptance remains; unknown geometry is disclosed |
 | 4 Places | Supported MVP implemented/tested | One approximate library; no documented schedules/restaurants/accessibility |
 | 5 Navigation | Foundation implemented/tested | No real route/origin-destination UI; graph/entrances remain empty |
-| 6 Reliability/performance | Failure paths and measurements tested; partial | Cloud map load ~4.1–4.45s; phone FPS/memory goals unproven |
+| 6 Reliability/performance | Failure paths and measurements tested; partial | Cloud map load ~3.65–4.45s; phone FPS/memory goals unproven |
 | 7 Review readiness | Tests/docs/CI/static staging prepared | PR remains unmerged for Codex A; cross-browser/device/GIS review outstanding |
 
 ## Technical decisions and change log
