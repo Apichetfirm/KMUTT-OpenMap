@@ -98,6 +98,7 @@ kbd{color:#9bb4c1;border:1px solid #4a6470;border-radius:4px;padding:2px 6px;fon
 @media(max-height:540px) and (max-width:900px){.maplibregl-ctrl-top-left{left:280px;top:12px}.detail{bottom:45px;max-height:calc(100dvh - 130px)}}
 /* Leave space for a complete selected marker between tools and the scrollable card. */
 @media(max-width:670px) and (min-height:541px){.detail{max-height:min(43dvh,calc(100dvh - 460px))}}
+@media(min-width:671px) and (min-height:541px){.detail{max-height:calc(100dvh - 390px)}}
 @media(max-height:540px) and (min-width:671px) and (max-width:900px){.detail{bottom:70px;max-height:calc(100dvh - 155px)}}
 /* Small phones in landscape need side panels, rather than two stacked sheets. */
 @media(min-width:541px) and (max-width:670px) and (max-height:540px){
