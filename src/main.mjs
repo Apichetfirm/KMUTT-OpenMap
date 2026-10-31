@@ -12,7 +12,7 @@ const state={official:[],drafts:[],results:[],selected:null,filter:'all',map:nul
   selectedMarker:null,previewMarker:null,locationMarker:null,is3d:true,dark:false,heightMode:'guarded',
   mapping:null,pending:null,footprints:emptyCollection(),places:[],visiblePlaces:[],storage:null,draftRevision:null,returnFocus:null};
 const codes=()=>state.official.map(b=>b.id);
-const mobile=()=>matchMedia('(max-width:670px)').matches;
+const mobile=()=>matchMedia('(max-width:670px)').matches&&!matchMedia('(min-width:541px) and (max-height:540px)').matches;
 const reducedMotion=()=>matchMedia('(prefers-reduced-motion:reduce)').matches;
 let toastTimer,mapPromise;
 function element(tag,cls,text) {
@@ -179,7 +179,7 @@ async function initMap() {
     try {
       state.maplibre=await import('https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.mjs');
       const map=new state.maplibre.Map({container:'map',style:state.dark?STYLES.dark:STYLES.light,center:HOME,zoom:16,pitch:state.is3d?48:0,bearing:-20,minZoom:11,maxZoom:20,
-        canvasContextAttributes:{antialias:!mobile()},attributionControl:true});state.map=map;
+        canvasContextAttributes:{antialias:!mobile()},attributionControl:{compact:matchMedia('(max-width:900px)').matches}});state.map=map;
       map.on('click',onMapClick);
       map.on('style.load',()=>{
         try {state.mapReady=true;syncMap();renderDetail();renderSelectedMarker();setMapControls(true);focusBuilding(state.selected);

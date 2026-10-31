@@ -21,7 +21,7 @@ async function fixture(page,{cdnFailure=false,dataFailure=false}={}) {
   }
   if(url.hostname==='tiles.openfreemap.org') {
    if(url.pathname.includes('/styles/'))return route.fulfill({json:{version:8,glyphs:'https://tiles.openfreemap.org/test-glyphs/{fontstack}/{range}.pbf',sources:{},layers:[{id:'background',type:'background',paint:{'background-color':url.pathname.endsWith('dark')?'#172b35':'#e4eae5'}}]}});
-   if(url.pathname==='/planet')return route.fulfill({json:{tilejson:'3.0.0',tiles:['https://tiles.openfreemap.org/test/{z}/{x}/{y}.pbf'],minzoom:0,maxzoom:14,vector_layers:[{id:'building',fields:{render_height:'Number',render_min_height:'Number'}}]}});
+   if(url.pathname==='/planet')return route.fulfill({json:{tilejson:'3.0.0',attribution:'<a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a>',tiles:['https://tiles.openfreemap.org/test/{z}/{x}/{y}.pbf'],minzoom:0,maxzoom:14,vector_layers:[{id:'building',fields:{render_height:'Number',render_min_height:'Number'}}]}});
    return route.fulfill({status:204,body:''});
   }
   return route.abort();
@@ -128,7 +128,7 @@ test('unavailable optional data cannot stall the map or catalog',async({page})=>
 
 test('selected markers remain clear of panels on short portrait and landscape screens',async({page})=>{
  await fixture(page);await page.emulateMedia({reducedMotion:'reduce'});
- for(const viewport of [{width:360,height:640},{width:844,height:390}]){
+ for(const viewport of [{width:360,height:640},{width:844,height:390},{width:667,height:375},{width:700,height:900}]){
   await page.setViewportSize(viewport);await page.goto('/?building=N10');await expect(page.locator('#toggle3d')).toBeEnabled();
   await expect.poll(()=>page.evaluate(()=>{
    const pin=document.querySelector('.selected-pin')?.getBoundingClientRect();if(!pin)return false;
@@ -137,5 +137,10 @@ test('selected markers remain clear of panels on short portrait and landscape sc
     return pin.right<=r.left||pin.left>=r.right||pin.bottom<=r.top||pin.top>=r.bottom;
    });
   })).toBe(true);
+  const attribution=page.locator('.maplibregl-ctrl-attrib-button');
+  const copyright=page.locator('.maplibregl-ctrl-attrib a[href="https://www.openstreetmap.org/copyright"]');
+  await expect(copyright).toHaveCount(1);
+  if(!await copyright.isVisible())await attribution.click();
+  await copyright.click({trial:true,timeout:2000});
  }
 });
