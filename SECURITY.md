@@ -1,0 +1,3 @@
+# Security and privacy
+
+There is no login, tracking code, location storage or server-side database in this preview. Browser geolocation is requested only after clicking the locate button and is used only client-side for the current session. Third-party basemap/CDN providers receive ordinary network requests from the user's browser; review their privacy policies separately. Never put API secrets, unpublished building plans, identification documents or personal information in issues/PRs. Report sensitive vulnerabilities to the repository owner privately rather than publicly posting exploit steps or security-related floor plans.
