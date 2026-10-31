@@ -57,7 +57,7 @@
         13.64996
       ],
       "location_quality": "approximate-third-party",
-      "location_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+      "location_source": "https://bangkok.worldplaces.me/th/review/86915165-innovative-learning-institute-li-80.html",
       "entrances": [],
       "building_height_m": null,
       "name_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
@@ -355,7 +355,7 @@
         13.65314
       ],
       "location_quality": "approximate-third-party",
-      "location_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+      "location_source": "https://bangkok.worldplaces.me/th/review/193660603-kmutt.html",
       "entrances": [],
       "building_height_m": null,
       "name_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
@@ -430,7 +430,7 @@
         13.65439
       ],
       "location_quality": "approximate-third-party",
-      "location_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+      "location_source": "https://bangkok.worldplaces.me/th/review/40052753.html",
       "entrances": [],
       "building_height_m": null,
       "name_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
@@ -453,8 +453,8 @@
         100.49389,
         13.65278
       ],
-      "location_quality": "approximate-third-party",
-      "location_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+      "location_quality": "osm-centroid",
+      "location_source": "https://www.openstreetmap.org/way/311879209",
       "entrances": [],
       "building_height_m": null,
       "name_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
@@ -478,7 +478,7 @@
         13.65256
       ],
       "location_quality": "approximate-third-party",
-      "location_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+      "location_source": "https://bangkok.worldplaces.me/review/73405899-sit-school-of-information-technology.html",
       "entrances": [],
       "building_height_m": null,
       "name_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
@@ -587,8 +587,8 @@
         100.49393,
         13.65147
       ],
-      "location_quality": "approximate-third-party",
-      "location_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+      "location_quality": "osm-centroid",
+      "location_source": "https://www.openstreetmap.org/way/420534143",
       "entrances": [],
       "building_height_m": null,
       "name_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
@@ -643,8 +643,8 @@
         100.49334,
         13.65152
       ],
-      "location_quality": "approximate-third-party",
-      "location_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+      "location_quality": "osm-centroid",
+      "location_source": "https://www.openstreetmap.org/way/436983061",
       "entrances": [],
       "building_height_m": null,
       "name_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
