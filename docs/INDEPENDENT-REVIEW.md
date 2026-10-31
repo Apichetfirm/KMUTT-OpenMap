@@ -39,6 +39,8 @@ Environment: Windows, Node 24.21.0, npm lockfile installation, Playwright 1.64.1
 
 The browser fixtures run the real pinned MapLibre against controlled empty tile responses. They check actual selected code, camera arguments, URL/reload, focus, extrusion counts/visibility, proposal preview/persistence/download/delete, POI unknown/empty states, GPS denial, reduced motion and recoveries. They do not establish live tile availability, physical height, field truth or on-device performance.
 
+Final-head CI on `4b6c787` initially passed 19/20 browser tests: the proposal test read storage immediately after clicking Confirm, racing the newly asynchronous Web Lock save on Linux. The test now waits for the editor to close (the application's post-save state) before reading persisted data; stale-tab checks likewise wait for the reported refusal before asserting unchanged bytes. No retry or timeout increase hides this failure. The corrected final-head CI must pass before merge.
+
 User scenarios covered: new student FIBO/N9; visitor library/N10; mobile directory/search/cards; services categories with honest empty/unknown hours; local contributor preview/confirmation/export; keyboard search/selection/focus and reduced motion. Unmapped LX/N16 remains searchable/shareable and discloses its 15-floor reference without inventing coordinates or metres. Screen-reader, Firefox/Safari and physical Android/iOS acceptance remain outstanding.
 
 ## GIS accuracy and security boundaries

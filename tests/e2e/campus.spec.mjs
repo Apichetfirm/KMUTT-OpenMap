@@ -59,6 +59,7 @@ test('proposal preview, confirmation, reload, export and deletion preserve offic
  await page.locator('#proposal-lat').fill('13.6541');await page.locator('#proposal-lng').fill('100.4941');await page.locator('#preview-coordinates').click();
  expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('kmutt-openmap-proposals-v02'))[0].coordinates)).toEqual(legacy.coordinates);
  await page.locator('#proposal-evidence').fill('Observed sign; independent review requested');await page.locator('#confirm-mapping').click();
+ await expect(page.locator('#map-editor-banner')).toBeHidden();
  expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('kmutt-openmap-proposals-v02'))[0].coordinates)).toEqual([100.4941,13.6541]);
  expect(await page.evaluate(()=>window.__camera.center)).toEqual(legacy.coordinates);
  await page.reload();await page.locator('.contribution-detail summary').click();await expect(page.locator('#draft-info')).toContainText('13.6541');
@@ -102,8 +103,8 @@ test('stale tabs cannot overwrite newer local proposals',async({page,context})=>
  const other=await context.newPage();await other.goto('/');
  await other.evaluate(p=>localStorage.setItem('kmutt-openmap-proposals-v02',JSON.stringify([{...p,building_code:'N10'}])),legacy);
  await page.locator('#confirm-mapping').click();
- expect(await other.evaluate(()=>JSON.parse(localStorage.getItem('kmutt-openmap-proposals-v02')).map(p=>p.building_code))).toEqual(['N10']);
  await expect(page.locator('#toast')).toContainText('บันทึกไม่สำเร็จ');
+ expect(await other.evaluate(()=>JSON.parse(localStorage.getItem('kmutt-openmap-proposals-v02')).map(p=>p.building_code))).toEqual(['N10']);
  await expect(page.locator('#map-editor-banner')).toBeVisible();
 });
 
