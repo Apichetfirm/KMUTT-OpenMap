@@ -1,0 +1,3 @@
+# Community Code of Conduct
+
+All contributors, students, visitors and staff should be treated respectfully regardless of background or ability. Be constructive, do not harass, intimidate, impersonate university officials or publish private or sensitive location data. Maintainers may remove abusive comments or contributions. Report problems privately to project maintainers; a public issue is not an appropriate place for personal data.
