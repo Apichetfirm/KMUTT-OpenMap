@@ -6,13 +6,16 @@ Open-source, community-driven 3D map **preview** for KMUTT Bangmod.
 
 This is a student community project, **not an official KMUTT service**. GitHub owner: `Apichetfirm`; public project initiator: Firm Impulse.
 
-## v0.3 implementation for independent review
+## v0.3 community preview
+
+Independent review and release evidence are recorded in [INDEPENDENT-REVIEW.md](docs/INDEPENDENT-REVIEW.md); the original implementer handoff remains historical evidence.
 
 - Search every original building code and Thai/English name; punctuation and alias spacing are tolerated. FIBO → N9, หอสมุด → N10, LX → N16.
 - Share a building with `?building=N9`, including under `/KMUTT-OpenMap/`. The card states location uncertainty, sources, name conflicts and height evidence.
 - Map labels use zoom/collision management; selection has a persistent marker. Layer reuse, clamped extrusion bases, 2D/3D, day/night and reduced motion improve rendering reliability.
 - Mobile directory and details scroll separately; search remains reachable and camera framing leaves room for the selected point.
 - Local coordinate proposals have preview/confirm, evidence notes, edit/delete/export and recovery protection. Published coordinates never change automatically.
+  Saving requires HTTPS/localhost and a browser with Web Locks. A stale tab is refused rather than overwriting newer proposals; copy preview coordinates and reload to retry.
 - One sourced approximate library POI, category filters and tested Bangkok recorded-hours logic. Other service categories remain empty until evidence exists.
 - Tested pedestrian graph/Dijkstra foundation; real internal and accessible routes remain disabled because paths and entrances are unverified.
 - Catalog remains usable if map/CDN or local storage fails. GPS is requested only after user action and is neither stored nor sent to the project.

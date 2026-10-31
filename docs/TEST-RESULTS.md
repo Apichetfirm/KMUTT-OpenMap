@@ -1,5 +1,7 @@
 # Test report — v0.3 implementation, 2026-11-01
 
+**Independent reviewer results supersede the implementer-only counts below:** see [INDEPENDENT-REVIEW.md](INDEPENDENT-REVIEW.md). The review expanded the suite to 34 unit/integration tests and 20 desktop/mobile browser tests, and added live Windows screenshots/metrics in `qa/review/`.
+
 Initiated by Firm Impulse · FIBO FRAB11. These are implementer results, not final Codex A acceptance.
 
 Flow under test: load the app → search FIBO/N9 → select → focus the published approximate point and show provenance → share/reload → preview/confirm/export/delete a separate local proposal. Also checked unmapped N16, POIs, style/mode changes, permissions and unavailable services.

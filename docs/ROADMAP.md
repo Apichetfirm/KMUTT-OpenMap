@@ -1,6 +1,6 @@
 # Implementation roadmap — 2026-11-01
 
-Initiated by Firm Impulse · FIBO FRAB11. Feature branch is for independent review; no self-merge or public beta declaration.
+Initiated by Firm Impulse · FIBO FRAB11. Independent review results and final release/deployment references: [INDEPENDENT-REVIEW.md](INDEPENDENT-REVIEW.md). Community preview acceptance does not declare a fully verified campus navigation system or close the data/device gates below.
 
 | Phase | Implemented/tested now | Still blocked or incomplete |
 | --- | --- | --- |
@@ -13,4 +13,4 @@ Initiated by Firm Impulse · FIBO FRAB11. Feature branch is for independent revi
 | 6 — reliability/performance | CDN/storage/data/GPS failure handling, batched labels/POIs, cloud measurements | Three-second map target, representative phone FPS, long-session memory/device/network testing |
 | 7 — review readiness | Unit/data/real-browser fixtures, live screenshots, CI/Pages staging, documentation | Independent review, cross-browser/device acceptance; no beta approval implied |
 
-Next work in order: independent P0 review → review the three source polygons and legacy reference licensing → field survey missing locations/entrances/heights → physical Android/iOS/Firefox/Safari and assistive-technology QA → verify services/hours → survey and review route/accessibility network. Keep #1–#5 open while their full acceptance criteria remain unmet. Avoid tours/PWA/advanced architecture before these gates pass.
+Next work in order: review the three source polygons and legacy reference licensing → field survey missing locations/entrances/heights → physical Android/iOS/Firefox/Safari and assistive-technology QA → verify services/hours → survey and review route/accessibility network. Keep #1–#5 open while their full acceptance criteria remain unmet. Supply-chain follow-up is tracked in #7. Avoid tours/PWA/advanced architecture before these gates pass. The phase table's implementer-era independent-acceptance items are resolved by the separate review report, subject to final CI and deployment evidence.

@@ -26,6 +26,8 @@ Select a building → expand “เสนอหรือแก้ไขตำแ
 
 The v0.2 storage key is retained. Valid legacy records remain readable. Invalid/partially rejected storage bytes are copied to a recovery key before an explicit new save. Storage failure leaves the preview unsaved and reports the problem; quota/security errors never claim success. An existing different recovery backup is never overwritten automatically. Users can export it. No proposals or GPS locations are transmitted to the project.
 
+Independent review added exact-revision checks inside a cross-tab Web Lock for saves/deletes. A second tab's newer proposal bytes cannot be silently replaced by a stale editor. Copy the unsaved preview coordinates, export any needed drafts, reload, and retry. Editing requires HTTPS/localhost and Web Locks; browsers without it retain search/share/export and receive an explicit error on attempted writes. The lock coordinates this version's editors; old code or manual storage edits cannot be made cooperative by this application.
+
 ## Places and hours
 
 `places.geojson` uses GeoJSON Point features with stable ID, name, category, description, optional building reference, confidence, evidence, verification date, accessibility and optional opening hours. One approximate library reference is published, supported by OSM's `amenity=library` and the official directory. All other categories remain empty rather than guessed. Points are clustered above a fixed density and rendered in one source.

@@ -1,5 +1,7 @@
 # Engineering handoff for Codex A
 
+Historical implementer handoff. Independent review, corrections and release-gate evidence are now recorded in [INDEPENDENT-REVIEW.md](INDEPENDENT-REVIEW.md).
+
 **Initiated by Firm Impulse · FIBO FRAB11**
 
 Feature branch: `feat/campus-map-v0.3`, based on `55cbef26cf2dea4e0c3fb336b6f517b8d2fc15e1`. Implementer: Codex B. This is an unmerged implementation for independent review; no final security, data or acceptance approval is asserted.
