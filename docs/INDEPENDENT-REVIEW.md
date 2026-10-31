@@ -82,3 +82,9 @@ Engineering review supports a **community preview**, conditional on successful f
 - **P2 engineering/coverage:** real-device FPS/memory/network tests and Firefox/Safari/screen readers ([#2](https://github.com/Apichetfirm/KMUTT-OpenMap/issues/2)); verified services/hours ([#5](https://github.com/Apichetfirm/KMUTT-OpenMap/issues/5)); CDN/action supply-chain hardening ([#7](https://github.com/Apichetfirm/KMUTT-OpenMap/issues/7)); cross-building overlap validation and provider warning investigation. Issue labels/priorities may remain stricter than this preview-specific roadmap.
 
 All Issues #1–#5 stay open because none has every acceptance criterion satisfied. Supporting software and community-preview publication do not certify the geography or complete those issues.
+
+## Post-deployment R3 follow-up
+
+PR #6 merged as `bf2e50e4938648408da306adb8947bbce13b2a57`; its final-head and post-merge CI and Pages deployment passed. The published HTML, main/storage modules, CSS and catalog matched that merge byte for byte, and live search/share/proposal/portrait/landscape smoke checks passed. Screenshot inspection then found one uncovered R3 case: expanding desktop contribution details lets the tall card cover theme/GPS controls. The initial smoke result did not test that expanded-card control interaction.
+
+The corrective follow-up reserves the toolbar's vertical space above the desktop card and keeps its content scrollable. A new browser regression reproduces the overlap (theme control receives intercepted pointer events) before the fix and requires theme/GPS controls to receive pointer events afterward. It expands the suite from 20 to 22 runs across the two browser projects. This is the same R3 panel/control-occlusion finding, not a new geographic claim. Final follow-up CI, merge, redeployment and production recheck are recorded in the linked PR release comments after they occur.

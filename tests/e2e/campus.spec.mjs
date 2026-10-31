@@ -145,3 +145,11 @@ test('selected markers remain clear of panels on short portrait and landscape sc
   await copyright.click({trial:true,timeout:2000});
  }
 });
+
+test('expanded desktop contribution details keep map controls reachable',async({page})=>{
+ await fixture(page);await page.setViewportSize({width:1440,height:1000});
+ await page.goto('/?building=N9');await expect(page.locator('#toggle3d')).toBeEnabled();
+ await page.locator('.contribution-detail summary').click();
+ await page.locator('#theme-toggle').click({trial:true,timeout:2000});
+ await page.locator('#locate').click({trial:true,timeout:2000});
+});
