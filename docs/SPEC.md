@@ -1,31 +1,11 @@
-# Product specification — KMUTT OpenMap
+# KMUTT OpenMap implementation scope
 
-**Owner:** Firm Impulse · FIBO FRAB11
-**Type:** Community-driven, open-source, unofficial student project for public navigation and campus discovery.
-**First campus:** KMUTT Bangmod.
+Initiated by Firm Impulse · FIBO FRAB11. An unofficial, open-source community student project for KMUTT Bangmod.
 
-## v0.2.1 scope
-- Search 35 officially listed building codes/names/aliases in Thai and English.
-- Display desktop/mobile interactive map via MapLibre/OpenFreeMap.
-- 3D extrusion, 2D mode, day/night, optional GPS with user permission.
-- Show only approx geocoded points for seven locations, and label verification limits prominently.
-- Allow local-only proposals of missing building positions, export as JSON for review.
-- Show approximate Google walking directions only for non-draft geocoded points.
-- No internal navigation, indoor floor maps, shop hours, verified building heights, or official service claims.
+Primary flow: search an official code/name/alias → select → show honest location/height/provenance → focus a supported approximate reference → share the building URL. Unknown locations stay searchable and do not cause fabricated camera movement. GPS is optional and user initiated. External Google directions are clearly labeled and do not claim verified entrances or campus routes.
 
-## Non-functional requirements
-- No secrets or proprietary map files in the public repository.
-- No analytics collecting precise location.
-- Map must remain searchable if CDN tiles are temporarily offline.
-- Screen-reader labels and keyboard shortcuts for search.
-- Valid data must pass regression tests and explicit provenance review.
-- Existing OSM/tiles attribution must remain visible.
+Contributions remain local: select → propose → preview → confirm → edit/remove/export. Independent review is required to update published data. Three sourced OSM footprint candidates remain distinct from accepted geometry. One approximate library point demonstrates service discovery; no other places, hours or accessibility are guessed. Internal pedestrian/accessible navigation remains disabled until reviewed paths and entrances exist, despite the tested routing foundation.
 
-## Release gates
-R0: source/CI and one public preview deployment.
-R1: independent building geocode & height validation.
-R2: verified pedestrian graph/navigation.
-R3: user research and beta test.
-R4: community-maintained public beta.
+Keep the map dominant, search reachable on phones, touch targets/focus visible, a keyboard directory alternative to map labels, and motion responsive to user preference. Catalog/CDN/storage failures are independent. Do not collect precise location, copy unlicensed assets, imply university endorsement, or treat passing software tests as geographic verification.
 
-See `ROADMAP.md`, `DATA-STATUS.md`, `FIELD-SURVEY.md` and `HEIGHT-QA.md`.
+Detailed acceptance status, limits and next gates: ROADMAP.md, DATA-STATUS.md, DATA-MODEL.md, TEST-RESULTS.md and IMPLEMENTATION-HANDOFF.md. Independent Codex A review is the next approval gate.

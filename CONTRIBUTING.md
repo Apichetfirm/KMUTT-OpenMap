@@ -1,13 +1,14 @@
 # Contributing to KMUTT OpenMap
 
-Thank you for helping people navigate campus.
+Initiated by Firm Impulse · FIBO FRAB11. Thai and English contributions are welcome.
 
-1. **Open an issue first** describing the incorrect/missing information and your source (official page, OSM feature ID, or field notes).
-2. Make a small pull request; do not add unreviewed navigation routes to the app.
-3. Edit `data/generate_catalog.py` for permanent building-name changes, then run `python data/generate_catalog.py`; do not edit only the generated JSON.
-4. Include sources, checked date and uncertainty per new coordinate. Separate building centroids from pedestrian entrances.
-5. Never add students' names, phone numbers, identifiable photos without permission, private security routes, or copyrighted campus 3D models without clearance.
-6. Run `npm test` and `npm run check`. Verify browser UI on mobile and desktop.
-7. A maintainer reviews every geodata PR. Paths require evidence of an on-site survey and graph checks before merge.
+1. Open an issue describing the problem, building code/place ID and evidence. A browser proposal is a private draft, not a published correction. Use the building or place issue template; attach the exported proposal JSON if useful.
+2. Edit the canonical `data/buildings.json` for reviewed building changes. The old documentation's `data/generate_catalog.py` does not exist. Run `npm run generate-data` to regenerate points and coverage CSV.
+3. Keep source, license, observation/check date and uncertainty with every new record. Coordinates are not entrances. Candidate footprints belong in the candidate file until association review supports acceptance. An independent maintainer reviews evidence before merging any promotion.
+4. Heights in metres require measured evidence. Official floors, OSM levels, estimates and display fallbacks stay separate. Never mark an OSM tag or a source URL alone as field verification.
+5. POI changes, closures and hours need provenance. Unknown fields remain unknown. Accessible paths require surveyed surfaces, steps, ramps, crossings and entrances; a generic wheelchair tag is insufficient.
+6. Routes require field evidence and independent topology/entrance review. Synthetic test fixtures must never be published as campus paths. Validate graph edges against accepted footprints and review unknown-building crossings manually.
+7. Do not contribute personal/private information, restricted plans, photographs without permission or copyrighted models. Record data licenses separately from MIT code.
+8. Run `npm ci`, `npm run check`, `npm run validate-data`, `npm test`, `npm run test:e2e` and `npm run build`; see [testing instructions](docs/TEST-RESULTS.md). Test live tiles separately and document device/browser limits.
 
-**Language:** Thai or English issues/PRs are welcome. Respectful, clear reports are preferred to assumptions. See CODE_OF_CONDUCT.md.
+The implementer does not self-merge. Independent review and respectful collaboration are required; see CODE_OF_CONDUCT.md.
