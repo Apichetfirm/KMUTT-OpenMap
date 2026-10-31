@@ -1,0 +1,117 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49518,
+          13.64996
+        ]
+      },
+      "properties": {
+        "id": "S3",
+        "name_th": "อาคารสถาบันนวัตกรรมการเรียนรู้เฉลิมพระเกียรติ 80 พรรษา มูลนิธิไทยคม",
+        "location_quality": "approximate-third-party",
+        "source": "https://www.kmutt.ac.th/about-kmutt/campus/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49458,
+          13.65314
+        ]
+      },
+      "properties": {
+        "id": "N5",
+        "name_th": "อาคารศูนย์เครื่องมือวิทยาศาสตร์เพื่อมาตรฐานและอุตสาหกรรม",
+        "location_quality": "approximate-third-party",
+        "source": "https://www.kmutt.ac.th/about-kmutt/campus/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49433,
+          13.65439
+        ]
+      },
+      "properties": {
+        "id": "N9",
+        "name_th": "อาคารสถาบันวิทยาการหุ่นยนต์ภาคสนาม",
+        "location_quality": "approximate-third-party",
+        "source": "https://www.kmutt.ac.th/about-kmutt/campus/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49389,
+          13.65278
+        ]
+      },
+      "properties": {
+        "id": "N10",
+        "name_th": "อาคารสำนักหอสมุด",
+        "location_quality": "approximate-third-party",
+        "source": "https://www.kmutt.ac.th/about-kmutt/campus/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49373,
+          13.65256
+        ]
+      },
+      "properties": {
+        "id": "N11",
+        "name_th": "อาคารคณะเทคโนโลยีสารสนเทศ",
+        "location_quality": "approximate-third-party",
+        "source": "https://www.kmutt.ac.th/about-kmutt/campus/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49393,
+          13.65147
+        ]
+      },
+      "properties": {
+        "id": "N17",
+        "name_th": "อาคารเรียนรวม 2",
+        "location_quality": "approximate-third-party",
+        "source": "https://www.kmutt.ac.th/about-kmutt/campus/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49334,
+          13.65152
+        ]
+      },
+      "properties": {
+        "id": "N20",
+        "name_th": "อาคารเรียนรวม 1",
+        "location_quality": "approximate-third-party",
+        "source": "https://www.kmutt.ac.th/about-kmutt/campus/"
+      }
+    }
+  ]
+}
