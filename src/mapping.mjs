@@ -10,9 +10,10 @@ export function validateProposal(p, codes) {
     (p.evidence===undefined || typeof p.evidence==='string' && p.evidence.length<=2000);
 }
 export function readDraftState(store,codes) {
+  let raw=null;
   try {
-    const raw=store?.getItem(DRAFT_STORAGE_KEY);
-    if(!raw)return {drafts:[],warning:null};
+    raw=store?.getItem(DRAFT_STORAGE_KEY)??null;
+    if(!raw)return {drafts:[],warning:null,raw};
     const entries=JSON.parse(raw);
     if(!Array.isArray(entries))throw Error('Invalid proposal collection');
     const seen=new Set();
@@ -20,13 +21,14 @@ export function readDraftState(store,codes) {
       if(!validateProposal(p,codes)||seen.has(p.building_code))return false;
       seen.add(p.building_code);return true;
     }).slice(0,MAX_DRAFTS);
-    return {drafts,warning:entries.length!==drafts.length?'Some proposals could not be read; original storage is preserved.':null};
-  }catch {return {drafts:[],warning:'Local proposals unavailable or corrupted; original storage is preserved.'};}
+    return {drafts,warning:entries.length!==drafts.length?'Some proposals could not be read; original storage is preserved.':null,raw};
+  }catch {return {drafts:[],warning:'Local proposals unavailable or corrupted; original storage is preserved.',raw};}
 }
 export const readDrafts = (store,codes) => readDraftState(store,codes).drafts;
-export function saveDrafts(store,drafts,codes) {
+export function saveDrafts(store,drafts,codes,expectedRaw=undefined) {
   if(!store)throw Error('Browser storage unavailable');
   if(drafts.length>MAX_DRAFTS||drafts.some(p=>!validateProposal(p,codes))||new Set(drafts.map(p=>p.building_code)).size!==drafts.length)throw Error('Invalid proposals');
+  if(expectedRaw!==undefined&&store.getItem(DRAFT_STORAGE_KEY)!==expectedRaw)throw Error('Proposals changed in another tab. Copy your preview coordinates and reload before retrying; newer data was preserved.');
   // Back up unreadable or partially rejected legacy bytes BEFORE overwriting them.
   const current=readDraftState(store,codes);
   if(current.warning) {

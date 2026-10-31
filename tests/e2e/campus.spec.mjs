@@ -8,7 +8,6 @@ async function fixture(page,{cdnFailure=false,dataFailure=false}={}) {
   const url=new URL(route.request().url());
   if(url.origin===origin) {
    if(dataFailure&&url.pathname.endsWith('/data/buildings.json'))return route.fulfill({status:503,body:'unavailable'});
-   if(url.pathname.startsWith('/KMUTT-OpenMap/'))return route.continue({url:origin+url.pathname.slice('/KMUTT-OpenMap'.length)+url.search});
    return route.continue();
   }
   if(url.hostname==='unpkg.com') {
@@ -94,4 +93,49 @@ test('reduced motion, responsive panels and denied geolocation',async({page,isMo
  await page.setViewportSize({width:844,height:390});await searchSelect(page,'N10');
  const search=await page.locator('#search').boundingBox();expect(search.y).toBeGreaterThanOrEqual(70);expect(search.y+search.height).toBeLessThan(355);
  const tools=await page.locator('.map-tools').boundingBox(),detail=await page.locator('#detail').boundingBox();expect(tools.x+tools.width).toBeLessThanOrEqual(detail.x);expect(errors).toEqual([]);
+});
+
+test('stale tabs cannot overwrite newer local proposals',async({page,context})=>{
+ await fixture(page);await page.goto('/?building=N9');await expect(page.locator('#toggle3d')).toBeEnabled();
+ await page.locator('.contribution-detail summary').click();await page.locator('#map-propose').click();
+ await page.locator('#proposal-lat').fill('13.6541');await page.locator('#proposal-lng').fill('100.4941');await page.locator('#preview-coordinates').click();
+ const other=await context.newPage();await other.goto('/');
+ await other.evaluate(p=>localStorage.setItem('kmutt-openmap-proposals-v02',JSON.stringify([{...p,building_code:'N10'}])),legacy);
+ await page.locator('#confirm-mapping').click();
+ expect(await other.evaluate(()=>JSON.parse(localStorage.getItem('kmutt-openmap-proposals-v02')).map(p=>p.building_code))).toEqual(['N10']);
+ await expect(page.locator('#toast')).toContainText('บันทึกไม่สำเร็จ');
+ await expect(page.locator('#map-editor-banner')).toBeVisible();
+});
+
+test('map recovery preserves the selected theme',async({page})=>{
+ await fixture(page);await page.goto('/?building=N9');await expect(page.locator('#toggle3d')).toBeEnabled();
+ await page.locator('#theme-toggle').click();await expect(page.locator('#theme-toggle')).toBeEnabled();
+ await page.locator('#toggle3d').click();
+ await page.evaluate(()=>window.__map.fire('error',{error:new Error('Temporary tile failure')}));
+ await page.locator('#retry-map').click();await expect(page.locator('#toggle3d')).toBeEnabled();
+ expect(await page.evaluate(()=>window.__map.getStyle().layers.find(l=>l.id==='background').paint['background-color'])).toBe('#172b35');
+ await expect(page.locator('#theme-toggle')).toHaveAttribute('aria-pressed','true');
+ expect(await page.evaluate(()=>window.__map.getPitch())).toBe(0);
+ expect(await page.evaluate(()=>window.__map.getLayoutProperty('campus-3d','visibility'))).toBe('none');
+});
+
+test('unavailable optional data cannot stall the map or catalog',async({page})=>{
+ await fixture(page);
+ await page.route('**/data/places.geojson',()=>new Promise(()=>{}));
+ await page.goto('/');await expect(page.locator('.place')).toHaveCount(35);
+ await expect(page.locator('#toggle3d')).toBeEnabled();
+});
+
+test('selected markers remain clear of panels on short portrait and landscape screens',async({page})=>{
+ await fixture(page);await page.emulateMedia({reducedMotion:'reduce'});
+ for(const viewport of [{width:360,height:640},{width:844,height:390}]){
+  await page.setViewportSize(viewport);await page.goto('/?building=N10');await expect(page.locator('#toggle3d')).toBeEnabled();
+  await expect.poll(()=>page.evaluate(()=>{
+   const pin=document.querySelector('.selected-pin')?.getBoundingClientRect();if(!pin)return false;
+   return ['.map-tools','#detail','.sidebar','.maplibregl-ctrl-top-left'].every(selector=>{
+    const r=document.querySelector(selector).getBoundingClientRect();
+    return pin.right<=r.left||pin.left>=r.right||pin.bottom<=r.top||pin.top>=r.bottom;
+   });
+  })).toBe(true);
+ }
 });

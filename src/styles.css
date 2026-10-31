@@ -96,3 +96,5 @@ kbd{color:#9bb4c1;border:1px solid #4a6470;border-radius:4px;padding:2px 6px;fon
 @media(max-width:900px) and (min-width:671px){.maplibregl-ctrl-top-left{left:290px}}
 @media(max-width:670px){.maplibregl-ctrl-top-left{left:0;top:20px}.maplibregl-ctrl-bottom-right{top:0;bottom:auto;max-width:100%}.maplibregl-ctrl-attrib{margin-top:0!important}.map-tools{top:90px}.detail{bottom:134px;max-height:min(43dvh,calc(100dvh - 360px))}}
 @media(max-height:540px) and (max-width:900px){.maplibregl-ctrl-top-left{left:280px;top:12px}.detail{bottom:45px;max-height:calc(100dvh - 130px)}}
+/* Leave space for a complete selected marker between tools and the scrollable card. */
+@media(max-width:670px) and (min-height:541px){.detail{max-height:min(43dvh,calc(100dvh - 460px))}}

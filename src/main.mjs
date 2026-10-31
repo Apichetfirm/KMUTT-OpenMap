@@ -1,7 +1,7 @@
 import {searchBuildings,validCoordinates} from './search.mjs';
 import {validateCatalog,validateFootprints,safeURL,coverage} from './data.mjs';
 import {HEIGHT_PRESETS} from './heights.mjs';
-import {readDraftState,saveDrafts,putDraft,proposalFor,exportPackage,RECOVERY_STORAGE_KEY} from './mapping.mjs';
+import {readDraftState,saveDrafts,putDraft,proposalFor,exportPackage,DRAFT_STORAGE_KEY,RECOVERY_STORAGE_KEY} from './mapping.mjs';
 import {buildingURL,sharedBuilding} from './sharing.mjs';
 import {PLACE_CATEGORIES,validatePlaces,filterPlaces,openingStatus} from './places.mjs';
 import {HOME,STYLES,installMapLayers,applyHeights,updateSelection,cameraOptions} from './map.mjs';
@@ -10,7 +10,7 @@ const $=id=>document.getElementById(id);
 const emptyCollection=()=>({type:'FeatureCollection',features:[]});
 const state={official:[],drafts:[],results:[],selected:null,filter:'all',map:null,maplibre:null,mapReady:false,
   selectedMarker:null,previewMarker:null,locationMarker:null,is3d:true,dark:false,heightMode:'guarded',
-  mapping:null,pending:null,footprints:emptyCollection(),places:[],visiblePlaces:[],storage:null,returnFocus:null};
+  mapping:null,pending:null,footprints:emptyCollection(),places:[],visiblePlaces:[],storage:null,draftRevision:null,returnFocus:null};
 const codes=()=>state.official.map(b=>b.id);
 const mobile=()=>matchMedia('(max-width:670px)').matches;
 const reducedMotion=()=>matchMedia('(prefers-reduced-motion:reduce)').matches;
@@ -54,6 +54,15 @@ function renderList() {
 function renderDraftStatus() {
   $('draft-count').textContent=String(state.drafts.length);$('export-drafts').disabled=!state.drafts.length;
   try {$('export-recovery').classList.toggle('hidden',!state.storage?.getItem(RECOVERY_STORAGE_KEY));}catch{}
+}
+async function persistDrafts(next) {
+  // Serialize snapshot comparison and write across tabs; never fall back to an unsafe write.
+  if(!navigator.locks)throw Error('การบันทึกอย่างปลอดภัยต้องใช้เบราว์เซอร์ที่รองรับ Web Locks บน HTTPS หรือ localhost');
+  const revision=state.draftRevision;
+  await navigator.locks.request(DRAFT_STORAGE_KEY,()=>{
+    saveDrafts(state.storage,next,codes(),revision);
+    state.drafts=next;state.draftRevision=JSON.stringify(next);
+  });
 }
 function showSource(container,label,url) {
   const link=element('a','',label),href=safeURL(url);
@@ -100,9 +109,13 @@ function closeDetail() {
 function focusBuilding(b) {
   if(!state.mapReady||!validCoordinates(b?.coordinates))return;
   const options=cameraOptions(b.coordinates,{is3d:state.is3d,reducedMotion:reducedMotion(),mobile:mobile()});
-  if(mobile()&&!$('detail').classList.contains('hidden')) {
+  if(!$('detail').classList.contains('hidden')) {
     const map=$('map').getBoundingClientRect(),detail=$('detail').getBoundingClientRect(),tools=document.querySelector('.map-tools').getBoundingClientRect();
-    options.padding={left:12,right:12,top:Math.max(20,tools.bottom-map.top+12),bottom:Math.max(120,map.bottom-detail.top+12)};
+    const sidebar=document.querySelector('.sidebar').getBoundingClientRect();
+    // The selected marker is bottom-anchored: reserve its height above the camera target.
+    options.padding={left:mobile()?12:sidebar.right-map.left+12,
+      right:mobile()?12:map.right-detail.left+12,top:Math.max(20,tools.bottom-map.top+60),
+      bottom:mobile()?Math.max(120,map.bottom-detail.top+12):20};
   }
   state.map.flyTo(options);
 }
@@ -165,7 +178,7 @@ async function initMap() {
   mapPromise=(async()=>{
     try {
       state.maplibre=await import('https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.mjs');
-      const map=new state.maplibre.Map({container:'map',style:STYLES.light,center:HOME,zoom:16,pitch:48,bearing:-20,minZoom:11,maxZoom:20,
+      const map=new state.maplibre.Map({container:'map',style:state.dark?STYLES.dark:STYLES.light,center:HOME,zoom:16,pitch:state.is3d?48:0,bearing:-20,minZoom:11,maxZoom:20,
         canvasContextAttributes:{antialias:!mobile()},attributionControl:true});state.map=map;
       map.on('click',onMapClick);
       map.on('style.load',()=>{
@@ -194,18 +207,22 @@ async function loadData() {
     const data=await fetchJSON('./data/buildings.json'),errors=validateCatalog(data.buildings);
     if(errors.length)throw Error(errors.join('; '));state.official=data.buildings;
     try {state.storage=localStorage;}catch{state.storage=null;}
-    const saved=readDraftState(state.storage,codes());state.drafts=saved.drafts;
+    const saved=readDraftState(state.storage,codes());state.drafts=saved.drafts;state.draftRevision=saved.raw;
     if(saved.warning||!state.storage){$('storage-warning').textContent='ข้อเสนอในเครื่องอ่านไม่ได้ ข้อมูลเดิมจะถูกเก็บไว้เมื่อบันทึกใหม่ หรือส่งออกสำเนากู้คืนได้';$('storage-warning').classList.remove('hidden');}
     $('count-total').textContent=String(state.official.length);renderList();renderDraftStatus();performance.mark('openmap-catalog-ready');
     const shared=sharedBuilding(location.href,state.official);
     if(shared.building)select(shared.building,{updateURL:false});else if(shared.requested)toast('ไม่พบรหัสอาคารในลิงก์: '+shared.requested);
-    const optional=await Promise.allSettled([fetchJSON('./data/building-footprints.geojson'),fetchJSON('./data/places.geojson')]);
-    if(optional[0].status==='fulfilled'&&!validateFootprints(optional[0].value,state.official).length)state.footprints=optional[0].value;
-    else toast('ข้อมูลรูปทรงอาคารไม่พร้อม จึงยังไม่แสดงรูปทรงที่จับคู่กับรหัส');
-    if(optional[1].status==='fulfilled'&&!validatePlaces(optional[1].value,codes()).length)state.places=optional[1].value.features;
-    else $('poi-empty').textContent='โหลดข้อมูลบริการไม่ได้ โปรดลองใหม่ภายหลัง';
     const report=coverage(state.official,state.footprints);$('coverage').textContent=`${report.total} อาคาร · ${report.coordinates} พิกัดโดยประมาณ · ${report.unmapped} ยังไม่ทราบตำแหน่ง`;
-    refreshPlaces();await initMap();
+    // Optional collections must never block the core map, or each other.
+    initMap();
+    fetchJSON('./data/building-footprints.geojson').then(data=>{
+      if(validateFootprints(data,state.official).length)throw Error('Invalid footprints');
+      state.footprints=data;syncMap();
+    }).catch(()=>toast('ข้อมูลรูปทรงอาคารไม่พร้อม จึงยังไม่แสดงรูปทรงที่จับคู่กับรหัส'));
+    fetchJSON('./data/places.geojson').then(data=>{
+      if(validatePlaces(data,codes()).length)throw Error('Invalid places');
+      state.places=data.features;refreshPlaces();
+    }).catch(()=>{$('poi-empty').textContent='โหลดข้อมูลบริการไม่ได้ โปรดลองใหม่ภายหลัง';$('poi-empty').classList.remove('hidden');});
   }catch(error) {
     $('map-status').textContent='โหลดข้อมูลอาคารไม่ได้';$('empty').textContent='โหลดรายชื่อไม่สำเร็จ โปรดตรวจการเชื่อมต่อแล้วลองใหม่';$('empty').classList.remove('hidden');$('retry-data').classList.remove('hidden');
   }
@@ -241,19 +258,19 @@ function setupEvents() {
   });
   $('preview-coordinates').addEventListener('click',()=>previewPoint([Number($('proposal-lng').value),Number($('proposal-lat').value)]));
   $('cancel-mapping').addEventListener('click',()=>{cancelMapping();if(state.selected){$('detail').classList.remove('hidden');$('map-propose').focus();}});
-  $('proposal-form').addEventListener('submit',event=>{
+  $('proposal-form').addEventListener('submit',async event=>{
     event.preventDefault();if(!state.pending)return;
     try {
       // Changing inputs after preview must require another preview.
       if(Number($('proposal-lng').value)!==state.pending.coordinates[0]||Number($('proposal-lat').value)!==state.pending.coordinates[1])throw Error('โปรดดูตัวอย่างพิกัดใหม่ก่อนยืนยัน');
       const proposal={...state.pending,evidence:$('proposal-evidence').value.trim().slice(0,2000)||state.pending.evidence};
-      const next=putDraft(state.drafts,proposal,codes());saveDrafts(state.storage,next,codes());state.drafts=next;
+      const next=putDraft(state.drafts,proposal,codes());await persistDrafts(next);
       cancelMapping();renderDraftStatus();syncMap();renderDetail();$('detail').classList.remove('hidden');toast('บันทึกข้อเสนอในเครื่องแล้ว · ตำแหน่งเผยแพร่ยังรอตรวจสอบ');
     }catch(error){toast('บันทึกไม่สำเร็จ: '+error.message);}
   });
   for(const id of ['proposal-lng','proposal-lat'])$(id).addEventListener('input',()=>{$('confirm-mapping').disabled=true;});
-  $('map-delete').addEventListener('click',()=>{
-    try {const next=state.drafts.filter(d=>d.building_code!==state.selected?.id);saveDrafts(state.storage,next,codes());state.drafts=next;renderDraftStatus();renderDetail();syncMap();toast('ลบข้อเสนอในเครื่องแล้ว');}
+  $('map-delete').addEventListener('click',async()=>{
+    try {const next=state.drafts.filter(d=>d.building_code!==state.selected?.id);await persistDrafts(next);renderDraftStatus();renderDetail();syncMap();toast('ลบข้อเสนอในเครื่องแล้ว');}
     catch(error){toast('ลบไม่สำเร็จ: '+error.message);}
   });
   $('view-proposal').addEventListener('click',()=>{
@@ -291,7 +308,7 @@ function setupEvents() {
     const url=new URL('https://github.com/Apichetfirm/KMUTT-OpenMap/issues/new');url.searchParams.set('template','place-data.yml');window.open(url,'_blank','noopener,noreferrer');
   });
   $('mobile-drawer').addEventListener('click',()=>setDrawer(!document.querySelector('.sidebar').classList.contains('collapsed')));
-  window.addEventListener('resize',()=>{setDrawer(document.querySelector('.sidebar').classList.contains('collapsed'));state.map?.resize();});
+  window.addEventListener('resize',()=>{setDrawer(document.querySelector('.sidebar').classList.contains('collapsed'));state.map?.resize();focusBuilding(state.selected);});
   window.addEventListener('popstate',()=>{
     const shared=sharedBuilding(location.href,state.official);
     if(shared.building)select(shared.building,{updateURL:false});else {state.selected=null;$('detail').classList.add('hidden');renderSelectedMarker();updateSelection(state.map,null);renderList();if(shared.requested)toast('ไม่พบรหัสอาคารในลิงก์');}

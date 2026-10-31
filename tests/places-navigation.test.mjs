@@ -68,6 +68,14 @@ test('storage quota/security failures do not silently save or overwrite recovery
  assert.ok(readDraftState({getItem:()=>{throw Error('Denied');}},['N9']).warning);
  const store=storage('{broken');store.setItem(RECOVERY_STORAGE_KEY,'previous broken data');assert.throws(()=>saveDrafts(store,[proposal()],['N9']),/Recovery backup/);assert.equal(store.getItem(DRAFT_STORAGE_KEY),'{broken');
 });
+
+test('a stale storage revision cannot replace or delete newer drafts',()=>{
+ const store=storage();
+ const newer=JSON.stringify([{...proposal(),building_code:'N10'}]);store.setItem(DRAFT_STORAGE_KEY,newer);
+ assert.throws(()=>saveDrafts(store,[proposal()],['N9','N10'],null),/another tab/i);
+ assert.throws(()=>saveDrafts(store,[],['N9','N10'],null),/another tab/i);
+ assert.equal(store.getItem(DRAFT_STORAGE_KEY),newer);
+});
 test('building intersections need explicit surveyed passages and identical endpoints are handled',()=>{
  const footprint={id:'test-building',geometry:{type:'Polygon',coordinates:[[[100.4934,13.6519],[100.4936,13.6519],[100.4936,13.6521],[100.4934,13.6521],[100.4934,13.6519]]]}};
  assert.ok(validateGraph(graph,{footprints:[footprint]}).some(e=>e.includes('building crossing')));
