@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {validateStyleMin} from '@maplibre/maplibre-gl-style-spec';
+import {validateStyleMin,createExpression} from '@maplibre/maplibre-gl-style-spec';
+import {extrusionHeight,numericVisualHeight} from '../src/heights.mjs';
 import {installMapLayers,cameraOptions} from '../src/map.mjs';
 function fakeMap() {
  const sources=new Map(),style={version:8,glyphs:'https://example.org/{fontstack}/{range}.pbf',sources:{basemap:{type:'vector',url:'https://tiles.openfreemap.org/planet'}},layers:[{id:'base-3d',type:'fill-extrusion',source:'basemap','source-layer':'building'}]};
@@ -21,4 +22,14 @@ test('repeated layer installation reuses basemap source and leaves one visible e
 test('camera options respect reduced motion and allow room for panels',()=>{
  const options=cameraOptions([100.493,13.652],{reducedMotion:true,mobile:true});
  assert.equal(options.duration,0);assert.ok(options.padding.bottom>200);assert.deepEqual(options.center,[100.493,13.652]);
+});
+
+test('real MapLibre height expression preserves missing-value fallback and matches numeric policy',()=>{
+ for(const mode of ['guarded','osm']) {
+  const expression=createExpression(extrusionHeight(mode),'layers[0].paint.fill-extrusion-height');assert.equal(expression.result,'success');
+  for(const height of [undefined,null,-2,0,12,'18','bad',100]) {
+   const properties=height===undefined?{}:{render_height:height};
+   assert.equal(expression.value.evaluate({zoom:16},{type:3,properties}),numericVisualHeight(height,mode));
+  }
+ }
 });

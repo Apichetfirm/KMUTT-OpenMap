@@ -6,7 +6,7 @@ Feature branch: `feat/campus-map-v0.3`, based on `55cbef26cf2dea4e0c3fb336b6f517
 
 ## Implementation summary
 
-Students and visitors can find every original building, share a repository-path-safe URL and see location/height uncertainty and source links. Camera selection is replayed after map readiness, remains visible beside mobile panels, respects reduced motion and never invents an unmapped destination. Map rendering reuses a single extrusion/source, bounds/interpolates bases consistently, adds collision-aware labels and preserves selection across style reloads. GPS, CDN, JSON and storage failures have useful separate states.
+Students and visitors can find every original building, share a repository-path-safe URL and see location/height uncertainty and source links. Camera selection is replayed after map readiness, remains visible beside mobile panels, respects reduced motion and never invents an unmapped destination. Map rendering reuses a single extrusion/source, bounds/interpolates bases consistently, preserves the four-metre visual fallback for absent tile values, adds collision-aware labels and preserves selection across style reloads. GPS, CDN, JSON and storage failures have useful separate states.
 
 The contribution workflow now previews before confirming, accepts evidence notes, edits/deletes/exports private drafts, retains legacy storage and protects unreadable bytes. Drafts never replace published coordinates or external-direction destinations. This fixes a material data-integrity problem in the baseline.
 
@@ -37,7 +37,7 @@ Detailed model, evidence and limitations: [DATA-MODEL](DATA-MODEL.md), [ARCHITEC
 
 ## Tests and data integrity
 
-32 unit/data/map integration tests and 12 desktop/mobile Playwright regressions pass locally. Syntax, data validation, MapLibre style-spec validation, dependency audit and static build pass. Live Chromium covers overview/selection, real tiles, day/night, 2D, mobile proposal preview and landscape; no app JS errors, with documented provider-style warnings. Raw measurements and 10 actual screenshots are linked in [TEST-RESULTS](TEST-RESULTS.md).
+33 unit/data/map integration tests and 12 desktop/mobile Playwright regressions pass locally. Syntax, data validation, MapLibre style-spec validation, dependency audit and static build pass. Live Chromium covers overview/selection, real tiles, day/night, 2D, mobile proposal preview and landscape; no app JS errors, with documented provider-style warnings. Raw measurements and 10 actual screenshots are linked in [TEST-RESULTS](TEST-RESULTS.md).
 
 Counts: 35 buildings; 7 approximate coordinates; 0 accepted/verified footprint associations; 3 candidate associations; 28 unmapped buildings; 0 measured heights or published building-specific estimates; 0 verified entrances/routes; 1 approximate POI; 0 verified POIs or documented schedules. Basemap tile rendering is not counted as measured height coverage. Tests do not certify real-world information.
 

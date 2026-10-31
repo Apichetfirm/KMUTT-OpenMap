@@ -6,7 +6,7 @@ export const HEIGHT_PRESETS = Object.freeze({
 });
 export function extrusionHeight(mode='guarded') {
   const p=HEIGHT_PRESETS[mode];if(!p)throw Error(`Unsupported height mode: ${mode}`);
-  const value=['max',0,['to-number',['get','render_height'],p.floor]];
+  const value=['max',0,['to-number',['coalesce',['get','render_height'],p.floor],p.floor]];
   return p.max===null?value:['min',p.max,value];
 }
 export function extrusionBase(mode='guarded') {
@@ -16,11 +16,12 @@ export function zoomHeight(expression) {
   return ['interpolate',['linear'],['zoom'],14.8,0,15.6,expression];
 }
 export function extrusionColor() {
-  return ['interpolate',['linear'],['to-number',['get','render_height'],4],0,'#c0d4cd',12,'#9fbbb3',30,'#7da49d',55,'#6e9499',110,'#628692'];
+  return ['interpolate',['linear'],['to-number',['coalesce',['get','render_height'],4],4],0,'#c0d4cd',12,'#9fbbb3',30,'#7da49d',55,'#6e9499',110,'#628692'];
 }
 export function numericVisualHeight(meters,mode='guarded') {
   const p=HEIGHT_PRESETS[mode];if(!p)throw Error(`Unsupported height mode: ${mode}`);
-  const n=typeof meters==='number'&&Number.isFinite(meters)&&meters>=0?meters:p.floor;
+  const parsed=meters===null||meters===undefined?p.floor:['number','string','boolean'].includes(typeof meters)?Number(meters):NaN;
+  const n=Number.isFinite(parsed)?Math.max(0,parsed):p.floor;
   return p.max===null?n:Math.min(n,p.max);
 }
 export const HEIGHT_KINDS=['measured','official-floors','osm-height','osm-levels','documented-estimate','visual-fallback'];

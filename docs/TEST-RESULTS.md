@@ -11,7 +11,7 @@ Cloud Linux, Node 24.19.0, Chromium 154.0.8037.57, headless software WebGL. Desk
 | Check | Result / scope |
 | --- | --- |
 | Baseline | 11/11 tests and syntax checks passed at `55cbef2` |
-| Current unit/data/map integration | 32/32 pass |
+| Current unit/data/map integration | 33/33 pass |
 | Browser regression fixtures | 12/12 pass across desktop/mobile; targeted landscape/motion checks rerun after final layout adjustment |
 | Syntax / data / static build | Pass: `npm run check`, `npm run validate-data`, `npm run build` |
 | Dependency check | `npm audit --omit=optional`: 0 vulnerabilities reported |
