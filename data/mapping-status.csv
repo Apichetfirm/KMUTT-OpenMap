@@ -1,0 +1,36 @@
+id,name_th,zone,mapped,verified,coordinates_quality
+S1,"อาคารวิศวกรรมเครื่องกล 4",south,false,false,unverified
+S2,"อาคารจอดรถ",south,false,false,unverified
+S3,"อาคารสถาบันนวัตกรรมการเรียนรู้เฉลิมพระเกียรติ 80 พรรษา มูลนิธิไทยคม",south,true,false,approximate-third-party
+S4,"อาคารวิศววัฒนะ",south,false,false,unverified
+S5,"บ้านธรรมรักษา 2",south,false,false,unverified
+S6,"บ้านธรรมรักษา 1",south,false,false,unverified
+S7,"อาคารพัฒนาเด็กเล็ก มจธ.",south,false,false,unverified
+S8,"อาคารโรงประลองเทคโนโลยีและวัสดุ",south,false,false,unverified
+S9,"อาคารเรียนและปฏิบัติการคณะพลังงาน สิ่งแวดล้อมและวัสดุ",south,false,false,unverified
+S10,"อาคารสังคมสีเขียว มจธ.",south,false,false,unverified
+S11,"อาคารเรียนรวม 5",south,false,false,unverified
+S12,"อาคารเรียนรวม 4",south,false,false,unverified
+S13,"อาคารเรียนรวม 3",south,false,false,unverified
+S14,"อาคารพระจอมเกล้าราชานุสรณ์ 190 ปี",south,false,false,unverified
+S15,"อาคารภาควิชาวิศวกรรมเคมี",south,false,false,unverified
+N1,"อาคารศูนย์ต้อนรับ",north,false,false,unverified
+N2,"อาคารสำนักงานอธิการบดี",north,false,false,unverified
+N3,"อาคารภาควิชาเคมี",north,false,false,unverified
+N4,"อาคารภาควิชาฟิสิกส์ - คณิตศาสตร์",north,false,false,unverified
+N5,"อาคารศูนย์เครื่องมือวิทยาศาสตร์เพื่อมาตรฐานและอุตสาหกรรม",north,true,false,approximate-third-party
+N6,"อาคารภาควิชาจุลชีววิทยา",north,false,false,unverified
+N7,"อาคารปฏิบัติการพื้นฐานทางวิทยาศาสตร์",north,false,false,unverified
+N8,"สถานีสูบน้ำ",north,false,false,unverified
+N9,"อาคารสถาบันวิทยาการหุ่นยนต์ภาคสนาม",north,true,false,approximate-third-party
+N10,"อาคารสำนักหอสมุด",north,true,false,approximate-third-party
+N11,"อาคารคณะเทคโนโลยีสารสนเทศ",north,true,false,approximate-third-party
+N12,"อาคารอเนกประสงค์",north,false,false,unverified
+N13,"อาคาร Workshop & Greenhouse",north,false,false,unverified
+N14,"อาคารไฟฟ้าแรงสูง",north,false,false,unverified
+N15,"อาคารเรียนและปฏิบัติทางศิลปศาสตร์",north,false,false,unverified
+N16,"อาคารการเรียนรู้พหุวิทยาการ",north,false,false,unverified
+N17,"อาคารเรียนรวม 2",north,true,false,approximate-third-party
+N18,"อาคารปฏิบัติการทางวิศวกรรมอุตสาหการ 4",north,false,false,unverified
+N19,"อาคารปฏิบัติการทางวิศวกรรมอุตสาหการ 5",north,false,false,unverified
+N20,"อาคารเรียนรวม 1",north,true,false,approximate-third-party
