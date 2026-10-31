@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.0",
+  "schema_version": "0.3.0",
   "campus": "KMUTT Bangmod",
   "notes": "Official names/codes; positions are approximate third-party centroids, not field-verified entrances.",
   "name_sources": [
@@ -27,7 +27,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": true,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "S2",
@@ -44,7 +55,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "S3",
@@ -64,7 +86,26 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "approximate",
+        "review_status": "needs-independent-review",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": {
+          "source": "https://bangkok.worldplaces.me/th/review/86915165-innovative-learning-institute-li-80.html",
+          "license": "Legacy reference only; redistribution permission not established",
+          "method": "public-map-reference",
+          "checked_on": "2026-11-01",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "Existing approximate reference retained; source not independently field-verified; not an entrance."
+        },
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "S4",
@@ -81,7 +122,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "S5",
@@ -98,7 +150,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "S6",
@@ -115,7 +178,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": true,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "S7",
@@ -132,7 +206,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "S8",
@@ -149,7 +234,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "S9",
@@ -166,7 +262,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "S10",
@@ -183,7 +290,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "S11",
@@ -202,7 +320,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "S12",
@@ -221,7 +350,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "S13",
@@ -240,7 +380,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "S14",
@@ -257,7 +408,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "S15",
@@ -274,7 +436,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "N1",
@@ -291,7 +464,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "N2",
@@ -308,7 +492,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "N3",
@@ -325,7 +520,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "N4",
@@ -342,7 +548,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "N5",
@@ -362,7 +579,26 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "approximate",
+        "review_status": "needs-independent-review",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": {
+          "source": "https://bangkok.worldplaces.me/th/review/193660603-kmutt.html",
+          "license": "Legacy reference only; redistribution permission not established",
+          "method": "public-map-reference",
+          "checked_on": "2026-11-01",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "Existing approximate reference retained; source not independently field-verified; not an entrance."
+        },
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "N6",
@@ -379,7 +615,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "N7",
@@ -396,7 +643,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "N8",
@@ -413,7 +671,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "N9",
@@ -437,7 +706,26 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "approximate",
+        "review_status": "needs-independent-review",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": {
+          "source": "https://bangkok.worldplaces.me/th/review/40052753.html",
+          "license": "Legacy reference only; redistribution permission not established",
+          "method": "public-map-reference",
+          "checked_on": "2026-11-01",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "Existing approximate reference retained; source not independently field-verified; not an entrance."
+        },
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "N10",
@@ -461,7 +749,26 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "approximate",
+        "review_status": "needs-independent-review",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/311879209",
+          "license": "ODbL-1.0",
+          "method": "public-map-reference",
+          "checked_on": "2026-11-01",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "Existing approximate reference retained; source not independently field-verified; not an entrance."
+        },
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "N11",
@@ -485,7 +792,26 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "approximate",
+        "review_status": "needs-independent-review",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": {
+          "source": "https://bangkok.worldplaces.me/review/73405899-sit-school-of-information-technology.html",
+          "license": "Legacy reference only; redistribution permission not established",
+          "method": "public-map-reference",
+          "checked_on": "2026-11-01",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "Existing approximate reference retained; source not independently field-verified; not an entrance."
+        },
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "N12",
@@ -502,7 +828,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "N13",
@@ -519,7 +856,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "N14",
@@ -536,7 +884,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "N15",
@@ -553,7 +912,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "N16",
@@ -573,7 +943,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": 15,
-      "floor_count_source": "https://sites.google.com/mail.kmutt.ac.th/learning-exchange/"
+      "floor_count_source": "https://sites.google.com/mail.kmutt.ac.th/learning-exchange/",
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "N17",
@@ -595,7 +976,26 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "approximate",
+        "review_status": "needs-independent-review",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/420534143",
+          "license": "ODbL-1.0",
+          "method": "public-map-reference",
+          "checked_on": "2026-11-01",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "Existing approximate reference retained; source not independently field-verified; not an entrance."
+        },
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "N18",
@@ -612,7 +1012,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "N19",
@@ -629,7 +1040,18 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "unverified",
+        "review_status": "unmatched",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": null,
+        "last_verified_on": null
+      },
+      "name_conflict": true,
+      "height_evidence": null,
+      "category": null
     },
     {
       "id": "N20",
@@ -651,7 +1073,26 @@
       "name_checked_on": "2026-11-01",
       "site_surveyed": false,
       "floor_count": null,
-      "floor_count_source": null
+      "floor_count_source": null,
+      "mapping": {
+        "confidence": "approximate",
+        "review_status": "needs-independent-review",
+        "footprint_id": null,
+        "centroid": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/436983061",
+          "license": "ODbL-1.0",
+          "method": "public-map-reference",
+          "checked_on": "2026-11-01",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "Existing approximate reference retained; source not independently field-verified; not an entrance."
+        },
+        "last_verified_on": null
+      },
+      "name_conflict": false,
+      "height_evidence": null,
+      "category": null
     }
   ]
 }

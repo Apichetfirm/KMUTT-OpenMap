@@ -1,10 +1,17 @@
-# Building mapping data
+# Building and campus data
 
-- `buildings.json`: 35 campus building codes and multilingual names. **7 approximate points only; none field verified.**
-- `buildings-geocoded.geojson`: generated map reference points. These are NOT surveyed entrances.
-- `mapping-status.csv`: work queue for field survey. Some official sources have conflicting names.
-- `walkways.geojson`: intentionally empty. No verified pedestrian routes. Do not display a routing claim.
+Initiated by Firm Impulse · FIBO FRAB11.
 
-Information about students, access control, restricted areas or private records must never be committed.
-Coordinates/height estimates from public maps are **not** substitutes for field survey.
-Read `../DATA-LICENSES.md` before adding geo datasets.
+| File | Role and status |
+| --- | --- |
+| `buildings.json` | Canonical 35-code inventory, seven approximate references, separate name/mapping/height evidence. |
+| `buildings-geocoded.geojson` | Generated approximate point view. None is an entrance. |
+| `mapping-status.csv` | Generated review work queue for all codes, including three candidate footprint IDs. |
+| `building-footprint-candidates.geojson` | Three OSM polygons (N10/N17/N20), independent code-association review pending; ODbL. |
+| `building-footprints.geojson` | Accepted associations only; currently empty. |
+| `height-overrides.json` | Provenance-aware override schema; currently empty. |
+| `places.geojson` | One approximate OSM library point; no documented hours or accessibility. |
+| `pedestrian-graph.json`, `walkways.geojson` | Intentionally empty: no verified pedestrian network or entrances. |
+| `evidence/source-review.json` | Source investigation outcomes; retrieval is distinct from field verification. |
+
+Regenerate derived views with `npm run generate-data`. Validate with `npm run validate-data`. Refresh named OSM candidates with `node scripts/import-osm.mjs`; never join by proximity alone. See [data model](../docs/DATA-MODEL.md), [coverage](../docs/DATA-STATUS.md) and [separate licenses](../DATA-LICENSES.md). No private campus information belongs in this database.

@@ -1,0 +1,10 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {validCoordinates} from '../src/search.mjs';
+const root=new URL('../data/',import.meta.url),read=async name=>JSON.parse(await readFile(new URL(name,root)));
+const {buildings}=await read('buildings.json'),candidates=await read('building-footprint-candidates.geojson');
+const points={type:'FeatureCollection',features:buildings.filter(b=>validCoordinates(b.coordinates)).map(b=>({type:'Feature',properties:{id:b.id,name_th:b.name_th,name_en:b.name_en,location_quality:b.location_quality,location_source:b.location_source,confidence:b.mapping.confidence,review_status:b.mapping.review_status},geometry:{type:'Point',coordinates:b.coordinates}}))};
+await writeFile(new URL('buildings-geocoded.geojson',root),JSON.stringify(points,null,2)+'\n');
+const quote=value=>'"'+String(value??'').replaceAll('"','""')+'"';
+const rows=[['building_code','name_th','name_en','location_confidence','coordinate_status','accepted_footprint_id','candidate_footprint_id','last_verified_on'],...buildings.map(b=>[b.id,b.name_th,b.name_en,b.mapping.confidence,b.coordinates?'approximate-reference':'unmapped',b.mapping.footprint_id,candidates.features.find(f=>f.properties.building_code===b.id)?.id,b.mapping.last_verified_on])];
+await writeFile(new URL('mapping-status.csv',root),'\uFEFF'+rows.map(row=>row.map(quote).join(',')).join('\n')+'\n');
+console.log('Regenerated point and coverage views from catalog; no new locations inferred.');
