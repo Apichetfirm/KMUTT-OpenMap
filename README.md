@@ -41,7 +41,7 @@ python -m http.server 8080
 
 Windows: `START_WINDOWS.bat`. Opening `index.html` directly as `file://` cannot fetch JSON.
 
-Tests/build tooling uses Node >=18 (CI: Node 22), pinned Playwright and MapLibre dev dependencies:
+Tests/build tooling uses Node >=20 (CI: Node 22), pinned Playwright and MapLibre dev dependencies:
 
 ```sh
 npm ci

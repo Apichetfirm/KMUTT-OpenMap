@@ -14,7 +14,7 @@
     "generate-data": "node scripts/generate-data.mjs"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "license": "MIT",
   "author": "Firm Impulse \u00b7 FIBO FRAB11",
