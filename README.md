@@ -8,7 +8,7 @@
 
 **สถานะ:** Open-source student preview — building locations/heights are NOT field-verified; not an official KMUTT service.
 
-## v0.2 — ปรับความสูง + ระบบจับคู่รหัสอาคาร (2026-11-01)
+## v0.2.1 — ปรับความสูง + ระบบจับคู่รหัสอาคาร (2026-11-01)
 
 - ป้องกันการวาดอาคาร extrusion ซ้อนกับเลเยอร์ 3D ที่อาจติดมาใน OpenFreeMap Liberty style
 - มี **2 โหมดความสูงสำหรับแสดงภาพเท่านั้น**: ลดค่าความสูงมากผิดปกติให้ไม่เกิน 55 เมตร และความสูงดิบจาก OSM; **ไม่มีโหมดไหนเป็นข้อมูลรังวัด**
@@ -64,17 +64,14 @@ src/heights.mjs            3D visualization-only height presets
 src/styles.css             Responsive UI
 favicon.svg                Logo for the prototype
 data/buildings.json        35 official code/name pairs + 7 sourced approximate geocodes
-data/generate_catalog.py   Reproducible directory seed generator
 data/buildings-geocoded.geojson  7 sourced points, no invented shapes
 data/mapping-status.csv     Coverage matrix to guide field validation
-data/export_geojson.py       Regenerate point GeoJSON
 data/walkways.geojson      Empty intentionally — no field-verified paths yet
 docs/SPEC.md               Product specification / scope
 docs/DATA-STATUS.md       Provenance, conflicts, limitations
 docs/FIELD-SURVEY.md      Survey and QA process before routing
 docs/ROADMAP.md           Release gates and beta plan
-tests/catalog.test.mjs     Smoke/data/search tests
-tests/mapping.test.mjs     Visual height and draft proposal tests
+tests/project.test.mjs     11 smoke/data/search/height/mapping checks
 docs/HEIGHT-QA.md          What to verify to fix the visual height problem
 docs/PUBLISH-GITHUB.md     Recommended publishing and security steps
 .github/                    CI and issue templates
@@ -107,4 +104,4 @@ docs/PUBLISH-GITHUB.md     Recommended publishing and security steps
 
 ## Deployment
 
-This repository is published by Firm Impulse · FIBO FRAB11. For GitHub Pages, open Settings → Pages and configure deployment from `main` / root or use the Pages workflow if enabled.
+This repository is published by Firm Impulse · FIBO FRAB11. The source code, CI and deployment workflow are pushed to `main`. GitHub Pages needs a one-time repository setting: **Settings → Pages → Source: GitHub Actions**. Then re-run the failed **Deploy GitHub Pages** action. The preview URL will be https://apichetfirm.github.io/KMUTT-OpenMap/ once the workflow reports success. Read [Publish instructions](docs/PUBLISH-GITHUB.md).
