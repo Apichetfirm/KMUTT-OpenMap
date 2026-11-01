@@ -1,71 +1,82 @@
 # KMUTT OpenMap
 
-Open-source, community-driven 3D map **preview** for KMUTT Bangmod.
+Open-source, community-driven 3D campus map for KMUTT Bangmod.
 
 **Initiated by Firm Impulse · FIBO FRAB11**
 
-This is a student community project, **not an official KMUTT service**. GitHub owner: `Apichetfirm`; public project initiator: Firm Impulse.
+This is a student community project, **not an official KMUTT service**. Original application code is MIT licensed; imported geodata has separate licenses.
 
-## v0.3 community preview
+## v0.4 release candidate
 
-Independent review and release evidence are recorded in [INDEPENDENT-REVIEW.md](docs/INDEPENDENT-REVIEW.md); the original implementer handoff remains historical evidence.
+Search → inspect → find services → get supported directions → share. This branch is for independent review; it has not been merged or released.
 
-- Search every original building code and Thai/English name; punctuation and alias spacing are tolerated. FIBO → N9, หอสมุด → N10, LX → N16.
-- Share a building with `?building=N9`, including under `/KMUTT-OpenMap/`. The card states location uncertainty, sources, name conflicts and height evidence.
-- Map labels use zoom/collision management; selection has a persistent marker. Layer reuse, clamped extrusion bases, 2D/3D, day/night and reduced motion improve rendering reliability.
-- Mobile directory and details scroll separately; search remains reachable and camera framing leaves room for the selected point.
-- Local coordinate proposals have preview/confirm, evidence notes, edit/delete/export and recovery protection. Published coordinates never change automatically.
-  Saving requires HTTPS/localhost and a browser with Web Locks. A stale tab is refused rather than overwriting newer proposals; copy preview coordinates and reload to retry.
-- One sourced approximate library POI, category filters and tested Bangkok recorded-hours logic. Other service categories remain empty until evidence exists.
-- Tested pedestrian graph/Dijkstra foundation; real internal and accessible routes remain disabled because paths and entrances are unverified.
-- Catalog remains usable if map/CDN or local storage fails. GPS is requested only after user action and is neither stored nor sent to the project.
+- All original 35 building codes and URLs remain compatible. Thai/English names, abbreviations, partial matches and single English typos are searchable; exact codes rank first.
+- Source-aware building details and `?building=N9` links retain the GitHub Pages path. Unknown locations remain searchable and explicitly unresolved.
+- **73 sourced OSM services in Bangmod and nearby streets**, with name/category filters, independent detail cards, source dates, recorded hours, Google Maps walking directions, correction actions and `?poi=…` links. They are approximate records, not 73 verified/current businesses.
+- 18 named footprint candidates can be selected in the mapping editor. Dashed outlines and amber 3D previews disclose source-level or generic height assumptions. Local proposals never change published references.
+- A generated coverage dashboard separates approximate points, candidates, accepted geometry and field verification. Every unresolved building has a reason.
+- Community forms cover building corrections, new services, hours, closures, geometry and inaccessible paths: review, local save/edit/delete, JSON export and a prepared GitHub issue. No browsing login or new backend.
+- Pedestrian routing, safety gates, accessibility constraints and route UI states are implemented/tested. **Internal routes remain disabled:** the accepted graph and surveyed entrances are empty. External walking directions use approximate reference points, not confirmed entrances.
+- MapLibre module, separate worker, CSS and license are vendored from the locked npm package and digest checked. CI actions pin full SHAs; the application has a tested CSP. The directory remains usable after map/storage failures.
 
-## Data accuracy
+## Data status
 
-| Data | Current status |
-| --- | --- |
-| Official directory | 35 original codes retained; S1/S6/N19 name/description conflicts remain |
-| Building coordinates | Seven approximate references; 28 unmapped |
-| Footprints | Three named OSM candidates; zero accepted/field-verified associations |
-| Heights | Zero measured heights; N16 has an existing university 15-floor reference |
-| Entrances / pedestrian routes | Zero verified; no internal routing advertised |
-| POIs | One approximate library point; zero verified places or documented schedules |
+| Data | Current result |
+| --- | ---: |
+| Buildings / approximate references / without coordinates | 35 / 20 / 15 |
+| Candidate / accepted / field-verified footprints | 18 / 0 / 0 |
+| Documented floor counts / measured heights | 1 / 0 |
+| Verified entrances / pedestrian routes | 0 / 0 |
+| Candidate pedestrian path segments | 112 |
+| POIs / field-verified POIs | 73 / 0 |
+| Recorded business schedules | 3, all stale |
 
-An implemented feature, a passing software test and verified real-world data are different things. See [data status](docs/DATA-STATUS.md), [model and review process](docs/DATA-MODEL.md), [baseline audit](docs/BASELINE-AUDIT.md) and [engineering handoff](docs/IMPLEMENTATION-HANDOFF.md).
+[Generated coverage and building review queue](docs/DATA-COVERAGE.md) is computed from the source data. S1/S6/N19 conflicts persist; comparison also found swapped S1/S2 image-map labels in BGM material. No dormitory gender/use claims were inferred. No physical survey or university endorsement is claimed.
 
-## Local development
+## Development
 
-Serving the website requires Python 3, a WebGL2-capable browser and internet for MapLibre/tiles; no npm runtime install is needed:
+Serve the committed runtime without npm installation:
 
 ```sh
 python -m http.server 8080
 # http://localhost:8080/
 ```
 
-Windows: `START_WINDOWS.bat`. Opening `index.html` directly as `file://` cannot fetch JSON.
+Windows: `START_WINDOWS.bat`. Do not open the HTML using `file://`. A WebGL2 browser and internet are needed for live tiles. Search already loaded in the current tab survives offline/map failure; first-visit offline support is not promised.
 
-Tests/build tooling uses Node >=20 (CI: Node 22), pinned Playwright and MapLibre dev dependencies:
+For development and validation (Node >=20, CI Node 22):
 
 ```sh
 npm ci
+npm run verify-vendor
 npm run check
 npm run validate-data
 npm test
-npx playwright install --with-deps chromium
+npx playwright install --with-deps chromium firefox webkit
 npm run test:e2e
 npm run build
 ```
 
-`npm run build` stages an allowlisted static website in `.site/`; npm dependencies and tests are excluded. On environments with system Chromium, set `OPENMAP_CHROMIUM=/usr/bin/chromium` for browser tests. Test fixtures use the real MapLibre library with controlled empty tiles; they do not prove live provider uptime or geographical truth. [Test report and actual screenshots](docs/TEST-RESULTS.md).
+The build stages allowlisted static assets in `.site/`; no node_modules, credentials or tests are published. System Chromium option:
 
-## Architecture and deployment
+```sh
+OPENMAP_CHROMIUM=/usr/bin/chromium npx playwright test --project=desktop --project=mobile
+```
 
-The app stays framework-free: ES modules, HTML/CSS, MapLibre, OpenFreeMap/OSM and GeoJSON. `main.mjs` coordinates UI; `map.mjs` manages layers/camera; pure modules cover search, evidence/geometry, height, proposals, URLs, places/hours and navigation. See [architecture](docs/ARCHITECTURE.md).
+[Actual browser results and screenshots](docs/TEST-RESULTS.md) distinguish fixture checks, live providers and unavailable physical devices/other engines. [Complete engineering handoff](docs/COMPLETE-IMPLEMENTATION-HANDOFF.md) identifies every phase and blocker.
 
-GitHub Actions validates source/data, runs unit/browser tests and stages `.site/`. Pages publishes **main only** at https://apichetfirm.github.io/KMUTT-OpenMap/. This feature branch must be independently reviewed before merge. Existing main deployment was successful; no repository settings or production access changes are needed. [Deployment instructions](docs/PUBLISH-GITHUB.md).
+## Data and maintenance
 
-## Contributing and licensing
+Read [CONTRIBUTING.md](CONTRIBUTING.md), the [non-programmer contribution guide](docs/COMMUNITY-GUIDE.md), [university collaboration guide](docs/UNIVERSITY-COLLABORATION.md), [architecture](docs/ARCHITECTURE.md), [data model](docs/DATA-MODEL.md), [mapping methodology](docs/MAPPING-METHODOLOGY.md), [height methodology](docs/HEIGHT-QA.md), [navigation methodology](docs/NAVIGATION-METHODOLOGY.md), [security review](docs/SECURITY-REVIEW.md) and [deployment instructions](docs/PUBLISH-GITHUB.md).
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md), [field survey guidance](docs/FIELD-SURVEY.md) and [roadmap](docs/ROADMAP.md). Unknown locations remain searchable; suggestions need independent review and evidence. No analytics or location collection are included.
+Refresh reviewed source snapshots deliberately, never by silently promoting submissions:
 
-Original code: [MIT](LICENSE). Imported OSM databases: ODbL, © OpenStreetMap contributors. MapLibre, OpenFreeMap and university references have separate conditions; see [DATA-LICENSES.md](DATA-LICENSES.md). No KMUTNB code/assets or protected university photographs/plans are copied.
+```sh
+python scripts/acquire-osm.py
+node scripts/import-osm.mjs
+node scripts/import-campus-data.mjs
+npm run generate-data
+npm run validate-data
+```
+
+Review upstream name/version changes and every derived diff. Geodata: © OpenStreetMap contributors, ODbL; see [DATA-LICENSES.md](DATA-LICENSES.md). No KMUTNB source code, models, photos or protected university map images are reused. The public main site remains https://apichetfirm.github.io/KMUTT-OpenMap/; only an independently accepted merge to main deploys this candidate.

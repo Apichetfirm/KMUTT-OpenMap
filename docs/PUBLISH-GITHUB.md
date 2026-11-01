@@ -1,13 +1,15 @@
-# GitHub Pages deployment
+# Deployment and release review
 
 Initiated by Firm Impulse · FIBO FRAB11.
 
-Current public path: https://apichetfirm.github.io/KMUTT-OpenMap/. Baseline main deployment succeeded ([run 41229441308](https://github.com/Apichetfirm/KMUTT-OpenMap/actions/runs/41229441308)); old first-time-setup instructions are no longer the current blocker.
+Existing URL: https://apichetfirm.github.io/KMUTT-OpenMap/. No production settings or access configuration changes are required. Feature branches/PRs run CI and do not deploy this candidate. Do not self-merge or publish a major release without independent review.
 
-The feature branch is prepared for Codex A and must not self-merge. It does not deploy to Pages. Main's workflow installs locked dev tooling, checks syntax/data/unit tests and stages allowlisted static assets in `.site/`, then uses the existing GitHub Pages actions. App assets and data URLs are relative, and sharing preserves `/KMUTT-OpenMap/`. No SPA rewrite is required: building links use query parameters and survive refresh.
+1. Install Node >=20/npm and run the README validation commands. Install Chromium, Firefox and WebKit for the complete CI browser matrix. Restricted environments can run explicit system-Chromium projects and must record missing coverage.
+2. Inspect data evidence/derived diffs, licenses, name conflicts and candidates versus accepted data. Independently verify the handoff, security review and actual screenshots/measurements. Verify CI results for the final commit, not an earlier SHA.
+3. `npm run build` verifies vendor bytes then stages allowlisted HTML/CSS/modules/vendor/data/docs/licenses in `.site/`. Test this directory under `/KMUTT-OpenMap/`; no npm runtime installation is required by visitors. Local file URLs are unsupported.
+4. A reviewer-approved merge to main triggers the existing SHA-pinned Pages workflow: install locked development tooling, verify/syntax/data/unit checks, stage/upload/deploy. CI separately runs all configured browser projects. Existing Pages permissions are limited to its deployment workflow.
+5. Smoke-test the actual published URL on desktop and physical phones, including live tiles, Thai labels, FIBO/N9/N10/LX, 2D/3D/night, source/candidate disclosures, POI links, local proposal export, GPS denial and attribution. Confirm no production console/CSP errors.
 
-Validate locally with `npm ci && npm run check && npm run validate-data && npm test && npm run test:e2e && npm run build`. Serve `.site/` over HTTP to inspect the actual upload artifact. The source root remains directly serveable without npm installation. Do not upload `node_modules`, test traces, credentials or arbitrary workspace files.
+Update MapLibre and action pins through reviewed PRs using SECURITY-REVIEW.md. Serving requires internet for provider tiles; same-origin runtime assets no longer depend on unpkg. No service worker/offline first-visit guarantee is included. Keep all unresolved data and performance/physical-device limitations visible.
 
-CI runs controlled desktop/mobile Chromium fixtures so external tile uptime does not gate every test. Independently check live tiles and actual devices before release; see TEST-RESULTS.md. Main's deployment workflow keeps its existing contents-read/pages-write/id-token-write permissions. CI remains contents-read only. No repository settings or access configuration are changed by this implementation.
-
-Rollback after an independently approved merge: revert the feature commits and rerun main's normal Pages pipeline. The v0.2 draft key is preserved and schema additions are additive; valid local records remain readable by the legacy proposal reader. Preserve the additional recovery key/export before any manual storage cleanup. Never delete local proposals to roll back a visual change.
+If a regression is accepted after release, revert through a reviewed commit and redeploy main. Do not roll back by loading an old editor into an active draft-writing session without exporting drafts first. Repository history preserves original data/release artifacts.

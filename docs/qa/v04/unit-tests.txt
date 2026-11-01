@@ -1,0 +1,58 @@
+
+> kmutt-openmap@0.4.0-rc.1 test
+> node --test tests/*.test.mjs
+
+✔ community reports validate references, bounds, moderation status and personal data free schema (3.057467ms)
+✔ community save/delete refuses stale, corrupt and denied storage without touching legacy drafts (2.288246ms)
+✔ prepared issue and POI URLs encode content, preserve Pages paths and choose one destination (0.486026ms)
+✔ single English typos and transpositions work without weakening exact code ranking (25.331702ms)
+✔ catalog integrity evolves with evidence instead of freezing initial missing data (2.574854ms)
+✔ all original inventory codes remain searchable, punctuation and aliases rank correctly (33.69586ms)
+✔ invalid code, coordinates and unsupported verification are rejected (5.846087ms)
+✔ URL validation rejects active content and embedded credentials (0.445474ms)
+✔ polygon validation rejects unclosed, degenerate, out-of-area and crossing rings (1.085903ms)
+✔ footprint association needs an independent evidence basis and no duplicates (1.919721ms)
+✔ height overrides separate measured heights from floor-based estimates (0.419001ms)
+✔ share URLs retain GitHub Pages base path, other parameters and fragment (3.499269ms)
+✔ coverage never counts candidate geometry as accepted or approximate as verified (0.483224ms)
+✔ cross-building overlaps are rejected while a shared boundary is allowed (3.168911ms)
+✔ named source candidates are valid and representative points remain inside concave footprints (11.494529ms)
+✔ every code has a supported reference or an explicit unresolved reason (0.235252ms)
+✔ candidate path pipeline cannot produce a public route (7.097496ms)
+✔ coverage is recomputed from current evidence and never counts candidates as accepted (1.902799ms)
+✔ source schedules retain original dates and stale schedules are excluded from likely-open filters (32.29691ms)
+✔ repeated layer installation reuses basemap source and leaves one visible extrusion (9.980408ms)
+✔ camera options respect reduced motion and allow room for panels (0.324922ms)
+✔ real MapLibre height expression preserves missing-value fallback and matches numeric policy (0.773542ms)
+✔ candidate previews are the only visible extrusion while editing and stay separate from accepted footprints (1.941837ms)
+✔ Bangkok schedules use local dates and closed/open boundaries (18.05531ms)
+✔ overnight carry works, holiday exceptions override it, missing schedules stay unknown (1.345219ms)
+✔ hours reject malformed calendars and show stale schedules separately (0.782655ms)
+✔ places validate provenance/references and unknown hours are not open-now (1.883807ms)
+✔ deterministic shortest path uses geometry distance with explicit walking speed (4.462511ms)
+✔ unverified paths, restrictions and missing accessibility never get promoted (1.898418ms)
+✔ graph rejects invalid topology, geometry and guessed passage access (1.069051ms)
+✔ legacy proposals survive and corrupt bytes are backed up before an edit (1.082928ms)
+✔ storage quota/security failures do not silently save or overwrite recovery (0.697785ms)
+✔ a stale storage revision cannot replace or delete newer drafts (0.817666ms)
+✔ building intersections need explicit surveyed passages and identical endpoints are handled (1.409607ms)
+✔ public route planning requires distinct survey/review identities and a verified linked entrance (2.791899ms)
+✔ original official inventory preserved with unique code/name pairs (1.288863ms)
+✔ every record has evidence metadata (0.186282ms)
+✔ no invented surveyed geometry, entrances, or height (0.191218ms)
+✔ search exact codes before other matching names (3.85583ms)
+✔ filter by zone and geocoded coordinates (10.270271ms)
+✔ walkway dataset has no unverified routes (0.295565ms)
+✔ height modes are visual only (0.495936ms)
+✔ proposed building mapping is flagged unverified (0.675007ms)
+✔ unknown codes and out-of-bounds coordinates rejected (0.78227ms)
+✔ draft proposal storage and corrupted input (1.344272ms)
+✔ initiator and project governance are identified (1.414002ms)
+ℹ tests 46
+ℹ suites 0
+ℹ pass 46
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 926.487393

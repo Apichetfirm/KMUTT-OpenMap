@@ -1,0 +1,132 @@
+{
+  "conditions": {
+    "browser": "154.0.8037.57",
+    "viewport": "1440x1000",
+    "network": "Managed proxy, live OpenFreeMap, no throttling, fresh browser context each sample; proxy caches are uncontrolled.",
+    "rendering": "Headless Chromium with software WebGL (SwiftShader); no concurrent QA processes.",
+    "physical_device": false,
+    "date": "2026-11-02"
+  },
+  "results": [
+    {
+      "version": "baseline",
+      "sample": 1,
+      "url": "http://127.0.0.1:8081/",
+      "timedOut": false,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 875.1000000000931
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 4927.199999999953
+        }
+      ],
+      "search_sync_median_ms": 0.39999999990686774,
+      "js_heap_bytes": 24988199,
+      "canvas_count": 1,
+      "errors": []
+    },
+    {
+      "version": "final",
+      "sample": 1,
+      "url": "http://127.0.0.1:8082/",
+      "timedOut": false,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 672.3000000000466
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 3944.100000000093
+        }
+      ],
+      "search_sync_median_ms": 0.5,
+      "js_heap_bytes": 23707203,
+      "canvas_count": 1,
+      "errors": []
+    },
+    {
+      "version": "baseline",
+      "sample": 2,
+      "url": "http://127.0.0.1:8081/",
+      "timedOut": false,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 644
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 3947.600000000093
+        }
+      ],
+      "search_sync_median_ms": 0.4000000001396984,
+      "js_heap_bytes": 28285557,
+      "canvas_count": 1,
+      "errors": []
+    },
+    {
+      "version": "final",
+      "sample": 2,
+      "url": "http://127.0.0.1:8082/",
+      "timedOut": false,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 541.5
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 4450.90000000014
+        }
+      ],
+      "search_sync_median_ms": 1.3000000000465661,
+      "js_heap_bytes": 27950599,
+      "canvas_count": 1,
+      "errors": []
+    },
+    {
+      "version": "baseline",
+      "sample": 3,
+      "url": "http://127.0.0.1:8081/",
+      "timedOut": false,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 580.0999999998603
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 6622.299999999814
+        }
+      ],
+      "search_sync_median_ms": 0.5,
+      "js_heap_bytes": 26374821,
+      "canvas_count": 1,
+      "errors": []
+    },
+    {
+      "version": "final",
+      "sample": 3,
+      "url": "http://127.0.0.1:8082/",
+      "timedOut": false,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 570.8000000000466
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 4529.100000000093
+        }
+      ],
+      "search_sync_median_ms": 0.6999999999534339,
+      "js_heap_bytes": 27718659,
+      "canvas_count": 1,
+      "errors": []
+    }
+  ]
+}

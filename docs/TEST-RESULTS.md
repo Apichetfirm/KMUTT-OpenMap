@@ -1,68 +1,49 @@
-# Test report — v0.3 implementation, 2026-11-01
+# QA results — v0.4 release candidate
 
-**Independent reviewer results supersede the implementer-only counts below:** see [INDEPENDENT-REVIEW.md](INDEPENDENT-REVIEW.md). The review expanded the suite to 34 unit/integration tests and 20 desktop/mobile browser tests, and added live Windows screenshots/metrics in `qa/review/`.
+Initiated by Firm Impulse · FIBO FRAB11. Date: 2026-11-02 (Asia/Bangkok).
 
-Initiated by Firm Impulse · FIBO FRAB11. These are implementer results, not final Codex A acceptance.
+## Environment and commands
 
-Flow under test: load the app → search FIBO/N9 → select → focus the published approximate point and show provenance → share/reload → preview/confirm/export/delete a separate local proposal. Also checked unmapped N16, POIs, style/mode changes, permissions and unavailable services.
+Linux managed workspace, Node 24.19.0, npm 11.9.0, Playwright 1.64.1, system Chromium `/usr/bin/chromium`, headless WebGL2/SwiftShader. The Browser plugin is absent; regular Playwright is the documented fallback. Loopback server exercises both `/` and `/KMUTT-OpenMap/`. CI uses Node 22 and installs all configured browser engines.
 
-## Environment and results
-
-Cloud Linux, Node 24.19.0, Chromium 154.0.8037.57, headless software WebGL. Desktop 1440×1000, mobile 390×844 plus Pixel 7 emulation, landscape 844×390. Browser plugin not available; regular Playwright was used. CI is configured for Node 22 and Playwright's Chromium.
-
-| Check | Result / scope |
+| Command | Result |
 | --- | --- |
-| Baseline | 11/11 tests and syntax checks passed at `55cbef2` |
-| Current unit/data/map integration | 33/33 pass |
-| Browser regression fixtures | 12/12 pass across desktop/mobile; targeted landscape/motion checks rerun after final layout adjustment |
-| Syntax / data / static build | Pass: `npm run check`, `npm run validate-data`, `npm run build` |
-| Dependency check | `npm audit --omit=optional`: 0 vulnerabilities reported |
-| Page identity / nonblank / overlay | Correct title and route, 35 directory buttons, no framework error overlay |
-| Console errors | No uncaught JS or console errors in live app sequence |
-| Console warnings | Live provider styles have missing icons (e.g. office, gate, sports_centre, wood-pattern) and null road-shield filters; recorded in live metrics, not suppressed |
-| Interaction proof | Search/selection/URL/camera, unmapped card, theme/2D/3D, proposal persistence/export/delete, POI empty filters and GPS denial pass |
-| Responsive evidence | Search, scrollable cards, map controls and selected marker remain reachable; no horizontal document overflow in tested layouts |
-| Field/device verification | Not performed; synthetic software tests cannot establish geography or physical-phone performance |
+| `npm ci` | Pass; 28 locked development packages installed |
+| `npm run check` | Pass; all ES module syntax |
+| `npm run validate-data` | Pass; catalog, accepted/candidate geometry, places, schedules, graphs, generated coverage and height provenance |
+| `npm test` | **46 passed, 0 failed** |
+| `npm run verify-vendor` | Pass; module, separate worker, CSS, license match manifest and locked npm bytes |
+| `OPENMAP_CHROMIUM=/usr/bin/chromium npx playwright test --project=desktop --project=mobile` | **40 passed, 0 failed**, 4.1 minutes |
+| `npm run build` | Pass; vendor verified and allowlisted Pages assets staged |
+| `npm audit --json` | Baseline and final: **0 advisories** |
+| `npx playwright install firefox webkit` / separate WebKit attempt | BLOCKED — TECHNICAL: download endpoints denied HTTP 403 by environment policy |
 
-Browser fixture tests load the **real pinned MapLibre** library with controlled empty vector tiles and local data. They inspect actual UI, camera center, layer visibility/count, persistence, downloads, focus and errors. Separate live checks use actual unmodified provider tiles. No fixture geography is published as real campus data. Browser-only instrumentation is injected into test responses; no production test hooks are added.
+Baseline from latest main `0bdeadd63d668d359fbe780fd5aef0acf98a25df`: 34 Node tests and 22 Chromium desktop/mobile browser tests passed. The release candidate expands to 46 and 40. Intermediate failures exposed stale expectations after data expansion, a popup fixture needing a local response, and the initially missing vendored worker; these were corrected before the final passes. They are not omitted failures from the final command.
 
-## Measured performance and limits
+After the final preview-framing refinement, the focused desktop/mobile candidate test is rerun with a new explicit non-overlap assertion; result: **2/2 passed**; see `qa/v04/preview-checks.txt`.
 
-Three live cloud runs: catalog ready 546–581 ms; map `load` event 3,655–4,447 ms from navigation start. This does **not** achieve the approximate 3-second map target. These are single-session, unthrottled cloud timings, not controlled mobile-network benchmarks. The load event is distinct from a formally defined first-interactive-map metric.
+## Browser validation
 
-500 local search calls over 35 entries: median about 0.2 ms, p95 about 0.4 ms in the recorded run. Initial JS heap snapshot approximately 28.4 MB; one sample cannot establish absence of long-term memory growth. Label/layer reuse and selected-marker count are regression checked. No representative-phone 30 FPS or long-session memory claim is made. Live warnings and raw measurements are in [qa/live-metrics.json](qa/live-metrics.json).
-
-## Commands
-
-```sh
-npm ci
-npm run check
-npm run validate-data
-npm test
-npx playwright install --with-deps chromium
-npm run test:e2e
-npm audit --omit=optional
-npm run build
-```
-
-For system Chromium in this execution environment:
-
-```sh
-OPENMAP_CHROMIUM=/usr/bin/chromium OPENMAP_QA_DIR=/workspace/work/e2e npm run test:e2e
-```
-
-Live screenshots were captured with Playwright against root-served baseline/current static apps, with actual CDN styles/tiles. The archived baseline is the source at `55cbef2`. Controlled browser tests also exercise `/KMUTT-OpenMap/?keep=1&building=N9` with a local path mount. Staged `.site/` is validated separately. Full CI is tracked in the PR.
-
-Remaining QA: Firefox/Safari, physical Android/iOS, representative bandwidth/CPU/GPU, screen-reader review, prolonged memory/FPS measurement, independent GIS/source/licensing review, current entrances and on-site navigation. The implementation has not changed production/main or closed unresolved issues.
-
-## Actual application screenshots
-
-These are application captures with rendered attribution, not generated concepts. Overview camera pitch and label strategy changed; before/after comparisons are qualitative, not a measurement of real height accuracy.
-
-| State | Evidence |
+| Check | Final evidence |
 | --- | --- |
-| Before desktop / mobile | [desktop](qa/before-desktop.png), [mobile](qa/before-mobile.png) |
-| After desktop / mobile | [desktop](qa/after-desktop.png), [mobile](qa/after-mobile.png) |
-| Selected / provenance | [desktop](qa/selected-desktop.png), [mobile](qa/selected-mobile.png) |
-| Night / 2D | [night](qa/night-desktop.png), [2D](qa/2d-desktop.png) |
-| Local preview / landscape | [proposal](qa/proposal-mobile.png), [landscape](qa/landscape.png) |
+| Page identity / no blank page | Correct title and 35 building rows; actual selected card and WebGL canvas |
+| Framework error overlay | None; the app is framework-free |
+| Runtime errors | None in passing interaction checks; actual live-provider health recorded in `qa/v04/browser-health.json` |
+| CSP / worker | Actual vendored module and worker return 200 at the Pages base path; no CSP violation in the fixture test |
+| Building flow | Thai/English/code search → Enter → focus/highlight/camera → source/floors → URL → reload/history |
+| POI flow | Name/category filter → details → stale schedule/source dates → shared URL/reload → walking link → report form |
+| Mapping | Candidate selection/48m labeled N16 assumption → one preview extrusion → local confirmation; published reference unchanged |
+| Contributions | Review required → local save → JSON export → edit invalidates review → reload → delete; legacy key retained |
+| Recovery | Runtime/storage failures, fresh import retry, stalled/failed catalog retry, optional data stall, GPS denial, clipboard fallback and literal hostile text |
+| Navigation | Public internal controls remain disabled; synthetic routing checks reject insufficient access/review/entrance/accessibility evidence |
+| Layout/accessibility | Desktop 1440×1000; Pixel 7 emulation; additional 360×640, 844×390, 667×375, 700×900; selected marker/controls/attribution reachable; keyboard and reduced motion |
+
+Fixtures run the real MapLibre library with controlled empty provider tiles and actual source data. They prove software behavior, not provider uptime, route safety or geographical truth. Live QA records zero uncaught errors, zero failed requests, zero console errors and zero CSP violations. Nonfatal warnings remain from SwiftShader screenshot readbacks and upstream style filters/missing provider sprite icons; raw messages are retained in browser-health.json and are not described as a warning-free console.
+
+Actual screenshots use the unmodified local application and live OpenFreeMap/OSM tiles; no generated imagery or map fixture is used. Screenshots cover overview, N9/N10/N16, light/night/2D, candidate preview, service search/details, navigation coverage, contribution review and phone/tablet layouts. Before screenshots are from the detached original main checkout.
+
+## Limits and release gates
+
+Firefox/WebKit projects are configured in Playwright and CI, but local binary downloads are denied; this report does not claim a local pass for either engine. The actual production/reference GitHub Pages domains are also denied by this environment. Local same-source/live-provider results are not production-site tests. No physical Android/iOS, Safari hardware, screen-reader session, thermal/memory soak or mid-range Android FPS was performed. No independent WCAG certification is claimed.
+
+Sequential actual-provider load/search measurements are in `qa/v04/performance.json` and PERFORMANCE.md. Software-rendered headless results do not satisfy the physical-device 30 FPS target. Independent reviewer must inspect CI at the final SHA and perform the listed physical/live-release checks. No phase depending on these checks is labeled complete.
