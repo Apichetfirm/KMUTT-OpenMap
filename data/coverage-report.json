@@ -10,6 +10,8 @@
   "documented_floor_counts": 1,
   "measured_heights": 0,
   "estimated_render_heights": 0,
+  "candidate_render_estimates": 7,
+  "candidate_visual_fallbacks": 11,
   "verified_entrances": 0,
   "candidate_pedestrian_paths": 112,
   "verified_pedestrian_paths": 0,

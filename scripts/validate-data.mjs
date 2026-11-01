@@ -3,7 +3,7 @@ import {validateCandidateFootprints,validateCatalog,validateFootprints,validGeom
 import {validatePlaces} from '../src/places.mjs';
 import {validateGraph} from '../src/navigation.mjs';
 import {qualityReport} from '../src/quality.mjs';
-import {validateHeightOverride} from '../src/heights.mjs';
+import {candidateRendering,validateHeightOverride} from '../src/heights.mjs';
 const read=async file=>JSON.parse(await readFile(new URL('../data/'+file,import.meta.url)));
 const [catalog,footprints,candidates,places,graph,heights,points,walkways]=await Promise.all(['buildings.json','building-footprints.geojson','building-footprint-candidates.geojson','places.geojson','pedestrian-graph.json','height-overrides.json','buildings-geocoded.geojson','walkways.geojson'].map(read));
 const rows=catalog.buildings,codes=rows.map(b=>b.id);
@@ -11,6 +11,8 @@ const errors=[...validateCandidateFootprints(candidates,codes),...validateCatalo
 const candidateGraph=await read('pedestrian-graph-candidates.json');
 errors.push(...validateGraph(candidateGraph));
 if(candidateGraph.edges.some(e=>e.independently_reviewed))errors.push('Candidate paths cannot be independently accepted');
+const expectedRendering={schema_version:'0.4.0',warning:'Candidate editor previews only, never measured/accepted heights.',buildings:candidates.features.map(f=>candidateRendering(f,rows.find(b=>b.id===f.properties.building_code)))};
+if(JSON.stringify(await read('building-rendering.json'))!==JSON.stringify(expectedRendering))errors.push('Candidate rendering metadata out of sync');
 const expectedReport=qualityReport({buildings:rows,footprints,candidates,places,graph,candidateGraph,heights});
 if(JSON.stringify(await read('coverage-report.json'))!==JSON.stringify(expectedReport))errors.push('Coverage report out of sync: run npm run generate-data');
 const seen=new Set();

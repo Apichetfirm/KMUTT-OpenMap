@@ -90,7 +90,7 @@ export function connectedComponents(graph) {
 }
 
 export function navigationAvailability(graph,building) {
- const nodes=graph.nodes||[],entranceIds=(building?.entrances||[]).filter(e=>e.confidence==='verified'&&verifiedEvidence(e.evidence)).map(e=>e.graph_node_id);
+ const nodes=graph.nodes||[],entranceIds=(building?.entrances||[]).filter(e=>e.confidence==='verified'&&verifiedEvidence(e.evidence)&&validCoordinates(e.coordinates)&&nodes.some(n=>n.id===e.graph_node_id&&n.kind==='entrance'&&n.coordinates[0]===e.coordinates[0]&&n.coordinates[1]===e.coordinates[1])).map(e=>e.graph_node_id);
  const origins=nodes.filter(n=>['entrance','gate'].includes(n.kind)&&reviewed(n));
  return {status:graph.edges?.some(e=>reviewed(e))&&entranceIds.some(id=>nodes.some(n=>n.id===id&&reviewed(n)))&&origins.length?'available':'unverified',origins,destinations:entranceIds};
 }

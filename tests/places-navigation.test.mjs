@@ -86,7 +86,7 @@ test('building intersections need explicit surveyed passages and identical endpo
 
 test('public route planning requires distinct survey/review identities and a verified linked entrance',async()=>{
  const {routeToBuilding,navigationAvailability}=await import('../src/navigation.mjs');
- const building={entrances:[{confidence:'verified',evidence,graph_node_id:'2'}]};assert.equal(navigationAvailability(graph,building).status,'available');
+ const building={entrances:[{confidence:'verified',evidence,graph_node_id:'2',coordinates:coordinates[2]}]};assert.equal(navigationAvailability(graph,building).status,'available');
  const r=routeToBuilding(graph,'0',building,{accessible:true});assert.equal(r.status,'ok');assert.equal(r.confidence,'field-surveyed-and-independently-reviewed');assert.equal(r.accessibility,'verified-wheelchair-constraints');
- assert.equal(routeToBuilding(graph,'0',{entrances:[]}).status,'unverified');const selfReviewed=structuredClone(graph);selfReviewed.nodes[0].independent_reviewer=evidence.reviewer;assert.ok(validateGraph(selfReviewed).length);assert.equal(routeToBuilding(selfReviewed,'0',building).status,'invalid-graph');
+ assert.equal(routeToBuilding(graph,'0',{entrances:[]}).status,'unverified');assert.equal(navigationAvailability(graph,{entrances:[{...building.entrances[0],coordinates:coordinates[0]}]}).status,'unverified');const selfReviewed=structuredClone(graph);selfReviewed.nodes[0].independent_reviewer=evidence.reviewer;assert.ok(validateGraph(selfReviewed).length);assert.equal(routeToBuilding(selfReviewed,'0',building).status,'invalid-graph');
 });
