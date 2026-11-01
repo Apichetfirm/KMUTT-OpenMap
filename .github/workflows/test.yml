@@ -8,23 +8,23 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '22'
           cache: npm
       - run: npm ci
       - name: Syntax and data integrity
-        run: npm run check && npm run validate-data
+        run: npm run verify-vendor && npm run check && npm run validate-data
       - name: Unit and map integration tests
         run: npm test
-      - name: Install Chromium
-        run: npx playwright install --with-deps chromium
-      - name: Desktop and mobile browser fixtures
+      - name: Install browser engines
+        run: npx playwright install --with-deps chromium firefox webkit
+      - name: Desktop/mobile and Firefox/WebKit browser fixtures
         run: npm run test:e2e
       - name: Stage GitHub Pages assets
         run: npm run build
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: failure()
         with:
           name: browser-failure-evidence
