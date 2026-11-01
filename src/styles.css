@@ -108,3 +108,13 @@ kbd{color:#9bb4c1;border:1px solid #4a6470;border-radius:4px;padding:2px 6px;fon
  .map-tools{top:72px;right:250px}.maplibregl-ctrl-top-left{left:230px;top:144px}
  .maplibregl-ctrl-bottom-right{top:auto;bottom:0;max-width:calc(100% - 240px)}
 }
+
+/* v0.4 discovery, evidence and contributions use the existing responsive panels. */
+#poi-search,.quality-panel select,#candidate-footprint,.navigation-panel select{width:100%;min-height:44px;padding:10px;border:1px solid #79929d;background:#183340;color:#effaf6;border-radius:7px;font-size:16px}
+#poi-results{max-height:320px;overflow:auto;overscroll-behavior:contain}#poi-count{color:#bed6d4;line-height:1.7}#poi-detail p{line-height:1.8;font-size:12px}#poi-name{font-size:18px;padding-right:26px}#poi-share-url{width:100%;padding:10px}#poi-schedule{white-space:pre-wrap;font-size:12px;line-height:1.8}
+.quality-panel,.navigation-panel{border-top:1px solid #4c6b77;margin:12px 0;font-size:12px;line-height:1.8}.quality-metric{display:flex;justify-content:space-between;gap:8px;padding:5px 0}.quality-metric strong{color:#b1f4d7}#unresolved-buildings button{display:block;text-align:left;width:100%;background:#193440;color:#e1eeec;border:1px solid #4c6b77;border-radius:7px;margin:5px 0;padding:8px;font-size:12px}
+#candidate-source{overflow-wrap:anywhere}.map-editor-banner{max-height:calc(100dvh - 155px);overflow:auto}#candidate-footprint{margin:6px 0 10px}#candidate-source a{display:block;min-height:44px;line-height:2}
+dialog{color:#eaf4f2;background:#102b39;border:1px solid #6e9c9c;border-radius:14px;max-width:min(620px,calc(100vw - 24px));max-height:calc(100dvh - 30px);padding:20px;overflow:auto;overscroll-behavior:contain}dialog::backdrop{background:#061420b8}dialog h2{font-size:18px}dialog p{font-size:13px;line-height:1.8}dialog label{display:block;font-size:13px;margin:10px 0 5px}dialog input,dialog textarea,dialog select{width:100%;min-height:44px;font:inherit;font-size:16px;padding:10px;background:#173d49;color:#f3fff6;border:1px solid #83a29f;border-radius:7px}dialog pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;line-height:1.7;background:#0b2029;padding:10px;border-radius:8px;max-height:250px;overflow:auto}dialog pre:empty{display:none}dialog button{min-height:44px;padding:9px;border:1px solid #80a69e;border-radius:7px;background:#1f4c4e;color:#e2fff1}.community-row{display:flex;gap:8px;align-items:center;margin:10px 0}.community-row span{flex:1;min-width:0;overflow-wrap:anywhere}
+@media(max-width:670px) and (min-height:541px){#poi-detail{max-height:min(43dvh,calc(100dvh - 460px))}}
+
+@media(max-width:670px) and (min-height:541px){.search-wrap{position:sticky;top:0;z-index:2;background:#152b3b}.sidebar-scroll{scroll-padding-top:50px}}

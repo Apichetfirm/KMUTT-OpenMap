@@ -1,3 +1,4 @@
+import {reviewed} from './navigation.mjs';
 import {coverage,verifiedEvidence} from './data.mjs';
 export function qualityReport({buildings,footprints={features:[]},candidates={features:[]},places={features:[]},graph={nodes:[],edges:[]},candidateGraph={edges:[]},heights={overrides:[]}}) {
  const c=coverage(buildings,footprints),verified=x=>verifiedEvidence(x?.evidence);
@@ -9,7 +10,7 @@ export function qualityReport({buildings,footprints={features:[]},candidates={fe
   estimated_render_heights:heights.overrides.filter(h=>h.kind!=='measured').length,
   verified_entrances:buildings.flatMap(b=>b.entrances).filter(e=>e.confidence==='verified'&&verified(e)).length,
   candidate_pedestrian_paths:candidateGraph.edges.length,
-  verified_pedestrian_paths:graph.edges.filter(e=>e.independently_reviewed&&verified(e)).length,
+  verified_pedestrian_paths:graph.edges.filter(e=>reviewed(e)).length,
   total_pois:places.features.length,verified_pois:places.features.filter(f=>f.properties.confidence==='verified'&&verified(f.properties)).length,
   pois_with_recorded_hours:places.features.filter(f=>f.properties.opening_hours!==null).length,
   unresolved_buildings:buildings.filter(b=>!b.coordinates||b.mapping.unresolved_reason).map(b=>({id:b.id,reason:b.mapping.unresolved_reason||'Location unresolved'})),

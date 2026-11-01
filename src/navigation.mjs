@@ -13,6 +13,7 @@ export function validateGraph(graph,{footprints=[]}={}) {
     if(!n||typeof n!=='object'){errors.push('Invalid graph node');continue;}
     if(typeof n.id!=='string'||!n.id||nodes.has(n.id)||!validCoordinates(n.coordinates))errors.push('Invalid/duplicate node');
     if(!['intersection','entrance','crossing','gate'].includes(n.kind)||!validEvidence(n.evidence))errors.push(`${n.id}: missing node provenance`);
+    if(n.independently_reviewed&&!reviewed(n))errors.push(`${n.id}: independent reviewer must differ from survey reviewer`);
     nodes.set(n.id,n);
   }
   for(const e of graph.edges) {
@@ -27,13 +28,15 @@ export function validateGraph(graph,{footprints=[]}={}) {
       if(crossed.some(f=>e.kind!=='passage'||!e.traversable_passage_verified||!e.passage_footprint_ids?.includes(f.id)||!verifiedEvidence(e.evidence)))errors.push(`${e.id}: building crossing lacks documented passage`);
     }
     if(!['path','stairs','ramp','crossing','passage'].includes(e.kind)||!validEvidence(e.evidence)||!['public','restricted','unknown'].includes(e.access))errors.push(`${e.id}: missing edge metadata`);
+    if(e.independently_reviewed&&!reviewed(e))errors.push(`${e.id}: independent reviewer must differ from survey reviewer`);
     if(e.hours!==null&&!validHours(e.hours))errors.push(`${e.id}: invalid gate schedule`);
     if(typeof e.bidirectional!=='boolean')errors.push(`${e.id}: direction must be explicit`);
     if(e.accessibility!==null&&(!e.accessibility||!verifiedEvidence(e.accessibility.evidence)))errors.push(`${e.id}: unsupported accessibility`);
   }
   return errors;
 }
-const reviewed=e=>verifiedEvidence(e.evidence)&&e.independently_reviewed===true;
+export const reviewed=e=>!!e&&verifiedEvidence(e.evidence)&&e.independently_reviewed===true&&
+  typeof e.independent_reviewer==='string'&&!!e.independent_reviewer.trim()&&e.independent_reviewer.trim()!==e.evidence.reviewer.trim();
 function usable(edge,nodes,{accessible,allowUnverified,now}) {
   if(edge.access!=='public'||!allowUnverified&&(!reviewed(edge)||!reviewed(nodes.get(edge.from))||!reviewed(nodes.get(edge.to))))return false;
   if(edge.kind==='passage'&&edge.traversable_passage_verified!==true)return false;
@@ -70,7 +73,7 @@ export function shortestPath(graph,origin,destination,{accessible=false,allowUnv
   const steps=[];for(let id=destination;id!==origin;){const step=previous.get(id);steps.unshift(step);id=step.from;}
   const coordinates=steps.flatMap((s,i)=>{const c=s.reverse?[...s.edge.coordinates].reverse():s.edge.coordinates;return i?c.slice(1):c;});
   return {status:'ok',distance_m:distance.get(destination),estimated_seconds:distance.get(destination)/walkingSpeed,
-    walking_speed_mps:walkingSpeed,edge_ids:steps.map(s=>s.edge.id),geometry:{type:'LineString',coordinates}};
+    walking_speed_mps:walkingSpeed,confidence:allowUnverified?'synthetic-unverified':'field-surveyed-and-independently-reviewed',accessibility:accessible?'verified-wheelchair-constraints':'not-assessed-for-this-route',edge_ids:steps.map(s=>s.edge.id),geometry:{type:'LineString',coordinates}};
 }
 export function connectedComponents(graph) {
   if(validateGraph(graph).length)throw Error('Invalid graph');
@@ -84,4 +87,16 @@ export function connectedComponents(graph) {
     components.push(component.sort());
   }
   return components;
+}
+
+export function navigationAvailability(graph,building) {
+ const nodes=graph.nodes||[],entranceIds=(building?.entrances||[]).filter(e=>e.confidence==='verified'&&verifiedEvidence(e.evidence)).map(e=>e.graph_node_id);
+ const origins=nodes.filter(n=>['entrance','gate'].includes(n.kind)&&reviewed(n));
+ return {status:graph.edges?.some(e=>reviewed(e))&&entranceIds.some(id=>nodes.some(n=>n.id===id&&reviewed(n)))&&origins.length?'available':'unverified',origins,destinations:entranceIds};
+}
+export function routeToBuilding(graph,origin,building,{accessible=false,footprints=[],now=new Date()}={}) {
+ if(validateGraph(graph,{footprints}).length)return {status:'invalid-graph'};
+ const availability=navigationAvailability(graph,building);if(availability.status!=='available')return {status:'unverified'};
+ const routes=availability.destinations.map(id=>shortestPath(graph,origin,id,{accessible,now})).filter(r=>r.status==='ok'||r.status==='already-there').sort((a,b)=>a.distance_m-b.distance_m);
+ return routes[0]||{status:'unreachable'};
 }

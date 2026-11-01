@@ -1,5 +1,5 @@
 import {readFile} from 'node:fs/promises';
-import {validateCatalog,validateFootprints,validGeometry,validEvidence,coverage} from '../src/data.mjs';
+import {validateCandidateFootprints,validateCatalog,validateFootprints,validGeometry,validEvidence,coverage} from '../src/data.mjs';
 import {validatePlaces} from '../src/places.mjs';
 import {validateGraph} from '../src/navigation.mjs';
 import {qualityReport} from '../src/quality.mjs';
@@ -7,7 +7,7 @@ import {validateHeightOverride} from '../src/heights.mjs';
 const read=async file=>JSON.parse(await readFile(new URL('../data/'+file,import.meta.url)));
 const [catalog,footprints,candidates,places,graph,heights,points,walkways]=await Promise.all(['buildings.json','building-footprints.geojson','building-footprint-candidates.geojson','places.geojson','pedestrian-graph.json','height-overrides.json','buildings-geocoded.geojson','walkways.geojson'].map(read));
 const rows=catalog.buildings,codes=rows.map(b=>b.id);
-const errors=[...validateCatalog(rows),...validateFootprints(footprints,rows),...validatePlaces(places,codes),...validateGraph(graph,{footprints:footprints.features})];
+const errors=[...validateCandidateFootprints(candidates,codes),...validateCatalog(rows),...validateFootprints(footprints,rows),...validatePlaces(places,codes),...validateGraph(graph,{footprints:footprints.features})];
 const candidateGraph=await read('pedestrian-graph-candidates.json');
 errors.push(...validateGraph(candidateGraph));
 if(candidateGraph.edges.some(e=>e.independently_reviewed))errors.push('Candidate paths cannot be independently accepted');
