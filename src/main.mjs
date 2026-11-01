@@ -14,7 +14,7 @@ const state={official:[],drafts:[],results:[],selected:null,filter:'all',map:nul
 const codes=()=>state.official.map(b=>b.id);
 const mobile=()=>matchMedia('(max-width:670px)').matches&&!matchMedia('(min-width:541px) and (max-height:540px)').matches;
 const reducedMotion=()=>matchMedia('(prefers-reduced-motion:reduce)').matches;
-let toastTimer,mapPromise;
+let toastTimer,mapPromise,mapAttempt=0;
 function element(tag,cls,text) {
   const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=text;return node;
 }
@@ -177,7 +177,7 @@ async function initMap() {
   if(mapPromise)return mapPromise;
   mapPromise=(async()=>{
     try {
-      state.maplibre=await import('https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.mjs');
+      state.maplibre=await import(`https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.mjs${mapAttempt++?'?retry='+mapAttempt:''}`);
       const map=new state.maplibre.Map({container:'map',style:state.dark?STYLES.dark:STYLES.light,center:HOME,zoom:16,pitch:state.is3d?48:0,bearing:-20,minZoom:11,maxZoom:20,
         canvasContextAttributes:{antialias:!mobile()},attributionControl:{compact:matchMedia('(max-width:900px)').matches}});state.map=map;
       map.on('click',onMapClick);
@@ -199,7 +199,9 @@ function setMapControls(enabled) {
   renderDetail();
 }
 async function fetchJSON(path) {
-  const response=await fetch(path,{cache:'no-cache'});if(!response.ok)throw Error(`HTTP ${response.status}`);return response.json();
+  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),12000);
+  try {const response=await fetch(path,{cache:'no-cache',signal:controller.signal});if(!response.ok)throw Error(`HTTP ${response.status}`);return await response.json();}
+  finally {clearTimeout(timer);}
 }
 async function loadData() {
   $('retry-data').classList.add('hidden');
