@@ -1,27 +1,18 @@
-/** Explicit allowlist: no proximity-based matching, no entrances inferred. */
+/** Explicit source-name matches only. No nearest-building joins, accepted shapes, or entrances. */
 import {readFile,writeFile} from 'node:fs/promises';
 import {validGeometry,pointInGeometry} from '../src/data.mjs';
-const catalog=JSON.parse(await readFile(new URL('../data/buildings.json',import.meta.url)));
-const candidates=[['N10',311879209,'สำนักหอสมุด'],['N17',420534143,'อาคารเรียนรวม 2'],['N20',436983061,'อาคารเรียนรวม 1']];
+import {representativePoint} from '../src/geometry.mjs';
+const root=new URL('../data/',import.meta.url),read=async p=>JSON.parse(await readFile(new URL(p,root)));
+const snapshot=await read('evidence/osm-campus-snapshot.json'),catalog=await read('buildings.json');
+const nodes=new Map(snapshot.elements.filter(e=>e.type==='node').map(n=>[n.id,[n.lon,n.lat]]));
 const features=[];
-for(const [code,id,expectedName] of candidates) {
-  const source=`https://www.openstreetmap.org/way/${id}`;
-  const file=process.argv[2]?new URL(`file://${process.argv[2]}/osm-${id}.json`):null;
-  const json=file?JSON.parse(await readFile(file)):await (await fetch(`https://www.openstreetmap.org/api/0.6/way/${id}/full.json`)).json();
-  const way=json.elements.find(e=>e.type==='way'&&e.id===id);
-  if(!way||way.tags?.name!==expectedName)throw Error(`${code}: source name changed; manual review required`);
-  const nodes=new Map(json.elements.filter(e=>e.type==='node').map(n=>[n.id,[n.lon,n.lat]]));
-  const geometry={type:'Polygon',coordinates:[way.nodes.map(id=>nodes.get(id))]};
-  if(!validGeometry(geometry))throw Error(`${code}: invalid geometry`);
-  const building=catalog.buildings.find(b=>b.id===code);
-  const contains=pointInGeometry(building.coordinates,geometry);
-  features.push({type:'Feature',id:`osm-way-${id}`,properties:{building_code:code,
-    confidence:'approximate',review_status:'candidate-needs-independent-review',reference_point_inside:contains,
-    osm_name:way.tags.name,osm_name_en:way.tags['name:en']||null,osm_levels:way.tags['building:levels']?Number(way.tags['building:levels']):null,
-    evidence:{source,license:'ODbL-1.0',method:'cross-source-name-match',checked_on:'2026-11-01',verified_on:null,reviewer:null,
-      source_version:way.version,source_timestamp:way.timestamp,
-      association_basis:`Official ${code} directory name agrees with the named OSM way and existing reference ID. Candidate only; independent association review pending.`,
-      limitations:'OSM geometry and levels are not field verified; wheelchair tags are not accepted as route evidence.'}},geometry});
+for(const [code,match] of Object.entries(snapshot.matching)) {
+ const way=snapshot.elements.find(e=>e.type==='way'&&e.id===match.way_id);
+ if(!way||way.tags.name!==match.expected_name)throw Error(`${code}: name changed; manual review required`);
+ const geometry={type:'Polygon',coordinates:[way.nodes.map(id=>nodes.get(id))]};
+ if(!validGeometry(geometry))throw Error(`${code}: invalid source geometry`);
+ const b=catalog.buildings.find(b=>b.id===code),partial=code==='N4';
+ features.push({type:'Feature',id:`osm-way-${way.id}`,properties:{building_code:code,confidence:'approximate',review_status:'candidate-needs-independent-review',association_scope:partial?'partial-complex':'named-building',reference_point_inside:b.coordinates?pointInGeometry(b.coordinates,geometry):null,osm_name:way.tags.name,osm_name_en:way.tags['name:en']||null,osm_levels:Number(way.tags['building:levels'])||null,roof_shape:way.tags['roof:shape']||null,reference_point:representativePoint(geometry),evidence:{source:`https://www.openstreetmap.org/way/${way.id}`,license:'ODbL-1.0',method:'cross-source-name-match',checked_on:snapshot.retrieved_on,source_version:way.version,source_timestamp:way.timestamp,source_date:way.timestamp.slice(0,10),verified_on:null,reviewer:null,association_basis:`Official/BGM ${code} name or documented alias compared with OSM name '${way.tags.name}'. ${partial?'Mathematics is only part of the official Physics–Mathematics complex. ':''}Independent association and physical survey remain pending.`,limitations:'Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height.'}},geometry});
 }
-await writeFile(new URL('../data/building-footprint-candidates.geojson',import.meta.url),JSON.stringify({type:'FeatureCollection',features},null,2)+'\n');
-console.log(features.map(f=>({code:f.properties.building_code,reference_point_inside:f.properties.reference_point_inside,vertices:f.geometry.coordinates[0].length})));
+await writeFile(new URL('building-footprint-candidates.geojson',root),JSON.stringify({type:'FeatureCollection',features},null,2)+'\n');
+console.log(`Rebuilt ${features.length} candidate polygons; accepted geometry unchanged.`);

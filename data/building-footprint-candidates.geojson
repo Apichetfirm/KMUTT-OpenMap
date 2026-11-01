@@ -3,26 +3,350 @@
   "features": [
     {
       "type": "Feature",
+      "id": "osm-way-436983064",
+      "properties": {
+        "building_code": "N3",
+        "confidence": "approximate",
+        "review_status": "candidate-needs-independent-review",
+        "association_scope": "named-building",
+        "reference_point_inside": null,
+        "osm_name": "ภาควิชาเคมี",
+        "osm_name_en": "Department of Chemistry",
+        "osm_levels": null,
+        "roof_shape": null,
+        "reference_point": [
+          100.49488534737489,
+          13.65246295
+        ],
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/436983064",
+          "license": "ODbL-1.0",
+          "method": "cross-source-name-match",
+          "checked_on": "2026-11-02",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM N3 name or documented alias compared with OSM name 'ภาควิชาเคมี'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.4945752,
+              13.6525796
+            ],
+            [
+              100.4947851,
+              13.6525817
+            ],
+            [
+              100.4948024,
+              13.6526847
+            ],
+            [
+              100.4950209,
+              13.652649
+            ],
+            [
+              100.4950187,
+              13.6525502
+            ],
+            [
+              100.4951464,
+              13.6525439
+            ],
+            [
+              100.4951745,
+              13.6524682
+            ],
+            [
+              100.4953043,
+              13.6524387
+            ],
+            [
+              100.4952762,
+              13.6522979
+            ],
+            [
+              100.495049,
+              13.652342
+            ],
+            [
+              100.4950382,
+              13.652424
+            ],
+            [
+              100.4949538,
+              13.6524366
+            ],
+            [
+              100.4949495,
+              13.6524156
+            ],
+            [
+              100.4949322,
+              13.6524009
+            ],
+            [
+              100.4949041,
+              13.6523904
+            ],
+            [
+              100.4948781,
+              13.652403
+            ],
+            [
+              100.4948673,
+              13.6524093
+            ],
+            [
+              100.4948478,
+              13.6524303
+            ],
+            [
+              100.4948392,
+              13.652445
+            ],
+            [
+              100.494824,
+              13.6524556
+            ],
+            [
+              100.4947829,
+              13.6524577
+            ],
+            [
+              100.494573,
+              13.6524577
+            ],
+            [
+              100.4945752,
+              13.6525796
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-436983063",
+      "properties": {
+        "building_code": "N4",
+        "confidence": "approximate",
+        "review_status": "candidate-needs-independent-review",
+        "association_scope": "partial-complex",
+        "reference_point_inside": null,
+        "osm_name": "ภาควิชาคณิตศาสตร์",
+        "osm_name_en": "Department of Mathematics",
+        "osm_levels": 4,
+        "roof_shape": null,
+        "reference_point": [
+          100.49444802818073,
+          13.6527089
+        ],
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/436983063",
+          "license": "ODbL-1.0",
+          "method": "cross-source-name-match",
+          "checked_on": "2026-11-02",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM N4 name or documented alias compared with OSM name 'ภาควิชาคณิตศาสตร์'. Mathematics is only part of the official Physics–Mathematics complex. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.4942442,
+              13.6528739
+            ],
+            [
+              100.4944108,
+              13.6528592
+            ],
+            [
+              100.4944194,
+              13.6527835
+            ],
+            [
+              100.4946358,
+              13.6527814
+            ],
+            [
+              100.4946531,
+              13.6526364
+            ],
+            [
+              100.494573,
+              13.6526111
+            ],
+            [
+              100.4945752,
+              13.6525796
+            ],
+            [
+              100.494573,
+              13.6524577
+            ],
+            [
+              100.4947829,
+              13.6524577
+            ],
+            [
+              100.4947764,
+              13.6523567
+            ],
+            [
+              100.4944043,
+              13.6523715
+            ],
+            [
+              100.4944043,
+              13.652485
+            ],
+            [
+              100.4944865,
+              13.6524913
+            ],
+            [
+              100.4944865,
+              13.6525375
+            ],
+            [
+              100.4942593,
+              13.6525375
+            ],
+            [
+              100.4942442,
+              13.6528739
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-346450376",
+      "properties": {
+        "building_code": "N9",
+        "confidence": "approximate",
+        "review_status": "candidate-needs-independent-review",
+        "association_scope": "named-building",
+        "reference_point_inside": true,
+        "osm_name": "Institute for Field Robotics",
+        "osm_name_en": null,
+        "osm_levels": null,
+        "roof_shape": null,
+        "reference_point": [
+          100.49421944545571,
+          13.65452305
+        ],
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/346450376",
+          "license": "ODbL-1.0",
+          "method": "cross-source-name-match",
+          "checked_on": "2026-11-02",
+          "source_version": 10,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM N9 name or documented alias compared with OSM name 'Institute for Field Robotics'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.494099,
+              13.6546828
+            ],
+            [
+              100.4940714,
+              13.6546132
+            ],
+            [
+              100.4940453,
+              13.654623
+            ],
+            [
+              100.4939937,
+              13.6544929
+            ],
+            [
+              100.4940202,
+              13.654483
+            ],
+            [
+              100.4940112,
+              13.6544605
+            ],
+            [
+              100.4943228,
+              13.6543439
+            ],
+            [
+              100.4943439,
+              13.6543972
+            ],
+            [
+              100.4943782,
+              13.6543844
+            ],
+            [
+              100.4944452,
+              13.6545532
+            ],
+            [
+              100.494099,
+              13.6546828
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
       "id": "osm-way-311879209",
       "properties": {
         "building_code": "N10",
         "confidence": "approximate",
         "review_status": "candidate-needs-independent-review",
+        "association_scope": "named-building",
         "reference_point_inside": true,
         "osm_name": "สำนักหอสมุด",
         "osm_name_en": "KMUTT Library",
         "osm_levels": null,
+        "roof_shape": null,
+        "reference_point": [
+          100.49389044346073,
+          13.65298425
+        ],
         "evidence": {
           "source": "https://www.openstreetmap.org/way/311879209",
           "license": "ODbL-1.0",
           "method": "cross-source-name-match",
-          "checked_on": "2026-11-01",
-          "verified_on": null,
-          "reviewer": null,
+          "checked_on": "2026-11-02",
           "source_version": 6,
           "source_timestamp": "2025-03-23T08:12:31Z",
-          "association_basis": "Official N10 directory name agrees with the named OSM way and existing reference ID. Candidate only; independent association review pending.",
-          "limitations": "OSM geometry and levels are not field verified; wheelchair tags are not accepted as route evidence."
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM N10 name or documented alias compared with OSM name 'สำนักหอสมุด'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
         }
       },
       "geometry": {
@@ -79,26 +403,359 @@
     },
     {
       "type": "Feature",
+      "id": "osm-way-224982053",
+      "properties": {
+        "building_code": "N11",
+        "confidence": "approximate",
+        "review_status": "candidate-needs-independent-review",
+        "association_scope": "named-building",
+        "reference_point_inside": true,
+        "osm_name": "คณะเทคโนโลยีสารสนเทศ",
+        "osm_name_en": "School of Information Technology",
+        "osm_levels": null,
+        "roof_shape": null,
+        "reference_point": [
+          100.49362882701143,
+          13.65260445
+        ],
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/224982053",
+          "license": "ODbL-1.0",
+          "method": "cross-source-name-match",
+          "checked_on": "2026-11-02",
+          "source_version": 3,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM N11 name or documented alias compared with OSM name 'คณะเทคโนโลยีสารสนเทศ'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.4934398,
+              13.6527568
+            ],
+            [
+              100.4934406,
+              13.6524513
+            ],
+            [
+              100.493819,
+              13.6524521
+            ],
+            [
+              100.4938159,
+              13.6527578
+            ],
+            [
+              100.4934398,
+              13.6527568
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-1333533935",
+      "properties": {
+        "building_code": "N16",
+        "confidence": "approximate",
+        "review_status": "candidate-needs-independent-review",
+        "association_scope": "named-building",
+        "reference_point_inside": null,
+        "osm_name": "LX",
+        "osm_name_en": null,
+        "osm_levels": null,
+        "roof_shape": null,
+        "reference_point": [
+          100.49406407203125,
+          13.65213625
+        ],
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/1333533935",
+          "license": "ODbL-1.0",
+          "method": "cross-source-name-match",
+          "checked_on": "2026-11-02",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:37Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM N16 name or documented alias compared with OSM name 'LX'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.4941076,
+              13.6516824
+            ],
+            [
+              100.4942806,
+              13.6516864
+            ],
+            [
+              100.4942922,
+              13.651691
+            ],
+            [
+              100.4942987,
+              13.6516985
+            ],
+            [
+              100.4943046,
+              13.6517087
+            ],
+            [
+              100.4943101,
+              13.6517332
+            ],
+            [
+              100.4943254,
+              13.6518094
+            ],
+            [
+              100.4943272,
+              13.6518232
+            ],
+            [
+              100.4943267,
+              13.6518385
+            ],
+            [
+              100.494323,
+              13.6518504
+            ],
+            [
+              100.4943151,
+              13.6518634
+            ],
+            [
+              100.4943018,
+              13.6518754
+            ],
+            [
+              100.4942871,
+              13.6518851
+            ],
+            [
+              100.4942656,
+              13.6518912
+            ],
+            [
+              100.494242,
+              13.6518925
+            ],
+            [
+              100.4941182,
+              13.6519017
+            ],
+            [
+              100.4941066,
+              13.6519037
+            ],
+            [
+              100.4940993,
+              13.651908
+            ],
+            [
+              100.4940975,
+              13.6519177
+            ],
+            [
+              100.4940969,
+              13.6519279
+            ],
+            [
+              100.4940985,
+              13.651935
+            ],
+            [
+              100.4941051,
+              13.6519378
+            ],
+            [
+              100.4941145,
+              13.6519384
+            ],
+            [
+              100.4941424,
+              13.651937
+            ],
+            [
+              100.4941535,
+              13.6519374
+            ],
+            [
+              100.4941605,
+              13.6519397
+            ],
+            [
+              100.4941682,
+              13.6519456
+            ],
+            [
+              100.4943489,
+              13.6519523
+            ],
+            [
+              100.4943673,
+              13.6519573
+            ],
+            [
+              100.4943837,
+              13.6519655
+            ],
+            [
+              100.4944027,
+              13.6519819
+            ],
+            [
+              100.4944201,
+              13.6520009
+            ],
+            [
+              100.4944327,
+              13.6520264
+            ],
+            [
+              100.4944844,
+              13.6521352
+            ],
+            [
+              100.4944874,
+              13.6521457
+            ],
+            [
+              100.4944863,
+              13.6521571
+            ],
+            [
+              100.4944816,
+              13.6521668
+            ],
+            [
+              100.494474,
+              13.6521727
+            ],
+            [
+              100.4944636,
+              13.6521761
+            ],
+            [
+              100.4944468,
+              13.6521755
+            ],
+            [
+              100.4942572,
+              13.6521671
+            ],
+            [
+              100.4939768,
+              13.6521621
+            ],
+            [
+              100.4936797,
+              13.6521564
+            ],
+            [
+              100.4936624,
+              13.6521526
+            ],
+            [
+              100.4936518,
+              13.6521472
+            ],
+            [
+              100.4936437,
+              13.6521373
+            ],
+            [
+              100.4936398,
+              13.6521213
+            ],
+            [
+              100.4936439,
+              13.651926
+            ],
+            [
+              100.4936561,
+              13.6519198
+            ],
+            [
+              100.4938406,
+              13.6519249
+            ],
+            [
+              100.4938461,
+              13.6516901
+            ],
+            [
+              100.4938475,
+              13.651681
+            ],
+            [
+              100.493854,
+              13.6516724
+            ],
+            [
+              100.4938666,
+              13.651669
+            ],
+            [
+              100.4940916,
+              13.6516693
+            ],
+            [
+              100.4941028,
+              13.6516744
+            ],
+            [
+              100.4941076,
+              13.6516824
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
       "id": "osm-way-420534143",
       "properties": {
         "building_code": "N17",
         "confidence": "approximate",
         "review_status": "candidate-needs-independent-review",
+        "association_scope": "named-building",
         "reference_point_inside": true,
         "osm_name": "อาคารเรียนรวม 2",
         "osm_name_en": "Classroom Building 2 (CB2)",
         "osm_levels": 6,
+        "roof_shape": null,
+        "reference_point": [
+          100.49390003854973,
+          13.65144355
+        ],
         "evidence": {
           "source": "https://www.openstreetmap.org/way/420534143",
           "license": "ODbL-1.0",
           "method": "cross-source-name-match",
-          "checked_on": "2026-11-01",
-          "verified_on": null,
-          "reviewer": null,
+          "checked_on": "2026-11-02",
           "source_version": 6,
           "source_timestamp": "2025-03-23T08:12:31Z",
-          "association_basis": "Official N17 directory name agrees with the named OSM way and existing reference ID. Candidate only; independent association review pending.",
-          "limitations": "OSM geometry and levels are not field verified; wheelchair tags are not accepted as route evidence."
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM N17 name or documented alias compared with OSM name 'อาคารเรียนรวม 2'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
         }
       },
       "geometry": {
@@ -288,21 +945,28 @@
         "building_code": "N20",
         "confidence": "approximate",
         "review_status": "candidate-needs-independent-review",
+        "association_scope": "named-building",
         "reference_point_inside": true,
         "osm_name": "อาคารเรียนรวม 1",
         "osm_name_en": "Classroom Building 1 (CB1)",
         "osm_levels": 5,
+        "roof_shape": null,
+        "reference_point": [
+          100.49334460978085,
+          13.65157495
+        ],
         "evidence": {
           "source": "https://www.openstreetmap.org/way/436983061",
           "license": "ODbL-1.0",
           "method": "cross-source-name-match",
-          "checked_on": "2026-11-01",
-          "verified_on": null,
-          "reviewer": null,
+          "checked_on": "2026-11-02",
           "source_version": 5,
           "source_timestamp": "2025-03-23T08:12:31Z",
-          "association_basis": "Official N20 directory name agrees with the named OSM way and existing reference ID. Candidate only; independent association review pending.",
-          "limitations": "OSM geometry and levels are not field verified; wheelchair tags are not accepted as route evidence."
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM N20 name or documented alias compared with OSM name 'อาคารเรียนรวม 1'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
         }
       },
       "geometry": {
@@ -372,6 +1036,840 @@
             [
               100.4931086,
               13.651665
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-420044928",
+      "properties": {
+        "building_code": "S4",
+        "confidence": "approximate",
+        "review_status": "candidate-needs-independent-review",
+        "association_scope": "named-building",
+        "reference_point_inside": null,
+        "osm_name": "กลุ่มอาคารวิศวะวัฒนะ",
+        "osm_name_en": "Witsawa Wattana",
+        "osm_levels": 11,
+        "roof_shape": "flat",
+        "reference_point": [
+          100.49421401605012,
+          13.6500597
+        ],
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/420044928",
+          "license": "ODbL-1.0",
+          "method": "cross-source-name-match",
+          "checked_on": "2026-11-02",
+          "source_version": 6,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM S4 name or documented alias compared with OSM name 'กลุ่มอาคารวิศวะวัฒนะ'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.4939059,
+              13.6501461
+            ],
+            [
+              100.4939076,
+              13.6499733
+            ],
+            [
+              100.4939088,
+              13.6498533
+            ],
+            [
+              100.4942112,
+              13.6498574
+            ],
+            [
+              100.4943461,
+              13.649858
+            ],
+            [
+              100.4945232,
+              13.6498588
+            ],
+            [
+              100.4945204,
+              13.6501521
+            ],
+            [
+              100.494414,
+              13.6501512
+            ],
+            [
+              100.4942714,
+              13.6501494
+            ],
+            [
+              100.4942179,
+              13.6501489
+            ],
+            [
+              100.4939059,
+              13.6501461
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-420045662",
+      "properties": {
+        "building_code": "S5",
+        "confidence": "approximate",
+        "review_status": "candidate-needs-independent-review",
+        "association_scope": "named-building",
+        "reference_point_inside": null,
+        "osm_name": "หอพักธรรมรักษา 2",
+        "osm_name_en": "Dhammaraska Residence Hall 2 (Male)",
+        "osm_levels": 10,
+        "roof_shape": "flat",
+        "reference_point": [
+          100.49453387755273,
+          13.649428799999999
+        ],
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/420045662",
+          "license": "ODbL-1.0",
+          "method": "cross-source-name-match",
+          "checked_on": "2026-11-02",
+          "source_version": 4,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM S5 name or documented alias compared with OSM name 'หอพักธรรมรักษา 2'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.4946088,
+              13.6492146
+            ],
+            [
+              100.4947406,
+              13.6494195
+            ],
+            [
+              100.4945198,
+              13.6495536
+            ],
+            [
+              100.4944794,
+              13.6495782
+            ],
+            [
+              100.4944514,
+              13.6495345
+            ],
+            [
+              100.4944067,
+              13.6495616
+            ],
+            [
+              100.4943273,
+              13.6494381
+            ],
+            [
+              100.4943684,
+              13.6494129
+            ],
+            [
+              100.4943442,
+              13.6493757
+            ],
+            [
+              100.4946088,
+              13.6492146
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-420051710",
+      "properties": {
+        "building_code": "S6",
+        "confidence": "approximate",
+        "review_status": "candidate-needs-independent-review",
+        "association_scope": "named-building",
+        "reference_point_inside": null,
+        "osm_name": "หอพักธรรมรักษา 1",
+        "osm_name_en": "Dhammaraska Residence Hall 1 (Female)",
+        "osm_levels": 11,
+        "roof_shape": null,
+        "reference_point": [
+          100.49472380326866,
+          13.648877899999999
+        ],
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/420051710",
+          "license": "ODbL-1.0",
+          "method": "cross-source-name-match",
+          "checked_on": "2026-11-02",
+          "source_version": 4,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM S6 name or documented alias compared with OSM name 'หอพักธรรมรักษา 1'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.4949496,
+              13.6486018
+            ],
+            [
+              100.4950778,
+              13.6488
+            ],
+            [
+              100.4947812,
+              13.6489811
+            ],
+            [
+              100.4945188,
+              13.6491413
+            ],
+            [
+              100.4944503,
+              13.6490353
+            ],
+            [
+              100.4944295,
+              13.649048
+            ],
+            [
+              100.4943698,
+              13.6489558
+            ],
+            [
+              100.4949496,
+              13.6486018
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-436983066",
+      "properties": {
+        "building_code": "S7",
+        "confidence": "approximate",
+        "review_status": "candidate-needs-independent-review",
+        "association_scope": "named-building",
+        "reference_point_inside": null,
+        "osm_name": "ศูนย์พัฒนาเด็กเล็ก มจธ.",
+        "osm_name_en": null,
+        "osm_levels": null,
+        "roof_shape": null,
+        "reference_point": [
+          100.49428230187159,
+          13.64915885
+        ],
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/436983066",
+          "license": "ODbL-1.0",
+          "method": "cross-source-name-match",
+          "checked_on": "2026-11-02",
+          "source_version": 3,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM S7 name or documented alias compared with OSM name 'ศูนย์พัฒนาเด็กเล็ก มจธ.'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.4942336,
+              13.6493293
+            ],
+            [
+              100.4941209,
+              13.6491229
+            ],
+            [
+              100.4943044,
+              13.6489883
+            ],
+            [
+              100.4944493,
+              13.6491948
+            ],
+            [
+              100.4942336,
+              13.6493293
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-651713745",
+      "properties": {
+        "building_code": "S9",
+        "confidence": "approximate",
+        "review_status": "candidate-needs-independent-review",
+        "association_scope": "named-building",
+        "reference_point_inside": null,
+        "osm_name": "คณะพลังงานสิ่งแวดล้อมและวัสดุ",
+        "osm_name_en": null,
+        "osm_levels": null,
+        "roof_shape": null,
+        "reference_point": [
+          100.49355972402114,
+          13.649047849999999
+        ],
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/651713745",
+          "license": "ODbL-1.0",
+          "method": "cross-source-name-match",
+          "checked_on": "2026-11-02",
+          "source_version": 4,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM S9 name or documented alias compared with OSM name 'คณะพลังงานสิ่งแวดล้อมและวัสดุ'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.4931458,
+              13.6491402
+            ],
+            [
+              100.4931385,
+              13.6489555
+            ],
+            [
+              100.4936026,
+              13.6487105
+            ],
+            [
+              100.4939809,
+              13.6488187
+            ],
+            [
+              100.4939754,
+              13.6491686
+            ],
+            [
+              100.493339,
+              13.6491468
+            ],
+            [
+              100.4931458,
+              13.6491402
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-1333533934",
+      "properties": {
+        "building_code": "S10",
+        "confidence": "approximate",
+        "review_status": "candidate-needs-independent-review",
+        "association_scope": "named-building",
+        "reference_point_inside": null,
+        "osm_name": "Green Society",
+        "osm_name_en": null,
+        "osm_levels": null,
+        "roof_shape": null,
+        "reference_point": [
+          100.49366302453281,
+          13.64957465
+        ],
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/1333533934",
+          "license": "ODbL-1.0",
+          "method": "cross-source-name-match",
+          "checked_on": "2026-11-02",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:37Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM S10 name or documented alias compared with OSM name 'Green Society'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.493559,
+              13.6496928
+            ],
+            [
+              100.4935647,
+              13.649452
+            ],
+            [
+              100.493767,
+              13.6494565
+            ],
+            [
+              100.4937614,
+              13.6496973
+            ],
+            [
+              100.493559,
+              13.6496928
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-420533543",
+      "properties": {
+        "building_code": "S11",
+        "confidence": "approximate",
+        "review_status": "candidate-needs-independent-review",
+        "association_scope": "named-building",
+        "reference_point_inside": null,
+        "osm_name": "CB5",
+        "osm_name_en": null,
+        "osm_levels": null,
+        "roof_shape": null,
+        "reference_point": [
+          100.49339650022299,
+          13.6497194
+        ],
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/420533543",
+          "license": "ODbL-1.0",
+          "method": "cross-source-name-match",
+          "checked_on": "2026-11-02",
+          "source_version": 6,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM S11 name or documented alias compared with OSM name 'CB5'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.4930906,
+              13.6497916
+            ],
+            [
+              100.4930855,
+              13.6499419
+            ],
+            [
+              100.4937034,
+              13.6499616
+            ],
+            [
+              100.4937074,
+              13.6498437
+            ],
+            [
+              100.4937742,
+              13.6498458
+            ],
+            [
+              100.4937786,
+              13.6497135
+            ],
+            [
+              100.4934713,
+              13.6497037
+            ],
+            [
+              100.4934741,
+              13.6496218
+            ],
+            [
+              100.4935468,
+              13.6496241
+            ],
+            [
+              100.4935511,
+              13.6494965
+            ],
+            [
+              100.4931221,
+              13.6494829
+            ],
+            [
+              100.4931186,
+              13.6495874
+            ],
+            [
+              100.4930191,
+              13.6495843
+            ],
+            [
+              100.4930144,
+              13.6497253
+            ],
+            [
+              100.4932283,
+              13.6497321
+            ],
+            [
+              100.4932262,
+              13.6497959
+            ],
+            [
+              100.4930906,
+              13.6497916
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-420534334",
+      "properties": {
+        "building_code": "S12",
+        "confidence": "approximate",
+        "review_status": "candidate-needs-independent-review",
+        "association_scope": "named-building",
+        "reference_point_inside": null,
+        "osm_name": "CB4",
+        "osm_name_en": null,
+        "osm_levels": null,
+        "roof_shape": null,
+        "reference_point": [
+          100.49272676647433,
+          13.64949
+        ],
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/420534334",
+          "license": "ODbL-1.0",
+          "method": "cross-source-name-match",
+          "checked_on": "2026-11-02",
+          "source_version": 6,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM S12 name or documented alias compared with OSM name 'CB4'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.4930392,
+              13.6493773
+            ],
+            [
+              100.4930402,
+              13.6495162
+            ],
+            [
+              100.4927744,
+              13.6495171
+            ],
+            [
+              100.492775,
+              13.6495636
+            ],
+            [
+              100.49294,
+              13.6495666
+            ],
+            [
+              100.4929385,
+              13.6497419
+            ],
+            [
+              100.4926906,
+              13.6497436
+            ],
+            [
+              100.492691,
+              13.6498335
+            ],
+            [
+              100.4923476,
+              13.6498334
+            ],
+            [
+              100.4923452,
+              13.6496761
+            ],
+            [
+              100.4925565,
+              13.6496736
+            ],
+            [
+              100.4925574,
+              13.6496152
+            ],
+            [
+              100.4924109,
+              13.6496152
+            ],
+            [
+              100.4924142,
+              13.6494576
+            ],
+            [
+              100.4926539,
+              13.6494638
+            ],
+            [
+              100.4926549,
+              13.649371
+            ],
+            [
+              100.4930392,
+              13.6493773
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-420534582",
+      "properties": {
+        "building_code": "S13",
+        "confidence": "approximate",
+        "review_status": "candidate-needs-independent-review",
+        "association_scope": "named-building",
+        "reference_point_inside": null,
+        "osm_name": "CB3",
+        "osm_name_en": null,
+        "osm_levels": null,
+        "roof_shape": null,
+        "reference_point": [
+          100.49190493504074,
+          13.650018150000001
+        ],
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/420534582",
+          "license": "ODbL-1.0",
+          "method": "cross-source-name-match",
+          "checked_on": "2026-11-02",
+          "source_version": 5,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM S13 name or documented alias compared with OSM name 'CB3'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.4922889,
+              13.6496764
+            ],
+            [
+              100.492288,
+              13.6498247
+            ],
+            [
+              100.4920747,
+              13.6498228
+            ],
+            [
+              100.4920757,
+              13.6498898
+            ],
+            [
+              100.4922138,
+              13.6498929
+            ],
+            [
+              100.4922112,
+              13.6500387
+            ],
+            [
+              100.4920654,
+              13.6500377
+            ],
+            [
+              100.4920657,
+              13.6501488
+            ],
+            [
+              100.4918354,
+              13.6501397
+            ],
+            [
+              100.4915959,
+              13.6501367
+            ],
+            [
+              100.4915987,
+              13.6499986
+            ],
+            [
+              100.491824,
+              13.649998
+            ],
+            [
+              100.4918272,
+              13.6499025
+            ],
+            [
+              100.4917514,
+              13.6498989
+            ],
+            [
+              100.4917508,
+              13.6498088
+            ],
+            [
+              100.4919001,
+              13.6498078
+            ],
+            [
+              100.4919016,
+              13.6496937
+            ],
+            [
+              100.4919208,
+              13.6496931
+            ],
+            [
+              100.4919221,
+              13.6496704
+            ],
+            [
+              100.4920757,
+              13.6496739
+            ],
+            [
+              100.4920762,
+              13.6495957
+            ],
+            [
+              100.4920966,
+              13.6495751
+            ],
+            [
+              100.4922929,
+              13.649577
+            ],
+            [
+              100.4923058,
+              13.6495992
+            ],
+            [
+              100.4923046,
+              13.6496766
+            ],
+            [
+              100.4922889,
+              13.6496764
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-436983067",
+      "properties": {
+        "building_code": "S15",
+        "confidence": "approximate",
+        "review_status": "candidate-needs-independent-review",
+        "association_scope": "named-building",
+        "reference_point_inside": null,
+        "osm_name": "ภาควิชาวิศวกรรมเคมี",
+        "osm_name_en": "Department of Chemistry Engineering",
+        "osm_levels": null,
+        "roof_shape": null,
+        "reference_point": [
+          100.49333025,
+          13.650303350000002
+        ],
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/436983067",
+          "license": "ODbL-1.0",
+          "method": "cross-source-name-match",
+          "checked_on": "2026-11-02",
+          "source_version": 4,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM S15 name or documented alias compared with OSM name 'ภาควิชาวิศวกรรมเคมี'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.4930486,
+              13.6505699
+            ],
+            [
+              100.4930575,
+              13.6500283
+            ],
+            [
+              100.4936119,
+              13.6500368
+            ],
+            [
+              100.493603,
+              13.6505784
+            ],
+            [
+              100.4930486,
+              13.6505699
             ]
           ]
         ]

@@ -30,6 +30,2775 @@
           "reviewer": null
         }
       }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-291433318",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4882352,
+          13.650673
+        ]
+      },
+      "properties": {
+        "name": "7-Eleven",
+        "name_en": "7-Eleven",
+        "category": "convenience",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/291433318",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-13",
+          "source_version": 11,
+          "source_timestamp": "2024-11-13T08:06:12Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-330412272",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4960531,
+          13.6482451
+        ]
+      },
+      "properties": {
+        "name": "Bangkok Bank",
+        "name_en": null,
+        "category": "visitor",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/330412272",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2013-06-09",
+          "source_version": 3,
+          "source_timestamp": "2013-06-09T13:13:06Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-2338147612",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.496621,
+          13.6515791
+        ]
+      },
+      "properties": {
+        "name": "ธนาคารกรุงเทพ",
+        "name_en": "Bangkok Bank",
+        "category": "visitor",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/2338147612",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-09-24",
+          "source_version": 4,
+          "source_timestamp": "2024-09-24T09:15:12Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-4200333436",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4956321,
+          13.650363
+        ]
+      },
+      "properties": {
+        "name": "ที่จอดรถ · OSM 4200333436",
+        "name_en": null,
+        "category": "parking",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/4200333436",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2019-01-14",
+          "source_version": 5,
+          "source_timestamp": "2019-01-14T04:23:16Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-4348163154",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4954213,
+          13.6518155
+        ]
+      },
+      "properties": {
+        "name": "KMUTT Shuttle Bus",
+        "name_en": null,
+        "category": "transport",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/4348163154",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-13",
+          "source_version": 2,
+          "source_timestamp": "2024-11-13T17:38:51Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-5285410621",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4889335,
+          13.6502846
+        ]
+      },
+      "properties": {
+        "name": "7-Eleven",
+        "name_en": null,
+        "category": "convenience",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/5285410621",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-07-02",
+          "source_version": 2,
+          "source_timestamp": "2024-07-02T09:50:10Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-6110949757",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.495098,
+          13.6534134
+        ]
+      },
+      "properties": {
+        "name": "Learning space",
+        "name_en": null,
+        "category": "library",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/6110949757",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2018-12-02",
+          "source_version": 2,
+          "source_timestamp": "2018-12-02T15:32:33Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-6207310420",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4947669,
+          13.6488084
+        ]
+      },
+      "properties": {
+        "name": "7-Eleven",
+        "name_en": null,
+        "category": "convenience",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/6207310420",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-15",
+          "source_version": 4,
+          "source_timestamp": "2024-11-15T10:02:10Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-8027501272",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4966342,
+          13.6499859
+        ]
+      },
+      "properties": {
+        "name": "Manpuku Ramen",
+        "name_en": null,
+        "category": "restaurant",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": {
+          "timezone": "Asia/Bangkok",
+          "checked_on": "2024-11-13",
+          "evidence": {
+            "source": "https://www.openstreetmap.org/node/8027501272",
+            "license": "ODbL-1.0",
+            "method": "osm-public-service-reference",
+            "checked_on": "2026-11-02",
+            "source_date": "2024-11-13",
+            "source_version": 2,
+            "source_timestamp": "2024-11-13T17:38:51Z",
+            "verified_on": null,
+            "reviewer": null,
+            "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+          },
+          "weekly": {
+            "0": [
+              [
+                "11:30",
+                "21:00"
+              ]
+            ],
+            "1": [
+              [
+                "11:30",
+                "21:00"
+              ]
+            ],
+            "2": [
+              [
+                "11:30",
+                "21:00"
+              ]
+            ],
+            "3": [
+              [
+                "11:30",
+                "21:00"
+              ]
+            ],
+            "4": [
+              [
+                "11:30",
+                "21:00"
+              ]
+            ],
+            "5": [
+              [
+                "11:30",
+                "21:00"
+              ]
+            ],
+            "6": [
+              [
+                "11:30",
+                "21:00"
+              ]
+            ]
+          },
+          "exceptions": {},
+          "holiday_coverage": "unknown"
+        },
+        "raw_opening_hours": "Mo-Su 11:30-21:00",
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/8027501272",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-13",
+          "source_version": 2,
+          "source_timestamp": "2024-11-13T17:38:51Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-8027521216",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4963393,
+          13.6498998
+        ]
+      },
+      "properties": {
+        "name": "BLK. Boba",
+        "name_en": null,
+        "category": "cafe",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/8027521216",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-13",
+          "source_version": 2,
+          "source_timestamp": "2024-11-13T17:38:51Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-9943118120",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4969169,
+          13.6519217
+        ]
+      },
+      "properties": {
+        "name": "วัวล้วนๆไม่มีควายผสม สาขา KMUTT บางมด",
+        "name_en": null,
+        "category": "cafe",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/9943118120",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-15",
+          "source_version": 2,
+          "source_timestamp": "2024-11-15T10:02:10Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-9943118121",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4969502,
+          13.6520511
+        ]
+      },
+      "properties": {
+        "name": "Bonchon Chicken",
+        "name_en": null,
+        "category": "restaurant",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/9943118121",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-15",
+          "source_version": 2,
+          "source_timestamp": "2024-11-15T10:02:10Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-10225189194",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4974235,
+          13.6520252
+        ]
+      },
+      "properties": {
+        "name": "เนื้อเทพ สาขา ประชาอุทิศ - ม.พระจอมเกล้าธนบุรี",
+        "name_en": null,
+        "category": "restaurant",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/10225189194",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-15",
+          "source_version": 3,
+          "source_timestamp": "2024-11-15T10:02:10Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-10829060694",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4974588,
+          13.6520745
+        ]
+      },
+      "properties": {
+        "name": "จอมหวาน Jomwaan",
+        "name_en": null,
+        "category": "cafe",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/10829060694",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-15",
+          "source_version": 3,
+          "source_timestamp": "2024-11-15T10:02:10Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-11057171459",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4914017,
+          13.6498965
+        ]
+      },
+      "properties": {
+        "name": "ป้ายรถโดยสาร · OSM 11057171459",
+        "name_en": null,
+        "category": "transport",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/11057171459",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2023-07-20",
+          "source_version": 1,
+          "source_timestamp": "2023-07-20T17:30:18Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-11057171460",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4892268,
+          13.6503877
+        ]
+      },
+      "properties": {
+        "name": "ป้ายรถโดยสาร · OSM 11057171460",
+        "name_en": null,
+        "category": "transport",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/11057171460",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2023-07-20",
+          "source_version": 1,
+          "source_timestamp": "2023-07-20T17:30:18Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-11057186610",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4961262,
+          13.6482108
+        ]
+      },
+      "properties": {
+        "name": "ป้ายรถโดยสาร · OSM 11057186610",
+        "name_en": null,
+        "category": "transport",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/11057186610",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-13",
+          "source_version": 2,
+          "source_timestamp": "2024-11-13T17:38:51Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-11057186611",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4965371,
+          13.6507049
+        ]
+      },
+      "properties": {
+        "name": "มจธ.",
+        "name_en": "KMUTT",
+        "category": "transport",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/11057186611",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-15",
+          "source_version": 2,
+          "source_timestamp": "2024-11-15T10:02:10Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-11057186614",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4974705,
+          13.6538974
+        ]
+      },
+      "properties": {
+        "name": "ป้ายรถโดยสาร · OSM 11057186614",
+        "name_en": null,
+        "category": "transport",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/11057186614",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-15",
+          "source_version": 2,
+          "source_timestamp": "2024-11-15T10:02:10Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-11057186615",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4986067,
+          13.655654
+        ]
+      },
+      "properties": {
+        "name": "โรงเรียนขจรโรจน์วิทยา",
+        "name_en": "Kajonrot Wittaya School",
+        "category": "transport",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/11057186615",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-19",
+          "source_version": 2,
+          "source_timestamp": "2024-11-19T16:38:10Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-11057186628",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4966265,
+          13.6503659
+        ]
+      },
+      "properties": {
+        "name": "ตรงข้าม มจธ.",
+        "name_en": "Opposite KMUTT",
+        "category": "transport",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/11057186628",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2023-07-20",
+          "source_version": 2,
+          "source_timestamp": "2023-07-20T19:07:16Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-11057186629",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4962736,
+          13.6480027
+        ]
+      },
+      "properties": {
+        "name": "ป้ายรถโดยสาร · OSM 11057186629",
+        "name_en": null,
+        "category": "transport",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/11057186629",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2023-07-20",
+          "source_version": 1,
+          "source_timestamp": "2023-07-20T17:30:18Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-11057332583",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4978195,
+          13.6541497
+        ]
+      },
+      "properties": {
+        "name": "ซอยประชาอุทิศ 39",
+        "name_en": "Soi Pracha Uthit 39",
+        "category": "transport",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/11057332583",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-20",
+          "source_version": 2,
+          "source_timestamp": "2024-11-20T09:24:05Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-11057332585",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4890748,
+          13.6503055
+        ]
+      },
+      "properties": {
+        "name": "ป้ายรถโดยสาร · OSM 11057332585",
+        "name_en": null,
+        "category": "transport",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/11057332585",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2023-07-20",
+          "source_version": 1,
+          "source_timestamp": "2023-07-20T19:07:16Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-11057332587",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4934474,
+          13.6485699
+        ]
+      },
+      "properties": {
+        "name": "ป้ายรถโดยสาร · OSM 11057332587",
+        "name_en": null,
+        "category": "transport",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/11057332587",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2023-07-20",
+          "source_version": 1,
+          "source_timestamp": "2023-07-20T19:07:16Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-11057332588",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4932735,
+          13.6484973
+        ]
+      },
+      "properties": {
+        "name": "ป้ายรถโดยสาร · OSM 11057332588",
+        "name_en": null,
+        "category": "transport",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/11057332588",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2023-07-20",
+          "source_version": 1,
+          "source_timestamp": "2023-07-20T19:07:16Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-11057332589",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4945756,
+          13.6478454
+        ]
+      },
+      "properties": {
+        "name": "ป้ายรถโดยสาร · OSM 11057332589",
+        "name_en": null,
+        "category": "transport",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/11057332589",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2023-07-20",
+          "source_version": 1,
+          "source_timestamp": "2023-07-20T19:07:16Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-11057332590",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4918313,
+          13.6494555
+        ]
+      },
+      "properties": {
+        "name": "ป้ายรถโดยสาร · OSM 11057332590",
+        "name_en": null,
+        "category": "transport",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/11057332590",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2023-07-20",
+          "source_version": 1,
+          "source_timestamp": "2023-07-20T19:07:16Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-11057332591",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4949066,
+          13.6474424
+        ]
+      },
+      "properties": {
+        "name": "ป้ายรถโดยสาร · OSM 11057332591",
+        "name_en": null,
+        "category": "transport",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/11057332591",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2023-07-20",
+          "source_version": 1,
+          "source_timestamp": "2023-07-20T19:07:16Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-12169701861",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4956112,
+          13.6505476
+        ]
+      },
+      "properties": {
+        "name": "Kamu Kamu",
+        "name_en": null,
+        "category": "cafe",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/12169701861",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-09-11",
+          "source_version": 1,
+          "source_timestamp": "2024-09-11T10:15:14Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-12169701863",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.495712,
+          13.6504504
+        ]
+      },
+      "properties": {
+        "name": "อินทนิล",
+        "name_en": "Inthanin",
+        "category": "cafe",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/12169701863",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-09-11",
+          "source_version": 2,
+          "source_timestamp": "2024-09-11T12:09:19Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-12343383196",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4975231,
+          13.6540223
+        ]
+      },
+      "properties": {
+        "name": "ชายสี่",
+        "name_en": null,
+        "category": "restaurant",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/12343383196",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-15",
+          "source_version": 1,
+          "source_timestamp": "2024-11-15T10:02:10Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-12343396011",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4971581,
+          13.6516857
+        ]
+      },
+      "properties": {
+        "name": "Mixue",
+        "name_en": null,
+        "category": "cafe",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/12343396011",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-15",
+          "source_version": 1,
+          "source_timestamp": "2024-11-15T10:02:10Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-12343396012",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4971919,
+          13.6517269
+        ]
+      },
+      "properties": {
+        "name": "The Pizza Company",
+        "name_en": null,
+        "category": "restaurant",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/12343396012",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-15",
+          "source_version": 1,
+          "source_timestamp": "2024-11-15T10:02:10Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-12343396013",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4972351,
+          13.6517802
+        ]
+      },
+      "properties": {
+        "name": "กิน กัน จัง ชาบู",
+        "name_en": null,
+        "category": "restaurant",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": {
+          "timezone": "Asia/Bangkok",
+          "checked_on": "2024-11-15",
+          "evidence": {
+            "source": "https://www.openstreetmap.org/node/12343396013",
+            "license": "ODbL-1.0",
+            "method": "osm-public-service-reference",
+            "checked_on": "2026-11-02",
+            "source_date": "2024-11-15",
+            "source_version": 1,
+            "source_timestamp": "2024-11-15T10:02:10Z",
+            "verified_on": null,
+            "reviewer": null,
+            "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+          },
+          "weekly": {
+            "0": [
+              [
+                "16:00",
+                "02:30"
+              ]
+            ],
+            "1": [
+              [
+                "16:00",
+                "02:30"
+              ]
+            ],
+            "2": [
+              [
+                "16:00",
+                "02:30"
+              ]
+            ],
+            "3": [
+              [
+                "16:00",
+                "02:30"
+              ]
+            ],
+            "4": [
+              [
+                "16:00",
+                "02:30"
+              ]
+            ],
+            "5": [
+              [
+                "16:00",
+                "02:30"
+              ]
+            ],
+            "6": [
+              [
+                "16:00",
+                "02:30"
+              ]
+            ]
+          },
+          "exceptions": {},
+          "holiday_coverage": "unknown"
+        },
+        "raw_opening_hours": "Mo-Su 16:00-02:30",
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/12343396013",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-15",
+          "source_version": 1,
+          "source_timestamp": "2024-11-15T10:02:10Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-12343396014",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4972704,
+          13.6518331
+        ]
+      },
+      "properties": {
+        "name": "คลินิกทันตกรรม จัดฟัน ครบวงจร บางมด",
+        "name_en": null,
+        "category": "clinic",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/12343396014",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-15",
+          "source_version": 1,
+          "source_timestamp": "2024-11-15T10:02:10Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-12343396019",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4970038,
+          13.6520455
+        ]
+      },
+      "properties": {
+        "name": "คาเฟ่ อเมซอน",
+        "name_en": "Café Amazon",
+        "category": "cafe",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/12343396019",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-15",
+          "source_version": 1,
+          "source_timestamp": "2024-11-15T10:02:10Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-12343396020",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4970607,
+          13.6520403
+        ]
+      },
+      "properties": {
+        "name": "อี้จาสุกี้หมาล่า",
+        "name_en": null,
+        "category": "restaurant",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/12343396020",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-15",
+          "source_version": 1,
+          "source_timestamp": "2024-11-15T10:02:10Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-12355863620",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4989873,
+          13.6557407
+        ]
+      },
+      "properties": {
+        "name": "7-Eleven",
+        "name_en": null,
+        "category": "convenience",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/12355863620",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-19",
+          "source_version": 1,
+          "source_timestamp": "2024-11-19T16:38:10Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-12357746752",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.497705,
+          13.6538488
+        ]
+      },
+      "properties": {
+        "name": "โจ๊กสามย่าน",
+        "name_en": null,
+        "category": "restaurant",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/12357746752",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-20",
+          "source_version": 1,
+          "source_timestamp": "2024-11-20T09:24:05Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-12357746754",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4976677,
+          13.653797
+        ]
+      },
+      "properties": {
+        "name": "เลเซอร์คลินิก",
+        "name_en": null,
+        "category": "clinic",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": {
+          "timezone": "Asia/Bangkok",
+          "checked_on": "2024-11-20",
+          "evidence": {
+            "source": "https://www.openstreetmap.org/node/12357746754",
+            "license": "ODbL-1.0",
+            "method": "osm-public-service-reference",
+            "checked_on": "2026-11-02",
+            "source_date": "2024-11-20",
+            "source_version": 1,
+            "source_timestamp": "2024-11-20T09:24:05Z",
+            "verified_on": null,
+            "reviewer": null,
+            "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+          },
+          "weekly": {
+            "0": [
+              [
+                "12:00",
+                "20:00"
+              ]
+            ],
+            "1": [
+              [
+                "12:00",
+                "20:00"
+              ]
+            ],
+            "2": [
+              [
+                "12:00",
+                "20:00"
+              ]
+            ],
+            "4": [
+              [
+                "12:00",
+                "20:00"
+              ]
+            ],
+            "5": [
+              [
+                "12:00",
+                "20:00"
+              ]
+            ],
+            "6": [
+              [
+                "12:00",
+                "20:00"
+              ]
+            ]
+          },
+          "exceptions": {},
+          "holiday_coverage": "unknown"
+        },
+        "raw_opening_hours": "Th-Tu 12:00-20:00",
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/12357746754",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-20",
+          "source_version": 1,
+          "source_timestamp": "2024-11-20T09:24:05Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-12357746755",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4975626,
+          13.6536278
+        ]
+      },
+      "properties": {
+        "name": "441 คลังยา",
+        "name_en": null,
+        "category": "pharmacy",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/12357746755",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-20",
+          "source_version": 1,
+          "source_timestamp": "2024-11-20T09:24:05Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-12357746756",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4975827,
+          13.6536581
+        ]
+      },
+      "properties": {
+        "name": "บางมดทันตกรรม",
+        "name_en": null,
+        "category": "clinic",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/12357746756",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-20",
+          "source_version": 1,
+          "source_timestamp": "2024-11-20T09:24:05Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-node-12357746757",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4976011,
+          13.6536877
+        ]
+      },
+      "properties": {
+        "name": "ยโสธรลาบเป็ด",
+        "name_en": null,
+        "category": "restaurant",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/12357746757",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-20",
+          "source_version": 1,
+          "source_timestamp": "2024-11-20T09:24:05Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-346449664",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49174926415202,
+          13.65102845
+        ]
+      },
+      "properties": {
+        "name": "KMUTT Canteen",
+        "name_en": null,
+        "category": "restaurant",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/346449664",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2025-03-23",
+          "source_version": 6,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-346450012",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49351422404831,
+          13.65083835
+        ]
+      },
+      "properties": {
+        "name": "ลาดจอดรถ",
+        "name_en": null,
+        "category": "parking",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/346450012",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-09-24",
+          "source_version": 8,
+          "source_timestamp": "2024-09-24T09:15:12Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-378153794",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49563200637097,
+          13.65038255
+        ]
+      },
+      "properties": {
+        "name": "Parking Building",
+        "name_en": null,
+        "category": "parking",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/378153794",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2025-03-23",
+          "source_version": 10,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-420051719",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4948354204326,
+          13.649743350000001
+        ]
+      },
+      "properties": {
+        "name": "ที่จอดรถ · OSM 420051719",
+        "name_en": null,
+        "category": "parking",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/420051719",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-15",
+          "source_version": 4,
+          "source_timestamp": "2024-11-15T10:02:10Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-420052628",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49367219569893,
+          13.649216800000001
+        ]
+      },
+      "properties": {
+        "name": "ลานจอดรถคณะพลังงาน",
+        "name_en": null,
+        "category": "parking",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/420052628",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2019-01-14",
+          "source_version": 3,
+          "source_timestamp": "2019-01-14T09:42:20Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-420054257",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4943189876459,
+          13.649417249999999
+        ]
+      },
+      "properties": {
+        "name": "Kafe Delight",
+        "name_en": null,
+        "category": "cafe",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/420054257",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2025-03-23",
+          "source_version": 3,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-420304825",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49459922689371,
+          13.652918849999999
+        ]
+      },
+      "properties": {
+        "name": "ที่จอดรถ · OSM 420304825",
+        "name_en": null,
+        "category": "parking",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/420304825",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2016-05-23",
+          "source_version": 1,
+          "source_timestamp": "2016-05-23T16:12:52Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-420306003",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49545098965714,
+          13.6525407
+        ]
+      },
+      "properties": {
+        "name": "ที่จอดรถ · OSM 420306003",
+        "name_en": null,
+        "category": "parking",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/420306003",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2016-05-23",
+          "source_version": 3,
+          "source_timestamp": "2016-05-23T16:28:03Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-651714592",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49307544971751,
+          13.65190935
+        ]
+      },
+      "properties": {
+        "name": "Coffee park",
+        "name_en": null,
+        "category": "cafe",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/651714592",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2025-03-23",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-663113959",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4957281857041,
+          13.650674949999999
+        ]
+      },
+      "properties": {
+        "name": "ที่จอดรถ · OSM 663113959",
+        "name_en": null,
+        "category": "parking",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/663113959",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2019-01-14",
+          "source_version": 1,
+          "source_timestamp": "2019-01-14T09:42:17Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-663430213",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49477788331394,
+          13.649152
+        ]
+      },
+      "properties": {
+        "name": "ที่จอดรถ · OSM 663430213",
+        "name_en": null,
+        "category": "parking",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/663430213",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2019-01-15",
+          "source_version": 1,
+          "source_timestamp": "2019-01-15T08:01:30Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-1333425809",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.48826433854413,
+          13.6509355
+        ]
+      },
+      "properties": {
+        "name": "กุ๊กกุ๊ยโภชนา",
+        "name_en": null,
+        "category": "restaurant",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/1333425809",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2025-03-23",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:37Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-1333425810",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.48809306757234,
+          13.6510094
+        ]
+      },
+      "properties": {
+        "name": "Stranger Again",
+        "name_en": null,
+        "category": "restaurant",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/1333425810",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2025-03-23",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:37Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-1333425816",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.48816212221206,
+          13.6509798
+        ]
+      },
+      "properties": {
+        "name": "ยโสธรอ้วนลาบเป็ด",
+        "name_en": null,
+        "category": "restaurant",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/1333425816",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2025-03-23",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:37Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-1333533899",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.48916173967162,
+          13.651362200000001
+        ]
+      },
+      "properties": {
+        "name": "สุกี้ตี๋น้อย ซัสโก้ พุทธบูชา",
+        "name_en": null,
+        "category": "restaurant",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/1333533899",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2025-03-23",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:37Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-1333533900",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.48883135827961,
+          13.650863399999999
+        ]
+      },
+      "properties": {
+        "name": "KFC",
+        "name_en": null,
+        "category": "restaurant",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/1333533900",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2025-03-23",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:37Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-1333533901",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.48911333970332,
+          13.6507388
+        ]
+      },
+      "properties": {
+        "name": "Starbucks",
+        "name_en": null,
+        "category": "cafe",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/1333533901",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2025-03-23",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:37Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-1333533903",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.48867855,
+          13.650869400000001
+        ]
+      },
+      "properties": {
+        "name": "Ebisu Ramen",
+        "name_en": null,
+        "category": "restaurant",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/1333533903",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2025-03-23",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:37Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-1333533917",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.48938922619195,
+          13.65134675
+        ]
+      },
+      "properties": {
+        "name": "ห้องน้ำ · OSM 1333533917",
+        "name_en": null,
+        "category": "restroom",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/1333533917",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2025-03-23",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:37Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-1333533931",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49370129972883,
+          13.65028645
+        ]
+      },
+      "properties": {
+        "name": "7-Eleven",
+        "name_en": null,
+        "category": "convenience",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/1333533931",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2025-03-23",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:37Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-1333533937",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49262329928985,
+          13.6518286
+        ]
+      },
+      "properties": {
+        "name": "ห้องน้ำ · OSM 1333533937",
+        "name_en": null,
+        "category": "restroom",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/1333533937",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2025-03-23",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:37Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-1334181339",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49749224752625,
+          13.65411935
+        ]
+      },
+      "properties": {
+        "name": "7-Eleven",
+        "name_en": null,
+        "category": "convenience",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/1334181339",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2025-03-23",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:37Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-1334181342",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49750215616807,
+          13.65455105
+        ]
+      },
+      "properties": {
+        "name": "CJ More",
+        "name_en": null,
+        "category": "convenience",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/1334181342",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2025-03-23",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:37Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-1334181351",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49703850234447,
+          13.651865699999998
+        ]
+      },
+      "properties": {
+        "name": "ลานปูน",
+        "name_en": null,
+        "category": "canteen",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/1334181351",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2024-11-15",
+          "source_version": 1,
+          "source_timestamp": "2024-11-15T10:02:10Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-1334181352",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49698243167084,
+          13.65155805
+        ]
+      },
+      "properties": {
+        "name": "7-Eleven",
+        "name_en": null,
+        "category": "convenience",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/1334181352",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2025-03-23",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:37Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-1334181353",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.496953823095,
+          13.65168995
+        ]
+      },
+      "properties": {
+        "name": "Burger King",
+        "name_en": null,
+        "category": "restaurant",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/1334181353",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2025-03-23",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:37Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-1334181359",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49700444113185,
+          13.65101885
+        ]
+      },
+      "properties": {
+        "name": "Station 45",
+        "name_en": null,
+        "category": "canteen",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/1334181359",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2025-03-23",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:37Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "osm-way-1334181374",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49641299818305,
+          13.650748400000001
+        ]
+      },
+      "properties": {
+        "name": "ธนาคารกรุงเทพ",
+        "name_en": "Bangkok Bank",
+        "category": "visitor",
+        "building_code": null,
+        "description": "ข้อมูล OSM ในบางมดและบริเวณใกล้เคียง · จุดอ้างอิง ไม่ใช่ทางเข้าที่สำรวจแล้ว",
+        "scope": "campus-or-nearby",
+        "confidence": "approximate",
+        "opening_hours": null,
+        "raw_opening_hours": null,
+        "last_verified_on": null,
+        "accessibility": null,
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/1334181374",
+          "license": "ODbL-1.0",
+          "method": "osm-public-service-reference",
+          "checked_on": "2026-11-02",
+          "source_date": "2025-03-23",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:37Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules."
+        }
+      }
     }
   ]
 }

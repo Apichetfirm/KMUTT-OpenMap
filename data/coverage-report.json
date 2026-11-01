@@ -1,0 +1,118 @@
+{
+  "total_buildings": 35,
+  "buildings_with_coordinates": 20,
+  "buildings_without_coordinates": 15,
+  "approximate_building_references": 20,
+  "verified_building_locations": 0,
+  "candidate_footprints": 18,
+  "accepted_footprints": 0,
+  "field_verified_footprints": 0,
+  "documented_floor_counts": 1,
+  "measured_heights": 0,
+  "estimated_render_heights": 0,
+  "verified_entrances": 0,
+  "candidate_pedestrian_paths": 112,
+  "verified_pedestrian_paths": 0,
+  "total_pois": 73,
+  "verified_pois": 0,
+  "pois_with_recorded_hours": 3,
+  "unresolved_buildings": [
+    {
+      "id": "S1",
+      "reason": "Official directory and BGM descriptions disagree; current institutional confirmation required."
+    },
+    {
+      "id": "S2",
+      "reason": "BGM image-map links swap S1/S2 while directory/button labels disagree; institutional confirmation required."
+    },
+    {
+      "id": "S6",
+      "reason": "Official directory and BGM descriptions disagree; current institutional confirmation required."
+    },
+    {
+      "id": "S8",
+      "reason": "No sufficiently supported code-to-location association found in the reviewed public sources."
+    },
+    {
+      "id": "S14",
+      "reason": "No sufficiently supported code-to-location association found in the reviewed public sources."
+    },
+    {
+      "id": "N1",
+      "reason": "No sufficiently supported code-to-location association found in the reviewed public sources."
+    },
+    {
+      "id": "N4",
+      "reason": "Candidate represents Mathematics only; full Physics–Mathematics complex is not established."
+    },
+    {
+      "id": "N6",
+      "reason": "No sufficiently supported code-to-location association found in the reviewed public sources."
+    },
+    {
+      "id": "N7",
+      "reason": "No sufficiently supported code-to-location association found in the reviewed public sources."
+    },
+    {
+      "id": "N8",
+      "reason": "No sufficiently supported code-to-location association found in the reviewed public sources."
+    },
+    {
+      "id": "N12",
+      "reason": "No sufficiently supported code-to-location association found in the reviewed public sources."
+    },
+    {
+      "id": "N13",
+      "reason": "No sufficiently supported code-to-location association found in the reviewed public sources."
+    },
+    {
+      "id": "N14",
+      "reason": "No sufficiently supported code-to-location association found in the reviewed public sources."
+    },
+    {
+      "id": "N18",
+      "reason": "No sufficiently supported code-to-location association found in the reviewed public sources."
+    },
+    {
+      "id": "N19",
+      "reason": "Official directory and BGM descriptions disagree; current institutional confirmation required."
+    }
+  ],
+  "pending_association_review": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8",
+    "S9",
+    "S10",
+    "S11",
+    "S12",
+    "S13",
+    "S14",
+    "S15",
+    "N1",
+    "N2",
+    "N3",
+    "N4",
+    "N5",
+    "N6",
+    "N7",
+    "N8",
+    "N9",
+    "N10",
+    "N11",
+    "N12",
+    "N13",
+    "N14",
+    "N15",
+    "N16",
+    "N17",
+    "N18",
+    "N19",
+    "N20"
+  ]
+}
