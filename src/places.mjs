@@ -1,6 +1,6 @@
 import {validCoordinates,normalize} from './search.mjs';
 import {CONFIDENCE,validEvidence,verifiedEvidence,validDate} from './data.mjs';
-export const PLACE_CATEGORIES={restaurant:'ร้านอาหาร / โรงอาหาร',cafe:'คาเฟ่',convenience:'ร้านสะดวกซื้อ',restroom:'ห้องน้ำ',water:'จุดเติมน้ำ',study:'พื้นที่อ่านหนังสือ',library:'หอสมุด',printing:'งานพิมพ์',atm:'ATM',clinic:'คลินิก / ร้านยา',parking:'ที่จอดรถ',transport:'รถโดยสาร',accessible_entrance:'ทางเข้าสำหรับทุกคน',visitor:'บริการผู้มาติดต่อ'};
+export const PLACE_CATEGORIES={restaurant:'ร้านอาหาร',canteen:'โรงอาหาร',cafe:'คาเฟ่',convenience:'ร้านสะดวกซื้อ',restroom:'ห้องน้ำ',water:'จุดเติมน้ำ',study:'พื้นที่อ่านหนังสือ',library:'หอสมุด',printing:'งานพิมพ์',atm:'ATM',clinic:'คลินิก',pharmacy:'ร้านยา',parking:'ที่จอดรถ',transport:'รถโดยสาร',accessible_entrance:'ทางเข้าสำหรับทุกคน',visitor:'บริการผู้มาติดต่อ'};
 const minutes=s=>typeof s==='string'&&/^([01]\d|2[0-3]):[0-5]\d$/.test(s)?Number(s.slice(0,2))*60+Number(s.slice(3)):null;
 function validIntervals(v) {return Array.isArray(v)&&v.every(p=>Array.isArray(p)&&p.length===2&&minutes(p[0])!==null&&minutes(p[1])!==null&&p[0]!==p[1]);}
 export function validHours(h) {
@@ -49,5 +49,19 @@ export function filterPlaces(features,{category='all',query='',likelyOpen=false,
   const q=normalize(query);
   return features.filter(f=>(category==='all'||f.properties.category===category)&&
     normalize([f.properties.name,f.properties.name_en].join(' ')).includes(q)&&
-    (!likelyOpen||openingStatus(f.properties.opening_hours,now).state==='likely-open'));
+    (!likelyOpen||(()=>{const s=openingStatus(f.properties.opening_hours,now);return s.state==='likely-open'&&!s.stale;})()));
+}
+
+/** Strict supported subset only; retain unsupported OSM expressions as raw metadata. */
+export function parseRecordedOSMHours(raw,evidence) {
+ if(typeof raw!=='string')return null;
+ const days=['Mo','Tu','We','Th','Fr','Sa','Su'],weekly={};
+ for(const rule of raw.split(';').map(x=>x.trim())) {
+  const m=/^(?:(Mo|Tu|We|Th|Fr|Sa|Su)(?:-(Mo|Tu|We|Th|Fr|Sa|Su))?\s+)?(\d\d:\d\d)-(\d\d:\d\d)$/.exec(rule);
+  if(!m||minutes(m[3])===null||minutes(m[4])===null||m[3]===m[4])return null;
+  const first=m[1]?days.indexOf(m[1]):0,last=m[1]?days.indexOf(m[2]||m[1]):6;
+  for(let d=first;;d=(d+1)%7){const key=String((d+1)%7);(weekly[key]??=[]).push([m[3],m[4]]);if(d===last)break;}
+ }
+ const hours={timezone:'Asia/Bangkok',checked_on:evidence.source_date||evidence.checked_on,evidence,weekly,exceptions:{},holiday_coverage:'unknown'};
+ return validHours(hours)?hours:null;
 }

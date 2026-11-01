@@ -33,8 +33,8 @@ test('places validate provenance/references and unknown hours are not open-now',
  assert.ok(validatePlaces({type:'FeatureCollection',features:[f,f]},[]).length);
 });
 const coordinates=[[100.493,13.652],[100.494,13.652],[100.495,13.652],[100.496,13.653]];
-const nodes=coordinates.map((c,i)=>({id:String(i),coordinates:c,kind:i===0||i===2?'entrance':'intersection',evidence,independently_reviewed:true,accessibility:{wheelchair:true,evidence}}));
-const edge=(id,a,b,extra={})=>({id,from:String(a),to:String(b),coordinates:[coordinates[a],coordinates[b]],kind:'path',access:'public',hours:null,bidirectional:true,evidence,independently_reviewed:true,accessibility:{wheelchair:true,evidence},...extra});
+const nodes=coordinates.map((c,i)=>({id:String(i),coordinates:c,kind:i===0||i===2?'entrance':'intersection',evidence,independently_reviewed:true,independent_reviewer:'Second synthetic reviewer',accessibility:{wheelchair:true,evidence}}));
+const edge=(id,a,b,extra={})=>({id,from:String(a),to:String(b),coordinates:[coordinates[a],coordinates[b]],kind:'path',access:'public',hours:null,bidirectional:true,evidence,independently_reviewed:true,independent_reviewer:'Second synthetic reviewer',accessibility:{wheelchair:true,evidence},...extra});
 const graph={nodes,edges:[edge('a',0,1),edge('b',1,2),edge('long',0,2,{coordinates:[coordinates[0],[100.494,13.655],coordinates[2]]})]};
 test('deterministic shortest path uses geometry distance with explicit walking speed',()=>{
  const r=shortestPath(graph,'0','2');assert.equal(r.status,'ok');assert.deepEqual(r.edge_ids,['a','b']);assert.ok(r.distance_m>200&&r.distance_m<230);assert.equal(r.estimated_seconds,r.distance_m/1.2);
@@ -82,4 +82,11 @@ test('building intersections need explicit surveyed passages and identical endpo
  const passage={nodes,edges:[edge('passage',0,2,{kind:'passage',traversable_passage_verified:true,passage_footprint_ids:['test-building']})]};
  assert.deepEqual(validateGraph(passage,{footprints:[footprint]}),[]);
  assert.equal(shortestPath(graph,'0','0').status,'already-there');
+});
+
+test('public route planning requires distinct survey/review identities and a verified linked entrance',async()=>{
+ const {routeToBuilding,navigationAvailability}=await import('../src/navigation.mjs');
+ const building={entrances:[{confidence:'verified',evidence,graph_node_id:'2',coordinates:coordinates[2]}]};assert.equal(navigationAvailability(graph,building).status,'available');
+ const r=routeToBuilding(graph,'0',building,{accessible:true});assert.equal(r.status,'ok');assert.equal(r.confidence,'field-surveyed-and-independently-reviewed');assert.equal(r.accessibility,'verified-wheelchair-constraints');
+ assert.equal(routeToBuilding(graph,'0',{entrances:[]}).status,'unverified');assert.equal(navigationAvailability(graph,{entrances:[{...building.entrances[0],coordinates:coordinates[0]}]}).status,'unverified');const selfReviewed=structuredClone(graph);selfReviewed.nodes[0].independent_reviewer=evidence.reviewer;assert.ok(validateGraph(selfReviewed).length);assert.equal(routeToBuilding(selfReviewed,'0',building).status,'invalid-graph');
 });

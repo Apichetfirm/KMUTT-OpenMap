@@ -1,7 +1,7 @@
 {
-  "schema_version": "0.3.0",
+  "schema_version": "0.4.0",
   "campus": "KMUTT Bangmod",
-  "notes": "Official names/codes; positions are approximate third-party centroids, not field-verified entrances.",
+  "notes": "Original building URLs/codes and published references preserved. Named OSM references are approximate; candidates, accepted geometry and surveyed entrances remain separate.",
   "name_sources": [
     "https://www.kmutt.ac.th/about-kmutt/campus/",
     "https://bgm.kmutt.ac.th/MapNavi/MAPNAVI.html"
@@ -9,7 +9,8 @@
   "name_source_conflicts": [
     "S1",
     "S6",
-    "N19"
+    "N19",
+    "S2"
   ],
   "buildings": [
     {
@@ -34,11 +35,16 @@
         "footprint_id": null,
         "centroid": null,
         "evidence": null,
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [],
+        "unresolved_reason": "Official directory and BGM descriptions disagree; current institutional confirmation required.",
+        "review_notes": "Official directory and BGM descriptions disagree; current institutional confirmation required."
       },
       "name_conflict": true,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "S2",
@@ -62,11 +68,16 @@
         "footprint_id": null,
         "centroid": null,
         "evidence": null,
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [],
+        "unresolved_reason": "BGM image-map links swap S1/S2 while directory/button labels disagree; institutional confirmation required.",
+        "review_notes": "No sufficiently supported code-to-location association found in the reviewed public sources."
       },
-      "name_conflict": false,
+      "name_conflict": true,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "S3",
@@ -101,11 +112,16 @@
           "reviewer": null,
           "limitations": "Existing approximate reference retained; source not independently field-verified; not an entrance."
         },
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [],
+        "unresolved_reason": null,
+        "review_notes": "Approximate published reference; footprint association and field survey remain pending."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "S4",
@@ -113,9 +129,12 @@
       "name_en": "Wissawa Wattana Engineering Building",
       "zone": "south",
       "aliases": [],
-      "coordinates": null,
-      "location_quality": "unverified",
-      "location_source": null,
+      "coordinates": [
+        100.49421401605012,
+        13.6500597
+      ],
+      "location_quality": "approximate-osm-name-match",
+      "location_source": "https://www.openstreetmap.org/way/420044928",
       "entrances": [],
       "building_height_m": null,
       "name_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
@@ -124,16 +143,35 @@
       "floor_count": null,
       "floor_count_source": null,
       "mapping": {
-        "confidence": "unverified",
-        "review_status": "unmatched",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review",
         "footprint_id": null,
         "centroid": null,
-        "evidence": null,
-        "last_verified_on": null
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/420044928",
+          "license": "ODbL-1.0",
+          "method": "named-osm-reference-point",
+          "checked_on": "2026-11-02",
+          "source_version": 6,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM S4 name or documented alias compared with OSM name 'กลุ่มอาคารวิศวะวัฒนะ'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        },
+        "last_verified_on": null,
+        "candidate_footprint_ids": [
+          "osm-way-420044928"
+        ],
+        "unresolved_reason": null,
+        "review_notes": "OSM name/alias association is provisional; no independent acceptance or field verification."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "S5",
@@ -141,9 +179,12 @@
       "name_en": "Dhammaraksa Residence Hall 2",
       "zone": "south",
       "aliases": [],
-      "coordinates": null,
-      "location_quality": "unverified",
-      "location_source": null,
+      "coordinates": [
+        100.49453387755273,
+        13.649428799999999
+      ],
+      "location_quality": "approximate-osm-name-match",
+      "location_source": "https://www.openstreetmap.org/way/420045662",
       "entrances": [],
       "building_height_m": null,
       "name_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
@@ -152,16 +193,35 @@
       "floor_count": null,
       "floor_count_source": null,
       "mapping": {
-        "confidence": "unverified",
-        "review_status": "unmatched",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review",
         "footprint_id": null,
         "centroid": null,
-        "evidence": null,
-        "last_verified_on": null
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/420045662",
+          "license": "ODbL-1.0",
+          "method": "named-osm-reference-point",
+          "checked_on": "2026-11-02",
+          "source_version": 4,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM S5 name or documented alias compared with OSM name 'หอพักธรรมรักษา 2'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        },
+        "last_verified_on": null,
+        "candidate_footprint_ids": [
+          "osm-way-420045662"
+        ],
+        "unresolved_reason": null,
+        "review_notes": "OSM name/alias association is provisional; no independent acceptance or field verification."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "S6",
@@ -185,11 +245,18 @@
         "footprint_id": null,
         "centroid": null,
         "evidence": null,
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [
+          "osm-way-420051710"
+        ],
+        "unresolved_reason": "Official directory and BGM descriptions disagree; current institutional confirmation required.",
+        "review_notes": "OSM name/alias association is provisional; no independent acceptance or field verification."
       },
       "name_conflict": true,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "S7",
@@ -197,9 +264,12 @@
       "name_en": "KMUTT Child Development Building",
       "zone": "south",
       "aliases": [],
-      "coordinates": null,
-      "location_quality": "unverified",
-      "location_source": null,
+      "coordinates": [
+        100.49428230187159,
+        13.64915885
+      ],
+      "location_quality": "approximate-osm-name-match",
+      "location_source": "https://www.openstreetmap.org/way/436983066",
       "entrances": [],
       "building_height_m": null,
       "name_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
@@ -208,16 +278,35 @@
       "floor_count": null,
       "floor_count_source": null,
       "mapping": {
-        "confidence": "unverified",
-        "review_status": "unmatched",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review",
         "footprint_id": null,
         "centroid": null,
-        "evidence": null,
-        "last_verified_on": null
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/436983066",
+          "license": "ODbL-1.0",
+          "method": "named-osm-reference-point",
+          "checked_on": "2026-11-02",
+          "source_version": 3,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM S7 name or documented alias compared with OSM name 'ศูนย์พัฒนาเด็กเล็ก มจธ.'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        },
+        "last_verified_on": null,
+        "candidate_footprint_ids": [
+          "osm-way-436983066"
+        ],
+        "unresolved_reason": null,
+        "review_notes": "OSM name/alias association is provisional; no independent acceptance or field verification."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "S8",
@@ -241,11 +330,16 @@
         "footprint_id": null,
         "centroid": null,
         "evidence": null,
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [],
+        "unresolved_reason": "No sufficiently supported code-to-location association found in the reviewed public sources.",
+        "review_notes": "No sufficiently supported code-to-location association found in the reviewed public sources."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "S9",
@@ -253,9 +347,12 @@
       "name_en": "School of Energy Environment and Materials Building",
       "zone": "south",
       "aliases": [],
-      "coordinates": null,
-      "location_quality": "unverified",
-      "location_source": null,
+      "coordinates": [
+        100.49355972402114,
+        13.649047849999999
+      ],
+      "location_quality": "approximate-osm-name-match",
+      "location_source": "https://www.openstreetmap.org/way/651713745",
       "entrances": [],
       "building_height_m": null,
       "name_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
@@ -264,16 +361,35 @@
       "floor_count": null,
       "floor_count_source": null,
       "mapping": {
-        "confidence": "unverified",
-        "review_status": "unmatched",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review",
         "footprint_id": null,
         "centroid": null,
-        "evidence": null,
-        "last_verified_on": null
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/651713745",
+          "license": "ODbL-1.0",
+          "method": "named-osm-reference-point",
+          "checked_on": "2026-11-02",
+          "source_version": 4,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM S9 name or documented alias compared with OSM name 'คณะพลังงานสิ่งแวดล้อมและวัสดุ'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        },
+        "last_verified_on": null,
+        "candidate_footprint_ids": [
+          "osm-way-651713745"
+        ],
+        "unresolved_reason": null,
+        "review_notes": "OSM name/alias association is provisional; no independent acceptance or field verification."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "S10",
@@ -281,9 +397,12 @@
       "name_en": "KMUTT Green Society Building",
       "zone": "south",
       "aliases": [],
-      "coordinates": null,
-      "location_quality": "unverified",
-      "location_source": null,
+      "coordinates": [
+        100.49366302453281,
+        13.64957465
+      ],
+      "location_quality": "approximate-osm-name-match",
+      "location_source": "https://www.openstreetmap.org/way/1333533934",
       "entrances": [],
       "building_height_m": null,
       "name_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
@@ -292,16 +411,35 @@
       "floor_count": null,
       "floor_count_source": null,
       "mapping": {
-        "confidence": "unverified",
-        "review_status": "unmatched",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review",
         "footprint_id": null,
         "centroid": null,
-        "evidence": null,
-        "last_verified_on": null
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/1333533934",
+          "license": "ODbL-1.0",
+          "method": "named-osm-reference-point",
+          "checked_on": "2026-11-02",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:37Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM S10 name or documented alias compared with OSM name 'Green Society'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        },
+        "last_verified_on": null,
+        "candidate_footprint_ids": [
+          "osm-way-1333533934"
+        ],
+        "unresolved_reason": null,
+        "review_notes": "OSM name/alias association is provisional; no independent acceptance or field verification."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "S11",
@@ -311,9 +449,12 @@
       "aliases": [
         "CB5"
       ],
-      "coordinates": null,
-      "location_quality": "unverified",
-      "location_source": null,
+      "coordinates": [
+        100.49339650022299,
+        13.6497194
+      ],
+      "location_quality": "approximate-osm-name-match",
+      "location_source": "https://www.openstreetmap.org/way/420533543",
       "entrances": [],
       "building_height_m": null,
       "name_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
@@ -322,16 +463,35 @@
       "floor_count": null,
       "floor_count_source": null,
       "mapping": {
-        "confidence": "unverified",
-        "review_status": "unmatched",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review",
         "footprint_id": null,
         "centroid": null,
-        "evidence": null,
-        "last_verified_on": null
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/420533543",
+          "license": "ODbL-1.0",
+          "method": "named-osm-reference-point",
+          "checked_on": "2026-11-02",
+          "source_version": 6,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM S11 name or documented alias compared with OSM name 'CB5'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        },
+        "last_verified_on": null,
+        "candidate_footprint_ids": [
+          "osm-way-420533543"
+        ],
+        "unresolved_reason": null,
+        "review_notes": "OSM name/alias association is provisional; no independent acceptance or field verification."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "S12",
@@ -341,9 +501,12 @@
       "aliases": [
         "CB4"
       ],
-      "coordinates": null,
-      "location_quality": "unverified",
-      "location_source": null,
+      "coordinates": [
+        100.49272676647433,
+        13.64949
+      ],
+      "location_quality": "approximate-osm-name-match",
+      "location_source": "https://www.openstreetmap.org/way/420534334",
       "entrances": [],
       "building_height_m": null,
       "name_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
@@ -352,16 +515,35 @@
       "floor_count": null,
       "floor_count_source": null,
       "mapping": {
-        "confidence": "unverified",
-        "review_status": "unmatched",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review",
         "footprint_id": null,
         "centroid": null,
-        "evidence": null,
-        "last_verified_on": null
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/420534334",
+          "license": "ODbL-1.0",
+          "method": "named-osm-reference-point",
+          "checked_on": "2026-11-02",
+          "source_version": 6,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM S12 name or documented alias compared with OSM name 'CB4'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        },
+        "last_verified_on": null,
+        "candidate_footprint_ids": [
+          "osm-way-420534334"
+        ],
+        "unresolved_reason": null,
+        "review_notes": "OSM name/alias association is provisional; no independent acceptance or field verification."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "S13",
@@ -371,9 +553,12 @@
       "aliases": [
         "CB3"
       ],
-      "coordinates": null,
-      "location_quality": "unverified",
-      "location_source": null,
+      "coordinates": [
+        100.49190493504074,
+        13.650018150000001
+      ],
+      "location_quality": "approximate-osm-name-match",
+      "location_source": "https://www.openstreetmap.org/way/420534582",
       "entrances": [],
       "building_height_m": null,
       "name_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
@@ -382,16 +567,35 @@
       "floor_count": null,
       "floor_count_source": null,
       "mapping": {
-        "confidence": "unverified",
-        "review_status": "unmatched",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review",
         "footprint_id": null,
         "centroid": null,
-        "evidence": null,
-        "last_verified_on": null
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/420534582",
+          "license": "ODbL-1.0",
+          "method": "named-osm-reference-point",
+          "checked_on": "2026-11-02",
+          "source_version": 5,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM S13 name or documented alias compared with OSM name 'CB3'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        },
+        "last_verified_on": null,
+        "candidate_footprint_ids": [
+          "osm-way-420534582"
+        ],
+        "unresolved_reason": null,
+        "review_notes": "OSM name/alias association is provisional; no independent acceptance or field verification."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "S14",
@@ -415,11 +619,16 @@
         "footprint_id": null,
         "centroid": null,
         "evidence": null,
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [],
+        "unresolved_reason": "No sufficiently supported code-to-location association found in the reviewed public sources.",
+        "review_notes": "No sufficiently supported code-to-location association found in the reviewed public sources."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "S15",
@@ -427,9 +636,12 @@
       "name_en": "Department of Chemical Engineering Building",
       "zone": "south",
       "aliases": [],
-      "coordinates": null,
-      "location_quality": "unverified",
-      "location_source": null,
+      "coordinates": [
+        100.49333025,
+        13.650303350000002
+      ],
+      "location_quality": "approximate-osm-name-match",
+      "location_source": "https://www.openstreetmap.org/way/436983067",
       "entrances": [],
       "building_height_m": null,
       "name_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
@@ -438,16 +650,35 @@
       "floor_count": null,
       "floor_count_source": null,
       "mapping": {
-        "confidence": "unverified",
-        "review_status": "unmatched",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review",
         "footprint_id": null,
         "centroid": null,
-        "evidence": null,
-        "last_verified_on": null
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/436983067",
+          "license": "ODbL-1.0",
+          "method": "named-osm-reference-point",
+          "checked_on": "2026-11-02",
+          "source_version": 4,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM S15 name or documented alias compared with OSM name 'ภาควิชาวิศวกรรมเคมี'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        },
+        "last_verified_on": null,
+        "candidate_footprint_ids": [
+          "osm-way-436983067"
+        ],
+        "unresolved_reason": null,
+        "review_notes": "OSM name/alias association is provisional; no independent acceptance or field verification."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "N1",
@@ -471,11 +702,16 @@
         "footprint_id": null,
         "centroid": null,
         "evidence": null,
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [],
+        "unresolved_reason": "No sufficiently supported code-to-location association found in the reviewed public sources.",
+        "review_notes": "No sufficiently supported code-to-location association found in the reviewed public sources."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "N2",
@@ -483,9 +719,12 @@
       "name_en": "Office of The President Building",
       "zone": "north",
       "aliases": [],
-      "coordinates": null,
-      "location_quality": "unverified",
-      "location_source": null,
+      "coordinates": [
+        100.4951391,
+        13.6518349
+      ],
+      "location_quality": "approximate-osm-name-match",
+      "location_source": "https://www.openstreetmap.org/node/3176409879",
       "entrances": [],
       "building_height_m": null,
       "name_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
@@ -494,16 +733,33 @@
       "floor_count": null,
       "floor_count_source": null,
       "mapping": {
-        "confidence": "unverified",
-        "review_status": "unmatched",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review",
         "footprint_id": null,
         "centroid": null,
-        "evidence": null,
-        "last_verified_on": null
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/3176409879",
+          "license": "ODbL-1.0",
+          "method": "official-name-osm-point-match",
+          "checked_on": "2026-11-02",
+          "source_date": "2016-05-23",
+          "source_version": 2,
+          "source_timestamp": "2016-05-23T18:02:05Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules.",
+          "association_basis": "Official N2 name matches named OSM office; approximate office reference, not a footprint or entrance."
+        },
+        "last_verified_on": null,
+        "candidate_footprint_ids": [],
+        "unresolved_reason": null,
+        "review_notes": "Approximate published reference; footprint association and field survey remain pending."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "N3",
@@ -511,9 +767,12 @@
       "name_en": "Department of Chemistry Building",
       "zone": "north",
       "aliases": [],
-      "coordinates": null,
-      "location_quality": "unverified",
-      "location_source": null,
+      "coordinates": [
+        100.49488534737489,
+        13.65246295
+      ],
+      "location_quality": "approximate-osm-name-match",
+      "location_source": "https://www.openstreetmap.org/way/436983064",
       "entrances": [],
       "building_height_m": null,
       "name_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
@@ -522,16 +781,35 @@
       "floor_count": null,
       "floor_count_source": null,
       "mapping": {
-        "confidence": "unverified",
-        "review_status": "unmatched",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review",
         "footprint_id": null,
         "centroid": null,
-        "evidence": null,
-        "last_verified_on": null
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/436983064",
+          "license": "ODbL-1.0",
+          "method": "named-osm-reference-point",
+          "checked_on": "2026-11-02",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:31Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM N3 name or documented alias compared with OSM name 'ภาควิชาเคมี'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        },
+        "last_verified_on": null,
+        "candidate_footprint_ids": [
+          "osm-way-436983064"
+        ],
+        "unresolved_reason": null,
+        "review_notes": "OSM name/alias association is provisional; no independent acceptance or field verification."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "N4",
@@ -555,11 +833,18 @@
         "footprint_id": null,
         "centroid": null,
         "evidence": null,
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [
+          "osm-way-436983063"
+        ],
+        "unresolved_reason": "Candidate represents Mathematics only; full Physics–Mathematics complex is not established.",
+        "review_notes": "OSM name/alias association is provisional; no independent acceptance or field verification."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "N5",
@@ -594,11 +879,16 @@
           "reviewer": null,
           "limitations": "Existing approximate reference retained; source not independently field-verified; not an entrance."
         },
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [],
+        "unresolved_reason": null,
+        "review_notes": "Approximate published reference; footprint association and field survey remain pending."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "N6",
@@ -622,11 +912,16 @@
         "footprint_id": null,
         "centroid": null,
         "evidence": null,
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [],
+        "unresolved_reason": "No sufficiently supported code-to-location association found in the reviewed public sources.",
+        "review_notes": "No sufficiently supported code-to-location association found in the reviewed public sources."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "N7",
@@ -650,11 +945,16 @@
         "footprint_id": null,
         "centroid": null,
         "evidence": null,
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [],
+        "unresolved_reason": "No sufficiently supported code-to-location association found in the reviewed public sources.",
+        "review_notes": "No sufficiently supported code-to-location association found in the reviewed public sources."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "N8",
@@ -678,11 +978,16 @@
         "footprint_id": null,
         "centroid": null,
         "evidence": null,
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [],
+        "unresolved_reason": "No sufficiently supported code-to-location association found in the reviewed public sources.",
+        "review_notes": "No sufficiently supported code-to-location association found in the reviewed public sources."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "N9",
@@ -721,11 +1026,18 @@
           "reviewer": null,
           "limitations": "Existing approximate reference retained; source not independently field-verified; not an entrance."
         },
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [
+          "osm-way-346450376"
+        ],
+        "unresolved_reason": null,
+        "review_notes": "OSM name/alias association is provisional; no independent acceptance or field verification."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "N10",
@@ -764,11 +1076,18 @@
           "reviewer": null,
           "limitations": "Existing approximate reference retained; source not independently field-verified; not an entrance."
         },
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [
+          "osm-way-311879209"
+        ],
+        "unresolved_reason": null,
+        "review_notes": "OSM name/alias association is provisional; no independent acceptance or field verification."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "N11",
@@ -807,11 +1126,18 @@
           "reviewer": null,
           "limitations": "Existing approximate reference retained; source not independently field-verified; not an entrance."
         },
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [
+          "osm-way-224982053"
+        ],
+        "unresolved_reason": null,
+        "review_notes": "OSM name/alias association is provisional; no independent acceptance or field verification."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "N12",
@@ -835,11 +1161,16 @@
         "footprint_id": null,
         "centroid": null,
         "evidence": null,
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [],
+        "unresolved_reason": "No sufficiently supported code-to-location association found in the reviewed public sources.",
+        "review_notes": "No sufficiently supported code-to-location association found in the reviewed public sources."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "N13",
@@ -863,11 +1194,16 @@
         "footprint_id": null,
         "centroid": null,
         "evidence": null,
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [],
+        "unresolved_reason": "No sufficiently supported code-to-location association found in the reviewed public sources.",
+        "review_notes": "No sufficiently supported code-to-location association found in the reviewed public sources."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "N14",
@@ -891,11 +1227,16 @@
         "footprint_id": null,
         "centroid": null,
         "evidence": null,
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [],
+        "unresolved_reason": "No sufficiently supported code-to-location association found in the reviewed public sources.",
+        "review_notes": "No sufficiently supported code-to-location association found in the reviewed public sources."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "N15",
@@ -903,9 +1244,12 @@
       "name_en": "School of Liberal Arts Building",
       "zone": "north",
       "aliases": [],
-      "coordinates": null,
-      "location_quality": "unverified",
-      "location_source": null,
+      "coordinates": [
+        100.4933848,
+        13.6520658
+      ],
+      "location_quality": "approximate-osm-name-match",
+      "location_source": "https://www.openstreetmap.org/node/3176409863",
       "entrances": [],
       "building_height_m": null,
       "name_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
@@ -914,16 +1258,33 @@
       "floor_count": null,
       "floor_count_source": null,
       "mapping": {
-        "confidence": "unverified",
-        "review_status": "unmatched",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review",
         "footprint_id": null,
         "centroid": null,
-        "evidence": null,
-        "last_verified_on": null
+        "evidence": {
+          "source": "https://www.openstreetmap.org/node/3176409863",
+          "license": "ODbL-1.0",
+          "method": "official-name-osm-point-match",
+          "checked_on": "2026-11-02",
+          "source_date": "2019-01-14",
+          "source_version": 4,
+          "source_timestamp": "2019-01-14T09:42:18Z",
+          "verified_on": null,
+          "reviewer": null,
+          "limitations": "OSM public record; retrieval does not confirm current business operation, surveyed access or present-day schedules.",
+          "association_basis": "Official N15 name matches named OSM office; approximate office reference, not a footprint or entrance."
+        },
+        "last_verified_on": null,
+        "candidate_footprint_ids": [],
+        "unresolved_reason": null,
+        "review_notes": "Approximate published reference; footprint association and field survey remain pending."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "N16",
@@ -934,9 +1295,12 @@
         "LX",
         "Learning Exchange"
       ],
-      "coordinates": null,
-      "location_quality": "unverified",
-      "location_source": null,
+      "coordinates": [
+        100.49406407203125,
+        13.65213625
+      ],
+      "location_quality": "approximate-osm-name-match",
+      "location_source": "https://www.openstreetmap.org/way/1333533935",
       "entrances": [],
       "building_height_m": null,
       "name_source": "https://www.kmutt.ac.th/about-kmutt/campus/",
@@ -945,16 +1309,35 @@
       "floor_count": 15,
       "floor_count_source": "https://sites.google.com/mail.kmutt.ac.th/learning-exchange/",
       "mapping": {
-        "confidence": "unverified",
-        "review_status": "unmatched",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review",
         "footprint_id": null,
         "centroid": null,
-        "evidence": null,
-        "last_verified_on": null
+        "evidence": {
+          "source": "https://www.openstreetmap.org/way/1333533935",
+          "license": "ODbL-1.0",
+          "method": "named-osm-reference-point",
+          "checked_on": "2026-11-02",
+          "source_version": 2,
+          "source_timestamp": "2025-03-23T08:12:37Z",
+          "source_date": "2025-03-23",
+          "verified_on": null,
+          "reviewer": null,
+          "association_basis": "Official/BGM N16 name or documented alias compared with OSM name 'LX'. Independent association and physical survey remain pending.",
+          "limitations": "Named source candidate; not an accepted polygon, surveyed location, entrance, official floor count or measured height."
+        },
+        "last_verified_on": null,
+        "candidate_footprint_ids": [
+          "osm-way-1333533935"
+        ],
+        "unresolved_reason": null,
+        "review_notes": "OSM name/alias association is provisional; no independent acceptance or field verification."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "N17",
@@ -991,11 +1374,18 @@
           "reviewer": null,
           "limitations": "Existing approximate reference retained; source not independently field-verified; not an entrance."
         },
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [
+          "osm-way-420534143"
+        ],
+        "unresolved_reason": null,
+        "review_notes": "OSM name/alias association is provisional; no independent acceptance or field verification."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "N18",
@@ -1019,11 +1409,16 @@
         "footprint_id": null,
         "centroid": null,
         "evidence": null,
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [],
+        "unresolved_reason": "No sufficiently supported code-to-location association found in the reviewed public sources.",
+        "review_notes": "No sufficiently supported code-to-location association found in the reviewed public sources."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "N19",
@@ -1047,11 +1442,16 @@
         "footprint_id": null,
         "centroid": null,
         "evidence": null,
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [],
+        "unresolved_reason": "Official directory and BGM descriptions disagree; current institutional confirmation required.",
+        "review_notes": "Official directory and BGM descriptions disagree; current institutional confirmation required."
       },
       "name_conflict": true,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     },
     {
       "id": "N20",
@@ -1088,11 +1488,18 @@
           "reviewer": null,
           "limitations": "Existing approximate reference retained; source not independently field-verified; not an entrance."
         },
-        "last_verified_on": null
+        "last_verified_on": null,
+        "candidate_footprint_ids": [
+          "osm-way-436983061"
+        ],
+        "unresolved_reason": null,
+        "review_notes": "OSM name/alias association is provisional; no independent acceptance or field verification."
       },
       "name_conflict": false,
       "height_evidence": null,
-      "category": null
+      "category": null,
+      "department": null,
+      "department_evidence": null
     }
   ]
 }

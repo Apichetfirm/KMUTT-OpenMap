@@ -1,7 +1,7 @@
 {
   "name": "kmutt-openmap",
   "private": true,
-  "version": "0.3.0",
+  "version": "0.4.0-rc.1",
   "description": "Open-source 3D campus map for KMUTT Bangmod",
   "type": "module",
   "scripts": {
@@ -11,7 +11,9 @@
     "validate-data": "node scripts/validate-data.mjs",
     "test:e2e": "playwright test",
     "build": "node scripts/build.mjs",
-    "generate-data": "node scripts/generate-data.mjs"
+    "generate-data": "node scripts/generate-data.mjs",
+    "verify-vendor": "node scripts/verify-vendor.mjs",
+    "vendor-maplibre": "node scripts/vendor-maplibre.mjs"
   },
   "engines": {
     "node": ">=20"
