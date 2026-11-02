@@ -1,7 +1,20 @@
-import unittest,tempfile,pathlib,json,subprocess,sys,shutil
-from PIL import Image
+import unittest,tempfile,pathlib,json,subprocess,sys,shutil,shlex,concurrent.futures
+from PIL import Image,__version__ as pillow_version
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 class ImageTools(unittest.TestCase):
+ def test_development_server_is_loopback_only(self):
+  command=shlex.split(json.loads((ROOT/'package.json').read_text())['scripts']['dev']);command[0]=sys.executable;command.insert(1,'-u');command[command.index('8080')]='0'
+  with tempfile.TemporaryDirectory() as tmp:
+   with subprocess.Popen(command,cwd=tmp,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True) as process:
+    pool=concurrent.futures.ThreadPoolExecutor(max_workers=1)
+    try:
+     banner=pool.submit(process.stdout.readline).result(timeout=10)
+     self.assertIn('Serving HTTP on 127.0.0.1 ',banner)
+     launchers=[line for line in (ROOT/'START_WINDOWS.bat').read_text().splitlines() if '-m http.server' in line]
+     self.assertEqual(len(launchers),2)
+     for line in launchers:self.assertIn('--bind 127.0.0.1',line)
+    finally:
+     process.terminate();process.wait(timeout=5);pool.shutdown(wait=True)
  def test_optimized_derivatives_and_private_pixel_features(self):
   with tempfile.TemporaryDirectory() as tmp:
    root=pathlib.Path(tmp);image=Image.new('RGB',(1200,900),'#8db5bd');exif=Image.Exif();exif[271]='Synthetic fixture metadata';source=root/'source.jpg';image.save(source,exif=exif)
@@ -11,7 +24,7 @@ class ImageTools(unittest.TestCase):
    for file in (root/'derivatives').glob('*.webp'):
     with Image.open(file) as result:self.assertFalse(result.getexif());self.assertLess(file.stat().st_size,120000)
    output=root/'features.json';subprocess.run([sys.executable,str(ROOT/'scripts/extract-photo-features.py'),str(source),str(meta),str(output)],check=True,capture_output=True)
-   features=json.loads(output.read_text());self.assertEqual(features['width'],1200);self.assertEqual(len(features['image_sha256']),64);self.assertAlmostEqual(sum(x['pixel_fraction'] for x in features['dominant_image_colors']),1)
+   features=json.loads(output.read_text());self.assertEqual(features['width'],1200);self.assertEqual(len(features['image_sha256']),64);self.assertAlmostEqual(sum(x['pixel_fraction'] for x in features['dominant_image_colors']),1);self.assertTrue(features['extractor'].startswith('Pillow '+pillow_version+' /'))
  def test_unreviewed_rights_are_rejected(self):
   with tempfile.TemporaryDirectory() as tmp:
    root=pathlib.Path(tmp);meta=root/'metadata.json';meta.write_text('{}')
