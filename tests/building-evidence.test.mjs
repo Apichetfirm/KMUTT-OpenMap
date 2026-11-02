@@ -11,3 +11,19 @@ test('review thumbnails preserve footprint proportions instead of stretching eve
 
 
 test('private output cannot enter any production directory on POSIX or Windows',async()=>{const {privateEvidenceOutput}=await import('../scripts/evidence-paths.mjs');const {posix,win32}=await import('node:path');for(const [paths,root] of [[posix,'/repo'],[win32,'C:\\repo']]){for(const name of ['src/private.json','data/private.json','vendor/private.json','.site/private.json','docs/private.json','index.html'])assert.throws(()=>privateEvidenceOutput(name,root,paths));assert.ok(privateEvidenceOutput('work/private.json',root,paths).endsWith('private.json'));}});
+
+test('private outputs cannot reach published directories through filesystem links',async()=>{
+ const {privateEvidenceOutput}=await import('../scripts/evidence-paths.mjs');
+ const {mkdtempSync,mkdirSync,symlinkSync,rmSync}=await import('node:fs');
+ const {tmpdir}=await import('node:os');const path=await import('node:path');
+ const temp=mkdtempSync(path.join(tmpdir(),'kmutt-evidence-link-')),root=path.join(temp,'repo');
+ try {
+  mkdirSync(path.join(root,'work'),{recursive:true});mkdirSync(path.join(root,'data'));
+  const type=process.platform==='win32'?'junction':'dir';
+  symlinkSync(path.join(root,'data'),path.join(root,'work','redirect'),type);
+  symlinkSync(path.join(root,'data'),path.join(temp,'outside-alias'),type);
+  assert.throws(()=>privateEvidenceOutput('work/redirect/private.json',root),/work/);
+  assert.throws(()=>privateEvidenceOutput(path.join(temp,'outside-alias/private.json'),root),/work/);
+  assert.equal(privateEvidenceOutput('work/new/private.json',root),path.join(root,'work/new/private.json'));
+ }finally{rmSync(temp,{recursive:true,force:true});}
+});
