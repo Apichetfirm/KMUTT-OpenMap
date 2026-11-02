@@ -5,7 +5,10 @@ p=argparse.ArgumentParser();p.add_argument('input');p.add_argument('metadata');p
 m=json.loads(pathlib.Path(a.metadata).read_text());allowed={'CC0-1.0','CC-BY-4.0','CC-BY-SA-4.0','CC-BY-3.0','CC-BY-SA-3.0'}
 if m.get('license') not in allowed or m.get('review_status')!='approved-for-publication' or not all(m.get(k) for k in ['photographer','source','attribution','reviewer','reviewed_on']):raise ValueError('Reviewed license/source/owner/attribution required')
 if not m.get('id','').replace('-','').replace('_','').isalnum():raise ValueError('Invalid image identifier')
-out=pathlib.Path(a.output);out.mkdir(parents=True,exist_ok=True)
+out=pathlib.Path(a.output).resolve()
+repo=pathlib.Path(__file__).resolve().parents[1]
+if out.is_relative_to(repo) and out.relative_to(repo).parts[:1]!=('work',):raise ValueError('Unreviewed output inside the repository must remain under work/')
+out.mkdir(parents=True,exist_ok=True)
 with Image.open(a.input) as original:
  image=ImageOps.exif_transpose(original).convert('RGB');variants=[];seen=set()
  for width in [320,640,960]:

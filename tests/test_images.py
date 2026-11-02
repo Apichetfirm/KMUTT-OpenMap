@@ -1,4 +1,4 @@
-import unittest,tempfile,pathlib,json,subprocess,sys
+import unittest,tempfile,pathlib,json,subprocess,sys,shutil
 from PIL import Image
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 class ImageTools(unittest.TestCase):
@@ -18,4 +18,13 @@ class ImageTools(unittest.TestCase):
    for script in ['optimize-building-images.py','extract-photo-features.py']:
     result=subprocess.run([sys.executable,str(ROOT/'scripts'/script),str(root/'missing.jpg'),str(meta),str(root/'output')],capture_output=True,text=True)
     self.assertNotEqual(result.returncode,0);self.assertIn('rights' if 'extract' in script else 'license',result.stderr.lower())
+ def test_optimizer_metadata_cannot_enter_published_directories(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   root=pathlib.Path(tmp);repo=root/'repo';(repo/'scripts').mkdir(parents=True)
+   script=repo/'scripts/optimize-building-images.py';shutil.copyfile(ROOT/'scripts/optimize-building-images.py',script)
+   image=root/'source.png';Image.new('RGB',(30,20),'red').save(image)
+   meta=root/'metadata.json';meta.write_text(json.dumps({'id':'synthetic','license':'CC0-1.0','review_status':'approved-for-publication','photographer':'Synthetic fixture','source':'https://example.org/test','attribution':'Synthetic QA only','reviewer':'QA','reviewed_on':'2026-11-02','private_analysis':'Do not publish this private sidecar'}))
+   output=repo/'data/private-derivatives'
+   result=subprocess.run([sys.executable,str(script),str(image),str(meta),str(output)],capture_output=True,text=True)
+   self.assertNotEqual(result.returncode,0);self.assertIn('work/',result.stderr);self.assertFalse(output.exists())
 if __name__=='__main__':unittest.main()
