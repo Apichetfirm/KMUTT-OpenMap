@@ -6,7 +6,9 @@ permissions:
   contents: read
 jobs:
   tests:
-    runs-on: ubuntu-latest
+    # Ubuntu 24.04 AppArmor blocks the downloaded Chromium user-namespace sandbox.
+    # Use the supported 22.04 image; keep the browser sandbox enabled.
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
