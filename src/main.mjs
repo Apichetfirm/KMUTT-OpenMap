@@ -382,6 +382,7 @@ function setupEvents() {
     },error=>toast(error.code===1?'ไม่ได้รับอนุญาตให้เข้าถึง GPS':'ไม่สามารถระบุตำแหน่งได้'),{enableHighAccuracy:true,timeout:10000,maximumAge:20000});
   });
   $('retry-map').addEventListener('click',()=>{
+    state.mapReady=false;setMapControls(false);
     if(state.map)state.map.remove();state.map=null;state.mapReady=false;state.selectedMarker=null;state.previewMarker=null;state.locationMarker=null;cancelMapping();mapPromise=null;initMap();
   });
   $('retry-data').addEventListener('click',loadData);
