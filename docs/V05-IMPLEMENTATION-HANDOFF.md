@@ -59,14 +59,14 @@ Photo rights/identity, licensed source inputs, actual vision-model evaluation, c
 
 ### Measured results
 
-Six alternating pairs of fresh contexts on system Chromium 156, sandbox enabled, 1440×1000, software WebGL, real OpenFreeMap, no throttling or concurrent local browser QA. Comparison is latest main `8973cf7` versus v0.5 runtime at `246a180`. Subsequent changes fix retry control readiness and add ambiguity/provenance inspection; they do not change startup/photo behavior. Browser process/proxy/OS/provider caches are uncontrolled; these samples do not establish a causal speedup.
+Six alternating pairs of fresh contexts on system Chromium 156, sandbox enabled, 1440×1000, software WebGL, real OpenFreeMap, no throttling or concurrent local browser QA. Comparison is latest main `8973cf7` versus v0.5 runtime at `64b401c`. The measured runtime includes compact metadata and the retry readiness fix. Later changes add private pixel-extraction tooling, tests and documentation; they do not change startup/photo behavior. Browser process/proxy/OS/provider caches are uncontrolled; these samples do not establish a causal speedup.
 
 | Median metric | main | v0.5 |
 | --- | ---: | ---: |
-| Initial MapLibre load | 4551.90ms | 4374.95ms |
-| Detail open synchronous JS/DOM | 44.75ms | 49.15ms |
-| Search synchronous JS/DOM | 0.70ms | 0.70ms |
-| Snapshot JS heap | 29.42MB | 25.90MB |
+| Initial MapLibre load | 8770.40ms | 7424.45ms |
+| Detail open synchronous JS/DOM | 75.55ms | 74.25ms |
+| Search synchronous JS/DOM | 1.55ms | 0.75ms |
+| Snapshot JS heap | 28.39MB | 27.40MB |
 | Building image transfer | 0 bytes | 0 bytes |
 
 All 12 samples loaded a canvas without uncaught app errors. “Detail open” excludes paint and is not input-to-next-paint; heap snapshots do not prove leak freedom. Real photographs remain unavailable, so no image-rich load-time, realistic compression or physical-smartphone performance claim is made. No robust regression in initial map loading was observed, and the existing ~3-second target is still unmet under software rendering. Raw per-resource timings and long tasks are retained in `qa/v05/performance.json`.
@@ -92,3 +92,5 @@ Build inspection confirms `.site/admin` and `.site/work` do not exist. Reviewed 
 - [ ] Check actual smartphone/Safari/provider behavior and real-photo performance when source assets are available. Keep field/photography/vision blockers open; do not self-merge.
 
 Offline pixel features can be extracted before optional model analysis with `python scripts/extract-photo-features.py ORIGINAL REVIEWED-METADATA.json work/pixels.json`. The extractor records input SHA-256, dimensions and five dominant image colors after orientation correction. These include sky/vegetation/background and are explicitly **not** inferred facade colors, floor counts, OCR, identity or GPS. Synthetic extraction was executed and checked for dimensions, digest and normalized color fractions; no real-photo extraction or actual vision-model inference is claimed. This tool does not replace a vision-capable model or independent review.
+
+The complete card runtime passes **104/104 cross-browser tests** (26 per project) in [CI run 41401966666](https://github.com/Apichetfirm/KMUTT-OpenMap/actions/runs/41401966666). The additional Python suite passes **2/2** locally and is now part of CI. An earlier exploratory comparison measured 4.55s/4.37s before the compact refinement; the final six-pair comparison above is substantially slower in both versions. Both raw runs are retained, underscoring why no causal speedup or ordinary-phone performance claim is justified.

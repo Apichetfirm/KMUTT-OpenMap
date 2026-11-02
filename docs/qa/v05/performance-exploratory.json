@@ -1,0 +1,3206 @@
+{
+  "conditions": {
+    "implementation_commit": "246a180db60e85de30f26e4252c8745ace86ffb4",
+    "browser": "154.0.8037.57",
+    "viewport": "1440x1000",
+    "network": "Live OpenFreeMap, no throttling, fresh browser context each sample; provider and OS caches uncontrolled; proxy only if HTTPS_PROXY is set.",
+    "ordering": "Six pairs, alternating baseline/final and final/baseline; browser process reused, contexts isolated.",
+    "rendering": "Headless Chromium with sandbox enabled and software WebGL (SwiftShader); no concurrent QA processes.",
+    "physical_device": false,
+    "date": "2026-11-02"
+  },
+  "results": [
+    {
+      "version": "baseline",
+      "sample": 1,
+      "url": "http://127.0.0.1:8091/",
+      "timedOut": false,
+      "detail_open_sync_ms": 30.200000000186265,
+      "image_transfer_bytes": 0,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 747.2000000001863
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 5083.899999999441
+        }
+      ],
+      "search_sync_median_ms": 0.6999999992549419,
+      "js_heap_bytes": 29377446,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 596.0999999996275,
+          "duration": 66
+        },
+        {
+          "start": 699.8999999994412,
+          "duration": 51
+        },
+        {
+          "start": 802.2000000001863,
+          "duration": 62
+        },
+        {
+          "start": 897.5999999996275,
+          "duration": 89
+        },
+        {
+          "start": 1128.8999999994412,
+          "duration": 90
+        },
+        {
+          "start": 1219.7000000001863,
+          "duration": 190
+        },
+        {
+          "start": 1415,
+          "duration": 186
+        },
+        {
+          "start": 1619.5999999996275,
+          "duration": 234
+        },
+        {
+          "start": 1879.5999999996275,
+          "duration": 195
+        },
+        {
+          "start": 2088.2999999998137,
+          "duration": 596
+        },
+        {
+          "start": 2686.0999999996275,
+          "duration": 163
+        },
+        {
+          "start": 2849.399999999441,
+          "duration": 308
+        },
+        {
+          "start": 3183.2000000001863,
+          "duration": 57
+        },
+        {
+          "start": 3327.5,
+          "duration": 638
+        },
+        {
+          "start": 3971.899999999441,
+          "duration": 202
+        },
+        {
+          "start": 4205.200000000186,
+          "duration": 312
+        },
+        {
+          "start": 4584.799999999814,
+          "duration": 468
+        },
+        {
+          "start": 5058.5999999996275,
+          "duration": 415
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://127.0.0.1:8091/vendor/maplibre-gl/maplibre-gl.css",
+          "duration": 22.59999999962747,
+          "bytes": 71896,
+          "decoded_bytes": 71596
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/styles.css",
+          "duration": 23.200000000186265,
+          "bytes": 24507,
+          "decoded_bytes": 24207
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/main.mjs",
+          "duration": 20.59999999962747,
+          "bytes": 42804,
+          "decoded_bytes": 42504
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/search.mjs",
+          "duration": 30.5,
+          "bytes": 2325,
+          "decoded_bytes": 2025
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/data.mjs",
+          "duration": 41.09999999962747,
+          "bytes": 10001,
+          "decoded_bytes": 9701
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/heights.mjs",
+          "duration": 40.40000000037253,
+          "bytes": 3744,
+          "decoded_bytes": 3444
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/mapping.mjs",
+          "duration": 46.799999999813735,
+          "bytes": 4380,
+          "decoded_bytes": 4080
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/sharing.mjs",
+          "duration": 28.799999999813735,
+          "bytes": 964,
+          "decoded_bytes": 664
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/places.mjs",
+          "duration": 31.59999999962747,
+          "bytes": 6311,
+          "decoded_bytes": 6011
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/map.mjs",
+          "duration": 31.5,
+          "bytes": 6405,
+          "decoded_bytes": 6105
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/community-ui.mjs",
+          "duration": 32,
+          "bytes": 5576,
+          "decoded_bytes": 5276
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/contributions.mjs",
+          "duration": 31.200000000186265,
+          "bytes": 3453,
+          "decoded_bytes": 3153
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/navigation.mjs",
+          "duration": 41.19999999925494,
+          "bytes": 8598,
+          "decoded_bytes": 8298
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/buildings.json",
+          "duration": 2.5,
+          "bytes": 57554,
+          "decoded_bytes": 57254
+        },
+        {
+          "url": "http://127.0.0.1:8091/favicon.svg",
+          "duration": 5.6000000005587935,
+          "bytes": 597,
+          "decoded_bytes": 297
+        },
+        {
+          "url": "http://127.0.0.1:8091/vendor/maplibre-gl/maplibre-gl.mjs",
+          "duration": 33,
+          "bytes": 1108349,
+          "decoded_bytes": 1108049
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/building-footprints.geojson",
+          "duration": 21.700000000186265,
+          "bytes": 352,
+          "decoded_bytes": 52
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/places.geojson",
+          "duration": 22.09999999962747,
+          "bytes": 104745,
+          "decoded_bytes": 104445
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/building-footprint-candidates.geojson",
+          "duration": 21.800000000745058,
+          "bytes": 49867,
+          "decoded_bytes": 49567
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/coverage-report.json",
+          "duration": 21.5,
+          "bytes": 3501,
+          "decoded_bytes": 3201
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/pedestrian-graph.json",
+          "duration": 28.300000000745058,
+          "bytes": 374,
+          "decoded_bytes": 74
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 139.40000000037253,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8091/vendor/maplibre-gl/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": -45.799999999813735,
+          "bytes": 519672,
+          "decoded_bytes": 519372
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 448.70000000018626,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 55.59999999962747,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 120.70000000018626,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 59,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 49.700000000186265,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 54.40000000037253,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "final",
+      "sample": 1,
+      "url": "http://127.0.0.1:8092/",
+      "timedOut": false,
+      "detail_open_sync_ms": 40.60000000055879,
+      "image_transfer_bytes": 0,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 704.7000000001863
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 5009.4000000003725
+        }
+      ],
+      "search_sync_median_ms": 0.6999999992549419,
+      "js_heap_bytes": 25103152,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 581.2000000001863,
+          "duration": 64
+        },
+        {
+          "start": 790.6000000005588,
+          "duration": 52
+        },
+        {
+          "start": 894.6000000005588,
+          "duration": 85
+        },
+        {
+          "start": 1280.2000000001863,
+          "duration": 95
+        },
+        {
+          "start": 1375.9000000003725,
+          "duration": 210
+        },
+        {
+          "start": 1592.9000000003725,
+          "duration": 191
+        },
+        {
+          "start": 1799.6000000005588,
+          "duration": 238
+        },
+        {
+          "start": 2062.7000000001863,
+          "duration": 218
+        },
+        {
+          "start": 2298.600000000559,
+          "duration": 552
+        },
+        {
+          "start": 2853.7000000001863,
+          "duration": 190
+        },
+        {
+          "start": 3044.100000000559,
+          "duration": 295
+        },
+        {
+          "start": 3440.9000000003725,
+          "duration": 629
+        },
+        {
+          "start": 4103.100000000559,
+          "duration": 458
+        },
+        {
+          "start": 4565.299999999814,
+          "duration": 395
+        },
+        {
+          "start": 4987.600000000559,
+          "duration": 506
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://127.0.0.1:8092/vendor/maplibre-gl/maplibre-gl.css",
+          "duration": 73.3999999994412,
+          "bytes": 71896,
+          "decoded_bytes": 71596
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/styles.css",
+          "duration": 81.70000000018626,
+          "bytes": 25189,
+          "decoded_bytes": 24889
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/main.mjs",
+          "duration": 80.29999999981374,
+          "bytes": 43255,
+          "decoded_bytes": 42955
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/search.mjs",
+          "duration": 36,
+          "bytes": 2325,
+          "decoded_bytes": 2025
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/data.mjs",
+          "duration": 38.799999999813735,
+          "bytes": 10001,
+          "decoded_bytes": 9701
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/heights.mjs",
+          "duration": 36.40000000037253,
+          "bytes": 3744,
+          "decoded_bytes": 3444
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/mapping.mjs",
+          "duration": 47.200000000186265,
+          "bytes": 4380,
+          "decoded_bytes": 4080
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/sharing.mjs",
+          "duration": 51.200000000186265,
+          "bytes": 964,
+          "decoded_bytes": 664
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/map.mjs",
+          "duration": 55.40000000037253,
+          "bytes": 6405,
+          "decoded_bytes": 6105
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/community-ui.mjs",
+          "duration": 56.299999999813735,
+          "bytes": 5576,
+          "decoded_bytes": 5276
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/places.mjs",
+          "duration": 54.799999999813735,
+          "bytes": 6311,
+          "decoded_bytes": 6011
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/contributions.mjs",
+          "duration": 54.5,
+          "bytes": 3453,
+          "decoded_bytes": 3153
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/navigation.mjs",
+          "duration": 69.20000000018626,
+          "bytes": 8598,
+          "decoded_bytes": 8298
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/building-detail.mjs",
+          "duration": 70,
+          "bytes": 3978,
+          "decoded_bytes": 3678
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/building-evidence.mjs",
+          "duration": 71.59999999962747,
+          "bytes": 4999,
+          "decoded_bytes": 4699
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/buildings.json",
+          "duration": 2.2000000001862645,
+          "bytes": 64939,
+          "decoded_bytes": 64639
+        },
+        {
+          "url": "http://127.0.0.1:8092/vendor/maplibre-gl/maplibre-gl.mjs",
+          "duration": 43.09999999962747,
+          "bytes": 1108349,
+          "decoded_bytes": 1108049
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/building-media.json",
+          "duration": 32.799999999813735,
+          "bytes": 13880,
+          "decoded_bytes": 13580
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/building-footprints.geojson",
+          "duration": 30.90000000037253,
+          "bytes": 352,
+          "decoded_bytes": 52
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/places.geojson",
+          "duration": 37.700000000186265,
+          "bytes": 104745,
+          "decoded_bytes": 104445
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/building-footprint-candidates.geojson",
+          "duration": 32.59999999962747,
+          "bytes": 49867,
+          "decoded_bytes": 49567
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/coverage-report.json",
+          "duration": 37.799999999813735,
+          "bytes": 3501,
+          "decoded_bytes": 3201
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/pedestrian-graph.json",
+          "duration": 46.60000000055879,
+          "bytes": 374,
+          "decoded_bytes": 74
+        },
+        {
+          "url": "http://127.0.0.1:8092/favicon.svg",
+          "duration": 48.40000000037253,
+          "bytes": 597,
+          "decoded_bytes": 297
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 297.40000000037253,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8092/vendor/maplibre-gl/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": -34.89999999944121,
+          "bytes": 519672,
+          "decoded_bytes": 519372
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 270.6000000005588,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 90,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 85.40000000037253,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 54.59999999962747,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 206,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 194.40000000037253,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "final",
+      "sample": 2,
+      "url": "http://127.0.0.1:8092/",
+      "timedOut": false,
+      "detail_open_sync_ms": 59.5,
+      "image_transfer_bytes": 0,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 660.9000000003725
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 4136.299999999814
+        }
+      ],
+      "search_sync_median_ms": 0.7000000001862645,
+      "js_heap_bytes": 29900901,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 533.0999999996275,
+          "duration": 67
+        },
+        {
+          "start": 633,
+          "duration": 51
+        },
+        {
+          "start": 851.4000000003725,
+          "duration": 117
+        },
+        {
+          "start": 1097.9000000003725,
+          "duration": 99
+        },
+        {
+          "start": 1197.0999999996275,
+          "duration": 215
+        },
+        {
+          "start": 1417.5,
+          "duration": 183
+        },
+        {
+          "start": 1618.2999999998137,
+          "duration": 200
+        },
+        {
+          "start": 1833.5,
+          "duration": 356
+        },
+        {
+          "start": 2191.7999999998137,
+          "duration": 233
+        },
+        {
+          "start": 2547.2999999998137,
+          "duration": 272
+        },
+        {
+          "start": 2855.4000000003725,
+          "duration": 741
+        },
+        {
+          "start": 3640.2000000001863,
+          "duration": 452
+        },
+        {
+          "start": 4096.5,
+          "duration": 437
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://127.0.0.1:8092/vendor/maplibre-gl/maplibre-gl.css",
+          "duration": 16.09999999962747,
+          "bytes": 71896,
+          "decoded_bytes": 71596
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/styles.css",
+          "duration": 15.800000000745058,
+          "bytes": 25189,
+          "decoded_bytes": 24889
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/main.mjs",
+          "duration": 35,
+          "bytes": 43255,
+          "decoded_bytes": 42955
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/search.mjs",
+          "duration": 11.799999999813735,
+          "bytes": 2325,
+          "decoded_bytes": 2025
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/data.mjs",
+          "duration": 44.30000000074506,
+          "bytes": 10001,
+          "decoded_bytes": 9701
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/heights.mjs",
+          "duration": 45.89999999944121,
+          "bytes": 3744,
+          "decoded_bytes": 3444
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/mapping.mjs",
+          "duration": 55.10000000055879,
+          "bytes": 4380,
+          "decoded_bytes": 4080
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/sharing.mjs",
+          "duration": 54.799999999813735,
+          "bytes": 964,
+          "decoded_bytes": 664
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/places.mjs",
+          "duration": 55.5,
+          "bytes": 6311,
+          "decoded_bytes": 6011
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/map.mjs",
+          "duration": 55.799999999813735,
+          "bytes": 6405,
+          "decoded_bytes": 6105
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/community-ui.mjs",
+          "duration": 57.40000000037253,
+          "bytes": 5576,
+          "decoded_bytes": 5276
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/contributions.mjs",
+          "duration": 69.79999999981374,
+          "bytes": 3453,
+          "decoded_bytes": 3153
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/navigation.mjs",
+          "duration": 78.6000000005588,
+          "bytes": 8598,
+          "decoded_bytes": 8298
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/building-detail.mjs",
+          "duration": 77,
+          "bytes": 3978,
+          "decoded_bytes": 3678
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/building-evidence.mjs",
+          "duration": 77.1000000005588,
+          "bytes": 4999,
+          "decoded_bytes": 4699
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/buildings.json",
+          "duration": 35.200000000186265,
+          "bytes": 64939,
+          "decoded_bytes": 64639
+        },
+        {
+          "url": "http://127.0.0.1:8092/favicon.svg",
+          "duration": 10.899999999441206,
+          "bytes": 597,
+          "decoded_bytes": 297
+        },
+        {
+          "url": "http://127.0.0.1:8092/vendor/maplibre-gl/maplibre-gl.mjs",
+          "duration": 24.699999999254942,
+          "bytes": 1108349,
+          "decoded_bytes": 1108049
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/building-media.json",
+          "duration": 12.099999999627471,
+          "bytes": 13880,
+          "decoded_bytes": 13580
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/building-footprints.geojson",
+          "duration": 11.099999999627471,
+          "bytes": 352,
+          "decoded_bytes": 52
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/places.geojson",
+          "duration": 15.599999999627471,
+          "bytes": 104745,
+          "decoded_bytes": 104445
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/building-footprint-candidates.geojson",
+          "duration": 21.5,
+          "bytes": 49867,
+          "decoded_bytes": 49567
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/coverage-report.json",
+          "duration": 19.300000000745058,
+          "bytes": 3501,
+          "decoded_bytes": 3201
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/pedestrian-graph.json",
+          "duration": 19.700000000186265,
+          "bytes": 374,
+          "decoded_bytes": 74
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 129.79999999981374,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8092/vendor/maplibre-gl/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": -39.09999999962747,
+          "bytes": 519672,
+          "decoded_bytes": 519372
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 89.20000000018626,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 68.80000000074506,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 74.59999999962747,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 42.700000000186265,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 77,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 57.299999999813735,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "baseline",
+      "sample": 2,
+      "url": "http://127.0.0.1:8091/",
+      "timedOut": false,
+      "detail_open_sync_ms": 69.09999999962747,
+      "image_transfer_bytes": 0,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 720.3000000007451
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 4655.300000000745
+        }
+      ],
+      "search_sync_median_ms": 0.8000000007450581,
+      "js_heap_bytes": 24714087,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 573.4000000003725,
+          "duration": 67
+        },
+        {
+          "start": 841.8000000007451,
+          "duration": 56
+        },
+        {
+          "start": 905.3000000007451,
+          "duration": 82
+        },
+        {
+          "start": 1063.7000000001863,
+          "duration": 97
+        },
+        {
+          "start": 1161.5,
+          "duration": 168
+        },
+        {
+          "start": 1332.2000000001863,
+          "duration": 203
+        },
+        {
+          "start": 1560,
+          "duration": 169
+        },
+        {
+          "start": 1757.300000000745,
+          "duration": 892
+        },
+        {
+          "start": 2663.300000000745,
+          "duration": 231
+        },
+        {
+          "start": 3053.300000000745,
+          "duration": 398
+        },
+        {
+          "start": 3595.800000000745,
+          "duration": 906
+        },
+        {
+          "start": 4552.4000000003725,
+          "duration": 597
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://127.0.0.1:8091/vendor/maplibre-gl/maplibre-gl.css",
+          "duration": 62.09999999962747,
+          "bytes": 71896,
+          "decoded_bytes": 71596
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/styles.css",
+          "duration": 59.90000000037253,
+          "bytes": 24507,
+          "decoded_bytes": 24207
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/main.mjs",
+          "duration": 66,
+          "bytes": 42804,
+          "decoded_bytes": 42504
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/search.mjs",
+          "duration": 22.200000000186265,
+          "bytes": 2325,
+          "decoded_bytes": 2025
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/heights.mjs",
+          "duration": 22.299999999813735,
+          "bytes": 3744,
+          "decoded_bytes": 3444
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/data.mjs",
+          "duration": 22.59999999962747,
+          "bytes": 10001,
+          "decoded_bytes": 9701
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/sharing.mjs",
+          "duration": 22.299999999813735,
+          "bytes": 964,
+          "decoded_bytes": 664
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/places.mjs",
+          "duration": 22.59999999962747,
+          "bytes": 6311,
+          "decoded_bytes": 6011
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/mapping.mjs",
+          "duration": 25.700000000186265,
+          "bytes": 4380,
+          "decoded_bytes": 4080
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/map.mjs",
+          "duration": 30.299999999813735,
+          "bytes": 6405,
+          "decoded_bytes": 6105
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/contributions.mjs",
+          "duration": 32.89999999944121,
+          "bytes": 3453,
+          "decoded_bytes": 3153
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/community-ui.mjs",
+          "duration": 33,
+          "bytes": 5576,
+          "decoded_bytes": 5276
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/navigation.mjs",
+          "duration": 33.299999999813735,
+          "bytes": 8598,
+          "decoded_bytes": 8298
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/buildings.json",
+          "duration": 5.400000000372529,
+          "bytes": 57554,
+          "decoded_bytes": 57254
+        },
+        {
+          "url": "http://127.0.0.1:8091/vendor/maplibre-gl/maplibre-gl.mjs",
+          "duration": 15.399999999441206,
+          "bytes": 1108349,
+          "decoded_bytes": 1108049
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/building-footprints.geojson",
+          "duration": 9.400000000372529,
+          "bytes": 352,
+          "decoded_bytes": 52
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/places.geojson",
+          "duration": 11.900000000372529,
+          "bytes": 104745,
+          "decoded_bytes": 104445
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/building-footprint-candidates.geojson",
+          "duration": 11.100000000558794,
+          "bytes": 49867,
+          "decoded_bytes": 49567
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/coverage-report.json",
+          "duration": 10.400000000372529,
+          "bytes": 3501,
+          "decoded_bytes": 3201
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/pedestrian-graph.json",
+          "duration": 10.399999999441206,
+          "bytes": 374,
+          "decoded_bytes": 74
+        },
+        {
+          "url": "http://127.0.0.1:8091/favicon.svg",
+          "duration": 19.200000000186265,
+          "bytes": 597,
+          "decoded_bytes": 297
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 74.20000000018626,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8091/vendor/maplibre-gl/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": -41.10000000055879,
+          "bytes": 519672,
+          "decoded_bytes": 519372
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 57.89999999944121,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 60.700000000186265,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 61.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 64.90000000037253,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 97.79999999981374,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 49.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "baseline",
+      "sample": 3,
+      "url": "http://127.0.0.1:8091/",
+      "timedOut": false,
+      "detail_open_sync_ms": 30.699999999254942,
+      "image_transfer_bytes": 0,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 742
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 4673.100000000559
+        }
+      ],
+      "search_sync_median_ms": 0.6999999992549419,
+      "js_heap_bytes": 29468350,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 572.2000000001863,
+          "duration": 98
+        },
+        {
+          "start": 828.9000000003725,
+          "duration": 60
+        },
+        {
+          "start": 903.1000000005588,
+          "duration": 61
+        },
+        {
+          "start": 968.2999999998137,
+          "duration": 96
+        },
+        {
+          "start": 1136.2999999998137,
+          "duration": 104
+        },
+        {
+          "start": 1240.9000000003725,
+          "duration": 182
+        },
+        {
+          "start": 1427.9000000003725,
+          "duration": 234
+        },
+        {
+          "start": 1668.6000000005588,
+          "duration": 200
+        },
+        {
+          "start": 1895,
+          "duration": 406
+        },
+        {
+          "start": 2305.100000000559,
+          "duration": 225
+        },
+        {
+          "start": 2627.4000000003725,
+          "duration": 54
+        },
+        {
+          "start": 2709.5,
+          "duration": 266
+        },
+        {
+          "start": 3015.4000000003725,
+          "duration": 741
+        },
+        {
+          "start": 3785.2000000001863,
+          "duration": 481
+        },
+        {
+          "start": 4268.799999999814,
+          "duration": 357
+        },
+        {
+          "start": 4628.700000000186,
+          "duration": 456
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://127.0.0.1:8091/vendor/maplibre-gl/maplibre-gl.css",
+          "duration": 49,
+          "bytes": 71896,
+          "decoded_bytes": 71596
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/styles.css",
+          "duration": 48.5,
+          "bytes": 24507,
+          "decoded_bytes": 24207
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/main.mjs",
+          "duration": 46.700000000186265,
+          "bytes": 42804,
+          "decoded_bytes": 42504
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/search.mjs",
+          "duration": 14.600000000558794,
+          "bytes": 2325,
+          "decoded_bytes": 2025
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/data.mjs",
+          "duration": 17,
+          "bytes": 10001,
+          "decoded_bytes": 9701
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/heights.mjs",
+          "duration": 16.600000000558794,
+          "bytes": 3744,
+          "decoded_bytes": 3444
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/mapping.mjs",
+          "duration": 17,
+          "bytes": 4380,
+          "decoded_bytes": 4080
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/sharing.mjs",
+          "duration": 16.799999999813735,
+          "bytes": 964,
+          "decoded_bytes": 664
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/places.mjs",
+          "duration": 16.90000000037253,
+          "bytes": 6311,
+          "decoded_bytes": 6011
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/map.mjs",
+          "duration": 48.40000000037253,
+          "bytes": 6405,
+          "decoded_bytes": 6105
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/community-ui.mjs",
+          "duration": 48.799999999813735,
+          "bytes": 5576,
+          "decoded_bytes": 5276
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/navigation.mjs",
+          "duration": 48.69999999925494,
+          "bytes": 8598,
+          "decoded_bytes": 8298
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/contributions.mjs",
+          "duration": 48.5,
+          "bytes": 3453,
+          "decoded_bytes": 3153
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/buildings.json",
+          "duration": 14,
+          "bytes": 57554,
+          "decoded_bytes": 57254
+        },
+        {
+          "url": "http://127.0.0.1:8091/vendor/maplibre-gl/maplibre-gl.mjs",
+          "duration": 40.5,
+          "bytes": 1108349,
+          "decoded_bytes": 1108049
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/building-footprints.geojson",
+          "duration": 5.7999999998137355,
+          "bytes": 352,
+          "decoded_bytes": 52
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/places.geojson",
+          "duration": 38.10000000055879,
+          "bytes": 104745,
+          "decoded_bytes": 104445
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/building-footprint-candidates.geojson",
+          "duration": 37.200000000186265,
+          "bytes": 49867,
+          "decoded_bytes": 49567
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/coverage-report.json",
+          "duration": 33.700000000186265,
+          "bytes": 3501,
+          "decoded_bytes": 3201
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/pedestrian-graph.json",
+          "duration": 34.90000000037253,
+          "bytes": 374,
+          "decoded_bytes": 74
+        },
+        {
+          "url": "http://127.0.0.1:8091/favicon.svg",
+          "duration": 21.700000000186265,
+          "bytes": 597,
+          "decoded_bytes": 297
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 68.70000000018626,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8091/vendor/maplibre-gl/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": -42.5,
+          "bytes": 519672,
+          "decoded_bytes": 519372
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 60.69999999925494,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 61.799999999813735,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 60.69999999925494,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 61,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 55.200000000186265,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 67.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "final",
+      "sample": 3,
+      "url": "http://127.0.0.1:8092/",
+      "timedOut": false,
+      "detail_open_sync_ms": 81.79999999981374,
+      "image_transfer_bytes": 0,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 866.2999999998137
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 5740.700000000186
+        }
+      ],
+      "search_sync_median_ms": 2,
+      "js_heap_bytes": 26704613,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 501.5,
+          "duration": 136
+        },
+        {
+          "start": 780.4000000003725,
+          "duration": 91
+        },
+        {
+          "start": 1088.7999999998137,
+          "duration": 102
+        },
+        {
+          "start": 1263.7000000001863,
+          "duration": 173
+        },
+        {
+          "start": 1437.2999999998137,
+          "duration": 235
+        },
+        {
+          "start": 1676.1000000005588,
+          "duration": 152
+        },
+        {
+          "start": 1838.7000000001863,
+          "duration": 187
+        },
+        {
+          "start": 2074.7000000001863,
+          "duration": 431
+        },
+        {
+          "start": 2542.5,
+          "duration": 651
+        },
+        {
+          "start": 3319.7999999998137,
+          "duration": 53
+        },
+        {
+          "start": 3411.9000000003725,
+          "duration": 314
+        },
+        {
+          "start": 3794.9000000003725,
+          "duration": 1274
+        },
+        {
+          "start": 5123.9000000003725,
+          "duration": 555
+        },
+        {
+          "start": 5685.4000000003725,
+          "duration": 608
+        },
+        {
+          "start": 6294.600000000559,
+          "duration": 798
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://127.0.0.1:8092/vendor/maplibre-gl/maplibre-gl.css",
+          "duration": 31.59999999962747,
+          "bytes": 71896,
+          "decoded_bytes": 71596
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/styles.css",
+          "duration": 31.399999999441206,
+          "bytes": 25189,
+          "decoded_bytes": 24889
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/main.mjs",
+          "duration": 18,
+          "bytes": 43255,
+          "decoded_bytes": 42955
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/search.mjs",
+          "duration": 15.700000000186265,
+          "bytes": 2325,
+          "decoded_bytes": 2025
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/data.mjs",
+          "duration": 56.200000000186265,
+          "bytes": 10001,
+          "decoded_bytes": 9701
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/heights.mjs",
+          "duration": 55.59999999962747,
+          "bytes": 3744,
+          "decoded_bytes": 3444
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/sharing.mjs",
+          "duration": 55.90000000037253,
+          "bytes": 964,
+          "decoded_bytes": 664
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/mapping.mjs",
+          "duration": 56.200000000186265,
+          "bytes": 4380,
+          "decoded_bytes": 4080
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/places.mjs",
+          "duration": 56.299999999813735,
+          "bytes": 6311,
+          "decoded_bytes": 6011
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/map.mjs",
+          "duration": 59.200000000186265,
+          "bytes": 6405,
+          "decoded_bytes": 6105
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/community-ui.mjs",
+          "duration": 62.39999999944121,
+          "bytes": 5576,
+          "decoded_bytes": 5276
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/contributions.mjs",
+          "duration": 63.799999999813735,
+          "bytes": 3453,
+          "decoded_bytes": 3153
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/navigation.mjs",
+          "duration": 65.40000000037253,
+          "bytes": 8598,
+          "decoded_bytes": 8298
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/building-detail.mjs",
+          "duration": 64.79999999981374,
+          "bytes": 3978,
+          "decoded_bytes": 3678
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/building-evidence.mjs",
+          "duration": 64.59999999962747,
+          "bytes": 4999,
+          "decoded_bytes": 4699
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/buildings.json",
+          "duration": 12.700000000186265,
+          "bytes": 64939,
+          "decoded_bytes": 64639
+        },
+        {
+          "url": "http://127.0.0.1:8092/favicon.svg",
+          "duration": 90.09999999962747,
+          "bytes": 597,
+          "decoded_bytes": 297
+        },
+        {
+          "url": "http://127.0.0.1:8092/vendor/maplibre-gl/maplibre-gl.mjs",
+          "duration": 24.200000000186265,
+          "bytes": 1108349,
+          "decoded_bytes": 1108049
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/building-media.json",
+          "duration": 21.700000000186265,
+          "bytes": 13880,
+          "decoded_bytes": 13580
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/building-footprints.geojson",
+          "duration": 19.600000000558794,
+          "bytes": 352,
+          "decoded_bytes": 52
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/places.geojson",
+          "duration": 21,
+          "bytes": 104745,
+          "decoded_bytes": 104445
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/building-footprint-candidates.geojson",
+          "duration": 20.40000000037253,
+          "bytes": 49867,
+          "decoded_bytes": 49567
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/coverage-report.json",
+          "duration": 19.700000000186265,
+          "bytes": 3501,
+          "decoded_bytes": 3201
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/pedestrian-graph.json",
+          "duration": 37.60000000055879,
+          "bytes": 374,
+          "decoded_bytes": 74
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 70.80000000074506,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8092/vendor/maplibre-gl/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": -40.90000000037253,
+          "bytes": 519672,
+          "decoded_bytes": 519372
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 61.90000000037253,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 66.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 65.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 45.10000000055879,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 138.1000000005588,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 55.700000000186265,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "final",
+      "sample": 4,
+      "url": "http://127.0.0.1:8092/",
+      "timedOut": false,
+      "detail_open_sync_ms": 32,
+      "image_transfer_bytes": 0,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 645.0999999996275
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 4322.799999999814
+        }
+      ],
+      "search_sync_median_ms": 0.6999999992549419,
+      "js_heap_bytes": 23356964,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 497.90000000037253,
+          "duration": 75
+        },
+        {
+          "start": 848.7000000001863,
+          "duration": 89
+        },
+        {
+          "start": 1100.4000000003725,
+          "duration": 99
+        },
+        {
+          "start": 1199.7999999998137,
+          "duration": 224
+        },
+        {
+          "start": 1429.4000000003725,
+          "duration": 196
+        },
+        {
+          "start": 1651.0999999996275,
+          "duration": 190
+        },
+        {
+          "start": 1877.7999999998137,
+          "duration": 248
+        },
+        {
+          "start": 2147.4000000003725,
+          "duration": 365
+        },
+        {
+          "start": 2512.7999999998137,
+          "duration": 202
+        },
+        {
+          "start": 2748,
+          "duration": 54
+        },
+        {
+          "start": 2913.5999999996275,
+          "duration": 322
+        },
+        {
+          "start": 3244.5999999996275,
+          "duration": 556
+        },
+        {
+          "start": 3849.4000000003725,
+          "duration": 363
+        },
+        {
+          "start": 4244.200000000186,
+          "duration": 528
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://127.0.0.1:8092/vendor/maplibre-gl/maplibre-gl.css",
+          "duration": 74.40000000037253,
+          "bytes": 71896,
+          "decoded_bytes": 71596
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/styles.css",
+          "duration": 71.59999999962747,
+          "bytes": 25189,
+          "decoded_bytes": 24889
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/main.mjs",
+          "duration": 67.79999999981374,
+          "bytes": 43255,
+          "decoded_bytes": 42955
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/search.mjs",
+          "duration": 17.5,
+          "bytes": 2325,
+          "decoded_bytes": 2025
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/data.mjs",
+          "duration": 17.699999999254942,
+          "bytes": 10001,
+          "decoded_bytes": 9701
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/heights.mjs",
+          "duration": 17.5,
+          "bytes": 3744,
+          "decoded_bytes": 3444
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/mapping.mjs",
+          "duration": 26.40000000037253,
+          "bytes": 4380,
+          "decoded_bytes": 4080
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/sharing.mjs",
+          "duration": 26.700000000186265,
+          "bytes": 964,
+          "decoded_bytes": 664
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/places.mjs",
+          "duration": 26.90000000037253,
+          "bytes": 6311,
+          "decoded_bytes": 6011
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/map.mjs",
+          "duration": 59.10000000055879,
+          "bytes": 6405,
+          "decoded_bytes": 6105
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/contributions.mjs",
+          "duration": 26.5,
+          "bytes": 3453,
+          "decoded_bytes": 3153
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/community-ui.mjs",
+          "duration": 59.39999999944121,
+          "bytes": 5576,
+          "decoded_bytes": 5276
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/navigation.mjs",
+          "duration": 68.5,
+          "bytes": 8598,
+          "decoded_bytes": 8298
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/building-detail.mjs",
+          "duration": 65.09999999962747,
+          "bytes": 3978,
+          "decoded_bytes": 3678
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/building-evidence.mjs",
+          "duration": 65.80000000074506,
+          "bytes": 4999,
+          "decoded_bytes": 4699
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/buildings.json",
+          "duration": 9.099999999627471,
+          "bytes": 64939,
+          "decoded_bytes": 64639
+        },
+        {
+          "url": "http://127.0.0.1:8092/vendor/maplibre-gl/maplibre-gl.mjs",
+          "duration": 36.5,
+          "bytes": 1108349,
+          "decoded_bytes": 1108049
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/building-media.json",
+          "duration": 34.299999999813735,
+          "bytes": 13880,
+          "decoded_bytes": 13580
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/building-footprints.geojson",
+          "duration": 33.30000000074506,
+          "bytes": 352,
+          "decoded_bytes": 52
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/places.geojson",
+          "duration": 34.200000000186265,
+          "bytes": 104745,
+          "decoded_bytes": 104445
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/building-footprint-candidates.geojson",
+          "duration": 33.40000000037253,
+          "bytes": 49867,
+          "decoded_bytes": 49567
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/coverage-report.json",
+          "duration": 33.10000000055879,
+          "bytes": 3501,
+          "decoded_bytes": 3201
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/pedestrian-graph.json",
+          "duration": 40.200000000186265,
+          "bytes": 374,
+          "decoded_bytes": 74
+        },
+        {
+          "url": "http://127.0.0.1:8092/favicon.svg",
+          "duration": 39.799999999813735,
+          "bytes": 597,
+          "decoded_bytes": 297
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 162.40000000037253,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8092/vendor/maplibre-gl/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": -47,
+          "bytes": 519672,
+          "decoded_bytes": 519372
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 84.29999999981374,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 53.200000000186265,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 79.29999999981374,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 53.09999999962747,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 53.799999999813735,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 49.700000000186265,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "baseline",
+      "sample": 4,
+      "url": "http://127.0.0.1:8091/",
+      "timedOut": false,
+      "detail_open_sync_ms": 37.90000000037253,
+      "image_transfer_bytes": 0,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 683.5
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 4414.5
+        }
+      ],
+      "search_sync_median_ms": 0.5,
+      "js_heap_bytes": 30674806,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 828.8999999994412,
+          "duration": 88
+        },
+        {
+          "start": 1006.0999999996275,
+          "duration": 93
+        },
+        {
+          "start": 1099.199999999255,
+          "duration": 202
+        },
+        {
+          "start": 1311.699999999255,
+          "duration": 187
+        },
+        {
+          "start": 1540.199999999255,
+          "duration": 216
+        },
+        {
+          "start": 1772.699999999255,
+          "duration": 329
+        },
+        {
+          "start": 2108.7999999998137,
+          "duration": 146
+        },
+        {
+          "start": 2414,
+          "duration": 335
+        },
+        {
+          "start": 2795.0999999996275,
+          "duration": 682
+        },
+        {
+          "start": 3508.0999999996275,
+          "duration": 334
+        },
+        {
+          "start": 3874.199999999255,
+          "duration": 502
+        },
+        {
+          "start": 4382.199999999255,
+          "duration": 427
+        },
+        {
+          "start": 4810,
+          "duration": 460
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://127.0.0.1:8091/vendor/maplibre-gl/maplibre-gl.css",
+          "duration": 82.1000000005588,
+          "bytes": 71896,
+          "decoded_bytes": 71596
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/styles.css",
+          "duration": 79.3999999994412,
+          "bytes": 24507,
+          "decoded_bytes": 24207
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/main.mjs",
+          "duration": 78.19999999925494,
+          "bytes": 42804,
+          "decoded_bytes": 42504
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/search.mjs",
+          "duration": 22.899999999441206,
+          "bytes": 2325,
+          "decoded_bytes": 2025
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/heights.mjs",
+          "duration": 19.600000000558794,
+          "bytes": 3744,
+          "decoded_bytes": 3444
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/data.mjs",
+          "duration": 35.60000000055879,
+          "bytes": 10001,
+          "decoded_bytes": 9701
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/mapping.mjs",
+          "duration": 22.399999999441206,
+          "bytes": 4380,
+          "decoded_bytes": 4080
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/sharing.mjs",
+          "duration": 22.09999999962747,
+          "bytes": 964,
+          "decoded_bytes": 664
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/places.mjs",
+          "duration": 37,
+          "bytes": 6311,
+          "decoded_bytes": 6011
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/map.mjs",
+          "duration": 41,
+          "bytes": 6405,
+          "decoded_bytes": 6105
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/community-ui.mjs",
+          "duration": 41.200000000186265,
+          "bytes": 5576,
+          "decoded_bytes": 5276
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/contributions.mjs",
+          "duration": 41,
+          "bytes": 3453,
+          "decoded_bytes": 3153
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/navigation.mjs",
+          "duration": 43.09999999962747,
+          "bytes": 8598,
+          "decoded_bytes": 8298
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/buildings.json",
+          "duration": 3,
+          "bytes": 57554,
+          "decoded_bytes": 57254
+        },
+        {
+          "url": "http://127.0.0.1:8091/vendor/maplibre-gl/maplibre-gl.mjs",
+          "duration": 53.60000000055879,
+          "bytes": 1108349,
+          "decoded_bytes": 1108049
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/building-footprints.geojson",
+          "duration": 25.09999999962747,
+          "bytes": 352,
+          "decoded_bytes": 52
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/places.geojson",
+          "duration": 51.09999999962747,
+          "bytes": 104745,
+          "decoded_bytes": 104445
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/building-footprint-candidates.geojson",
+          "duration": 25.199999999254942,
+          "bytes": 49867,
+          "decoded_bytes": 49567
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/coverage-report.json",
+          "duration": 24.299999999813735,
+          "bytes": 3501,
+          "decoded_bytes": 3201
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/pedestrian-graph.json",
+          "duration": 23.90000000037253,
+          "bytes": 374,
+          "decoded_bytes": 74
+        },
+        {
+          "url": "http://127.0.0.1:8091/favicon.svg",
+          "duration": 48.09999999962747,
+          "bytes": 597,
+          "decoded_bytes": 297
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 85.70000000018626,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8091/vendor/maplibre-gl/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": -40.39999999944121,
+          "bytes": 519672,
+          "decoded_bytes": 519372
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 68.80000000074506,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 56.200000000186265,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 60.39999999944121,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 47.200000000186265,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 42.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 53.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "baseline",
+      "sample": 5,
+      "url": "http://127.0.0.1:8091/",
+      "timedOut": false,
+      "detail_open_sync_ms": 51.60000000055879,
+      "image_transfer_bytes": 0,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 626.7999999998137
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 4448.5
+        }
+      ],
+      "search_sync_median_ms": 0.7000000001862645,
+      "js_heap_bytes": 30561264,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 499.09999999962747,
+          "duration": 71
+        },
+        {
+          "start": 834.2999999998137,
+          "duration": 80
+        },
+        {
+          "start": 1009.7999999998137,
+          "duration": 100
+        },
+        {
+          "start": 1110.5999999996275,
+          "duration": 212
+        },
+        {
+          "start": 1328.2000000001863,
+          "duration": 198
+        },
+        {
+          "start": 1539.5,
+          "duration": 193
+        },
+        {
+          "start": 1741.3999999994412,
+          "duration": 359
+        },
+        {
+          "start": 2105.5999999996275,
+          "duration": 181
+        },
+        {
+          "start": 2288.5,
+          "duration": 81
+        },
+        {
+          "start": 2481.2000000001863,
+          "duration": 254
+        },
+        {
+          "start": 2780.2000000001863,
+          "duration": 649
+        },
+        {
+          "start": 3475.399999999441,
+          "duration": 339
+        },
+        {
+          "start": 3873.399999999441,
+          "duration": 532
+        },
+        {
+          "start": 4414,
+          "duration": 415
+        },
+        {
+          "start": 4829.799999999814,
+          "duration": 395
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://127.0.0.1:8091/vendor/maplibre-gl/maplibre-gl.css",
+          "duration": 42.90000000037253,
+          "bytes": 71896,
+          "decoded_bytes": 71596
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/styles.css",
+          "duration": 45.59999999962747,
+          "bytes": 24507,
+          "decoded_bytes": 24207
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/main.mjs",
+          "duration": 18.200000000186265,
+          "bytes": 42804,
+          "decoded_bytes": 42504
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/search.mjs",
+          "duration": 12.100000000558794,
+          "bytes": 2325,
+          "decoded_bytes": 2025
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/data.mjs",
+          "duration": 15.400000000372529,
+          "bytes": 10001,
+          "decoded_bytes": 9701
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/heights.mjs",
+          "duration": 26.40000000037253,
+          "bytes": 3744,
+          "decoded_bytes": 3444
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/mapping.mjs",
+          "duration": 30.300000000745058,
+          "bytes": 4380,
+          "decoded_bytes": 4080
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/sharing.mjs",
+          "duration": 29.899999999441206,
+          "bytes": 964,
+          "decoded_bytes": 664
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/places.mjs",
+          "duration": 30.40000000037253,
+          "bytes": 6311,
+          "decoded_bytes": 6011
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/map.mjs",
+          "duration": 30,
+          "bytes": 6405,
+          "decoded_bytes": 6105
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/community-ui.mjs",
+          "duration": 30.100000000558794,
+          "bytes": 5576,
+          "decoded_bytes": 5276
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/contributions.mjs",
+          "duration": 35.799999999813735,
+          "bytes": 3453,
+          "decoded_bytes": 3153
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/navigation.mjs",
+          "duration": 35.89999999944121,
+          "bytes": 8598,
+          "decoded_bytes": 8298
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/buildings.json",
+          "duration": 5.599999999627471,
+          "bytes": 57554,
+          "decoded_bytes": 57254
+        },
+        {
+          "url": "http://127.0.0.1:8091/vendor/maplibre-gl/maplibre-gl.mjs",
+          "duration": 45,
+          "bytes": 1108349,
+          "decoded_bytes": 1108049
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/building-footprints.geojson",
+          "duration": 39.89999999944121,
+          "bytes": 352,
+          "decoded_bytes": 52
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/places.geojson",
+          "duration": 58.700000000186265,
+          "bytes": 104745,
+          "decoded_bytes": 104445
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/building-footprint-candidates.geojson",
+          "duration": 58.39999999944121,
+          "bytes": 49867,
+          "decoded_bytes": 49567
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/coverage-report.json",
+          "duration": 56.5,
+          "bytes": 3501,
+          "decoded_bytes": 3201
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/pedestrian-graph.json",
+          "duration": 56.59999999962747,
+          "bytes": 374,
+          "decoded_bytes": 74
+        },
+        {
+          "url": "http://127.0.0.1:8091/favicon.svg",
+          "duration": 57.09999999962747,
+          "bytes": 597,
+          "decoded_bytes": 297
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 93.09999999962747,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8091/vendor/maplibre-gl/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": -47.90000000037253,
+          "bytes": 519672,
+          "decoded_bytes": 519372
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 94.59999999962747,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 92.80000000074506,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 92.79999999981374,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 49,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 57.80000000074506,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 84.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "final",
+      "sample": 5,
+      "url": "http://127.0.0.1:8092/",
+      "timedOut": false,
+      "detail_open_sync_ms": 41.299999999813735,
+      "image_transfer_bytes": 0,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 581.5999999996275
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 3649.5
+        }
+      ],
+      "search_sync_median_ms": 0.6999999992549419,
+      "js_heap_bytes": 22922604,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 533.5,
+          "duration": 50
+        },
+        {
+          "start": 741.5999999996275,
+          "duration": 146
+        },
+        {
+          "start": 963,
+          "duration": 96
+        },
+        {
+          "start": 1059.0999999996275,
+          "duration": 183
+        },
+        {
+          "start": 1250,
+          "duration": 173
+        },
+        {
+          "start": 1433.199999999255,
+          "duration": 170
+        },
+        {
+          "start": 1624.5,
+          "duration": 314
+        },
+        {
+          "start": 1975.2999999998137,
+          "duration": 150
+        },
+        {
+          "start": 2250.699999999255,
+          "duration": 291
+        },
+        {
+          "start": 2726.7999999998137,
+          "duration": 822
+        },
+        {
+          "start": 3573,
+          "duration": 447
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://127.0.0.1:8092/vendor/maplibre-gl/maplibre-gl.css",
+          "duration": 49.90000000037253,
+          "bytes": 71896,
+          "decoded_bytes": 71596
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/styles.css",
+          "duration": 49.69999999925494,
+          "bytes": 25189,
+          "decoded_bytes": 24889
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/main.mjs",
+          "duration": 47.90000000037253,
+          "bytes": 43255,
+          "decoded_bytes": 42955
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/search.mjs",
+          "duration": 10.400000000372529,
+          "bytes": 2325,
+          "decoded_bytes": 2025
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/data.mjs",
+          "duration": 11.100000000558794,
+          "bytes": 10001,
+          "decoded_bytes": 9701
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/heights.mjs",
+          "duration": 16,
+          "bytes": 3744,
+          "decoded_bytes": 3444
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/mapping.mjs",
+          "duration": 16.600000000558794,
+          "bytes": 4380,
+          "decoded_bytes": 4080
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/sharing.mjs",
+          "duration": 12.900000000372529,
+          "bytes": 964,
+          "decoded_bytes": 664
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/places.mjs",
+          "duration": 13.400000000372529,
+          "bytes": 6311,
+          "decoded_bytes": 6011
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/community-ui.mjs",
+          "duration": 12.899999999441206,
+          "bytes": 5576,
+          "decoded_bytes": 5276
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/map.mjs",
+          "duration": 12.799999999813735,
+          "bytes": 6405,
+          "decoded_bytes": 6105
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/contributions.mjs",
+          "duration": 17.5,
+          "bytes": 3453,
+          "decoded_bytes": 3153
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/navigation.mjs",
+          "duration": 19.5,
+          "bytes": 8598,
+          "decoded_bytes": 8298
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/building-detail.mjs",
+          "duration": 19.299999999813735,
+          "bytes": 3978,
+          "decoded_bytes": 3678
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/building-evidence.mjs",
+          "duration": 19.59999999962747,
+          "bytes": 4999,
+          "decoded_bytes": 4699
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/buildings.json",
+          "duration": 8.799999999813735,
+          "bytes": 64939,
+          "decoded_bytes": 64639
+        },
+        {
+          "url": "http://127.0.0.1:8092/vendor/maplibre-gl/maplibre-gl.mjs",
+          "duration": 31.299999999813735,
+          "bytes": 1108349,
+          "decoded_bytes": 1108049
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/building-media.json",
+          "duration": 20.299999999813735,
+          "bytes": 13880,
+          "decoded_bytes": 13580
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/building-footprints.geojson",
+          "duration": 19.59999999962747,
+          "bytes": 352,
+          "decoded_bytes": 52
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/places.geojson",
+          "duration": 22.600000000558794,
+          "bytes": 104745,
+          "decoded_bytes": 104445
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/coverage-report.json",
+          "duration": 19.799999999813735,
+          "bytes": 3501,
+          "decoded_bytes": 3201
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/building-footprint-candidates.geojson",
+          "duration": 20.299999999813735,
+          "bytes": 49867,
+          "decoded_bytes": 49567
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/pedestrian-graph.json",
+          "duration": 29.600000000558794,
+          "bytes": 374,
+          "decoded_bytes": 74
+        },
+        {
+          "url": "http://127.0.0.1:8092/favicon.svg",
+          "duration": 41.799999999813735,
+          "bytes": 597,
+          "decoded_bytes": 297
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 71.90000000037253,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8092/vendor/maplibre-gl/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": -63.799999999813735,
+          "bytes": 519672,
+          "decoded_bytes": 519372
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 49.59999999962747,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 80.6000000005588,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 57.799999999813735,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 63.700000000186265,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 39.19999999925494,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 39,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "final",
+      "sample": 6,
+      "url": "http://127.0.0.1:8092/",
+      "timedOut": false,
+      "detail_open_sync_ms": 57,
+      "image_transfer_bytes": 0,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 568.7999999998137
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 4427.0999999996275
+        }
+      ],
+      "search_sync_median_ms": 0.7999999998137355,
+      "js_heap_bytes": 29523008,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 738.1999999992549,
+          "duration": 129
+        },
+        {
+          "start": 868.0999999996275,
+          "duration": 52
+        },
+        {
+          "start": 951.2999999998137,
+          "duration": 89
+        },
+        {
+          "start": 1041.2999999998137,
+          "duration": 171
+        },
+        {
+          "start": 1217.3999999994412,
+          "duration": 178
+        },
+        {
+          "start": 1401.2999999998137,
+          "duration": 177
+        },
+        {
+          "start": 1605.0999999996275,
+          "duration": 270
+        },
+        {
+          "start": 1886.3999999994412,
+          "duration": 184
+        },
+        {
+          "start": 2073.2999999998137,
+          "duration": 349
+        },
+        {
+          "start": 2523.5,
+          "duration": 311
+        },
+        {
+          "start": 2861.0999999996275,
+          "duration": 669
+        },
+        {
+          "start": 3559.7999999998137,
+          "duration": 329
+        },
+        {
+          "start": 3931.7999999998137,
+          "duration": 455
+        },
+        {
+          "start": 4391.199999999255,
+          "duration": 415
+        },
+        {
+          "start": 4806.899999999441,
+          "duration": 404
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://127.0.0.1:8092/vendor/maplibre-gl/maplibre-gl.css",
+          "duration": 28,
+          "bytes": 71896,
+          "decoded_bytes": 71596
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/styles.css",
+          "duration": 34.10000000055879,
+          "bytes": 25189,
+          "decoded_bytes": 24889
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/main.mjs",
+          "duration": 24.799999999813735,
+          "bytes": 43255,
+          "decoded_bytes": 42955
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/search.mjs",
+          "duration": 49.5,
+          "bytes": 2325,
+          "decoded_bytes": 2025
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/data.mjs",
+          "duration": 50.299999999813735,
+          "bytes": 10001,
+          "decoded_bytes": 9701
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/heights.mjs",
+          "duration": 59.5,
+          "bytes": 3744,
+          "decoded_bytes": 3444
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/mapping.mjs",
+          "duration": 62.90000000037253,
+          "bytes": 4380,
+          "decoded_bytes": 4080
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/sharing.mjs",
+          "duration": 61.40000000037253,
+          "bytes": 964,
+          "decoded_bytes": 664
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/places.mjs",
+          "duration": 63,
+          "bytes": 6311,
+          "decoded_bytes": 6011
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/map.mjs",
+          "duration": 63,
+          "bytes": 6405,
+          "decoded_bytes": 6105
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/community-ui.mjs",
+          "duration": 65.79999999981374,
+          "bytes": 5576,
+          "decoded_bytes": 5276
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/contributions.mjs",
+          "duration": 68,
+          "bytes": 3453,
+          "decoded_bytes": 3153
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/navigation.mjs",
+          "duration": 70.1000000005588,
+          "bytes": 8598,
+          "decoded_bytes": 8298
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/building-detail.mjs",
+          "duration": 67.8999999994412,
+          "bytes": 3978,
+          "decoded_bytes": 3678
+        },
+        {
+          "url": "http://127.0.0.1:8092/src/building-evidence.mjs",
+          "duration": 70.29999999981374,
+          "bytes": 4999,
+          "decoded_bytes": 4699
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/buildings.json",
+          "duration": 6,
+          "bytes": 64939,
+          "decoded_bytes": 64639
+        },
+        {
+          "url": "http://127.0.0.1:8092/vendor/maplibre-gl/maplibre-gl.mjs",
+          "duration": 23.59999999962747,
+          "bytes": 1108349,
+          "decoded_bytes": 1108049
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/building-media.json",
+          "duration": 11.200000000186265,
+          "bytes": 13880,
+          "decoded_bytes": 13580
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/building-footprints.geojson",
+          "duration": 10.200000000186265,
+          "bytes": 352,
+          "decoded_bytes": 52
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/places.geojson",
+          "duration": 21,
+          "bytes": 104745,
+          "decoded_bytes": 104445
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/building-footprint-candidates.geojson",
+          "duration": 20.600000000558794,
+          "bytes": 49867,
+          "decoded_bytes": 49567
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/coverage-report.json",
+          "duration": 19.59999999962747,
+          "bytes": 3501,
+          "decoded_bytes": 3201
+        },
+        {
+          "url": "http://127.0.0.1:8092/data/pedestrian-graph.json",
+          "duration": 33.299999999813735,
+          "bytes": 374,
+          "decoded_bytes": 74
+        },
+        {
+          "url": "http://127.0.0.1:8092/favicon.svg",
+          "duration": 8,
+          "bytes": 597,
+          "decoded_bytes": 297
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 83.29999999981374,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8092/vendor/maplibre-gl/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": -66.70000000018626,
+          "bytes": 519672,
+          "decoded_bytes": 519372
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 38.89999999944121,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 63.40000000037253,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 57.799999999813735,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 35.30000000074506,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 83.70000000018626,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 40.299999999813735,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "baseline",
+      "sample": 6,
+      "url": "http://127.0.0.1:8091/",
+      "timedOut": false,
+      "detail_open_sync_ms": 54.59999999962747,
+      "image_transfer_bytes": 0,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 686.7999999998137
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 4447.200000000186
+        }
+      ],
+      "search_sync_median_ms": 0.6999999992549419,
+      "js_heap_bytes": 24859010,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 868.8999999994412,
+          "duration": 87
+        },
+        {
+          "start": 1018.2999999998137,
+          "duration": 103
+        },
+        {
+          "start": 1122.2000000001863,
+          "duration": 176
+        },
+        {
+          "start": 1307.2999999998137,
+          "duration": 191
+        },
+        {
+          "start": 1507.7000000001863,
+          "duration": 174
+        },
+        {
+          "start": 1712.7999999998137,
+          "duration": 392
+        },
+        {
+          "start": 2107.2999999998137,
+          "duration": 322
+        },
+        {
+          "start": 2492.899999999441,
+          "duration": 226
+        },
+        {
+          "start": 2720.899999999441,
+          "duration": 63
+        },
+        {
+          "start": 2814.7000000001863,
+          "duration": 750
+        },
+        {
+          "start": 3590.5999999996275,
+          "duration": 461
+        },
+        {
+          "start": 4070.2000000001863,
+          "duration": 348
+        },
+        {
+          "start": 4426.5,
+          "duration": 459
+        },
+        {
+          "start": 4885.899999999441,
+          "duration": 402
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://127.0.0.1:8091/vendor/maplibre-gl/maplibre-gl.css",
+          "duration": 47.59999999962747,
+          "bytes": 71896,
+          "decoded_bytes": 71596
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/styles.css",
+          "duration": 20.899999999441206,
+          "bytes": 24507,
+          "decoded_bytes": 24207
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/main.mjs",
+          "duration": 19.100000000558794,
+          "bytes": 42804,
+          "decoded_bytes": 42504
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/search.mjs",
+          "duration": 32.200000000186265,
+          "bytes": 2325,
+          "decoded_bytes": 2025
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/data.mjs",
+          "duration": 40.39999999944121,
+          "bytes": 10001,
+          "decoded_bytes": 9701
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/heights.mjs",
+          "duration": 40.09999999962747,
+          "bytes": 3744,
+          "decoded_bytes": 3444
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/mapping.mjs",
+          "duration": 40.299999999813735,
+          "bytes": 4380,
+          "decoded_bytes": 4080
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/sharing.mjs",
+          "duration": 40.200000000186265,
+          "bytes": 964,
+          "decoded_bytes": 664
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/places.mjs",
+          "duration": 40.40000000037253,
+          "bytes": 6311,
+          "decoded_bytes": 6011
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/map.mjs",
+          "duration": 47.299999999813735,
+          "bytes": 6405,
+          "decoded_bytes": 6105
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/community-ui.mjs",
+          "duration": 47.39999999944121,
+          "bytes": 5576,
+          "decoded_bytes": 5276
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/contributions.mjs",
+          "duration": 51.09999999962747,
+          "bytes": 3453,
+          "decoded_bytes": 3153
+        },
+        {
+          "url": "http://127.0.0.1:8091/src/navigation.mjs",
+          "duration": 51.09999999962747,
+          "bytes": 8598,
+          "decoded_bytes": 8298
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/buildings.json",
+          "duration": 6.1000000005587935,
+          "bytes": 57554,
+          "decoded_bytes": 57254
+        },
+        {
+          "url": "http://127.0.0.1:8091/favicon.svg",
+          "duration": 1.7000000001862645,
+          "bytes": 597,
+          "decoded_bytes": 297
+        },
+        {
+          "url": "http://127.0.0.1:8091/vendor/maplibre-gl/maplibre-gl.mjs",
+          "duration": 20,
+          "bytes": 1108349,
+          "decoded_bytes": 1108049
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/building-footprints.geojson",
+          "duration": 11.100000000558794,
+          "bytes": 352,
+          "decoded_bytes": 52
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/places.geojson",
+          "duration": 14.200000000186265,
+          "bytes": 104745,
+          "decoded_bytes": 104445
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/building-footprint-candidates.geojson",
+          "duration": 13.200000000186265,
+          "bytes": 49867,
+          "decoded_bytes": 49567
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/coverage-report.json",
+          "duration": 10,
+          "bytes": 3501,
+          "decoded_bytes": 3201
+        },
+        {
+          "url": "http://127.0.0.1:8091/data/pedestrian-graph.json",
+          "duration": 10.200000000186265,
+          "bytes": 374,
+          "decoded_bytes": 74
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 58.700000000186265,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8091/vendor/maplibre-gl/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": -51.799999999813735,
+          "bytes": 519672,
+          "decoded_bytes": 519372
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 40.60000000055879,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 49.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 65.80000000074506,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 47.90000000037253,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 53.40000000037253,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 44.09999999962747,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    }
+  ]
+}
