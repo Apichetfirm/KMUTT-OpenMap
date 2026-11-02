@@ -1,5 +1,5 @@
 import {defineConfig,devices} from '@playwright/test';
-const chromiumOptions=process.env.OPENMAP_CHROMIUM?{executablePath:process.env.OPENMAP_CHROMIUM,args:['--no-sandbox','--enable-unsafe-swiftshader']}:undefined;
+const chromiumOptions={chromiumSandbox:true,...(process.env.OPENMAP_CHROMIUM?{executablePath:process.env.OPENMAP_CHROMIUM,args:['--enable-unsafe-swiftshader']}:{} )};
 export default defineConfig({
  testDir:'./tests/e2e',fullyParallel:true,workers:2,timeout:60000,
  reporter:process.env.CI?[['list'],['github']]:[['list']],outputDir:process.env.OPENMAP_QA_DIR||'test-results',

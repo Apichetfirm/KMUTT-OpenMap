@@ -2,7 +2,7 @@ import {execFileSync} from 'node:child_process';
 /** Actual local application and live provider evidence. No mocked map or generated screenshots. */
 import {chromium} from 'playwright';import {mkdir,writeFile} from 'node:fs/promises';
 const [url='http://127.0.0.1:8082/',out='/workspace/work/release-qa']=process.argv.slice(2);await mkdir(out,{recursive:true});
-const browser=await chromium.launch({executablePath:process.env.OPENMAP_CHROMIUM||undefined,headless:true,proxy:process.env.HTTPS_PROXY?{server:process.env.HTTPS_PROXY,bypass:'127.0.0.1,localhost'}:undefined,args:['--no-sandbox','--enable-unsafe-swiftshader']});
+const browser=await chromium.launch({executablePath:process.env.OPENMAP_CHROMIUM||undefined,headless:true,chromiumSandbox:true,proxy:process.env.HTTPS_PROXY?{server:process.env.HTTPS_PROXY,bypass:'127.0.0.1,localhost'}:undefined,args:['--enable-unsafe-swiftshader']});
 const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[],failed=[],consoleErrors=new Set(),consoleWarnings=new Set();
 page.on('console',message=>{if(message.type()==='error')consoleErrors.add(message.text());if(message.type()==='warning')consoleWarnings.add(message.text());});
 page.on('pageerror',e=>errors.push(e.message));page.on('requestfailed',r=>failed.push({url:r.url(),error:r.failure()?.errorText}));
