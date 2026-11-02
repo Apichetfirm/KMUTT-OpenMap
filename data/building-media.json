@@ -1,0 +1,460 @@
+{
+  "schema_version": "0.5.0",
+  "buildings": [
+    {
+      "building_code": "S1",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "S2",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "S3",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "S4",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "S5",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "S6",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "S7",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "S8",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "S9",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "S10",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "S11",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "S12",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "S13",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "S14",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "S15",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "N1",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "N2",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "N3",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "N4",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "N5",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "N6",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "N7",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "N8",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "N9",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "N10",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "N11",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "N12",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "N13",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "N14",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "N15",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "N16",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "N17",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "N18",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "N19",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    },
+    {
+      "building_code": "N20",
+      "photo": null,
+      "gallery": [],
+      "review_status": "photo-rights-unresolved",
+      "references": [
+        {
+          "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+          "publication": "reference-only",
+          "reason": "No explicit photo reuse permission established; no photograph copied."
+        }
+      ]
+    }
+  ]
+}

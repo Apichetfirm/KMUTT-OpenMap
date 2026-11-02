@@ -7,4 +7,4 @@ async function check(dir) {
   else if(file.endsWith('.mjs')) {const result=spawnSync(process.execPath,['--check',file],{stdio:'inherit'});if(result.status)process.exitCode=1;}
  }
 }
-for(const path of ['src','scripts','tests'])await check(path);
+for(const path of ['src','scripts','tests','admin'])await check(path);

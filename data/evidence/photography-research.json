@@ -1,0 +1,20 @@
+[
+  {
+    "source": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrsearch=KMUTT%20building&gsrlimit=20&prop=imageinfo&iiprop=url%7Cextmetadata",
+    "status": "unavailable",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "reuse_rights": "not-established; no image copied"
+  },
+  {
+    "source": "https://www.kmutt.ac.th/about-kmutt/campus/",
+    "status": 200,
+    "bytes": 283258,
+    "reuse_rights": "not-established; no image copied"
+  },
+  {
+    "source": "https://bgm.kmutt.ac.th/MapNavi/MAPNAVI.html",
+    "status": 200,
+    "bytes": 23715,
+    "reuse_rights": "not-established; no image copied"
+  }
+]

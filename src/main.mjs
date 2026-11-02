@@ -10,6 +10,8 @@ import {setupCommunity} from './community-ui.mjs';
 import {reviewIssueURL} from './contributions.mjs';
 import {validateGraph,navigationAvailability,routeToBuilding} from './navigation.mjs';
 
+import {BuildingDetail} from './building-detail.mjs';
+import {validateMedia} from './building-evidence.mjs';
 const $=id=>document.getElementById(id);
 const emptyCollection=()=>({type:'FeatureCollection',features:[]});
 const state={official:[],drafts:[],results:[],selected:null,filter:'all',map:null,maplibre:null,mapReady:false,
@@ -19,6 +21,7 @@ const codes=()=>state.official.map(b=>b.id);
 const mobile=()=>matchMedia('(max-width:670px)').matches&&!matchMedia('(min-width:541px) and (max-height:540px)').matches;
 const reducedMotion=()=>matchMedia('(prefers-reduced-motion:reduce)').matches;
 let toastTimer,mapPromise,mapAttempt=0;
+let mediaIndex=null;const visualDetail=new BuildingDetail($('building-visual'));
 function element(tag,cls,text) {
   const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=text;return node;
 }
@@ -75,6 +78,7 @@ function showSource(container,label,url) {
 }
 function renderDetail() {
   const b=state.selected;if(!b)return;
+  visualDetail.render(b,mediaIndex?.buildings.find(m=>m.building_code===b.id));
   const mapped=validCoordinates(b.coordinates),draft=state.drafts.find(d=>d.building_code===b.id);
   $('detail-code').textContent=b.id;$('detail-name').textContent=b.name_th;$('detail-en').textContent=b.name_en;
   $('detail-location').textContent=mapped?'≈ พิกัดอ้างอิงโดยประมาณ · ไม่ใช่ทางเข้า':'? ยังไม่มีพิกัดที่ยืนยันตำแหน่งได้';
@@ -273,6 +277,7 @@ async function loadData() {
     const report=coverage(state.official,state.footprints);$('coverage').textContent=`${report.total} อาคาร · ${report.coordinates} พิกัดโดยประมาณ · ${report.unmapped} ยังไม่ทราบตำแหน่ง`;
     // Optional collections must never block the core map, or each other.
     initMap();
+    fetchJSON('./data/building-media.json').then(data=>{if(validateMedia(data,codes()).length)throw Error('Invalid image evidence');mediaIndex=data;renderDetail();}).catch(()=>{});
     fetchJSON('./data/building-footprints.geojson').then(data=>{
       if(validateFootprints(data,state.official).length)throw Error('Invalid footprints');
       state.footprints=data;syncMap();

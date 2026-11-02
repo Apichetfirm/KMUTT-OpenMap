@@ -1,3 +1,4 @@
+import {validateMedia} from '../src/building-evidence.mjs';
 import {readFile} from 'node:fs/promises';
 import {validateCandidateFootprints,validateCatalog,validateFootprints,validGeometry,validEvidence,coverage} from '../src/data.mjs';
 import {validatePlaces} from '../src/places.mjs';
@@ -15,6 +16,7 @@ const expectedRendering={schema_version:'0.4.0',warning:'Candidate editor previe
 if(JSON.stringify(await read('building-rendering.json'))!==JSON.stringify(expectedRendering))errors.push('Candidate rendering metadata out of sync');
 const expectedReport=qualityReport({buildings:rows,footprints,candidates,places,graph,candidateGraph,heights});
 if(JSON.stringify(await read('coverage-report.json'))!==JSON.stringify(expectedReport))errors.push('Coverage report out of sync: run npm run generate-data');
+errors.push(...validateMedia(await read('building-media.json'),codes));
 const seen=new Set();
 for(const f of candidates.features) {
   if(seen.has(f.id)||!validGeometry(f.geometry)||!codes.includes(f.properties.building_code)||!validEvidence(f.properties.evidence)||f.properties.review_status!=='candidate-needs-independent-review')errors.push('Invalid candidate footprint');
