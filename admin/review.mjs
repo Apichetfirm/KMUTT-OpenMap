@@ -6,6 +6,7 @@ let analysis={candidates:[]},decisions=[];
 for(const b of catalog.buildings){const o=node('option',b.id+' · '+b.name_th);o.value=b.id;$('building').append(o);}
 function render(){const id=$('building').value,b=catalog.buildings.find(b=>b.id===id),m=media.buildings.find(b=>b.building_code===id);$('evidence').replaceChildren(node('h2',b.name_th),node('p','Published reference: '+JSON.stringify(b.coordinates)+' · '+b.mapping.confidence));
  for(const p of [m?.photo,...m?.gallery||[]].filter(Boolean)){const img=document.createElement('img');img.src='../'+p.src.slice(2);img.alt=p.alt;img.loading='lazy';$('evidence').append(img,node('p',p.attribution+' · '+p.license));}
+ $('evidence').append(node('h3','Photo rights/source metadata'),node('pre',JSON.stringify(m,null,2)));
  if(!m?.photo)$('evidence').append(node('p','No approved reusable photograph. Rights/identity remain unresolved.'));
  for(const f of footprints.features.filter(f=>f.properties.building_code===id)){
  const ring=f.geometry.type==='Polygon'?f.geometry.coordinates[0]:f.geometry.coordinates[0][0],xs=ring.map(p=>p[0]),ys=ring.map(p=>p[1]),minx=Math.min(...xs),miny=Math.min(...ys),sx=Math.max(...xs)-minx,sy=Math.max(...ys)-miny;

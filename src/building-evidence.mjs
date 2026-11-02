@@ -13,13 +13,14 @@ export function streetViewURL(coordinates){if(!validCoordinates(coordinates))ret
 export function validObservation(o,photos){return !!o&&photos.some(p=>p.id===o.photo_id&&validPhoto(p))&&typeof o.model==='string'&&!!o.model.trim()&&typeof o.model_version==='string'&&!!o.model_version.trim()&&validDate(o.analyzed_on)&&typeof o.sign_text==='string'&&Array.isArray(o.features)&&o.features.every(s=>typeof s==='string'&&s.length<=300)&&(o.visible_floors===null||Number.isInteger(o.visible_floors)&&o.visible_floors>0)&&typeof o.uncertainty==='string'&&!!o.uncertainty.trim();}
 export function proposeMatches(buildings,footprints,photos,observations){
  if(observations.some(o=>!validObservation(o,photos)))throw Error('Observations need licensed reviewed image provenance and model/version/date/uncertainty');
- return observations.flatMap(o=>buildings.map(b=>{
+ const matches=observations.flatMap(o=>buildings.map(b=>{
   const text=o.sign_text.toLowerCase(),names=[b.name_th,b.name_en,...b.aliases].filter(s=>s.length>=3);
   const signMatch=names.some(n=>text.includes(n.toLowerCase()))||new RegExp(`(^|[^a-z0-9])${b.id}($|[^a-z0-9])`,'i').test(text);
   if(!signMatch)return null;
   const conflict=b.floor_count!==null&&o.visible_floors!==null&&b.floor_count!==o.visible_floors;
   return {building_code:b.id,photo_id:o.photo_id,observation:o,footprint_candidates:footprints.features.filter(f=>f.properties.building_code===b.id).map(f=>f.id),review_status:'needs-independent-review',confidence:'unverified',explanation:'Visible reported sign text matches a directory name/code. Existing named GIS candidates are context only; image similarity does not verify coordinates.',conflicts:conflict?['Visible floor estimate differs from documented count; perspective/occlusion may explain it.']:[],uncertainty:o.uncertainty,coordinates_verified:false,height_measured:false};
  }).filter(Boolean));
+ return matches.map(m=>({...m,ambiguous:matches.filter(other=>other.photo_id===m.photo_id).length>1}));
 }
 export function reviewDecision({building_code,decision,reviewer,survey_reviewer=null,notes,source_refs=[]}){
  if(!/^[NS][1-9]\d?$/.test(building_code)||!['accept-for-pr-review','reject','request-evidence'].includes(decision)||!reviewer?.trim()||!notes?.trim()||reviewer.trim()===survey_reviewer?.trim()||!source_refs.length||source_refs.some(s=>!safeURL(s)))throw Error('Decision requires independent reviewer, evidence URLs and rationale');
