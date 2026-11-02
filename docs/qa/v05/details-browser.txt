@@ -1,0 +1,23 @@
+[WebServer] (node:6857) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 8 tests using 2 workers
+
+(node:6870) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:6869) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › tests/e2e/building-details.spec.mjs:3:1 › media loading is independent and empty index causes no image downloads (6.8s)
+  ✓  3 [desktop] › tests/e2e/building-details.spec.mjs:4:1 › review tool records decision and refuses same author/reviewer (3.1s)
+  ✓  2 [desktop] › tests/e2e/building-details.spec.mjs:2:1 › building visual detail, unknown photo, supported Street View and URL compatibility (14.0s)
+(node:7267) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 [desktop] › tests/e2e/building-details.spec.mjs:6:1 › reviewed image renders lazily and broken image has a visible fallback (5.8s)
+(node:7310) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  6 [mobile] › tests/e2e/building-details.spec.mjs:3:1 › media loading is independent and empty index causes no image downloads (5.8s)
+  ✓  5 [mobile] › tests/e2e/building-details.spec.mjs:2:1 › building visual detail, unknown photo, supported Street View and URL compatibility (11.2s)
+  ✓  7 [mobile] › tests/e2e/building-details.spec.mjs:4:1 › review tool records decision and refuses same author/reviewer (3.1s)
+  ✓  8 [mobile] › tests/e2e/building-details.spec.mjs:6:1 › reviewed image renders lazily and broken image has a visible fallback (3.8s)
+
+  8 passed (33.3s)
