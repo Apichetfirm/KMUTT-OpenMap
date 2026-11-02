@@ -1,0 +1,29 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync,existsSync} from 'node:fs';import {validPhoto,validateMedia,streetViewURL,proposeMatches,reviewDecision} from '../src/building-evidence.mjs';
+const photo={id:'synthetic',src:'./assets/buildings/synthetic-640.webp',alt:'Synthetic test fixture, not a campus photograph',license:'CC0-1.0',source:'https://example.org/test',photographer:'Synthetic fixture',attribution:'Test fixture',checked_on:'2026-11-02',review_status:'approved-for-publication',reviewer:'Reviewer B',reviewed_on:'2026-11-02',width:640,height:480,capture_date:null,camera_coordinates:null,camera_heading:null,variants:[{src:'./assets/buildings/synthetic-320.webp',width:320}]};
+test('publication requires reviewed rights and safe optimized assets',()=>{assert.ok(validPhoto(photo));for(const c of [{license:'unknown'},{reviewer:null},{src:'https://google.com/image.webp'},{camera_coordinates:[0,0]},{review_status:'ai-approved'},{source:'javascript:alert(1)'},{photographer:''}])assert.ok(!validPhoto({...photo,...c}));});
+test('all 35 photo records explicitly unknown and references never become published images',()=>{const b=JSON.parse(readFileSync('data/buildings.json')).buildings,m=JSON.parse(readFileSync('data/building-media.json'));assert.deepEqual(validateMedia(m,b.map(b=>b.id)),[]);assert.ok(m.buildings.every(b=>b.photo===null&&b.gallery.length===0));assert.equal(validateMedia({...m,buildings:m.buildings.slice(1)},b.map(b=>b.id)).length,1);});
+test('Street View uses supported point only and promises no panorama identity',()=>{assert.equal(streetViewURL(null),null);assert.equal(streetViewURL([0,0]),null);const u=new URL(streetViewURL([100.493,13.652]));assert.equal(u.searchParams.get('map_action'),'pano');assert.equal(u.searchParams.get('viewpoint'),'13.652,100.493');assert.equal(u.hostname,'www.google.com');});
+test('offline observations remain candidates, flag floor conflict and reject missing provenance',()=>{const b=[{id:'N9',name_th:'หุ่นยนต์',name_en:'Institute of Field Robotics',aliases:['FIBO'],floor_count:15}],obs={photo_id:'synthetic',model:'test-only-model',model_version:'fixture-1',analyzed_on:'2026-11-02',sign_text:'FIBO',features:['synthetic red facade'],visible_floors:5,uncertainty:'Synthetic observation; no geography proof'};const matches=proposeMatches(b,{features:[]},[photo],[obs]);assert.equal(matches.length,1);assert.equal(matches[0].coordinates_verified,false);assert.ok(matches[0].conflicts.length);assert.equal(matches[0].ambiguous,false);assert.ok(proposeMatches([...b,{...b[0],id:'N10'}],{features:[]},[photo],[{...obs,sign_text:'N9 N10'}]).every(m=>m.ambiguous));assert.throws(()=>proposeMatches(b,{features:[]},[],[obs]));assert.equal(proposeMatches(b,{features:[]},[photo],[{...obs,sign_text:'Other building'}]).length,0);});
+test('decisions require independent reviewer and sources and never publish geometry',()=>{const d={building_code:'N9',decision:'accept-for-pr-review',reviewer:'B',survey_reviewer:'A',notes:'Review rationale',source_refs:['https://example.org']};assert.equal(reviewDecision(d).publication_status,'not-published');assert.throws(()=>reviewDecision({...d,reviewer:'A'}));assert.throws(()=>reviewDecision({...d,source_refs:[]}));assert.throws(()=>reviewDecision({...d,decision:'publish'}));});
+
+
+test('review thumbnails preserve footprint proportions instead of stretching every shape',async()=>{const {footprintPreview}=await import('../admin/footprint.mjs');const lat=13.652,dy=0.0001,dx=dy/Math.cos((lat+dy/2)*Math.PI/180),ring=[[100.493,lat],[100.493+dx,lat],[100.493+dx,lat+dy],[100.493,lat+dy],[100.493,lat]],points=footprintPreview({type:'Polygon',coordinates:[ring]}).split(' ').map(s=>s.split(',').map(Number));assert.ok(Math.abs((points[1][0]-points[0][0])/(points[1][1]-points[2][1])-1)<1e-6);});
+
+
+test('private output cannot enter any production directory on POSIX or Windows',async()=>{const {privateEvidenceOutput}=await import('../scripts/evidence-paths.mjs');const {posix,win32}=await import('node:path');for(const [paths,root] of [[posix,'/repo'],[win32,'C:\\repo']]){for(const name of ['src/private.json','data/private.json','vendor/private.json','.site/private.json','docs/private.json','index.html'])assert.throws(()=>privateEvidenceOutput(name,root,paths));assert.ok(privateEvidenceOutput('work/private.json',root,paths).endsWith('private.json'));}});
+
+test('private outputs cannot reach published directories through filesystem links',async()=>{
+ const {privateEvidenceOutput}=await import('../scripts/evidence-paths.mjs');
+ const {mkdtempSync,mkdirSync,symlinkSync,rmSync}=await import('node:fs');
+ const {tmpdir}=await import('node:os');const path=await import('node:path');
+ const temp=mkdtempSync(path.join(tmpdir(),'kmutt-evidence-link-')),root=path.join(temp,'repo');
+ try {
+  mkdirSync(path.join(root,'work'),{recursive:true});mkdirSync(path.join(root,'data'));
+  const type=process.platform==='win32'?'junction':'dir';
+  symlinkSync(path.join(root,'data'),path.join(root,'work','redirect'),type);
+  symlinkSync(path.join(root,'data'),path.join(temp,'outside-alias'),type);
+  assert.throws(()=>privateEvidenceOutput('work/redirect/private.json',root),/work/);
+  assert.throws(()=>privateEvidenceOutput(path.join(temp,'outside-alias/private.json'),root),/work/);
+  assert.equal(privateEvidenceOutput('work/new/private.json',root),path.join(root,'work/new/private.json'));
+ }finally{rmSync(temp,{recursive:true,force:true});}
+});

@@ -84,3 +84,7 @@ npm run validate-data
 ```
 
 Review upstream name/version changes and every derived diff. Geodata: © OpenStreetMap contributors, ODbL; see [DATA-LICENSES.md](DATA-LICENSES.md). No KMUTNB source code, models, photos or protected university map images are reused. The public main site is https://apichetfirm.github.io/KMUTT-OpenMap/. The independent report records the accepted application SHA and deployed byte verification.
+
+## v0.5 building evidence candidate
+
+[Implementation handoff](docs/V05-IMPLEMENTATION-HANDOFF.md): reusable visual building cards, official Street View search links with explicit unknown coverage, reviewed media metadata for every code, offline image optimization and evidence matching, and a local-only evidence review/export tool. No building photo has established publication rights yet; the app shows an honest unavailable state. No runtime AI or automatically accepted GIS associations. `npm run validate-media` verifies approved image files; private analysis and `/admin/` are excluded from production builds.

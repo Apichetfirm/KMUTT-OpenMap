@@ -1,0 +1,20 @@
+{
+  "schema_version": "0.5.0",
+  "photo_id": "synthetic",
+  "image_sha256": "0d6c26f13dcce6e427ea8c8166c34669e4cefa0f329e93db00398c7cc0b77a8f",
+  "extractor": "Pillow 12.3.0 / EXIF orientation + 128px five-color quantization",
+  "width": 1200,
+  "height": 900,
+  "dominant_image_colors": [
+    {
+      "rgb": [
+        141,
+        181,
+        189
+      ],
+      "pixel_fraction": 1.0
+    }
+  ],
+  "review_status": "unreviewed-pixel-features",
+  "limitations": "Image colors include sky, vegetation and surroundings; they are not facade labels or building identity. No OCR, semantic AI, floor/GPS/height inference or acceptance performed."
+}

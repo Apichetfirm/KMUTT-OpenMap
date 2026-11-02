@@ -20,6 +20,8 @@ jobs:
         run: npm run verify-vendor && npm run check && npm run validate-data
       - name: Unit and map integration tests
         run: npm test
+      - name: Offline image tools
+        run: python -m pip install -r scripts/requirements-images.txt && python -m unittest discover -s tests -p 'test_*.py'
       - name: Install browser engines
         run: npx playwright install --with-deps chromium firefox webkit
       - name: Desktop/mobile and Firefox/WebKit browser fixtures

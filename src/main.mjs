@@ -10,6 +10,8 @@ import {setupCommunity} from './community-ui.mjs';
 import {reviewIssueURL} from './contributions.mjs';
 import {validateGraph,navigationAvailability,routeToBuilding} from './navigation.mjs';
 
+import {BuildingDetail} from './building-detail.mjs';
+import {validateMedia} from './building-evidence.mjs';
 const $=id=>document.getElementById(id);
 const emptyCollection=()=>({type:'FeatureCollection',features:[]});
 const state={official:[],drafts:[],results:[],selected:null,filter:'all',map:null,maplibre:null,mapReady:false,
@@ -19,6 +21,7 @@ const codes=()=>state.official.map(b=>b.id);
 const mobile=()=>matchMedia('(max-width:670px)').matches&&!matchMedia('(min-width:541px) and (max-height:540px)').matches;
 const reducedMotion=()=>matchMedia('(prefers-reduced-motion:reduce)').matches;
 let toastTimer,mapPromise,mapAttempt=0;
+let mediaIndex=null;const visualDetail=new BuildingDetail($('building-visual'));
 function element(tag,cls,text) {
   const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=text;return node;
 }
@@ -75,6 +78,7 @@ function showSource(container,label,url) {
 }
 function renderDetail() {
   const b=state.selected;if(!b)return;
+  visualDetail.render(b,mediaIndex?.buildings.find(m=>m.building_code===b.id));
   const mapped=validCoordinates(b.coordinates),draft=state.drafts.find(d=>d.building_code===b.id);
   $('detail-code').textContent=b.id;$('detail-name').textContent=b.name_th;$('detail-en').textContent=b.name_en;
   $('detail-location').textContent=mapped?'≈ พิกัดอ้างอิงโดยประมาณ · ไม่ใช่ทางเข้า':'? ยังไม่มีพิกัดที่ยืนยันตำแหน่งได้';
@@ -84,6 +88,7 @@ function renderDetail() {
   $('map-propose').disabled=!state.mapReady;
   $('detail-caveat').textContent=mapped?'จุดนี้ยังไม่ผ่านการสำรวจ ทางเดินและทางเข้าสำหรับผู้ใช้วีลแชร์ยังไม่มีข้อมูลยืนยัน การนำทางภายนอกอาจไม่ตรงทางเข้าจริง':'รายชื่อยังค้นหาและแชร์ได้ โปรดเสนอพิกัดพร้อมหลักฐานเพื่อให้ผู้ดูแลตรวจสอบ';
   $('detail-conflict').classList.toggle('hidden',!b.name_conflict);
+  $('detail-department').classList.toggle('hidden',!b.department);
   $('detail-department').textContent=b.department||'คณะ / หน่วยงาน: ยังไม่มีข้อมูลยืนยันแยกจากชื่ออาคาร';
   $('entrance-status').textContent=b.entrances.length?`${b.entrances.length} ทางเข้าในข้อมูล · ตรวจหลักฐานก่อนเดินทาง`:'ยังไม่มีทางเข้าสาธารณะที่สำรวจยืนยัน';
   renderNavigation();
@@ -273,6 +278,7 @@ async function loadData() {
     const report=coverage(state.official,state.footprints);$('coverage').textContent=`${report.total} อาคาร · ${report.coordinates} พิกัดโดยประมาณ · ${report.unmapped} ยังไม่ทราบตำแหน่ง`;
     // Optional collections must never block the core map, or each other.
     initMap();
+    fetchJSON('./data/building-media.json').then(data=>{if(validateMedia(data,codes()).length)throw Error('Invalid image evidence');mediaIndex=data;renderDetail();}).catch(()=>{});
     fetchJSON('./data/building-footprints.geojson').then(data=>{
       if(validateFootprints(data,state.official).length)throw Error('Invalid footprints');
       state.footprints=data;syncMap();
@@ -377,6 +383,7 @@ function setupEvents() {
     },error=>toast(error.code===1?'ไม่ได้รับอนุญาตให้เข้าถึง GPS':'ไม่สามารถระบุตำแหน่งได้'),{enableHighAccuracy:true,timeout:10000,maximumAge:20000});
   });
   $('retry-map').addEventListener('click',()=>{
+    state.mapReady=false;setMapControls(false);
     if(state.map)state.map.remove();state.map=null;state.mapReady=false;state.selectedMarker=null;state.previewMarker=null;state.locationMarker=null;cancelMapping();mapPromise=null;initMap();
   });
   $('retry-data').addEventListener('click',loadData);
