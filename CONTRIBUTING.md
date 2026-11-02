@@ -1,14 +1,13 @@
-# Contributing to KMUTT OpenMap
+# Contributing
 
-Initiated by Firm Impulse · FIBO FRAB11. Thai and English contributions are welcome.
+Initiated by Firm Impulse · FIBO FRAB11.
 
-1. Open an issue describing the problem, building code/place ID and evidence. A browser proposal is a private draft, not a published correction. Use the building or place issue template; attach the exported proposal JSON if useful.
-2. Edit the canonical `data/buildings.json` for reviewed building changes. The old documentation's `data/generate_catalog.py` does not exist. Run `npm run generate-data` to regenerate points and coverage CSV.
-3. Keep source, license, observation/check date and uncertainty with every new record. Coordinates are not entrances. Candidate footprints belong in the candidate file until association review supports acceptance. An independent maintainer reviews evidence before merging any promotion.
-4. Heights in metres require measured evidence. Official floors, OSM levels, estimates and display fallbacks stay separate. Never mark an OSM tag or a source URL alone as field verification.
-5. POI changes, closures and hours need provenance. Unknown fields remain unknown. Accessible paths require surveyed surfaces, steps, ramps, crossings and entrances; a generic wheelchair tag is insufficient.
-6. Routes require field evidence and independent topology/entrance review. Synthetic test fixtures must never be published as campus paths. Validate graph edges against accepted footprints and review unknown-building crossings manually.
-7. Do not contribute personal/private information, restricted plans, photographs without permission or copyrighted models. Record data licenses separately from MIT code.
-8. Run `npm ci`, `npm run check`, `npm run validate-data`, `npm test`, `npm run test:e2e` and `npm run build`; see [testing instructions](docs/TEST-RESULTS.md). Test live tiles separately and document device/browser limits.
+Everyone can browse without an account. For corrections without code, use the map's review/export form and [community guide](docs/COMMUNITY-GUIDE.md). GitHub issues/PRs are the moderation workflow; no unreviewed submission becomes published data automatically.
 
-The implementer does not self-merge. Independent review and respectful collaboration are required; see CODE_OF_CONDUCT.md.
+Code contributors: branch from latest main, preserve building URLs and existing local drafts, keep Pages-relative assets, and avoid unnecessary infrastructure. Original code remains MIT. Do not copy reference-site assets or assume a public repository grants reuse rights.
+
+Data contributors: document the source URL/version/date, retrieval date, license, matching method, uncertainty and reviewer status. Unknown values stay null. Keep candidates, accepted associations, surveyed geometry and public entrances separate. Measured heights require evidence; floor-based render estimates remain labeled assumptions. Never infer a building association from proximity, a walkable connection through a building, current business hours from retrieval date or wheelchair suitability from one tag. See [data model](docs/DATA-MODEL.md), [mapping methodology](docs/MAPPING-METHODOLOGY.md), [navigation methodology](docs/NAVIGATION-METHODOLOGY.md) and [licenses](DATA-LICENSES.md).
+
+Run the README checks before submitting. New geography needs meaningful schema/geometry tests and independent evidence review, not a test that freezes an inflated count. Browser changes need actual interaction and responsive checks. Include screenshots and limitations. Maintain current source history; do not silently promote local drafts or delete recovery bytes.
+
+Keep private student records, personal contacts and restricted infrastructure out of reports. University collaborators can follow [the staff handover guide](docs/UNIVERSITY-COLLABORATION.md). Security reporting is covered by [SECURITY.md](SECURITY.md). Be respectful under [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).

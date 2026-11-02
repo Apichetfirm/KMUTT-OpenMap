@@ -1,33 +1,9 @@
 import {test,expect} from '@playwright/test';
 import {readFile} from 'node:fs/promises';
+import {fixture} from './fixture.mjs';
+const placeCount=JSON.parse(await readFile('data/places.geojson','utf8')).features.length;
 const origin='http://127.0.0.1:8080';
 const legacy={building_code:'N9',coordinates:[100.49433,13.65439],capture_method:'clicked-map',review_status:'needs-field-verification',created_at:'2026-11-01T00:00:00Z',evidence:'Legacy proposal'};
-async function fixture(page,{cdnFailure=false,dataFailure=false}={}) {
- const errors=[];page.on('pageerror',e=>errors.push(e.message));
- await page.route('**/*',async route=>{
-  const url=new URL(route.request().url());
-  if(url.origin===origin) {
-   if(dataFailure&&url.pathname.endsWith('/data/buildings.json'))return route.fulfill({status:503,body:'unavailable'});
-   return route.continue();
-  }
-  if(url.hostname==='unpkg.com') {
-   if(cdnFailure)return route.abort();
-   if(url.pathname.endsWith('.css'))return route.fulfill({contentType:'text/css',body:await readFile('node_modules/maplibre-gl/dist/maplibre-gl.css','utf8')});
-   // Instrument the real MapLibre class in the fixture only, without production hooks.
-   return route.fulfill({contentType:'application/javascript',body:`export * from '${origin}/node_modules/maplibre-gl/dist/maplibre-gl.mjs';
-    import {Map} from '${origin}/node_modules/maplibre-gl/dist/maplibre-gl.mjs';
-    const on=Map.prototype.on;Map.prototype.on=function(...a){window.__map=this;return on.apply(this,a)};
-    const fly=Map.prototype.flyTo;Map.prototype.flyTo=function(options){window.__camera=options;return fly.call(this,options)};`});
-  }
-  if(url.hostname==='tiles.openfreemap.org') {
-   if(url.pathname.includes('/styles/'))return route.fulfill({json:{version:8,glyphs:'https://tiles.openfreemap.org/test-glyphs/{fontstack}/{range}.pbf',sources:{},layers:[{id:'background',type:'background',paint:{'background-color':url.pathname.endsWith('dark')?'#172b35':'#e4eae5'}}]}});
-   if(url.pathname==='/planet')return route.fulfill({json:{tilejson:'3.0.0',attribution:'<a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a>',tiles:['https://tiles.openfreemap.org/test/{z}/{x}/{y}.pbf'],minzoom:0,maxzoom:14,vector_layers:[{id:'building',fields:{render_height:'Number',render_min_height:'Number'}}]}});
-   return route.fulfill({status:204,body:''});
-  }
-  return route.abort();
- });
- return errors;
-}
 async function searchSelect(page,q='N9') {
  await page.locator('#search').fill(q);await expect(page.locator('.place').first()).toHaveAttribute('data-code',q==='FIBO'?'N9':q);
  await page.locator('#search').press('Enter');await expect(page.locator('#detail')).toBeVisible();
@@ -40,7 +16,7 @@ test('directory, shared URLs, keyboard selection and camera target',async({page}
  expect(await page.evaluate(()=>window.__camera.center)).toEqual([100.49433,13.65439]);
  await page.reload();await expect(page.locator('#detail-code')).toHaveText('N9');
  await page.locator('#close-detail').click();await searchSelect(page,'N16');
- await expect(page.locator('#focus-detail')).toBeDisabled();await expect(page.locator('#detail-height')).toContainText('15');expect(errors).toEqual([]);
+ await expect(page.locator('#focus-detail')).toBeEnabled();await expect(page.locator('#detail-height')).toContainText('15');expect(errors).toEqual([]);
 });
 test('style reloads preserve selection with one extrusion and working height/2D modes',async({page})=>{
  const errors=await fixture(page);await page.goto('/?building=N9');await expect(page.locator('#toggle3d')).toBeEnabled();
@@ -67,12 +43,12 @@ test('proposal preview, confirmation, reload, export and deletion preserve offic
  const download=page.waitForEvent('download');await page.locator('#export-drafts').click();expect((await download).suggestedFilename()).toContain('unverified');
  await searchSelect(page);await page.locator('.contribution-detail summary').click();await page.locator('#map-delete').click();await expect(page.locator('#map-delete')).toBeHidden();expect(errors).toEqual([]);
 });
-test('catalog survives CDN/storage failures, invalid URLs and POI empty filters',async({page})=>{
+test('catalog survives runtime/storage failures, invalid URLs and POI empty filters',async({page})=>{
  const errors=await fixture(page,{cdnFailure:true});await page.addInitScript(()=>Object.defineProperty(window,'localStorage',{get(){throw new DOMException('Denied','SecurityError')}}));
  await page.goto('/?building=UNKNOWN');await expect(page.locator('.place')).toHaveCount(35);await expect(page.locator('#retry-map')).toBeVisible();
  await searchSelect(page);await expect(page.locator('#map-propose')).toBeDisabled();await expect(page.locator('#directions')).toBeEnabled();
- await page.locator('#close-detail').click();await page.locator('#search').focus();await page.locator('.campus-services summary').click();await expect(page.locator('.poi-result')).toHaveCount(1);
- await page.locator('#poi-category').selectOption('restaurant');await expect(page.locator('.poi-result')).toHaveCount(0);await expect(page.locator('#poi-empty')).toBeVisible();
+ await page.locator('#close-detail').click();await page.locator('#search').focus();await page.locator('.campus-services summary').click();await expect(page.locator('.poi-result')).toHaveCount(placeCount);
+ await page.locator('#poi-category').selectOption('water');await expect(page.locator('.poi-result')).toHaveCount(0);await expect(page.locator('#poi-empty')).toBeVisible();
  await page.locator('#poi-category').selectOption('all');await page.locator('#poi-open').check();await expect(page.locator('.poi-result')).toHaveCount(0);expect(errors).toEqual([]);
 });
 test('data failure is actionable and mobile details/search remain reachable',async({page})=>{

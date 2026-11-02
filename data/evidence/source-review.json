@@ -1,5 +1,5 @@
 {
-  "checked_on": "2026-11-01",
+  "checked_on": "2026-11-02",
   "sources": [
     {
       "url": "https://www.kmutt.ac.th/about-kmutt/campus/",
@@ -40,13 +40,31 @@
       "url": "https://github.com/microsoft/GlobalMLBuildingFootprints",
       "status": "read-project-documentation",
       "supports": "CDLA-Permissive-2.0 machine-derived footprints; no code/entrance verification. No data imported."
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/map?bbox=100.488,13.646,100.499,13.658",
+      "status": "retrieved",
+      "retrieved_on": "2026-11-02",
+      "license": "ODbL-1.0",
+      "supports": "Named footprint candidates, approximate service records and candidate pedestrian topology. No field verification. Sanitized versioned extract is stored in osm-campus-snapshot.json."
+    },
+    {
+      "url": "https://apichetfirm.github.io/KMUTT-OpenMap/",
+      "status": "blocked-environment-policy-http-403",
+      "supports": null
+    },
+    {
+      "url": "https://sutiporn03082547-eng.github.io/kmutnb-3d-map/",
+      "status": "blocked-environment-policy-http-403",
+      "supports": "Source HTML inspected for concepts only; no assets/code copied."
     }
   ],
   "unresolved_names": [
     "S1",
+    "S2",
     "S6",
     "N19"
   ],
   "new_field_verified_claims": 0,
-  "candidate_footprints": 3
+  "candidate_footprints": 18
 }

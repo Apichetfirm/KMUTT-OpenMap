@@ -52,3 +52,9 @@ test('share URLs retain GitHub Pages base path, other parameters and fragment',(
 test('coverage never counts candidate geometry as accepted or approximate as verified',()=>{
  const c=coverage(rows);assert.equal(c.verified,0);assert.equal(c.footprints,0);assert.equal(c.coordinates+c.unmapped,c.total);
 });
+
+test('cross-building overlaps are rejected while a shared boundary is allowed',async()=>{
+ const {geometriesOverlap}=await import('../src/data.mjs');const a={type:'Polygon',coordinates:[rectangle]};
+ const shift=x=>({type:'Polygon',coordinates:[rectangle.map(([lng,lat])=>[lng+x,lat])]});
+ assert.equal(geometriesOverlap(a,shift(0.0005)),true);assert.equal(geometriesOverlap(a,shift(0.001)),false);assert.equal(geometriesOverlap(a,shift(0.002)),false);assert.equal(geometriesOverlap(a,a),true);
+});

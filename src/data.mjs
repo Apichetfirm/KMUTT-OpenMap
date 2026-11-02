@@ -107,6 +107,7 @@ export function validateFootprints(collection,rows) {
     if(p.confidence==='verified'&&!verifiedEvidence(p.evidence))errors.push(`${f.id}: unsupported verification`);
     if(b?.coordinates&&validGeometry(f.geometry)&&!pointInGeometry(b.coordinates,f.geometry))errors.push(`${f.id}: reference point outside footprint`);
   }
+  for(let i=0;i<collection.features.length;i++)for(let j=0;j<i;j++){const a=collection.features[i],b=collection.features[j];if(validGeometry(a.geometry)&&validGeometry(b.geometry)&&geometriesOverlap(a.geometry,b.geometry))errors.push(`${a.id}/${b.id}: accepted footprints overlap`);}
   return errors;
 }
 export function coverage(rows,footprints={features:[]}) {
@@ -115,4 +116,31 @@ export function coverage(rows,footprints={features:[]}) {
     approximate:rows.filter(b=>b.mapping?.confidence==='approximate').length,
     unmapped:rows.filter(b=>!validCoordinates(b.coordinates)).length,
     measured_heights:rows.filter(b=>b.building_height_m!==null&&b.height_evidence?.kind==='measured').length};
+}
+
+/** Positive-area overlap; shared boundaries alone are allowed. */
+export function geometriesOverlap(a,b) {
+ const polygons=g=>g.type==='Polygon'?[g.coordinates]:g.coordinates;
+ const boundary=(p,g)=>polygons(g).some(rs=>rs.some(r=>r.slice(1).some((q,i)=>onSegment(r[i],q,p))));
+ const interior=(p,g)=>pointInGeometry(p,g)&&!boundary(p,g);
+ for(const pa of polygons(a))for(const pb of polygons(b)) {
+  for(const ra of pa)for(const rb of pb)for(let i=1;i<ra.length;i++)for(let j=1;j<rb.length;j++)
+   if(cross(ra[i-1],ra[i],rb[j-1])*cross(ra[i-1],ra[i],rb[j])<0&&cross(rb[j-1],rb[j],ra[i-1])*cross(rb[j-1],rb[j],ra[i])<0)return true;
+ }
+ for(const [g,h] of [[a,b],[b,a]])for(const rs of polygons(g))for(const ring of rs)for(let i=1;i<ring.length;i++) {
+  if(interior(ring[i],h))return true;
+  const p=ring[i-1],q=ring[i],length=Math.hypot(q[0]-p[0],q[1]-p[1]);
+  for(const sign of [-1,1]){const probe=[(p[0]+q[0])/2+sign*(q[1]-p[1])/length*1e-7,(p[1]+q[1])/2-sign*(q[0]-p[0])/length*1e-7];if(interior(probe,g)&&interior(probe,h))return true;}
+ }
+ return false;
+}
+
+export function validateCandidateFootprints(collection,codes) {
+ if(collection?.type!=='FeatureCollection'||!Array.isArray(collection.features))return ['Invalid candidate collection'];
+ const ids=new Set(),errors=[];
+ for(const f of collection.features){const p=f?.properties;
+  if(!f||typeof f.id!=='string'||ids.has(f.id)||!validGeometry(f.geometry)||!p||!codes.includes(p.building_code)||!validEvidence(p.evidence)||p.review_status!=='candidate-needs-independent-review'||!validCoordinates(p.reference_point)||!pointInGeometry(p.reference_point,f.geometry))errors.push('Invalid candidate geometry or evidence');
+  ids.add(f?.id);
+ }
+ return errors;
 }

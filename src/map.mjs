@@ -27,7 +27,7 @@ export function installMapLayers(map,state) {
   layer(map,{id:'campus-3d',type:'fill-extrusion',source:tileSource,'source-layer':'building',minzoom:14.8,
     paint:{'fill-extrusion-color':extrusionColor(),'fill-extrusion-height':zoomHeight(extrusionHeight(state.heightMode)),
       'fill-extrusion-base':zoomHeight(extrusionBase(state.heightMode)),'fill-extrusion-opacity':0.9}},before);
-  map.setLayoutProperty('campus-3d','visibility',state.is3d?'visible':'none');applyHeights(map,state.heightMode);
+  map.setLayoutProperty('campus-3d','visibility',state.is3d&&!state.candidatePreview?.features.length?'visible':'none');applyHeights(map,state.heightMode);
   source(map,'campus-buildings',buildingPoints(state.official));
   layer(map,{id:'campus-labels',type:'symbol',source:'campus-buildings',minzoom:15,
     layout:{'text-field':['step',['zoom'],['get','id'],17,['concat',['get','id'],' · ',['get','label']]],
@@ -35,7 +35,7 @@ export function installMapLayers(map,state) {
     paint:{'text-color':state.dark?'#d9fff2':'#123f3b','text-halo-color':state.dark?'#10232b':'#f8fffa','text-halo-width':2}});
   source(map,'campus-footprints',state.footprints);
   layer(map,{id:'campus-selected-footprint',type:'line',source:'campus-footprints',filter:['==',['get','building_code'],state.selected?.id||''],paint:{'line-color':'#18b89b','line-width':4}});
-  source(map,'campus-places',collection(state.visiblePlaces),{cluster:true,clusterRadius:45,clusterMaxZoom:16});
+  source(map,'campus-places',collection(state.visiblePlaces.map(f=>({...f,properties:{...f.properties,place_id:String(f.id)}}))),{cluster:true,clusterRadius:45,clusterMaxZoom:16});
   layer(map,{id:'campus-poi-clusters',type:'circle',source:'campus-places',filter:['has','point_count'],paint:{'circle-color':'#dcae5e','circle-radius':19,'circle-stroke-width':2,'circle-stroke-color':'#fff'}});
   layer(map,{id:'campus-poi-count',type:'symbol',source:'campus-places',filter:['has','point_count'],layout:{'text-field':['to-string',['get','point_count_abbreviated']],'text-font':['Noto Sans Regular'],'text-size':12}});
   layer(map,{id:'campus-poi',type:'circle',source:'campus-places',filter:['!', ['has','point_count']],minzoom:14,
@@ -43,7 +43,12 @@ export function installMapLayers(map,state) {
   source(map,'campus-drafts',collection(state.drafts.map(p=>({type:'Feature',properties:{id:p.building_code},geometry:{type:'Point',coordinates:p.coordinates}}))));
   layer(map,{id:'campus-drafts',type:'circle',source:'campus-drafts',paint:{'circle-radius':10,'circle-color':'#d49643','circle-opacity':0.75,'circle-stroke-width':2,'circle-stroke-color':'#fff0b0'}});
   // Route visualization source stays empty until a sufficiently reviewed graph/entrance workflow is available.
-  source(map,'campus-route',collection([]));
+  source(map,'campus-route',state.route||collection([]));
+  source(map,'campus-candidate-preview',state.candidatePreview||collection([]));
+  layer(map,{id:'campus-candidate-3d',type:'fill-extrusion',source:'campus-candidate-preview',paint:{'fill-extrusion-color':'#d9a34b','fill-extrusion-opacity':0.8,'fill-extrusion-height':['get','preview_height'],'fill-extrusion-base':0}});
+  map.setLayoutProperty('campus-candidate-3d','visibility',state.is3d&&!!state.candidatePreview?.features.length?'visible':'none');
+  map.setLight({anchor:'viewport',color:state.dark?'#c5d2ee':'#fff5e4',intensity:state.dark?0.25:0.45,position:[1.5,state.dark?250:200,35]});
+  layer(map,{id:'campus-candidate-preview',type:'line',source:'campus-candidate-preview',paint:{'line-color':'#d68d20','line-width':4,'line-dasharray':[2,2]}});
   layer(map,{id:'campus-route',type:'line',source:'campus-route',paint:{'line-color':'#168da5','line-width':5}});
 }
 export function updateSelection(map,selected) {

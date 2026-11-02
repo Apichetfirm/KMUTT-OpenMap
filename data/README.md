@@ -1,17 +1,19 @@
-# Building and campus data
+# Campus data
 
-Initiated by Firm Impulse · FIBO FRAB11.
+Initiated by Firm Impulse · FIBO FRAB11. Code and geodata use separate licenses.
 
-| File | Role and status |
+| File | Role |
 | --- | --- |
-| `buildings.json` | Canonical 35-code inventory, seven approximate references, separate name/mapping/height evidence. |
-| `buildings-geocoded.geojson` | Generated approximate point view. None is an entrance. |
-| `mapping-status.csv` | Generated review work queue for all codes, including three candidate footprint IDs. |
-| `building-footprint-candidates.geojson` | Three OSM polygons (N10/N17/N20), independent code-association review pending; ODbL. |
-| `building-footprints.geojson` | Accepted associations only; currently empty. |
-| `height-overrides.json` | Provenance-aware override schema; currently empty. |
-| `places.geojson` | One approximate OSM library point; no documented hours or accessibility. |
-| `pedestrian-graph.json`, `walkways.geojson` | Intentionally empty: no verified pedestrian network or entrances. |
-| `evidence/source-review.json` | Source investigation outcomes; retrieval is distinct from field verification. |
+| `buildings.json` | 35 canonical codes, 20 approximate references, explicit unknown/review reasons and separate name/height/entrance evidence |
+| `building-footprint-candidates.geojson` | 18 named OSM candidates, unaccepted; N4 is a partial complex |
+| `building-footprints.geojson` | Accepted associations only; empty |
+| `buildings-geocoded.geojson`, `mapping-status.csv`, `coverage-report.json` | Generated point/queue/coverage views |
+| `building-rendering.json` | Generated candidate editor estimates, never physical measured height |
+| `height-overrides.json` | Accepted provenance-aware rendering overrides; empty |
+| `places.geojson` | 73 approximate OSM campus/nearby service records; three stale source schedules |
+| `pedestrian-graph-candidates.json`, `walkway-candidates.geojson` | 112 topology-review path segments; never used for public routing |
+| `pedestrian-graph.json`, `walkways.geojson` | Accepted routes; empty |
+| `evidence/osm-campus-snapshot.json` | Minimal licensed source geometry/tags/version/date without contributor identity fields |
+| `evidence/source-review.json` | Investigation outcomes; retrieval and field verification stay distinct |
 
-Regenerate derived views with `npm run generate-data`. Validate with `npm run validate-data`. Refresh named OSM candidates with `node scripts/import-osm.mjs`; never join by proximity alone. See [data model](../docs/DATA-MODEL.md), [coverage](../docs/DATA-STATUS.md) and [separate licenses](../DATA-LICENSES.md). No private campus information belongs in this database.
+README documents acquisition/import/generation/validation commands. Read DATA-MODEL.md, MAPPING-METHODOLOGY.md, NAVIGATION-METHODOLOGY.md and DATA-LICENSES.md before importing or promoting records. Unknown values must remain unknown, and rejected/outdated submissions remain in review history rather than public collections.

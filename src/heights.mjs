@@ -31,3 +31,15 @@ export function validateHeightOverride(record,codes) {
     validEvidence(record.evidence) && (record.kind==='measured' ? record.measured_height_m===record.render_height_m : record.measured_height_m===null) &&
     (!['official-floors','osm-levels'].includes(record.kind) || Number.isInteger(record.levels)&&record.levels>0&&Number.isFinite(record.metres_per_level)&&record.metres_per_level>0&&Math.abs(record.levels*record.metres_per_level-record.render_height_m)<0.01);
 }
+
+/** Candidate visualization only. A floor-based assumption is explicitly not a measured height. */
+export function candidateRendering(feature,building) {
+ const p=feature.properties,official=building.floor_count,osm=p.osm_levels;
+ const levels=Number.isInteger(official)&&official>0?official:Number.isInteger(osm)&&osm>0?osm:null;
+ const kind=levels?(official?'official-floors':'osm-levels'):'visual-fallback',metres_per_level=levels?3.2:null;
+ return {building_code:building.id,footprint_id:feature.id,review_status:'candidate-visualization-only',kind,
+  levels,metres_per_level,render_height_m:levels?levels*metres_per_level:4,measured_height_m:null,
+  roof_shape:p.roof_shape||null,evidence:{...p.evidence,source:official?building.floor_count_source:p.evidence.source,
+   method:official?'official-floors-render-estimate':levels?'osm-levels-render-estimate':'generic-render-fallback',
+   limitations:levels?'Rendering assumption: 3.2 metres per documented/source level. Not measured; geometry association remains unreviewed.':'Generic 4m display fallback. Real height and code association are unverified.'}};
+}

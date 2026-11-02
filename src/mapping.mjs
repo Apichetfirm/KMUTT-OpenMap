@@ -1,3 +1,4 @@
+import {safeURL} from './data.mjs';
 import {validCoordinates} from './search.mjs';
 export const DRAFT_STORAGE_KEY = 'kmutt-openmap-proposals-v02';
 export const RECOVERY_STORAGE_KEY = DRAFT_STORAGE_KEY+'-recovery';
@@ -7,6 +8,8 @@ export function validateProposal(p, codes) {
     validCoordinates(p.coordinates) && p.review_status==='needs-field-verification' &&
     ['clicked-building','clicked-map'].includes(p.capture_method) &&
     typeof p.created_at==='string' && Number.isFinite(Date.parse(p.created_at)) &&
+    (p.candidate_footprint_id===undefined||typeof p.candidate_footprint_id==='string'&&/^osm-way-\d+$/.test(p.candidate_footprint_id))&&
+    (p.source_url===undefined||!!safeURL(p.source_url))&&
     (p.evidence===undefined || typeof p.evidence==='string' && p.evidence.length<=2000);
 }
 export function readDraftState(store,codes) {

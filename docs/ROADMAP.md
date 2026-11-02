@@ -1,16 +1,12 @@
-# Implementation roadmap — 2026-11-01
+# Roadmap after v0.4 RC
 
-Initiated by Firm Impulse · FIBO FRAB11. Independent review results and final release/deployment references: [INDEPENDENT-REVIEW.md](INDEPENDENT-REVIEW.md). Community preview acceptance does not declare a fully verified campus navigation system or close the data/device gates below.
+Initiated by Firm Impulse · FIBO FRAB11.
 
-| Phase | Implemented/tested now | Still blocked or incomplete |
-| --- | --- | --- |
-| 0 — audit/stability | Clean baseline, audit, confirmed bug fixes, safe storage/map failures, tests/build | Independent Codex A acceptance |
-| 1 — mapping integrity | 35 preserved codes, evidence/confidence schema, three OSM candidates, validation and preview/export | 28 unmapped locations, all field verification, accepted polygon joins, S1/S6/N19 resolution |
-| 2 — 3D fidelity | Layer/source reuse, base/roof bounds, selected point, label collision, height provenance/override schema | Actual building-specific dimensions/overrides and accepted shape association |
-| 3 — core experience | Search, shared URLs, mapped/unmapped cards, provenance, reduced motion, mobile/keyboard flows | Physical-device and screen-reader review; selected shape remains unavailable without accepted geometry |
-| 4 — campus life | One sourced approximate library point, categories/clustering, tested recorded-hours engine, issue intake | Verified service coverage, actual hours, restaurant data and accessibility evidence |
-| 5 — navigation | Validated graph, deterministic shortest path, connectivity and evidence/accessibility gates, empty route layer | Reviewed entrances/paths, real origin/destination UI and any published internal/accessible route |
-| 6 — reliability/performance | CDN/storage/data/GPS failure handling, batched labels/POIs, cloud measurements | Three-second map target, representative phone FPS, long-session memory/device/network testing |
-| 7 — review readiness | Unit/data/real-browser fixtures, live screenshots, CI/Pages staging, documentation | Independent review, cross-browser/device acceptance; no beta approval implied |
+The implementation now supplies licensed source acquisition, mapping previews, discovery/details, community proposals, route safety infrastructure, runtime hardening and expanded QA. See COMPLETE-IMPLEMENTATION-HANDOFF.md for the actual phase matrix; no incomplete evidence-dependent phase is declared complete.
 
-Next work in order: review the three source polygons and legacy reference licensing → field survey missing locations/entrances/heights → physical Android/iOS/Firefox/Safari and assistive-technology QA → verify services/hours → survey and review route/accessibility network. Keep #1–#5 open while their full acceptance criteria remain unmet. Supply-chain follow-up is tracked in #7. Avoid tours/PWA/advanced architecture before these gates pass. The phase table's implementer-era independent-acceptance items are resolved by the separate review report, subject to final CI and deployment evidence.
+1. University/BGM resolves S1/S2/S6/N19 identities and the N4 complex; independent GIS reviewers evaluate all 18 candidate shapes and the other unmatched buildings.
+2. Survey public entrances, measured heights, documented floors, path connectivity, crossings/gates/restrictions and wheelchair usability. Obtain lawful landmark plans/views before detailed architectural models.
+3. Operators/students verify current POIs and schedules/holiday exceptions; cover currently empty service categories with evidence rather than targets.
+4. Run the final CI browser matrix, live published-site tests, assistive-technology checks and real Android/iOS performance. Evaluate the ~3s load and ~30 FPS targets on documented hardware/network conditions.
+5. Codex A reviews the unmerged candidate, licenses, blocker matrix and security changes before release. Existing issues stay open until their complete acceptance criteria are met.
+6. Extend to other campuses only after configuration/data governance can be extracted from proven needs; avoid speculative backend/framework complexity.

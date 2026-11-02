@@ -7,7 +7,7 @@ function fakeMap() {
  const sources=new Map(),style={version:8,glyphs:'https://example.org/{fontstack}/{range}.pbf',sources:{basemap:{type:'vector',url:'https://tiles.openfreemap.org/planet'}},layers:[{id:'base-3d',type:'fill-extrusion',source:'basemap','source-layer':'building'}]};
  return {getStyle:()=>style,getSource:id=>sources.get(id),getLayer:id=>style.layers.find(l=>l.id===id),
  addSource:(id,s)=>{style.sources[id]=s;sources.set(id,{setData:data=>style.sources[id].data=data});},
- addLayer:l=>style.layers.push(l),setLayoutProperty:(id,k,v)=>{const l=style.layers.find(l=>l.id===id);l.layout={...l.layout,[k]:v};},
+ setLight:()=>{},addLayer:l=>style.layers.push(l),setLayoutProperty:(id,k,v)=>{const l=style.layers.find(l=>l.id===id);l.layout={...l.layout,[k]:v};},
  setPaintProperty:(id,k,v)=>{style.layers.find(l=>l.id===id).paint[k]=v;}};
 }
 const state={official:[],footprints:{type:'FeatureCollection',features:[]},visiblePlaces:[],drafts:[],is3d:true,heightMode:'guarded',dark:false,selected:null};
@@ -32,4 +32,10 @@ test('real MapLibre height expression preserves missing-value fallback and match
    assert.equal(expression.value.evaluate({zoom:16},{type:3,properties}),numericVisualHeight(height,mode));
   }
  }
+});
+
+test('candidate previews are the only visible extrusion while editing and stay separate from accepted footprints',()=>{
+ const map=fakeMap();const candidatePreview={type:'FeatureCollection',features:[{type:'Feature',properties:{preview_height:48},geometry:{type:'Polygon',coordinates:[[[100.493,13.652],[100.494,13.652],[100.494,13.653],[100.493,13.652]]]}}]};
+ installMapLayers(map,{...state,candidatePreview});assert.equal(map.getLayer('campus-3d').layout.visibility,'none');assert.equal(map.getLayer('campus-candidate-3d').layout.visibility,'visible');assert.equal(map.getStyle().sources['campus-footprints'].data.features.length,0);
+ installMapLayers(map,{...state,candidatePreview:{type:'FeatureCollection',features:[]}});assert.equal(map.getLayer('campus-3d').layout.visibility,'visible');assert.equal(map.getLayer('campus-candidate-3d').layout.visibility,'none');
 });

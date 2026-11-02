@@ -1,0 +1,56 @@
+{
+  "tested_commit": "58250994dfc58f72a0ebe0f221a9851a04655a60",
+  "date": "2026-11-02",
+  "workflow": "CI",
+  "run_id": 41391049480,
+  "run_url": "https://github.com/Apichetfirm/KMUTT-OpenMap/actions/runs/41391049480",
+  "additional_successful_run_id": 41391045133,
+  "conclusion": "success",
+  "unit_tests": 46,
+  "browser_tests": 84,
+  "browser_duration": "2.8m",
+  "projects": [
+    {
+      "name": "desktop",
+      "browser": "Chromium 156",
+      "passed": 21,
+      "webgl2": true,
+      "rendering": "SwiftShader"
+    },
+    {
+      "name": "mobile",
+      "browser": "Chromium 156 / Pixel 7 emulation",
+      "passed": 21,
+      "webgl2": true,
+      "rendering": "SwiftShader"
+    },
+    {
+      "name": "firefox",
+      "browser": "Firefox 157",
+      "passed": 21,
+      "webgl2": true,
+      "rendering": "headed Xvfb / software Mesa llvmpipe"
+    },
+    {
+      "name": "webkit",
+      "browser": "WebKit 27.2",
+      "passed": 21,
+      "webgl2": true,
+      "rendering": "Linux CI browser backend; not physical Safari hardware"
+    }
+  ],
+  "ci_command": "LIBGL_ALWAYS_SOFTWARE=1 MOZ_WEBRENDER=1 xvfb-run --auto-servernum npm run test:e2e",
+  "syntax_data_vendor_build": "passed",
+  "earlier_failure": {
+    "run_id": 41337476384,
+    "passed": 67,
+    "failed": 13,
+    "project": "firefox",
+    "observation": "Headless Firefox failed map initialization checks on the Linux runner; Xvfb/software Mesa and explicit WebGL preferences resolved all 13 checks. A real WebGL2 capability assertion now covers every project."
+  },
+  "limitations": [
+    "Physical Android/iOS/Safari hardware and screen-reader testing remain unperformed.",
+    "Local Firefox/WebKit download endpoints remain blocked, but full engine coverage is supplied by this successful CI run.",
+    "Fixture checks do not prove geographical truth, provider uptime or surveyed navigation."
+  ]
+}

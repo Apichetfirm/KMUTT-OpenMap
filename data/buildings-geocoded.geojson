@@ -23,6 +23,215 @@
     {
       "type": "Feature",
       "properties": {
+        "id": "S4",
+        "name_th": "อาคารวิศววัฒนะ",
+        "name_en": "Wissawa Wattana Engineering Building",
+        "location_quality": "approximate-osm-name-match",
+        "location_source": "https://www.openstreetmap.org/way/420044928",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49421401605012,
+          13.6500597
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "S5",
+        "name_th": "บ้านธรรมรักษา 2",
+        "name_en": "Dhammaraksa Residence Hall 2",
+        "location_quality": "approximate-osm-name-match",
+        "location_source": "https://www.openstreetmap.org/way/420045662",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49453387755273,
+          13.649428799999999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "S7",
+        "name_th": "อาคารพัฒนาเด็กเล็ก มจธ.",
+        "name_en": "KMUTT Child Development Building",
+        "location_quality": "approximate-osm-name-match",
+        "location_source": "https://www.openstreetmap.org/way/436983066",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49428230187159,
+          13.64915885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "S9",
+        "name_th": "อาคารเรียนและปฏิบัติการคณะพลังงาน สิ่งแวดล้อมและวัสดุ",
+        "name_en": "School of Energy Environment and Materials Building",
+        "location_quality": "approximate-osm-name-match",
+        "location_source": "https://www.openstreetmap.org/way/651713745",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49355972402114,
+          13.649047849999999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "S10",
+        "name_th": "อาคารสังคมสีเขียว มจธ.",
+        "name_en": "KMUTT Green Society Building",
+        "location_quality": "approximate-osm-name-match",
+        "location_source": "https://www.openstreetmap.org/way/1333533934",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49366302453281,
+          13.64957465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "S11",
+        "name_th": "อาคารเรียนรวม 5",
+        "name_en": "Classroom Building 5",
+        "location_quality": "approximate-osm-name-match",
+        "location_source": "https://www.openstreetmap.org/way/420533543",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49339650022299,
+          13.6497194
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "S12",
+        "name_th": "อาคารเรียนรวม 4",
+        "name_en": "Classroom Building 4",
+        "location_quality": "approximate-osm-name-match",
+        "location_source": "https://www.openstreetmap.org/way/420534334",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49272676647433,
+          13.64949
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "S13",
+        "name_th": "อาคารเรียนรวม 3",
+        "name_en": "Classroom Building 3",
+        "location_quality": "approximate-osm-name-match",
+        "location_source": "https://www.openstreetmap.org/way/420534582",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49190493504074,
+          13.650018150000001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "S15",
+        "name_th": "อาคารภาควิชาวิศวกรรมเคมี",
+        "name_en": "Department of Chemical Engineering Building",
+        "location_quality": "approximate-osm-name-match",
+        "location_source": "https://www.openstreetmap.org/way/436983067",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49333025,
+          13.650303350000002
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "N2",
+        "name_th": "อาคารสำนักงานอธิการบดี",
+        "name_en": "Office of The President Building",
+        "location_quality": "approximate-osm-name-match",
+        "location_source": "https://www.openstreetmap.org/node/3176409879",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4951391,
+          13.6518349
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "N3",
+        "name_th": "อาคารภาควิชาเคมี",
+        "name_en": "Department of Chemistry Building",
+        "location_quality": "approximate-osm-name-match",
+        "location_source": "https://www.openstreetmap.org/way/436983064",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49488534737489,
+          13.65246295
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "id": "N5",
         "name_th": "อาคารศูนย์เครื่องมือวิทยาศาสตร์เพื่อมาตรฐานและอุตสาหกรรม",
         "name_en": "Scientific Instrument Center for Standards and Industry Building",
@@ -93,6 +302,44 @@
         "coordinates": [
           100.49373,
           13.65256
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "N15",
+        "name_th": "อาคารเรียนและปฏิบัติทางศิลปศาสตร์",
+        "name_en": "School of Liberal Arts Building",
+        "location_quality": "approximate-osm-name-match",
+        "location_source": "https://www.openstreetmap.org/node/3176409863",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.4933848,
+          13.6520658
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "N16",
+        "name_th": "อาคารการเรียนรู้พหุวิทยาการ",
+        "name_en": "Learning Exchange Building",
+        "location_quality": "approximate-osm-name-match",
+        "location_source": "https://www.openstreetmap.org/way/1333533935",
+        "confidence": "approximate",
+        "review_status": "needs-independent-review"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.49406407203125,
+          13.65213625
         ]
       }
     },
