@@ -1,0 +1,2 @@
+# Vendored npm artifacts are byte-verified; checkout must not rewrite line endings.
+vendor/maplibre-gl/* -text
