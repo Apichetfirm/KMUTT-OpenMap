@@ -5,6 +5,6 @@ export default defineConfig({
  reporter:process.env.CI?[['list'],['github']]:[['list']],outputDir:process.env.OPENMAP_QA_DIR||'test-results',
  use:{baseURL:'http://127.0.0.1:8080',headless:true,trace:'retain-on-failure'},
  projects:[{name:'desktop',use:{browserName:'chromium',viewport:{width:1440,height:1000},launchOptions:chromiumOptions}},{name:'mobile',use:{...devices['Pixel 7'],launchOptions:chromiumOptions}},
-  {name:'firefox',use:{browserName:'firefox',viewport:{width:1440,height:1000}}},{name:'webkit',use:{browserName:'webkit',viewport:{width:1440,height:1000}}}],
+  {name:'firefox',use:{browserName:'firefox',viewport:{width:1440,height:1000},headless:!process.env.CI,launchOptions:{firefoxUserPrefs:{'webgl.force-enabled':true,'webgl.disabled':false}}}},{name:'webkit',use:{browserName:'webkit',viewport:{width:1440,height:1000}}}],
  webServer:{command:'node scripts/serve.mjs',url:'http://127.0.0.1:8080',reuseExistingServer:!process.env.CI}
 });

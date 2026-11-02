@@ -21,7 +21,10 @@ jobs:
       - name: Install browser engines
         run: npx playwright install --with-deps chromium firefox webkit
       - name: Desktop/mobile and Firefox/WebKit browser fixtures
-        run: npm run test:e2e
+        env:
+          LIBGL_ALWAYS_SOFTWARE: '1'
+          MOZ_WEBRENDER: '1'
+        run: xvfb-run --auto-servernum npm run test:e2e
       - name: Stage GitHub Pages assets
         run: npm run build
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

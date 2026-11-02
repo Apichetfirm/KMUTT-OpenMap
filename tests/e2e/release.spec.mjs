@@ -53,3 +53,16 @@ test('a stalled core catalog times out and recovers on explicit retry',async({pa
 test('untrusted report text remains literal and clipboard failure leaves a usable share URL',async({page})=>{
  const errors=await fixture(page);await page.addInitScript(()=>Object.defineProperty(navigator,'clipboard',{value:{writeText:()=>Promise.reject(new Error('Denied'))}}));await page.goto('/KMUTT-OpenMap/?building=N9');await page.locator('#share-building').click();await expect(page.locator('#share-url')).toHaveValue(/\/KMUTT-OpenMap\/\?building=N9/);await page.locator('#detail [data-report]').click();await page.locator('#community-title').fill('<img src=x onerror=alert(1)>');await page.locator('#community-details').fill('<script>window.bad=true</script>');await page.locator('#community-form button[type=submit]').click();await expect(page.locator('#community-preview')).toContainText('<script>');expect(await page.evaluate(()=>window.bad)).toBeUndefined();expect(errors).toEqual([]);
 });
+
+
+test('browser provides a real WebGL2 context for campus rendering',async({page,browserName})=>{
+ await fixture(page);await page.goto('/');
+ const capability=await page.evaluate(()=>{
+  const canvas=document.createElement('canvas'),creationErrors=[];canvas.addEventListener('webglcontextcreationerror',e=>creationErrors.push(e.statusMessage));
+  const gl=canvas.getContext('webgl2');const debug=gl?.getExtension('WEBGL_debug_renderer_info');
+  const result={webgl2:!!gl,creationErrors,userAgent:navigator.userAgent,renderer:gl&&debug?gl.getParameter(debug.UNMASKED_RENDERER_WEBGL):null};
+  gl?.getExtension('WEBGL_lose_context')?.loseContext();return result;
+ });
+ console.log('Rendering capability',browserName,JSON.stringify(capability));
+ expect(capability.webgl2,JSON.stringify(capability)).toBe(true);
+});
