@@ -1,5 +1,7 @@
 # Performance measurements — v0.4 RC
 
+Independent review adds six counterbalanced Windows Chromium 156 pairs: baseline median 2,385.0ms, candidate 2,183.1ms, paired sign-flip p=0.40625. No causal speedup is established. See [independent results and limitations](V04-INDEPENDENT-RELEASE-REPORT.md#7-performance-measurements). The script now performs six pairs with the sandbox enabled; historical n=3 evidence below is retained.
+
 Initiated by Firm Impulse · FIBO FRAB11. Measured 2026-11-02.
 
 Three alternating fresh-context runs per version, same headless system Chromium 154.0.8037.57, 1440×1000, software WebGL/SwiftShader, no throttling, managed proxy, live OpenFreeMap tiles and no concurrent browser QA. Original main was served from a detached checkout on localhost:8081; final source used localhost:8082. Browser version in the JSON is authoritative. Provider/proxy cache and connection variance were uncontrolled; three samples cannot establish a causal performance improvement.

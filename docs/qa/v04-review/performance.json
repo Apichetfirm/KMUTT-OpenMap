@@ -1,0 +1,2698 @@
+{
+  "conditions": {
+    "implementation_commit": "5c0170dc90a6b0085992f54996c3d4d88929afbb",
+    "browser": "156.0.8078.4",
+    "viewport": "1440x1000",
+    "network": "Live OpenFreeMap, no throttling, fresh browser context each sample; provider and OS caches uncontrolled; proxy only if HTTPS_PROXY is set.",
+    "ordering": "Six pairs, alternating baseline/final and final/baseline; browser process reused, contexts isolated.",
+    "rendering": "Headless Chromium with sandbox enabled and software WebGL (SwiftShader); no concurrent QA processes.",
+    "physical_device": false,
+    "date": "2026-11-02"
+  },
+  "results": [
+    {
+      "version": "baseline",
+      "sample": 1,
+      "url": "http://127.0.0.1:8083/KMUTT-OpenMap/",
+      "timedOut": false,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 431
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 2646.60000000149
+        }
+      ],
+      "search_sync_median_ms": 0.3999999985098839,
+      "js_heap_bytes": 27600000,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 286.5,
+          "duration": 118
+        },
+        {
+          "start": 942.1999999955297,
+          "duration": 65
+        },
+        {
+          "start": 1007.6999999955297,
+          "duration": 105
+        },
+        {
+          "start": 1115.1000000014901,
+          "duration": 60
+        },
+        {
+          "start": 1181.6000000014901,
+          "duration": 100
+        },
+        {
+          "start": 1289.6000000014901,
+          "duration": 62
+        },
+        {
+          "start": 1364.1999999955297,
+          "duration": 67
+        },
+        {
+          "start": 1445.1000000014901,
+          "duration": 142
+        },
+        {
+          "start": 1587.1999999955297,
+          "duration": 60
+        },
+        {
+          "start": 1845.6000000014901,
+          "duration": 383
+        },
+        {
+          "start": 2229.7999999970198,
+          "duration": 73
+        },
+        {
+          "start": 2304.7999999970198,
+          "duration": 82
+        },
+        {
+          "start": 2428.39999999851,
+          "duration": 171
+        },
+        {
+          "start": 2615.60000000149,
+          "duration": 181
+        }
+      ],
+      "resources": [
+        {
+          "url": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.css",
+          "duration": 264.69999999552965,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/styles.css",
+          "duration": 11,
+          "bytes": 21095,
+          "decoded_bytes": 20795
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/main.mjs",
+          "duration": 9.899999998509884,
+          "bytes": 28355,
+          "decoded_bytes": 28055
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/search.mjs",
+          "duration": 6,
+          "bytes": 1836,
+          "decoded_bytes": 1536
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/data.mjs",
+          "duration": 8.299999997019768,
+          "bytes": 8117,
+          "decoded_bytes": 7817
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/heights.mjs",
+          "duration": 7.700000002980232,
+          "bytes": 2662,
+          "decoded_bytes": 2362
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/mapping.mjs",
+          "duration": 8.399999998509884,
+          "bytes": 4212,
+          "decoded_bytes": 3912
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/sharing.mjs",
+          "duration": 11.5,
+          "bytes": 630,
+          "decoded_bytes": 330
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/places.mjs",
+          "duration": 12.899999998509884,
+          "bytes": 5442,
+          "decoded_bytes": 5142
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/map.mjs",
+          "duration": 13.600000001490116,
+          "bytes": 5582,
+          "decoded_bytes": 5282
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/data/buildings.json",
+          "duration": 5.200000002980232,
+          "bytes": 36721,
+          "decoded_bytes": 36421
+        },
+        {
+          "url": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.mjs",
+          "duration": 222.10000000149012,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/data/building-footprints.geojson",
+          "duration": 3.600000001490116,
+          "bytes": 356,
+          "decoded_bytes": 56
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/data/places.geojson",
+          "duration": 3.899999998509884,
+          "bytes": 1363,
+          "decoded_bytes": 1063
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 246.30000000447035,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": 124.19999999552965,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 220.40000000596046,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 219.39999999850988,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 216.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 228.80000000447035,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 210.20000000298023,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 203.09999999403954,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "final",
+      "sample": 1,
+      "url": "http://127.0.0.1:8082/KMUTT-OpenMap/",
+      "timedOut": false,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 166.10000000149012
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 2221.89999999851
+        }
+      ],
+      "search_sync_median_ms": 0.8999999985098839,
+      "js_heap_bytes": 27600000,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 514.5,
+          "duration": 105
+        },
+        {
+          "start": 621.7000000029802,
+          "duration": 72
+        },
+        {
+          "start": 699.7999999970198,
+          "duration": 59
+        },
+        {
+          "start": 767.3999999985099,
+          "duration": 80
+        },
+        {
+          "start": 849.7000000029802,
+          "duration": 75
+        },
+        {
+          "start": 938.3999999985099,
+          "duration": 83
+        },
+        {
+          "start": 1032.5,
+          "duration": 218
+        },
+        {
+          "start": 1252.2999999970198,
+          "duration": 51
+        },
+        {
+          "start": 1322.8999999985099,
+          "duration": 70
+        },
+        {
+          "start": 1424.2999999970198,
+          "duration": 72
+        },
+        {
+          "start": 1500.7000000029802,
+          "duration": 336
+        },
+        {
+          "start": 1847.3999999985099,
+          "duration": 72
+        },
+        {
+          "start": 1929.8999999985099,
+          "duration": 221
+        },
+        {
+          "start": 2188.39999999851,
+          "duration": 197
+        },
+        {
+          "start": 2385.60000000149,
+          "duration": 151
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/vendor/maplibre-gl/maplibre-gl.css",
+          "duration": 6.100000001490116,
+          "bytes": 71896,
+          "decoded_bytes": 71596
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/styles.css",
+          "duration": 6.399999998509884,
+          "bytes": 24635,
+          "decoded_bytes": 24335
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/main.mjs",
+          "duration": 5.699999995529652,
+          "bytes": 43212,
+          "decoded_bytes": 42912
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/search.mjs",
+          "duration": 3.899999998509884,
+          "bytes": 2362,
+          "decoded_bytes": 2062
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/data.mjs",
+          "duration": 4.300000004470348,
+          "bytes": 10147,
+          "decoded_bytes": 9847
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/heights.mjs",
+          "duration": 4.899999998509884,
+          "bytes": 3789,
+          "decoded_bytes": 3489
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/mapping.mjs",
+          "duration": 3.899999998509884,
+          "bytes": 4446,
+          "decoded_bytes": 4146
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/sharing.mjs",
+          "duration": 6.0999999940395355,
+          "bytes": 974,
+          "decoded_bytes": 674
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/places.mjs",
+          "duration": 6.5,
+          "bytes": 6378,
+          "decoded_bytes": 6078
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/map.mjs",
+          "duration": 7.5,
+          "bytes": 6466,
+          "decoded_bytes": 6166
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/community-ui.mjs",
+          "duration": 7.300000004470348,
+          "bytes": 5573,
+          "decoded_bytes": 5273
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/contributions.mjs",
+          "duration": 7.700000002980232,
+          "bytes": 3429,
+          "decoded_bytes": 3129
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/navigation.mjs",
+          "duration": 8.100000001490116,
+          "bytes": 8700,
+          "decoded_bytes": 8400
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/buildings.json",
+          "duration": 2.7999999970197678,
+          "bytes": 59059,
+          "decoded_bytes": 58759
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/vendor/maplibre-gl/maplibre-gl.mjs",
+          "duration": 10,
+          "bytes": 1108349,
+          "decoded_bytes": 1108049
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/building-footprints.geojson",
+          "duration": 4.700000002980232,
+          "bytes": 356,
+          "decoded_bytes": 56
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/places.geojson",
+          "duration": 6.699999995529652,
+          "bytes": 107549,
+          "decoded_bytes": 107249
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/building-footprint-candidates.geojson",
+          "duration": 7.5,
+          "bytes": 51746,
+          "decoded_bytes": 51446
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/coverage-report.json",
+          "duration": 7.200000002980232,
+          "bytes": 3621,
+          "decoded_bytes": 3321
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/pedestrian-graph.json",
+          "duration": 7.200000002980232,
+          "bytes": 375,
+          "decoded_bytes": 75
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 227.29999999701977,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/vendor/maplibre-gl/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": -25.5,
+          "bytes": 519672,
+          "decoded_bytes": 519372
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 269.1000000014901,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 298.79999999701977,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 293.70000000298023,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 38.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 32.29999999701977,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 19.799999997019768,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "final",
+      "sample": 2,
+      "url": "http://127.0.0.1:8082/KMUTT-OpenMap/",
+      "timedOut": false,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 226
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 2643.89999999851
+        }
+      ],
+      "search_sync_median_ms": 0.4000000059604645,
+      "js_heap_bytes": 29400000,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 409.6000000014901,
+          "duration": 87
+        },
+        {
+          "start": 497,
+          "duration": 105
+        },
+        {
+          "start": 606.2999999970198,
+          "duration": 75
+        },
+        {
+          "start": 691,
+          "duration": 69
+        },
+        {
+          "start": 773.2999999970198,
+          "duration": 97
+        },
+        {
+          "start": 871.2999999970198,
+          "duration": 76
+        },
+        {
+          "start": 959.1999999955297,
+          "duration": 176
+        },
+        {
+          "start": 1141.2999999970198,
+          "duration": 334
+        },
+        {
+          "start": 1479,
+          "duration": 81
+        },
+        {
+          "start": 1579.1000000014901,
+          "duration": 96
+        },
+        {
+          "start": 1731.8999999985099,
+          "duration": 93
+        },
+        {
+          "start": 1834.7999999970198,
+          "duration": 432
+        },
+        {
+          "start": 2271.10000000149,
+          "duration": 79
+        },
+        {
+          "start": 2366,
+          "duration": 81
+        },
+        {
+          "start": 2451.89999999851,
+          "duration": 152
+        },
+        {
+          "start": 2619.6999999955297,
+          "duration": 159
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/vendor/maplibre-gl/maplibre-gl.css",
+          "duration": 7.700000002980232,
+          "bytes": 71896,
+          "decoded_bytes": 71596
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/styles.css",
+          "duration": 8.600000001490116,
+          "bytes": 24635,
+          "decoded_bytes": 24335
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/main.mjs",
+          "duration": 7.5,
+          "bytes": 43212,
+          "decoded_bytes": 42912
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/search.mjs",
+          "duration": 6.699999995529652,
+          "bytes": 2362,
+          "decoded_bytes": 2062
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/heights.mjs",
+          "duration": 6.800000004470348,
+          "bytes": 3789,
+          "decoded_bytes": 3489
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/data.mjs",
+          "duration": 7.100000001490116,
+          "bytes": 10147,
+          "decoded_bytes": 9847
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/sharing.mjs",
+          "duration": 7,
+          "bytes": 974,
+          "decoded_bytes": 674
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/mapping.mjs",
+          "duration": 7.100000001490116,
+          "bytes": 4446,
+          "decoded_bytes": 4146
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/map.mjs",
+          "duration": 10,
+          "bytes": 6466,
+          "decoded_bytes": 6166
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/places.mjs",
+          "duration": 9.799999997019768,
+          "bytes": 6378,
+          "decoded_bytes": 6078
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/community-ui.mjs",
+          "duration": 10.299999997019768,
+          "bytes": 5573,
+          "decoded_bytes": 5273
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/contributions.mjs",
+          "duration": 10.100000001490116,
+          "bytes": 3429,
+          "decoded_bytes": 3129
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/navigation.mjs",
+          "duration": 10.200000002980232,
+          "bytes": 8700,
+          "decoded_bytes": 8400
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/buildings.json",
+          "duration": 4.600000001490116,
+          "bytes": 59059,
+          "decoded_bytes": 58759
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/vendor/maplibre-gl/maplibre-gl.mjs",
+          "duration": 10.5,
+          "bytes": 1108349,
+          "decoded_bytes": 1108049
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/building-footprints.geojson",
+          "duration": 7.0999999940395355,
+          "bytes": 356,
+          "decoded_bytes": 56
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/places.geojson",
+          "duration": 7.5,
+          "bytes": 107549,
+          "decoded_bytes": 107249
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/coverage-report.json",
+          "duration": 7.300000004470348,
+          "bytes": 3621,
+          "decoded_bytes": 3321
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/building-footprint-candidates.geojson",
+          "duration": 8,
+          "bytes": 51746,
+          "decoded_bytes": 51446
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/pedestrian-graph.json",
+          "duration": 7.600000001490116,
+          "bytes": 375,
+          "decoded_bytes": 75
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 91.39999999850988,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/vendor/maplibre-gl/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": -15.399999998509884,
+          "bytes": 519672,
+          "decoded_bytes": 519372
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 14.800000004470348,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 18.600000001490116,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 28.299999997019768,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 220.60000000149012,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 230.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 238.39999999850988,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "baseline",
+      "sample": 2,
+      "url": "http://127.0.0.1:8083/KMUTT-OpenMap/",
+      "timedOut": false,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 543.7000000029802
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 2495.89999999851
+        }
+      ],
+      "search_sync_median_ms": 0.5,
+      "js_heap_bytes": 24500000,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 1148.7000000029802,
+          "duration": 75
+        },
+        {
+          "start": 1225,
+          "duration": 130
+        },
+        {
+          "start": 1357.6000000014901,
+          "duration": 63
+        },
+        {
+          "start": 1428.2000000029802,
+          "duration": 100
+        },
+        {
+          "start": 1531.3999999985099,
+          "duration": 62
+        },
+        {
+          "start": 1603.5,
+          "duration": 65
+        },
+        {
+          "start": 1671.1000000014901,
+          "duration": 171
+        },
+        {
+          "start": 1846.3999999985099,
+          "duration": 57
+        },
+        {
+          "start": 1923.8000000044703,
+          "duration": 67
+        },
+        {
+          "start": 2034.8999999985099,
+          "duration": 408
+        },
+        {
+          "start": 2461.60000000149,
+          "duration": 241
+        }
+      ],
+      "resources": [
+        {
+          "url": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.css",
+          "duration": 184.79999999701977,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/styles.css",
+          "duration": 11.899999998509884,
+          "bytes": 21095,
+          "decoded_bytes": 20795
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/main.mjs",
+          "duration": 12,
+          "bytes": 28355,
+          "decoded_bytes": 28055
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/search.mjs",
+          "duration": 7.100000001490116,
+          "bytes": 1836,
+          "decoded_bytes": 1536
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/heights.mjs",
+          "duration": 10.399999998509884,
+          "bytes": 2662,
+          "decoded_bytes": 2362
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/mapping.mjs",
+          "duration": 11.199999995529652,
+          "bytes": 4212,
+          "decoded_bytes": 3912
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/data.mjs",
+          "duration": 10.799999997019768,
+          "bytes": 8117,
+          "decoded_bytes": 7817
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/sharing.mjs",
+          "duration": 10.800000004470348,
+          "bytes": 630,
+          "decoded_bytes": 330
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/places.mjs",
+          "duration": 12.5,
+          "bytes": 5442,
+          "decoded_bytes": 5142
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/map.mjs",
+          "duration": 14.700000002980232,
+          "bytes": 5582,
+          "decoded_bytes": 5282
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/data/buildings.json",
+          "duration": 11.800000004470348,
+          "bytes": 36721,
+          "decoded_bytes": 36421
+        },
+        {
+          "url": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.mjs",
+          "duration": 322.20000000298023,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/data/building-footprints.geojson",
+          "duration": 10.399999998509884,
+          "bytes": 356,
+          "decoded_bytes": 56
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/data/places.geojson",
+          "duration": 9.899999998509884,
+          "bytes": 1363,
+          "decoded_bytes": 1063
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 230.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": 111.30000000447035,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 218,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 212.89999999850988,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 212.69999999552965,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 46.399999998509884,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 18,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 13.200000002980232,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "baseline",
+      "sample": 3,
+      "url": "http://127.0.0.1:8083/KMUTT-OpenMap/",
+      "timedOut": false,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 407.6000000014901
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 2095.10000000149
+        }
+      ],
+      "search_sync_median_ms": 0.4000000059604645,
+      "js_heap_bytes": 27600000,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 805.9000000059605,
+          "duration": 136
+        },
+        {
+          "start": 943.9000000059605,
+          "duration": 71
+        },
+        {
+          "start": 1026.8000000044703,
+          "duration": 65
+        },
+        {
+          "start": 1098.8000000044703,
+          "duration": 74
+        },
+        {
+          "start": 1180.8000000044703,
+          "duration": 130
+        },
+        {
+          "start": 1312.8000000044703,
+          "duration": 97
+        },
+        {
+          "start": 1574.7000000029802,
+          "duration": 454
+        },
+        {
+          "start": 2052.9000000059605,
+          "duration": 247
+        }
+      ],
+      "resources": [
+        {
+          "url": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.css",
+          "duration": 200.30000000447035,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/styles.css",
+          "duration": 10.299999997019768,
+          "bytes": 21095,
+          "decoded_bytes": 20795
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/main.mjs",
+          "duration": 10.300000004470348,
+          "bytes": 28355,
+          "decoded_bytes": 28055
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/search.mjs",
+          "duration": 4.799999997019768,
+          "bytes": 1836,
+          "decoded_bytes": 1536
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/heights.mjs",
+          "duration": 9.5,
+          "bytes": 2662,
+          "decoded_bytes": 2362
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/data.mjs",
+          "duration": 10.200000002980232,
+          "bytes": 8117,
+          "decoded_bytes": 7817
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/mapping.mjs",
+          "duration": 9.899999998509884,
+          "bytes": 4212,
+          "decoded_bytes": 3912
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/sharing.mjs",
+          "duration": 10.600000001490116,
+          "bytes": 630,
+          "decoded_bytes": 330
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/places.mjs",
+          "duration": 12.5,
+          "bytes": 5442,
+          "decoded_bytes": 5142
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/map.mjs",
+          "duration": 14.700000002980232,
+          "bytes": 5582,
+          "decoded_bytes": 5282
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/data/buildings.json",
+          "duration": 4.199999995529652,
+          "bytes": 36721,
+          "decoded_bytes": 36421
+        },
+        {
+          "url": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.mjs",
+          "duration": 256.3999999985099,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/data/building-footprints.geojson",
+          "duration": 6.5,
+          "bytes": 356,
+          "decoded_bytes": 56
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/data/places.geojson",
+          "duration": 6.100000001490116,
+          "bytes": 1363,
+          "decoded_bytes": 1063
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 41.600000001490116,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": 132.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 15.300000004470348,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 14.299999997019768,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 22.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 15.100000001490116,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 22,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 21.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "final",
+      "sample": 3,
+      "url": "http://127.0.0.1:8082/KMUTT-OpenMap/",
+      "timedOut": false,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 202.5
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 2144.1999999955297
+        }
+      ],
+      "search_sync_median_ms": 0.5,
+      "js_heap_bytes": 29400000,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 402.09999999403954,
+          "duration": 86
+        },
+        {
+          "start": 491.59999999403954,
+          "duration": 56
+        },
+        {
+          "start": 557.5999999940395,
+          "duration": 86
+        },
+        {
+          "start": 669.7999999970198,
+          "duration": 98
+        },
+        {
+          "start": 768.7999999970198,
+          "duration": 80
+        },
+        {
+          "start": 865.3999999985099,
+          "duration": 83
+        },
+        {
+          "start": 958.5,
+          "duration": 68
+        },
+        {
+          "start": 1149.3999999985099,
+          "duration": 189
+        },
+        {
+          "start": 1369.0999999940395,
+          "duration": 695
+        },
+        {
+          "start": 2101.39999999851,
+          "duration": 243
+        },
+        {
+          "start": 2344.89999999851,
+          "duration": 165
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/vendor/maplibre-gl/maplibre-gl.css",
+          "duration": 8.800000004470348,
+          "bytes": 71896,
+          "decoded_bytes": 71596
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/styles.css",
+          "duration": 9.5,
+          "bytes": 24635,
+          "decoded_bytes": 24335
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/main.mjs",
+          "duration": 7.899999998509884,
+          "bytes": 43212,
+          "decoded_bytes": 42912
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/search.mjs",
+          "duration": 5.399999998509884,
+          "bytes": 2362,
+          "decoded_bytes": 2062
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/data.mjs",
+          "duration": 6.700000002980232,
+          "bytes": 10147,
+          "decoded_bytes": 9847
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/heights.mjs",
+          "duration": 5.5,
+          "bytes": 3789,
+          "decoded_bytes": 3489
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/mapping.mjs",
+          "duration": 9.700000002980232,
+          "bytes": 4446,
+          "decoded_bytes": 4146
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/sharing.mjs",
+          "duration": 9.399999998509884,
+          "bytes": 974,
+          "decoded_bytes": 674
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/places.mjs",
+          "duration": 9.399999998509884,
+          "bytes": 6378,
+          "decoded_bytes": 6078
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/map.mjs",
+          "duration": 10.200000002980232,
+          "bytes": 6466,
+          "decoded_bytes": 6166
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/community-ui.mjs",
+          "duration": 10.200000002980232,
+          "bytes": 5573,
+          "decoded_bytes": 5273
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/contributions.mjs",
+          "duration": 9.699999995529652,
+          "bytes": 3429,
+          "decoded_bytes": 3129
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/navigation.mjs",
+          "duration": 11.800000004470348,
+          "bytes": 8700,
+          "decoded_bytes": 8400
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/buildings.json",
+          "duration": 6,
+          "bytes": 59059,
+          "decoded_bytes": 58759
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/vendor/maplibre-gl/maplibre-gl.mjs",
+          "duration": 22.30000000447035,
+          "bytes": 1108349,
+          "decoded_bytes": 1108049
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/building-footprints.geojson",
+          "duration": 8.699999995529652,
+          "bytes": 356,
+          "decoded_bytes": 56
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/places.geojson",
+          "duration": 11.799999997019768,
+          "bytes": 107549,
+          "decoded_bytes": 107249
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/building-footprint-candidates.geojson",
+          "duration": 8.5,
+          "bytes": 51746,
+          "decoded_bytes": 51446
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/coverage-report.json",
+          "duration": 11.100000001490116,
+          "bytes": 3621,
+          "decoded_bytes": 3321
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/pedestrian-graph.json",
+          "duration": 10.899999998509884,
+          "bytes": 375,
+          "decoded_bytes": 75
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 42.19999999552965,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/vendor/maplibre-gl/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": -22.899999998509884,
+          "bytes": 519672,
+          "decoded_bytes": 519372
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 61.899999998509884,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 60.600000001490116,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 60.900000005960464,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 22.299999997019768,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 18.700000002980232,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 19.69999999552965,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "final",
+      "sample": 4,
+      "url": "http://127.0.0.1:8082/KMUTT-OpenMap/",
+      "timedOut": false,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 206.90000000596046
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 1822.5
+        }
+      ],
+      "search_sync_median_ms": 0.7000000029802322,
+      "js_heap_bytes": 29400000,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 341.80000000447035,
+          "duration": 59
+        },
+        {
+          "start": 401.1000000014901,
+          "duration": 105
+        },
+        {
+          "start": 509.40000000596046,
+          "duration": 66
+        },
+        {
+          "start": 583.8000000044703,
+          "duration": 70
+        },
+        {
+          "start": 671.8000000044703,
+          "duration": 111
+        },
+        {
+          "start": 784.9000000059605,
+          "duration": 80
+        },
+        {
+          "start": 878.8000000044703,
+          "duration": 81
+        },
+        {
+          "start": 1119.9000000059605,
+          "duration": 161
+        },
+        {
+          "start": 1300.6000000014901,
+          "duration": 495
+        },
+        {
+          "start": 1802.4000000059605,
+          "duration": 143
+        },
+        {
+          "start": 1945.6000000014901,
+          "duration": 140
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/vendor/maplibre-gl/maplibre-gl.css",
+          "duration": 10.400000005960464,
+          "bytes": 71896,
+          "decoded_bytes": 71596
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/styles.css",
+          "duration": 12.399999998509884,
+          "bytes": 24635,
+          "decoded_bytes": 24335
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/main.mjs",
+          "duration": 11.400000005960464,
+          "bytes": 43212,
+          "decoded_bytes": 42912
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/search.mjs",
+          "duration": 4.100000001490116,
+          "bytes": 2362,
+          "decoded_bytes": 2062
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/data.mjs",
+          "duration": 4.699999995529652,
+          "bytes": 10147,
+          "decoded_bytes": 9847
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/heights.mjs",
+          "duration": 4.699999995529652,
+          "bytes": 3789,
+          "decoded_bytes": 3489
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/mapping.mjs",
+          "duration": 4.800000004470348,
+          "bytes": 4446,
+          "decoded_bytes": 4146
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/sharing.mjs",
+          "duration": 7.300000004470348,
+          "bytes": 974,
+          "decoded_bytes": 674
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/places.mjs",
+          "duration": 7.899999998509884,
+          "bytes": 6378,
+          "decoded_bytes": 6078
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/map.mjs",
+          "duration": 8.100000001490116,
+          "bytes": 6466,
+          "decoded_bytes": 6166
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/contributions.mjs",
+          "duration": 10,
+          "bytes": 3429,
+          "decoded_bytes": 3129
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/community-ui.mjs",
+          "duration": 8.099999994039536,
+          "bytes": 5573,
+          "decoded_bytes": 5273
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/navigation.mjs",
+          "duration": 12.5,
+          "bytes": 8700,
+          "decoded_bytes": 8400
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/buildings.json",
+          "duration": 2.7999999970197678,
+          "bytes": 59059,
+          "decoded_bytes": 58759
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/vendor/maplibre-gl/maplibre-gl.mjs",
+          "duration": 5.5999999940395355,
+          "bytes": 1108349,
+          "decoded_bytes": 1108049
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/building-footprints.geojson",
+          "duration": 3.8000000044703484,
+          "bytes": 356,
+          "decoded_bytes": 56
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/places.geojson",
+          "duration": 4.100000001490116,
+          "bytes": 107549,
+          "decoded_bytes": 107249
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/building-footprint-candidates.geojson",
+          "duration": 3.899999998509884,
+          "bytes": 51746,
+          "decoded_bytes": 51446
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/coverage-report.json",
+          "duration": 4,
+          "bytes": 3621,
+          "decoded_bytes": 3321
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/pedestrian-graph.json",
+          "duration": 4,
+          "bytes": 375,
+          "decoded_bytes": 75
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 43.80000000447035,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/vendor/maplibre-gl/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": -29.19999999552965,
+          "bytes": 519672,
+          "decoded_bytes": 519372
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 26.599999994039536,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 25.399999998509884,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 24.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 22.600000001490116,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 17.899999998509884,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 16.80000000447035,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "baseline",
+      "sample": 4,
+      "url": "http://127.0.0.1:8083/KMUTT-OpenMap/",
+      "timedOut": false,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 403
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 2274.10000000149
+        }
+      ],
+      "search_sync_median_ms": 0.5,
+      "js_heap_bytes": 27600000,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 246.39999999850988,
+          "duration": 123
+        },
+        {
+          "start": 772.5,
+          "duration": 101
+        },
+        {
+          "start": 875.7999999970198,
+          "duration": 57
+        },
+        {
+          "start": 945.8999999985099,
+          "duration": 54
+        },
+        {
+          "start": 1002.6999999955297,
+          "duration": 53
+        },
+        {
+          "start": 1058.6000000014901,
+          "duration": 62
+        },
+        {
+          "start": 1130.2999999970198,
+          "duration": 103
+        },
+        {
+          "start": 1508.1000000014901,
+          "duration": 415
+        },
+        {
+          "start": 1924.6000000014901,
+          "duration": 69
+        },
+        {
+          "start": 1994.7999999970198,
+          "duration": 71
+        },
+        {
+          "start": 2091,
+          "duration": 143
+        },
+        {
+          "start": 2247.7999999970198,
+          "duration": 169
+        }
+      ],
+      "resources": [
+        {
+          "url": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.css",
+          "duration": 234.79999999701977,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/styles.css",
+          "duration": 9.200000002980232,
+          "bytes": 21095,
+          "decoded_bytes": 20795
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/main.mjs",
+          "duration": 9.5,
+          "bytes": 28355,
+          "decoded_bytes": 28055
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/data.mjs",
+          "duration": 7.100000001490116,
+          "bytes": 8117,
+          "decoded_bytes": 7817
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/search.mjs",
+          "duration": 5.200000002980232,
+          "bytes": 1836,
+          "decoded_bytes": 1536
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/mapping.mjs",
+          "duration": 6.899999998509884,
+          "bytes": 4212,
+          "decoded_bytes": 3912
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/heights.mjs",
+          "duration": 6.699999995529652,
+          "bytes": 2662,
+          "decoded_bytes": 2362
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/sharing.mjs",
+          "duration": 7.699999995529652,
+          "bytes": 630,
+          "decoded_bytes": 330
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/map.mjs",
+          "duration": 9.5,
+          "bytes": 5582,
+          "decoded_bytes": 5282
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/places.mjs",
+          "duration": 9.600000001490116,
+          "bytes": 5442,
+          "decoded_bytes": 5142
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/data/buildings.json",
+          "duration": 3.3000000044703484,
+          "bytes": 36721,
+          "decoded_bytes": 36421
+        },
+        {
+          "url": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.mjs",
+          "duration": 228.29999999701977,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/data/building-footprints.geojson",
+          "duration": 4.300000004470348,
+          "bytes": 356,
+          "decoded_bytes": 56
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/data/places.geojson",
+          "duration": 7.4000000059604645,
+          "bytes": 1363,
+          "decoded_bytes": 1063
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 47.399999998509884,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": 116.20000000298023,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 19.100000001490116,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 19.600000001490116,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 17.700000002980232,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 221.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 215.70000000298023,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 220.80000000447035,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "baseline",
+      "sample": 5,
+      "url": "http://127.0.0.1:8083/KMUTT-OpenMap/",
+      "timedOut": false,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 525.3000000044703
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 2777.39999999851
+        }
+      ],
+      "search_sync_median_ms": 0.3999999985098839,
+      "js_heap_bytes": 24500000,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 323.70000000298023,
+          "duration": 163
+        },
+        {
+          "start": 781.8999999985099,
+          "duration": 52
+        },
+        {
+          "start": 892.6000000014901,
+          "duration": 131
+        },
+        {
+          "start": 1024.3999999985099,
+          "duration": 132
+        },
+        {
+          "start": 1160.6000000014901,
+          "duration": 79
+        },
+        {
+          "start": 1255.6000000014901,
+          "duration": 75
+        },
+        {
+          "start": 1332.8999999985099,
+          "duration": 85
+        },
+        {
+          "start": 1423.7000000029802,
+          "duration": 69
+        },
+        {
+          "start": 1500.1000000014901,
+          "duration": 73
+        },
+        {
+          "start": 1580.1000000014901,
+          "duration": 142
+        },
+        {
+          "start": 1726.8000000044703,
+          "duration": 74
+        },
+        {
+          "start": 1815.5,
+          "duration": 87
+        },
+        {
+          "start": 2037.3999999985099,
+          "duration": 189
+        },
+        {
+          "start": 2248.10000000149,
+          "duration": 514
+        },
+        {
+          "start": 2763.8000000044703,
+          "duration": 129
+        },
+        {
+          "start": 2893.7000000029802,
+          "duration": 117
+        }
+      ],
+      "resources": [
+        {
+          "url": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.css",
+          "duration": 308.3999999985099,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/styles.css",
+          "duration": 9.800000004470348,
+          "bytes": 21095,
+          "decoded_bytes": 20795
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/main.mjs",
+          "duration": 10.100000001490116,
+          "bytes": 28355,
+          "decoded_bytes": 28055
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/search.mjs",
+          "duration": 4.200000002980232,
+          "bytes": 1836,
+          "decoded_bytes": 1536
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/mapping.mjs",
+          "duration": 8.799999997019768,
+          "bytes": 4212,
+          "decoded_bytes": 3912
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/heights.mjs",
+          "duration": 7.799999997019768,
+          "bytes": 2662,
+          "decoded_bytes": 2362
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/data.mjs",
+          "duration": 8.5,
+          "bytes": 8117,
+          "decoded_bytes": 7817
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/sharing.mjs",
+          "duration": 8.799999997019768,
+          "bytes": 630,
+          "decoded_bytes": 330
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/places.mjs",
+          "duration": 13.400000005960464,
+          "bytes": 5442,
+          "decoded_bytes": 5142
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/map.mjs",
+          "duration": 14.400000005960464,
+          "bytes": 5582,
+          "decoded_bytes": 5282
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/data/buildings.json",
+          "duration": 4.100000001490116,
+          "bytes": 36721,
+          "decoded_bytes": 36421
+        },
+        {
+          "url": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.mjs",
+          "duration": 239.80000000447035,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/data/building-footprints.geojson",
+          "duration": 5.5,
+          "bytes": 356,
+          "decoded_bytes": 56
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/data/places.geojson",
+          "duration": 5.5,
+          "bytes": 1363,
+          "decoded_bytes": 1063
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 55,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": 133.70000000298023,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 19.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 18,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 37.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 18.900000005960464,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 17.200000002980232,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 14.899999998509884,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "final",
+      "sample": 5,
+      "url": "http://127.0.0.1:8082/KMUTT-OpenMap/",
+      "timedOut": false,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 198.89999999850988
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 1431.8999999985099
+        }
+      ],
+      "search_sync_median_ms": 0.8000000044703484,
+      "js_heap_bytes": 29400000,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 30.899999998509884,
+          "duration": 140
+        },
+        {
+          "start": 359.6000000014901,
+          "duration": 93
+        },
+        {
+          "start": 453.6000000014901,
+          "duration": 56
+        },
+        {
+          "start": 512.6000000014901,
+          "duration": 57
+        },
+        {
+          "start": 580.7999999970198,
+          "duration": 65
+        },
+        {
+          "start": 650.7999999970198,
+          "duration": 72
+        },
+        {
+          "start": 728.1000000014901,
+          "duration": 79
+        },
+        {
+          "start": 811.5,
+          "duration": 76
+        },
+        {
+          "start": 891,
+          "duration": 63
+        },
+        {
+          "start": 1102.2999999970198,
+          "duration": 195
+        },
+        {
+          "start": 1323.1999999955297,
+          "duration": 580
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/vendor/maplibre-gl/maplibre-gl.css",
+          "duration": 7,
+          "bytes": 71896,
+          "decoded_bytes": 71596
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/styles.css",
+          "duration": 7.5,
+          "bytes": 24635,
+          "decoded_bytes": 24335
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/main.mjs",
+          "duration": 6.5999999940395355,
+          "bytes": 43212,
+          "decoded_bytes": 42912
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/search.mjs",
+          "duration": 3.2999999970197678,
+          "bytes": 2362,
+          "decoded_bytes": 2062
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/data.mjs",
+          "duration": 3.8000000044703484,
+          "bytes": 10147,
+          "decoded_bytes": 9847
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/heights.mjs",
+          "duration": 3.600000001490116,
+          "bytes": 3789,
+          "decoded_bytes": 3489
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/sharing.mjs",
+          "duration": 5.399999998509884,
+          "bytes": 974,
+          "decoded_bytes": 674
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/mapping.mjs",
+          "duration": 3.7000000029802322,
+          "bytes": 4446,
+          "decoded_bytes": 4146
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/places.mjs",
+          "duration": 5.799999997019768,
+          "bytes": 6378,
+          "decoded_bytes": 6078
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/map.mjs",
+          "duration": 5.899999998509884,
+          "bytes": 6466,
+          "decoded_bytes": 6166
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/community-ui.mjs",
+          "duration": 6.100000001490116,
+          "bytes": 5573,
+          "decoded_bytes": 5273
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/contributions.mjs",
+          "duration": 7.699999995529652,
+          "bytes": 3429,
+          "decoded_bytes": 3129
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/navigation.mjs",
+          "duration": 7.800000004470348,
+          "bytes": 8700,
+          "decoded_bytes": 8400
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/buildings.json",
+          "duration": 9.700000002980232,
+          "bytes": 59059,
+          "decoded_bytes": 58759
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/vendor/maplibre-gl/maplibre-gl.mjs",
+          "duration": 6.800000004470348,
+          "bytes": 1108349,
+          "decoded_bytes": 1108049
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/building-footprints.geojson",
+          "duration": 4.600000001490116,
+          "bytes": 356,
+          "decoded_bytes": 56
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/building-footprint-candidates.geojson",
+          "duration": 4.799999997019768,
+          "bytes": 51746,
+          "decoded_bytes": 51446
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/places.geojson",
+          "duration": 5,
+          "bytes": 107549,
+          "decoded_bytes": 107249
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/coverage-report.json",
+          "duration": 4.899999998509884,
+          "bytes": 3621,
+          "decoded_bytes": 3321
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/pedestrian-graph.json",
+          "duration": 5.4000000059604645,
+          "bytes": 375,
+          "decoded_bytes": 75
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 41.400000005960464,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/vendor/maplibre-gl/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": -28.80000000447035,
+          "bytes": 519672,
+          "decoded_bytes": 519372
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 64.59999999403954,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 65.59999999403954,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 62.099999994039536,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 21.700000002980232,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 15.399999998509884,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 18.799999997019768,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "final",
+      "sample": 6,
+      "url": "http://127.0.0.1:8082/KMUTT-OpenMap/",
+      "timedOut": false,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 228.80000000447035
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 2474.60000000149
+        }
+      ],
+      "search_sync_median_ms": 0.5,
+      "js_heap_bytes": 26000000,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 51.399999998509884,
+          "duration": 145
+        },
+        {
+          "start": 341.80000000447035,
+          "duration": 68
+        },
+        {
+          "start": 410.6000000014901,
+          "duration": 114
+        },
+        {
+          "start": 527.2000000029802,
+          "duration": 58
+        },
+        {
+          "start": 589.6000000014901,
+          "duration": 53
+        },
+        {
+          "start": 655.8000000044703,
+          "duration": 65
+        },
+        {
+          "start": 726.1000000014901,
+          "duration": 67
+        },
+        {
+          "start": 809.8000000044703,
+          "duration": 99
+        },
+        {
+          "start": 915.8000000044703,
+          "duration": 113
+        },
+        {
+          "start": 1043.1000000014901,
+          "duration": 106
+        },
+        {
+          "start": 1398,
+          "duration": 241
+        },
+        {
+          "start": 1666.3000000044703,
+          "duration": 743
+        },
+        {
+          "start": 2432.3000000044703,
+          "duration": 228
+        },
+        {
+          "start": 2661.2000000029802,
+          "duration": 145
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/vendor/maplibre-gl/maplibre-gl.css",
+          "duration": 32,
+          "bytes": 71896,
+          "decoded_bytes": 71596
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/styles.css",
+          "duration": 10.600000001490116,
+          "bytes": 24635,
+          "decoded_bytes": 24335
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/main.mjs",
+          "duration": 11.100000001490116,
+          "bytes": 43212,
+          "decoded_bytes": 42912
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/search.mjs",
+          "duration": 5.799999997019768,
+          "bytes": 2362,
+          "decoded_bytes": 2062
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/heights.mjs",
+          "duration": 8.200000002980232,
+          "bytes": 3789,
+          "decoded_bytes": 3489
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/data.mjs",
+          "duration": 8.5,
+          "bytes": 10147,
+          "decoded_bytes": 9847
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/mapping.mjs",
+          "duration": 8.300000004470348,
+          "bytes": 4446,
+          "decoded_bytes": 4146
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/sharing.mjs",
+          "duration": 10.300000004470348,
+          "bytes": 974,
+          "decoded_bytes": 674
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/places.mjs",
+          "duration": 11.599999994039536,
+          "bytes": 6378,
+          "decoded_bytes": 6078
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/community-ui.mjs",
+          "duration": 11.400000005960464,
+          "bytes": 5573,
+          "decoded_bytes": 5273
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/map.mjs",
+          "duration": 11.900000005960464,
+          "bytes": 6466,
+          "decoded_bytes": 6166
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/contributions.mjs",
+          "duration": 12,
+          "bytes": 3429,
+          "decoded_bytes": 3129
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/src/navigation.mjs",
+          "duration": 12,
+          "bytes": 8700,
+          "decoded_bytes": 8400
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/buildings.json",
+          "duration": 24.899999998509884,
+          "bytes": 59059,
+          "decoded_bytes": 58759
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/vendor/maplibre-gl/maplibre-gl.mjs",
+          "duration": 6.5,
+          "bytes": 1108349,
+          "decoded_bytes": 1108049
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/building-footprints.geojson",
+          "duration": 3.399999998509884,
+          "bytes": 356,
+          "decoded_bytes": 56
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/places.geojson",
+          "duration": 4.100000001490116,
+          "bytes": 107549,
+          "decoded_bytes": 107249
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/building-footprint-candidates.geojson",
+          "duration": 3.5,
+          "bytes": 51746,
+          "decoded_bytes": 51446
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/coverage-report.json",
+          "duration": 3.399999998509884,
+          "bytes": 3621,
+          "decoded_bytes": 3321
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/data/pedestrian-graph.json",
+          "duration": 3.7000000029802322,
+          "bytes": 375,
+          "decoded_bytes": 75
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 39.600000001490116,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8082/KMUTT-OpenMap/vendor/maplibre-gl/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": -25.30000000447035,
+          "bytes": 519672,
+          "decoded_bytes": 519372
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 16.899999998509884,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 18.299999997019768,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 19.400000005960464,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 59,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 25.899999998509884,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 53.899999998509884,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "version": "baseline",
+      "sample": 6,
+      "url": "http://127.0.0.1:8083/KMUTT-OpenMap/",
+      "timedOut": false,
+      "marks": [
+        {
+          "name": "openmap-catalog-ready",
+          "ms": 397.6000000014901
+        },
+        {
+          "name": "openmap-map-loaded",
+          "ms": 2093.10000000149
+        }
+      ],
+      "search_sync_median_ms": 0.6000000014901161,
+      "js_heap_bytes": 23100000,
+      "canvas_count": 1,
+      "long_tasks": [
+        {
+          "start": 784.7000000029802,
+          "duration": 112
+        },
+        {
+          "start": 897.8000000044703,
+          "duration": 64
+        },
+        {
+          "start": 978.8999999985099,
+          "duration": 63
+        },
+        {
+          "start": 1054.1000000014901,
+          "duration": 69
+        },
+        {
+          "start": 1129.2000000029802,
+          "duration": 60
+        },
+        {
+          "start": 1195.1000000014901,
+          "duration": 118
+        },
+        {
+          "start": 1319.8000000044703,
+          "duration": 55
+        },
+        {
+          "start": 1383.8000000044703,
+          "duration": 74
+        },
+        {
+          "start": 1565.6000000014901,
+          "duration": 461
+        },
+        {
+          "start": 2052.8000000044703,
+          "duration": 234
+        }
+      ],
+      "resources": [
+        {
+          "url": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.css",
+          "duration": 191.80000000447035,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/styles.css",
+          "duration": 10.899999998509884,
+          "bytes": 21095,
+          "decoded_bytes": 20795
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/main.mjs",
+          "duration": 10.899999998509884,
+          "bytes": 28355,
+          "decoded_bytes": 28055
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/search.mjs",
+          "duration": 6.600000001490116,
+          "bytes": 1836,
+          "decoded_bytes": 1536
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/data.mjs",
+          "duration": 8.099999994039536,
+          "bytes": 8117,
+          "decoded_bytes": 7817
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/heights.mjs",
+          "duration": 7.600000001490116,
+          "bytes": 2662,
+          "decoded_bytes": 2362
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/mapping.mjs",
+          "duration": 13,
+          "bytes": 4212,
+          "decoded_bytes": 3912
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/sharing.mjs",
+          "duration": 12.800000004470348,
+          "bytes": 630,
+          "decoded_bytes": 330
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/places.mjs",
+          "duration": 14.700000002980232,
+          "bytes": 5442,
+          "decoded_bytes": 5142
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/src/map.mjs",
+          "duration": 15.200000002980232,
+          "bytes": 5582,
+          "decoded_bytes": 5282
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/data/buildings.json",
+          "duration": 3.399999998509884,
+          "bytes": 36721,
+          "decoded_bytes": 36421
+        },
+        {
+          "url": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.mjs",
+          "duration": 261,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/data/building-footprints.geojson",
+          "duration": 4.800000004470348,
+          "bytes": 356,
+          "decoded_bytes": 56
+        },
+        {
+          "url": "http://127.0.0.1:8083/KMUTT-OpenMap/data/places.geojson",
+          "duration": 4.5999999940395355,
+          "bytes": 1363,
+          "decoded_bytes": 1063
+        },
+        {
+          "url": "https://tiles.openfreemap.org/styles/liberty",
+          "duration": 36.70000000298023,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl-worker.mjs?v=6.16.0",
+          "duration": 133,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/planet",
+          "duration": 14.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.json",
+          "duration": 17.899999998509884,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+          "duration": 13.699999995529652,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf",
+          "duration": 19.100000001490116,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
+          "duration": 23.30000000447035,
+          "bytes": 0,
+          "decoded_bytes": 0
+        },
+        {
+          "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/8192-8447.pbf",
+          "duration": 15.5,
+          "bytes": 0,
+          "decoded_bytes": 0
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

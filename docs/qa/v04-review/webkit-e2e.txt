@@ -1,0 +1,32 @@
+[WebServer] (node:28136) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 22 tests using 1 worker
+
+(node:28244) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [webkit] › tests\e2e\campus.spec.mjs:11:1 › directory, shared URLs, keyboard selection and camera target (4.0s)
+  ok  2 [webkit] › tests\e2e\campus.spec.mjs:21:1 › style reloads preserve selection with one extrusion and working height/2D modes (3.6s)
+  ok  3 [webkit] › tests\e2e\campus.spec.mjs:31:1 › proposal preview, confirmation, reload, export and deletion preserve official point (6.3s)
+  ok  4 [webkit] › tests\e2e\campus.spec.mjs:46:1 › catalog survives runtime/storage failures, invalid URLs and POI empty filters (1.4s)
+  ok  5 [webkit] › tests\e2e\campus.spec.mjs:54:1 › data failure is actionable and mobile details/search remain reachable (418ms)
+  ok  6 [webkit] › tests\e2e\campus.spec.mjs:57:1 › reduced motion, responsive panels and denied geolocation (3.1s)
+  ok  7 [webkit] › tests\e2e\campus.spec.mjs:75:1 › stale tabs cannot overwrite newer local proposals (4.0s)
+  ok  8 [webkit] › tests\e2e\campus.spec.mjs:87:1 › map recovery preserves the selected theme (3.7s)
+  ok  9 [webkit] › tests\e2e\campus.spec.mjs:99:1 › unavailable optional data cannot stall the map or catalog (691ms)
+  ok 10 [webkit] › tests\e2e\campus.spec.mjs:106:1 › selected markers remain clear of panels on short portrait and landscape screens (4.2s)
+  ok 11 [webkit] › tests\e2e\campus.spec.mjs:125:1 › expanded desktop contribution details keep map controls reachable (2.0s)
+  ok 12 [webkit] › tests\e2e\release.spec.mjs:5:1 › POI search, independent details, shared Pages URL, directions and correction entry (3.6s)
+  ok 13 [webkit] › tests\e2e\release.spec.mjs:14:1 › candidate footprint preview shows explicit height assumptions and never publishes a proposal (3.2s)
+  ok 14 [webkit] › tests\e2e\release.spec.mjs:24:1 › community review, local save, export, edit invalidation, reload and delete (3.3s)
+  ok 15 [webkit] › tests\e2e\release.spec.mjs:32:1 › map module can recover after an initial asset failure without losing the directory (1.3s)
+  ok 16 [webkit] › tests\e2e\release.spec.mjs:36:1 › quality dashboard and navigation keep candidates separate from verified data (2.3s)
+  ok 17 [webkit] › tests\e2e\release.spec.mjs:40:1 › real vendored module and worker run under CSP at the Pages base path (1.4s)
+  ok 18 [webkit] › tests\e2e\release.spec.mjs:46:1 › POI back and forward restore one detail panel and one selected marker (3.5s)
+  ok 19 [webkit] › tests\e2e\release.spec.mjs:50:1 › a stalled core catalog times out and recovers on explicit retry (1.1s)
+  ok 20 [webkit] › tests\e2e\release.spec.mjs:53:1 › untrusted report text remains literal and clipboard failure leaves a usable share URL (3.2s)
+Rendering capability webkit {"webgl2":true,"creationErrors":[],"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15","renderer":"Apple GPU"}
+  ok 21 [webkit] › tests\e2e\release.spec.mjs:58:1 › browser provides a real WebGL2 context for campus rendering (760ms)
+  ok 22 [webkit] › tests\e2e\release.spec.mjs:70:1 › queued community deletions cannot restore an already deleted report (2.2s)
+
+  22 passed (1.0m)

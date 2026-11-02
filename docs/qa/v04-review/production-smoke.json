@@ -1,0 +1,277 @@
+{
+  "date": "2026-11-02",
+  "merged_commit": "bbbbc06eb3cbd92415d0d28b50a395a5579666b9",
+  "url": "https://apichetfirm.github.io/KMUTT-OpenMap/",
+  "browser": "156.0.8078.4",
+  "resources": [
+    {
+      "file": "DATA-LICENSES.md",
+      "status": 200,
+      "sha256": "7fe9501491ab7f8000748155dd46d317d875d5916a0eac84f4b6294cb1e5292d",
+      "matches_merged": true
+    },
+    {
+      "file": "LICENSE",
+      "status": 200,
+      "sha256": "4ca3409d56a195526e40ea1038b75688a78d56864a811ebb3ec8eab53cd0f6b1",
+      "matches_merged": true
+    },
+    {
+      "file": "data/README.md",
+      "status": 200,
+      "sha256": "27aa63ec63d8e7ac1879bfe9de1c10d0808f17db9f735da043bb03ff04a6a218",
+      "matches_merged": true
+    },
+    {
+      "file": "data/building-footprint-candidates.geojson",
+      "status": 200,
+      "sha256": "0c36789fb0bc7304f5755f1cad7de00f2c822bc4e85caaeac08440a108dbd06f",
+      "matches_merged": true
+    },
+    {
+      "file": "data/building-footprints.geojson",
+      "status": 200,
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1",
+      "matches_merged": true
+    },
+    {
+      "file": "data/building-rendering.json",
+      "status": 200,
+      "sha256": "0f6b83b97dbd5e055394bdd5da35c3818336a2d9c820b4f737f7e5a62e8cff12",
+      "matches_merged": true
+    },
+    {
+      "file": "data/buildings-geocoded.geojson",
+      "status": 200,
+      "sha256": "e85c0a3a73115c8d7062ae9ed73d4052d770fd8a621f01011d2a73ebcbff4d94",
+      "matches_merged": true
+    },
+    {
+      "file": "data/buildings.json",
+      "status": 200,
+      "sha256": "43a9352613471f3ac8240e09e75132e56afb5405c82adfb8588ba1851eb1be48",
+      "matches_merged": true
+    },
+    {
+      "file": "data/coverage-report.json",
+      "status": 200,
+      "sha256": "4c036cd308e24ed785883c3f040c857ee9a9ddf584cc6f48e2ba0b296b8af055",
+      "matches_merged": true
+    },
+    {
+      "file": "data/evidence/osm-campus-snapshot.json",
+      "status": 200,
+      "sha256": "7fae570a5c3ed9485c4d5fbafef6e7cdc5d4c399c0cbadb8afed010c8a640bbf",
+      "matches_merged": true
+    },
+    {
+      "file": "data/evidence/source-review.json",
+      "status": 200,
+      "sha256": "b744e92db965c839a8de8325ab48c48a131106bfb5181afb9297430c145b8af0",
+      "matches_merged": true
+    },
+    {
+      "file": "data/height-overrides.json",
+      "status": 200,
+      "sha256": "d232561045edcd17cae77461f00fe1d39c5b9fac16f5e1725c0552e2ef6fcc0b",
+      "matches_merged": true
+    },
+    {
+      "file": "data/mapping-status.csv",
+      "status": 200,
+      "sha256": "743eb3ca572e3480834d6e4416c355cd012b917186f8abf448c365a98b96781b",
+      "matches_merged": true
+    },
+    {
+      "file": "data/pedestrian-graph-candidates.json",
+      "status": 200,
+      "sha256": "b5cb4b294c6630c66edfd4bebace414d52060117e849f21109093b973b731305",
+      "matches_merged": true
+    },
+    {
+      "file": "data/pedestrian-graph.json",
+      "status": 200,
+      "sha256": "5a14136cb4bc4cc93ec7e3d24da00b1886b987e64576d48cdfe305533fad697b",
+      "matches_merged": true
+    },
+    {
+      "file": "data/places.geojson",
+      "status": 200,
+      "sha256": "074caa4652f3f26f9a53273e48562bee47e7d816a955eeb5ce8ab056296d7355",
+      "matches_merged": true
+    },
+    {
+      "file": "data/walkway-candidates.geojson",
+      "status": 200,
+      "sha256": "c48c84e8714f526a1f1a0f23f46dfcba574156a6ead421cad1c629d6e6a8a3e8",
+      "matches_merged": true
+    },
+    {
+      "file": "data/walkways.geojson",
+      "status": 200,
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1",
+      "matches_merged": true
+    },
+    {
+      "file": "favicon.svg",
+      "status": 200,
+      "sha256": "7b8ef5429d07bbb3705bb867f8d522a5f3455fc6c632beb542f73ddd3a7c7fe3",
+      "matches_merged": true
+    },
+    {
+      "file": "index.html",
+      "status": 200,
+      "sha256": "33f0030d1d9e107a81e338ca5bd6901abbb6df673141edc320e570bde82b0116",
+      "matches_merged": true
+    },
+    {
+      "file": "src/community-ui.mjs",
+      "status": 200,
+      "sha256": "93cda5dc809d9feda9ba55f713f3a31f9d64e468ba38f89d9eeb0d21e1ef8dd9",
+      "matches_merged": true
+    },
+    {
+      "file": "src/contributions.mjs",
+      "status": 200,
+      "sha256": "828f96211dd46f81ac100a2b2b632d8ebc0d920621f6d7d742390628ded35f09",
+      "matches_merged": true
+    },
+    {
+      "file": "src/data.mjs",
+      "status": 200,
+      "sha256": "9fd6829a2c8698806a86d8151aa676cb418ad52a3097a182de00215b3efe1665",
+      "matches_merged": true
+    },
+    {
+      "file": "src/geometry.mjs",
+      "status": 200,
+      "sha256": "51c4e4e62c5773dfb6ad9e6c07ef308316c4ff2db9a6f1b413db2874cba8501a",
+      "matches_merged": true
+    },
+    {
+      "file": "src/heights.mjs",
+      "status": 200,
+      "sha256": "fb2c158002367561fc8ae105ef01b59a78f50fbc621d87bc89f4c93b57e5c071",
+      "matches_merged": true
+    },
+    {
+      "file": "src/main.mjs",
+      "status": 200,
+      "sha256": "054833709f37ba1e82e8c38ce859e4d55b19021ff54692874428dcc402c8ad8d",
+      "matches_merged": true
+    },
+    {
+      "file": "src/map.mjs",
+      "status": 200,
+      "sha256": "72322fb3b655603f743ad7032f1a90bd13610f55eff5534551f44ffdbaf3a288",
+      "matches_merged": true
+    },
+    {
+      "file": "src/mapping.mjs",
+      "status": 200,
+      "sha256": "74c36ab42d7fa778e26dbd1b3a212eda1810a0c641793dffe64c8a8393285627",
+      "matches_merged": true
+    },
+    {
+      "file": "src/navigation.mjs",
+      "status": 200,
+      "sha256": "242c73963ac000011520644de3739130f22c21ff4921a5ef2aa96faba86dd95f",
+      "matches_merged": true
+    },
+    {
+      "file": "src/places.mjs",
+      "status": 200,
+      "sha256": "636b2f0b69d4e5fb73a41739c4abe3f98be681b79611f6411b2869392b133fb0",
+      "matches_merged": true
+    },
+    {
+      "file": "src/quality.mjs",
+      "status": 200,
+      "sha256": "ac4a7a6741be91e12615fa5220b4c971abd954dd25b52d525cee345a90a8845f",
+      "matches_merged": true
+    },
+    {
+      "file": "src/search.mjs",
+      "status": 200,
+      "sha256": "2e4ec0c1eb006fd9c8b6b763b20100c311ff1bc54683ca68dd7337c18e697793",
+      "matches_merged": true
+    },
+    {
+      "file": "src/sharing.mjs",
+      "status": 200,
+      "sha256": "4fa1623a66f8a2c6f743bca228126dc33ac6845c9ca164b0033b21c3bc7de799",
+      "matches_merged": true
+    },
+    {
+      "file": "src/styles.css",
+      "status": 200,
+      "sha256": "e26fa3757b9e79a0d177dd42b399f25f433b402efc470126d9a3d33c744376a6",
+      "matches_merged": true
+    },
+    {
+      "file": "vendor/maplibre-gl/LICENSE.txt",
+      "status": 200,
+      "sha256": "ee5fc05a0677eaf69601d2c7db0d9ecd6cc27c3abc1d0733bc9ed34707cf8ef2",
+      "matches_merged": true
+    },
+    {
+      "file": "vendor/maplibre-gl/manifest.json",
+      "status": 200,
+      "sha256": "78cf532a11a142639465b7751e57ba972596200fa62cedcf84192bc4eab422b7",
+      "matches_merged": true
+    },
+    {
+      "file": "vendor/maplibre-gl/maplibre-gl-worker.mjs",
+      "status": 200,
+      "sha256": "0bf06492bdb7ba3d4132b78e435621bfba60d5250967991c02b1a73affea8cd5",
+      "matches_merged": true
+    },
+    {
+      "file": "vendor/maplibre-gl/maplibre-gl.css",
+      "status": 200,
+      "sha256": "a90798a1953017790e590f7e1bd35ff103a8a4263972cb47290b78adf86f8c20",
+      "matches_merged": true
+    },
+    {
+      "file": "vendor/maplibre-gl/maplibre-gl.mjs",
+      "status": 200,
+      "sha256": "fbbdf8ddd9a48e49059a4be6795a4f214a711314bb5809f72d3730b48e7897e3",
+      "matches_merged": true
+    }
+  ],
+  "checks": [
+    "All published source, vendor, data, HTML, favicon and license bytes match merged commit exactly",
+    "All six priority codes select with a visible marker",
+    "Search FIBO → N9; shared URL reload selects N9",
+    "Live night and 2D controls respond",
+    "Expanded desktop contribution details keep theme/GPS controls reachable",
+    "Local-only proposal preview/save/export validation/delete; published location unchanged",
+    "Production POI search, stale-hour warning and shared URL reload",
+    "Production portrait library selection, clear pin and reachable attribution",
+    "Production landscape library selection, clear pin and reachable attribution"
+  ],
+  "errors": [],
+  "warnings": [
+    "[.WebGL-0x71dc00d48200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x71dc00d48200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+    "layers[highway-shield-non-us].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
+    "layers[highway-shield-us-interstate].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
+    "layers[road_shield_us].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
+    "Image \"gate\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+    "Image \"lift_gate\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+    "Image \"office\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+    "Image \"swimming_pool\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+    "Image \"running\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+    "Image \"motorcycle_parking\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+    "Image \"sports_centre\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+    "Image \"wood-pattern\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style."
+  ],
+  "screenshots": [
+    "production-desktop.png",
+    "production-portrait.png",
+    "production-landscape.png"
+  ],
+  "map_loaded_ms": 4477.20000000298,
+  "csp_violations": [],
+  "status": "passed"
+}

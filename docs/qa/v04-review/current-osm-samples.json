@@ -1,0 +1,44 @@
+[
+  {
+    "code": "N11",
+    "way_id": "224982053",
+    "name": "คณะเทคโนโลยีสารสนเทศ",
+    "version": 3,
+    "timestamp": "2025-03-23T08:12:31Z"
+  },
+  {
+    "code": "N10",
+    "way_id": "311879209",
+    "name": "สำนักหอสมุด",
+    "version": 6,
+    "timestamp": "2025-03-23T08:12:31Z"
+  },
+  {
+    "code": "N9",
+    "way_id": "346450376",
+    "name": "Institute for Field Robotics",
+    "version": 10,
+    "timestamp": "2025-03-23T08:12:31Z"
+  },
+  {
+    "code": "N17",
+    "way_id": "420534143",
+    "name": "อาคารเรียนรวม 2",
+    "version": 6,
+    "timestamp": "2025-03-23T08:12:31Z"
+  },
+  {
+    "code": "N20",
+    "way_id": "436983061",
+    "name": "อาคารเรียนรวม 1",
+    "version": 5,
+    "timestamp": "2025-03-23T08:12:31Z"
+  },
+  {
+    "code": "N16",
+    "way_id": "1333533935",
+    "name": "LX",
+    "version": 2,
+    "timestamp": "2025-03-23T08:12:37Z"
+  }
+]

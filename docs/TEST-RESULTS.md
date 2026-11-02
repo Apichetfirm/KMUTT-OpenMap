@@ -1,5 +1,7 @@
 # QA results — v0.4 release candidate
 
+Independent review supersedes the original counts below with 47 unit and 88 browser tests after two regression fixes. Local sandboxed Chromium passes 44 checks; a full WebKit rerun passes 22; local Firefox cannot launch. Final CI/release status, original failures and independent live screenshots are in [V04-INDEPENDENT-RELEASE-REPORT.md](V04-INDEPENDENT-RELEASE-REPORT.md). Original implementation evidence remains below.
+
 Initiated by Firm Impulse · FIBO FRAB11. Date: 2026-11-02 (Asia/Bangkok).
 
 ## Environment and commands

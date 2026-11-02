@@ -1,0 +1,774 @@
+{
+  "geos": "3.14.1",
+  "buildings": 35,
+  "points": 20,
+  "unmapped": 15,
+  "candidates": 18,
+  "pois": 73,
+  "candidate_segments": 112,
+  "measured_heights": 0,
+  "entrances": 0,
+  "accepted_footprints": 0,
+  "accepted_edges": 0,
+  "candidate_checks": [
+    {
+      "code": "N3",
+      "id": "osm-way-436983064",
+      "geos_valid": true,
+      "source_geometry_exact": true,
+      "source_version_matches": true,
+      "representative_inside": true,
+      "published_point_inside": true,
+      "confidence": "approximate",
+      "scope": "named-building"
+    },
+    {
+      "code": "N4",
+      "id": "osm-way-436983063",
+      "geos_valid": true,
+      "source_geometry_exact": true,
+      "source_version_matches": true,
+      "representative_inside": true,
+      "published_point_inside": null,
+      "confidence": "approximate",
+      "scope": "partial-complex"
+    },
+    {
+      "code": "N9",
+      "id": "osm-way-346450376",
+      "geos_valid": true,
+      "source_geometry_exact": true,
+      "source_version_matches": true,
+      "representative_inside": true,
+      "published_point_inside": true,
+      "confidence": "approximate",
+      "scope": "named-building"
+    },
+    {
+      "code": "N10",
+      "id": "osm-way-311879209",
+      "geos_valid": true,
+      "source_geometry_exact": true,
+      "source_version_matches": true,
+      "representative_inside": true,
+      "published_point_inside": true,
+      "confidence": "approximate",
+      "scope": "named-building"
+    },
+    {
+      "code": "N11",
+      "id": "osm-way-224982053",
+      "geos_valid": true,
+      "source_geometry_exact": true,
+      "source_version_matches": true,
+      "representative_inside": true,
+      "published_point_inside": true,
+      "confidence": "approximate",
+      "scope": "named-building"
+    },
+    {
+      "code": "N16",
+      "id": "osm-way-1333533935",
+      "geos_valid": true,
+      "source_geometry_exact": true,
+      "source_version_matches": true,
+      "representative_inside": true,
+      "published_point_inside": true,
+      "confidence": "approximate",
+      "scope": "named-building"
+    },
+    {
+      "code": "N17",
+      "id": "osm-way-420534143",
+      "geos_valid": true,
+      "source_geometry_exact": true,
+      "source_version_matches": true,
+      "representative_inside": true,
+      "published_point_inside": true,
+      "confidence": "approximate",
+      "scope": "named-building"
+    },
+    {
+      "code": "N20",
+      "id": "osm-way-436983061",
+      "geos_valid": true,
+      "source_geometry_exact": true,
+      "source_version_matches": true,
+      "representative_inside": true,
+      "published_point_inside": true,
+      "confidence": "approximate",
+      "scope": "named-building"
+    },
+    {
+      "code": "S4",
+      "id": "osm-way-420044928",
+      "geos_valid": true,
+      "source_geometry_exact": true,
+      "source_version_matches": true,
+      "representative_inside": true,
+      "published_point_inside": true,
+      "confidence": "approximate",
+      "scope": "named-building"
+    },
+    {
+      "code": "S5",
+      "id": "osm-way-420045662",
+      "geos_valid": true,
+      "source_geometry_exact": true,
+      "source_version_matches": true,
+      "representative_inside": true,
+      "published_point_inside": true,
+      "confidence": "approximate",
+      "scope": "named-building"
+    },
+    {
+      "code": "S6",
+      "id": "osm-way-420051710",
+      "geos_valid": true,
+      "source_geometry_exact": true,
+      "source_version_matches": true,
+      "representative_inside": true,
+      "published_point_inside": null,
+      "confidence": "approximate",
+      "scope": "named-building"
+    },
+    {
+      "code": "S7",
+      "id": "osm-way-436983066",
+      "geos_valid": true,
+      "source_geometry_exact": true,
+      "source_version_matches": true,
+      "representative_inside": true,
+      "published_point_inside": true,
+      "confidence": "approximate",
+      "scope": "named-building"
+    },
+    {
+      "code": "S9",
+      "id": "osm-way-651713745",
+      "geos_valid": true,
+      "source_geometry_exact": true,
+      "source_version_matches": true,
+      "representative_inside": true,
+      "published_point_inside": true,
+      "confidence": "approximate",
+      "scope": "named-building"
+    },
+    {
+      "code": "S10",
+      "id": "osm-way-1333533934",
+      "geos_valid": true,
+      "source_geometry_exact": true,
+      "source_version_matches": true,
+      "representative_inside": true,
+      "published_point_inside": true,
+      "confidence": "approximate",
+      "scope": "named-building"
+    },
+    {
+      "code": "S11",
+      "id": "osm-way-420533543",
+      "geos_valid": true,
+      "source_geometry_exact": true,
+      "source_version_matches": true,
+      "representative_inside": true,
+      "published_point_inside": true,
+      "confidence": "approximate",
+      "scope": "named-building"
+    },
+    {
+      "code": "S12",
+      "id": "osm-way-420534334",
+      "geos_valid": true,
+      "source_geometry_exact": true,
+      "source_version_matches": true,
+      "representative_inside": true,
+      "published_point_inside": true,
+      "confidence": "approximate",
+      "scope": "named-building"
+    },
+    {
+      "code": "S13",
+      "id": "osm-way-420534582",
+      "geos_valid": true,
+      "source_geometry_exact": true,
+      "source_version_matches": true,
+      "representative_inside": true,
+      "published_point_inside": true,
+      "confidence": "approximate",
+      "scope": "named-building"
+    },
+    {
+      "code": "S15",
+      "id": "osm-way-436983067",
+      "geos_valid": true,
+      "source_geometry_exact": true,
+      "source_version_matches": true,
+      "representative_inside": true,
+      "published_point_inside": true,
+      "confidence": "approximate",
+      "scope": "named-building"
+    }
+  ],
+  "positive_area_overlaps": [],
+  "boundary_touches": [
+    [
+      "N3",
+      "N4"
+    ],
+    [
+      "N10",
+      "N11"
+    ],
+    [
+      "N17",
+      "N20"
+    ]
+  ],
+  "original_point_checks": [
+    {
+      "code": "S3",
+      "preserved": true
+    },
+    {
+      "code": "N5",
+      "preserved": true
+    },
+    {
+      "code": "N9",
+      "preserved": true
+    },
+    {
+      "code": "N10",
+      "preserved": true
+    },
+    {
+      "code": "N11",
+      "preserved": true
+    },
+    {
+      "code": "N17",
+      "preserved": true
+    },
+    {
+      "code": "N20",
+      "preserved": true
+    }
+  ],
+  "poi_checks": [
+    {
+      "id": "kmutt-library",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-291433318",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-330412272",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-2338147612",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-4200333436",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-4348163154",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-5285410621",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-6110949757",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-6207310420",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-8027501272",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-8027521216",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-9943118120",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-9943118121",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-10225189194",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-10829060694",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-11057171459",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-11057171460",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-11057186610",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-11057186611",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-11057186614",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-11057186615",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-11057186628",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-11057186629",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-11057332583",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-11057332585",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-11057332587",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-11057332588",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-11057332589",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-11057332590",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-11057332591",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-12169701861",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-12169701863",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-12343383196",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-12343396011",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-12343396012",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-12343396013",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-12343396014",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-12343396019",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-12343396020",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-12355863620",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-12357746752",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-12357746754",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-12357746755",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-12357746756",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-node-12357746757",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-346449664",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-346450012",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-378153794",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-420051719",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-420052628",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-420054257",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-420304825",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-420306003",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-651714592",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-663113959",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-663430213",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-1333425809",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-1333425810",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-1333425816",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-1333533899",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-1333533900",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-1333533901",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-1333533903",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-1333533917",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-1333533931",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-1333533937",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-1334181339",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-1334181342",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-1334181351",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-1334181352",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-1334181353",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-1334181359",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    },
+    {
+      "id": "osm-way-1334181374",
+      "source_present": true,
+      "private": false,
+      "inside_bounds": true,
+      "field_verified": false
+    }
+  ],
+  "all_candidate_edges_match_source_slices": true,
+  "unexpected_source_fields": [],
+  "snapshot_retrieved_on": "2026-11-02"
+}

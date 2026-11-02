@@ -6,9 +6,11 @@ Open-source, community-driven 3D campus map for KMUTT Bangmod.
 
 This is a student community project, **not an official KMUTT service**. Original application code is MIT licensed; imported geodata has separate licenses.
 
-## v0.4 release candidate
+## v0.4 community preview
 
-Search → inspect → find services → get supported directions → share. This branch is for independent review; it has not been merged or released.
+Independent review findings, corrected tests and release status: [v0.4 independent release report](docs/V04-INDEPENDENT-RELEASE-REPORT.md).
+
+Search → inspect → find services → get supported directions → share. PR #9 was independently reviewed, corrected, merged and verified on GitHub Pages as a community preview. This is not a verified campus navigation service.
 
 - All original 35 building codes and URLs remain compatible. Thai/English names, abbreviations, partial matches and single English typos are searchable; exact codes rank first.
 - Source-aware building details and `?building=N9` links retain the GitHub Pages path. Unknown locations remain searchable and explicitly unresolved.
@@ -63,7 +65,7 @@ The build stages allowlisted static assets in `.site/`; no node_modules, credent
 OPENMAP_CHROMIUM=/usr/bin/chromium npx playwright test --project=desktop --project=mobile
 ```
 
-The full CI matrix passes **84/84 browser checks**, including real WebGL2 in all four projects; 46 unit tests also pass. On Linux, the CI rendering setup is reproducible with `CI=1 LIBGL_ALWAYS_SOFTWARE=1 MOZ_WEBRENDER=1 xvfb-run --auto-servernum npm run test:e2e` after installing browser dependencies. This does not substitute for physical-device tests.
+Final candidate CI passes **88/88 browser checks**, including real WebGL2 in all four projects; 47 unit tests also pass. Chromium sandboxing is enabled; CI uses Ubuntu 22.04 because the downloaded browser sandbox is blocked by the Ubuntu 24.04 AppArmor host policy. On a compatible Linux host, the CI rendering setup is reproducible with `CI=1 LIBGL_ALWAYS_SOFTWARE=1 MOZ_WEBRENDER=1 xvfb-run --auto-servernum npm run test:e2e` after installing browser dependencies. This does not substitute for physical-device tests.
 
 [Actual browser results and screenshots](docs/TEST-RESULTS.md) distinguish fixture checks, live providers and unavailable physical devices/other engines. [Complete engineering handoff](docs/COMPLETE-IMPLEMENTATION-HANDOFF.md) identifies every phase and blocker.
 
@@ -81,4 +83,4 @@ npm run generate-data
 npm run validate-data
 ```
 
-Review upstream name/version changes and every derived diff. Geodata: © OpenStreetMap contributors, ODbL; see [DATA-LICENSES.md](DATA-LICENSES.md). No KMUTNB source code, models, photos or protected university map images are reused. The public main site remains https://apichetfirm.github.io/KMUTT-OpenMap/; only an independently accepted merge to main deploys this candidate.
+Review upstream name/version changes and every derived diff. Geodata: © OpenStreetMap contributors, ODbL; see [DATA-LICENSES.md](DATA-LICENSES.md). No KMUTNB source code, models, photos or protected university map images are reused. The public main site is https://apichetfirm.github.io/KMUTT-OpenMap/. The independent report records the accepted application SHA and deployed byte verification.
