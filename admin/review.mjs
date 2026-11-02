@@ -1,3 +1,4 @@
+import {footprintPreview} from './footprint.mjs';
 import {reviewDecision} from '../src/building-evidence.mjs';
 const $=id=>document.getElementById(id),node=(t,text)=>{const n=document.createElement(t);n.textContent=text;return n;};
 const load=async p=>{const r=await fetch(p);if(!r.ok)throw Error('Evidence unavailable');return r.json();};
@@ -9,8 +10,7 @@ function render(){const id=$('building').value,b=catalog.buildings.find(b=>b.id=
  $('evidence').append(node('h3','Photo rights/source metadata'),node('pre',JSON.stringify(m,null,2)));
  if(!m?.photo)$('evidence').append(node('p','No approved reusable photograph. Rights/identity remain unresolved.'));
  for(const f of footprints.features.filter(f=>f.properties.building_code===id)){
- const ring=f.geometry.type==='Polygon'?f.geometry.coordinates[0]:f.geometry.coordinates[0][0],xs=ring.map(p=>p[0]),ys=ring.map(p=>p[1]),minx=Math.min(...xs),miny=Math.min(...ys),sx=Math.max(...xs)-minx,sy=Math.max(...ys)-miny;
- const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 360 200');svg.setAttribute('aria-label','Unaccepted OSM footprint '+f.id);const poly=document.createElementNS(svg.namespaceURI,'polygon');poly.setAttribute('points',ring.map(p=>`${10+(p[0]-minx)/sx*340},${190-(p[1]-miny)/sy*180}`).join(' '));svg.append(poly);$('evidence').append(svg,node('pre',JSON.stringify(f.properties,null,2)));
+ const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 360 200');svg.setAttribute('aria-label','Unaccepted OSM footprint '+f.id);const poly=document.createElementNS(svg.namespaceURI,'polygon');poly.setAttribute('points',footprintPreview(f.geometry));svg.append(poly);$('evidence').append(svg,node('pre',JSON.stringify(f.properties,null,2)));
  }
  $('evidence').append(node('h3','AI suggestions (unaccepted)'),node('pre',JSON.stringify(analysis.candidates.filter(c=>c.building_code===id),null,2)),node('h3','Canonical record'),node('pre',JSON.stringify(b,null,2)));
 }
