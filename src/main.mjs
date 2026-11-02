@@ -88,6 +88,7 @@ function renderDetail() {
   $('map-propose').disabled=!state.mapReady;
   $('detail-caveat').textContent=mapped?'จุดนี้ยังไม่ผ่านการสำรวจ ทางเดินและทางเข้าสำหรับผู้ใช้วีลแชร์ยังไม่มีข้อมูลยืนยัน การนำทางภายนอกอาจไม่ตรงทางเข้าจริง':'รายชื่อยังค้นหาและแชร์ได้ โปรดเสนอพิกัดพร้อมหลักฐานเพื่อให้ผู้ดูแลตรวจสอบ';
   $('detail-conflict').classList.toggle('hidden',!b.name_conflict);
+  $('detail-department').classList.toggle('hidden',!b.department);
   $('detail-department').textContent=b.department||'คณะ / หน่วยงาน: ยังไม่มีข้อมูลยืนยันแยกจากชื่ออาคาร';
   $('entrance-status').textContent=b.entrances.length?`${b.entrances.length} ทางเข้าในข้อมูล · ตรวจหลักฐานก่อนเดินทาง`:'ยังไม่มีทางเข้าสาธารณะที่สำรวจยืนยัน';
   renderNavigation();
