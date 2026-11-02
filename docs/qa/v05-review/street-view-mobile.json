@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "context": "Pixel 7 browser emulation, not a physical phone",
+  "url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=13.65439%2C100.49433",
+  "opener_null": true,
+  "google_imagery_fetched": false,
+  "scope": "Outgoing supported URL handoff only; no panorama availability or building identity claim"
+}

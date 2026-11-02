@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-02",
+  "scope": "HTML reference pages only; no photographs fetched or rights inferred",
+  "results": [
+    {
+      "code": "N9",
+      "source": "https://bgm.kmutt.ac.th/MapNavi/N9.html",
+      "status": 200,
+      "bytes": 809,
+      "reference_digest_matches": true,
+      "photograph_copied": false
+    },
+    {
+      "code": "N10",
+      "source": "https://bgm.kmutt.ac.th/MapNavi/N10.html",
+      "status": 200,
+      "bytes": 811,
+      "reference_digest_matches": true,
+      "photograph_copied": false
+    },
+    {
+      "code": "N11",
+      "source": "https://bgm.kmutt.ac.th/MapNavi/N11.html",
+      "status": 200,
+      "bytes": 811,
+      "reference_digest_matches": true,
+      "photograph_copied": false
+    },
+    {
+      "code": "N16",
+      "source": "https://bgm.kmutt.ac.th/MapNavi/N16.html",
+      "status": 200,
+      "bytes": 803,
+      "reference_digest_matches": true,
+      "photograph_copied": false
+    },
+    {
+      "code": "N17",
+      "source": "https://bgm.kmutt.ac.th/MapNavi/N17.html",
+      "status": 200,
+      "bytes": 808,
+      "reference_digest_matches": true,
+      "photograph_copied": false
+    },
+    {
+      "code": "N20",
+      "source": "https://bgm.kmutt.ac.th/MapNavi/N20.html",
+      "status": 200,
+      "bytes": 800,
+      "reference_digest_matches": true,
+      "photograph_copied": false
+    }
+  ]
+}

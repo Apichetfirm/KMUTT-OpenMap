@@ -1,0 +1,37 @@
+
+> kmutt-openmap@0.5.0-rc.1 check
+> node scripts/check.mjs
+
+
+> kmutt-openmap@0.5.0-rc.1 validate-data
+> node scripts/validate-data.mjs
+
+{
+  "total": 35,
+  "coordinates": 20,
+  "footprints": 0,
+  "verified": 0,
+  "approximate": 20,
+  "unmapped": 15,
+  "measured_heights": 0,
+  "candidate_footprints": 18,
+  "places": 73,
+  "verified_routes": 0
+}
+
+> kmutt-openmap@0.5.0-rc.1 validate-media
+> node scripts/validate-building-media.mjs
+
+Image metadata valid; 0 reviewed derivatives. Missing/unknown photos remain explicit.
+
+> kmutt-openmap@0.5.0-rc.1 verify-vendor
+> node scripts/verify-vendor.mjs
+
+Verified MapLibre 6.16.0 assets against SHA-256 manifest and locked npm package.
+
+> kmutt-openmap@0.5.0-rc.1 build
+> node scripts/build.mjs
+
+Verified MapLibre 6.16.0 assets against SHA-256 manifest and locked npm package.
+Image metadata valid; 0 reviewed derivatives. Missing/unknown photos remain explicit.
+Static GitHub Pages site staged in .site (no npm runtime, tests, credentials or node_modules).

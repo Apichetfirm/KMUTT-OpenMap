@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-02",
+  "application_merge": "a854d90488c3377840edd1a506a3639ddfba9cb0",
+  "url": "https://apichetfirm.github.io/KMUTT-OpenMap/?building=N9&review=v05-recovery",
+  "browser": "156.0.8078.4",
+  "sandbox": true,
+  "expected_initial_failure": "Deliberately blocked same-origin vendor module in this fresh context only",
+  "directory_search_and_missing_photo_during_failure": true,
+  "explicit_retry_loads_real_module_worker_tiles": true,
+  "preserved_selection": "N9",
+  "status": "passed"
+}

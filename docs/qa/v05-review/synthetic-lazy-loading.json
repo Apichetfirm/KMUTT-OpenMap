@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "scope": "Private response fixtures only; no photograph or synthetic image file published",
+  "selected_card_image_only": true,
+  "gallery_deferred_until_open": true,
+  "unselected_building_image_not_requested": true,
+  "attribution_retained": true
+}

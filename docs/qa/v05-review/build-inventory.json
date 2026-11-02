@@ -1,0 +1,891 @@
+{
+  "commit": "4ef4d0c6636a5601b508fb7222d42aeafe2d9806",
+  "private_work_canary_excluded": true,
+  "unlisted_asset_canary_excluded": true,
+  "admin_excluded": true,
+  "approved_image_count": 0,
+  "unrelated_root_file_excluded": true,
+  "files_checked": 176,
+  "files": [
+    {
+      "file": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "data/building-footprint-candidates.geojson",
+      "bytes": 51446,
+      "sha256": "ded5e2d0a05ac16b7113e384bd6992d505eb8fb21816b436959c90d8e665f43d"
+    },
+    {
+      "file": "data/building-footprints.geojson",
+      "bytes": 56,
+      "sha256": "7626ea83caeb18d3dad503b15bfd7eb88c4c13ba8440fab45c456f9288f03cce"
+    },
+    {
+      "file": "data/building-media.json",
+      "bytes": 14040,
+      "sha256": "30f643645f6701f3d83894b573991fd874a26477aded4689f09ec0388b7b2109"
+    },
+    {
+      "file": "data/building-rendering.json",
+      "bytes": 18821,
+      "sha256": "2b7308938195804acc1421adfc04e28414c0fd1fdecea379ba18f9ac7c541b4e"
+    },
+    {
+      "file": "data/buildings-geocoded.geojson",
+      "bytes": 12554,
+      "sha256": "ada88ccaccb0185c46820a7b059dcf329fa285b2e52e2ff8c0b5e24cf5b82980"
+    },
+    {
+      "file": "data/buildings.json",
+      "bytes": 66424,
+      "sha256": "3749a895fd42e124a1d67313cc541d35081b8cd84baad2ff4ca3e0e6b3a768af"
+    },
+    {
+      "file": "data/coverage-report.json",
+      "bytes": 3321,
+      "sha256": "1ed18cc8ef1ee38a020a1e464fee4850111854328092df494f83e4ce589fa4d2"
+    },
+    {
+      "file": "data/evidence/building-photography-coverage.json",
+      "bytes": 21564,
+      "sha256": "f2c45955603f808484ed7d66ebb5990a54a6144c1395142d11f2cc6ce71a4357"
+    },
+    {
+      "file": "data/evidence/osm-campus-snapshot.json",
+      "bytes": 239068,
+      "sha256": "cfdc35d79d0121cf3f2b3354b06f823b5411d53c661c23da3cf3d96f118be811"
+    },
+    {
+      "file": "data/evidence/photography-research.json",
+      "bytes": 709,
+      "sha256": "a8e9277cea15ef5e06684e9b5a816126a63ca7875347bb4aa5fe2f1e2308308b"
+    },
+    {
+      "file": "data/evidence/source-review.json",
+      "bytes": 2513,
+      "sha256": "18c63de03acafcda6ffc92257ee002b962b0a9e489e6a99c93cc3710a4ba7bb8"
+    },
+    {
+      "file": "data/height-overrides.json",
+      "bytes": 43,
+      "sha256": "397ec12fc4b6b0e9610f205a6d2389028b282ac38915455f16fb7df11ad524c0"
+    },
+    {
+      "file": "data/mapping-status.csv",
+      "bytes": 6040,
+      "sha256": "517b3b4012ed6a60e744f00744e06caa60b2d6a921a90327dd6fe65a99f570b4"
+    },
+    {
+      "file": "data/pedestrian-graph-candidates.json",
+      "bytes": 229333,
+      "sha256": "1d8920a68a6cedf388c02a1cad327df6e3ba911a38fbb8a527fd5f2ee9aa1674"
+    },
+    {
+      "file": "data/pedestrian-graph.json",
+      "bytes": 75,
+      "sha256": "cbdb05ae9d59c6e8eb47ba7cb3f7fe140ef57094c097345f6d191972745f7e01"
+    },
+    {
+      "file": "data/places.geojson",
+      "bytes": 107249,
+      "sha256": "84ecefbc3db545d0dbd152fde117462572aa72cff4f54c9cefd6e59e9c841390"
+    },
+    {
+      "file": "data/README.md",
+      "bytes": 1644,
+      "sha256": "75ce19afe094c2f78c5305e5705592189db173f9df64f65ae6cd2bf4c1dc1a4b"
+    },
+    {
+      "file": "data/walkway-candidates.geojson",
+      "bytes": 132096,
+      "sha256": "e566cd642988c5f17a0134e0c2554644912745ece6d966fd04f83b46bb300acb"
+    },
+    {
+      "file": "data/walkways.geojson",
+      "bytes": 56,
+      "sha256": "7626ea83caeb18d3dad503b15bfd7eb88c4c13ba8440fab45c456f9288f03cce"
+    },
+    {
+      "file": "DATA-LICENSES.md",
+      "bytes": 3839,
+      "sha256": "ae1e32fc1512bfd710c1deb5907679feea09582ec59e1a66b5f19321d14d6305"
+    },
+    {
+      "file": "docs/ARCHITECTURE.md",
+      "bytes": 5289,
+      "sha256": "1c81d45d409397f4427a6741661ab91272d3f6a86bbc51a79ebd95b552fb68b7"
+    },
+    {
+      "file": "docs/BASELINE-AUDIT.md",
+      "bytes": 2200,
+      "sha256": "693e80dc06afcad761b6d5665b7e27b9474b48b2c46fc8695eca7e529d87cb67"
+    },
+    {
+      "file": "docs/COMMUNITY-GUIDE.md",
+      "bytes": 2393,
+      "sha256": "bc580f266ec537113c631b22027d85ae79e7bd12b23c3a618c924fb9f199d78e"
+    },
+    {
+      "file": "docs/COMPLETE-IMPLEMENTATION-HANDOFF.md",
+      "bytes": 16298,
+      "sha256": "9dc4add7a647a2758f72ee07b834e8a6bee6e06feadc9922c9c663832d2d1622"
+    },
+    {
+      "file": "docs/DATA-COVERAGE.md",
+      "bytes": 5623,
+      "sha256": "2734db4b0829cb68b8d617144615f605214d522c439c099dc0d7a2069766c59a"
+    },
+    {
+      "file": "docs/DATA-MODEL.md",
+      "bytes": 6245,
+      "sha256": "f63ee9294baa1dc1683fa512b78491236d5affc42eb5f070fbdc2022773c6d5c"
+    },
+    {
+      "file": "docs/DATA-STATUS.md",
+      "bytes": 1938,
+      "sha256": "da0d0e78973902dffca530e4b615aa0ef31b107d1868d57f7f21835b247d0d87"
+    },
+    {
+      "file": "docs/FIELD-SURVEY.md",
+      "bytes": 1905,
+      "sha256": "e775b9494031dfb75d3456ccebce61372c5c2fc4940f37abea519ae779fda863"
+    },
+    {
+      "file": "docs/HEIGHT-QA.md",
+      "bytes": 2720,
+      "sha256": "0c5282c8bd0ebc92123b799c2f440b7176137e532bf37f25ddb05f4c584f63a2"
+    },
+    {
+      "file": "docs/IMPLEMENTATION-HANDOFF.md",
+      "bytes": 9801,
+      "sha256": "c69957dbab1d99046a5cbd1e02d3843a9c022eaa2c52c4f23456ed77f64284ef"
+    },
+    {
+      "file": "docs/INDEPENDENT-REVIEW.md",
+      "bytes": 14210,
+      "sha256": "1d3a3213cb0ebad1881e3f565e67261aea169fbc2cb8dda688a1dde807cde849"
+    },
+    {
+      "file": "docs/MAPPING-METHODOLOGY.md",
+      "bytes": 4523,
+      "sha256": "057ce741093db9f2cb0afd8f673b7c8277bdd82a76163a5eacdc0ee153270891"
+    },
+    {
+      "file": "docs/NAVIGATION-METHODOLOGY.md",
+      "bytes": 3277,
+      "sha256": "4e29b3b3809b5279baef15c3c6b6f22d7fd8c91a1d970533026262d052a08480"
+    },
+    {
+      "file": "docs/PERFORMANCE.md",
+      "bytes": 3369,
+      "sha256": "680e0f42d1b644a21aff61c25bed1411493ec5c94e8b982fe0e9157faf8ced1b"
+    },
+    {
+      "file": "docs/PUBLISH-GITHUB.md",
+      "bytes": 2381,
+      "sha256": "58bdff0edf57946c94858e30c2fbb66877e9c473ea7e585f30c1193696ef8b74"
+    },
+    {
+      "file": "docs/qa/2d-desktop.png",
+      "bytes": 211636,
+      "sha256": "2f45819aed6611ec263e6b2c6f47037383c0429c74ca09d7b2f4e179ba0882e9"
+    },
+    {
+      "file": "docs/qa/after-desktop.png",
+      "bytes": 662613,
+      "sha256": "a4e6ef02f4eddf71ab19a420d155a8b834adea97c72851a70bf84a30d8874980"
+    },
+    {
+      "file": "docs/qa/after-mobile.png",
+      "bytes": 103362,
+      "sha256": "b9ff82b3bd62ddd93b765b54adcd23db2e7491e5a527f36243dc3b177604ae5b"
+    },
+    {
+      "file": "docs/qa/before-desktop.png",
+      "bytes": 758819,
+      "sha256": "0c137394b7d5c21b6b0ad212599c130608d16b28cfd89e2b4e1dd8b6702e1591"
+    },
+    {
+      "file": "docs/qa/before-mobile.png",
+      "bytes": 82342,
+      "sha256": "a80fbf683bf498d21c0bd093a96befaed5cb8349751543f2ce1c084aa3b55ba8"
+    },
+    {
+      "file": "docs/qa/landscape.png",
+      "bytes": 80522,
+      "sha256": "8f629865f1304ed243b1462002ae3deec26c243fb09fed7907d95e6607a557db"
+    },
+    {
+      "file": "docs/qa/live-metrics.json",
+      "bytes": 3655,
+      "sha256": "1bcfbdd913ab941af77966aacf970e10327efe64bfcec720c3de606d4659182b"
+    },
+    {
+      "file": "docs/qa/night-desktop.png",
+      "bytes": 226929,
+      "sha256": "04073d294097e6c32e0051eb5d3a16b31aa4d1bd7f54679cd260d6793725df3c"
+    },
+    {
+      "file": "docs/qa/proposal-mobile.png",
+      "bytes": 85157,
+      "sha256": "e3421b335ded04a02453abbd9ff2cbdc7df33b558147e400cb3aa764450976f6"
+    },
+    {
+      "file": "docs/qa/review/desktop-2d.png",
+      "bytes": 202873,
+      "sha256": "8f4f738bb69989293d2b0e84af3b10f18aca1e97db2d1d29fd9c4a32d5982b2b"
+    },
+    {
+      "file": "docs/qa/review/desktop-night.png",
+      "bytes": 228186,
+      "sha256": "8a237197f31fa5980b1d9abd966835861d9212d3a6f1e23c6d885dcd64a9e353"
+    },
+    {
+      "file": "docs/qa/review/desktop-selected.png",
+      "bytes": 314241,
+      "sha256": "661798c50dfe0a930c41d841bc53f0b93430866a289ef956476acbc81f70dfbe"
+    },
+    {
+      "file": "docs/qa/review/live-metrics.json",
+      "bytes": 24012,
+      "sha256": "65ac1caa0f25e5bbd270b9c037834a7d7d661906a1c0d8c4e6afbf3993e3fd4f"
+    },
+    {
+      "file": "docs/qa/review/mobile-landscape.png",
+      "bytes": 86246,
+      "sha256": "02e70620dd6dd118eb9f5a89407cac44923d520b7415c888877bc42f7b38ef20"
+    },
+    {
+      "file": "docs/qa/review/mobile-narrow.png",
+      "bytes": 54048,
+      "sha256": "69bdb440ab9dc6d01295f0069a0f6a20e335a48b598d9003a28bb4017d8a77dc"
+    },
+    {
+      "file": "docs/qa/review/mobile-portrait.png",
+      "bytes": 71358,
+      "sha256": "25f3d44016559d7dda9d310c1dde25b79a35629fec92c414f14e1cf96313d47a"
+    },
+    {
+      "file": "docs/qa/review/small-landscape.png",
+      "bytes": 74137,
+      "sha256": "c5f82b0f7023237aada745ace0f17e771c63b85c7d491149dada577429cd698e"
+    },
+    {
+      "file": "docs/qa/review/tablet.png",
+      "bytes": 153217,
+      "sha256": "0e43f28e1e4a08aefad97b4efa4628e679ab42d5dd767cf7a187d9b3c78bf063"
+    },
+    {
+      "file": "docs/qa/selected-desktop.png",
+      "bytes": 310095,
+      "sha256": "2ff8515ca82a2f112b04921c7cdf6d4199d448ef5eb52832fb8458ed1276c838"
+    },
+    {
+      "file": "docs/qa/selected-mobile.png",
+      "bytes": 75556,
+      "sha256": "7acdb3d7b40cff2708e7d519c8e657de8fe1ece108d47189d2b174dc379b106a"
+    },
+    {
+      "file": "docs/qa/v04/2d.png",
+      "bytes": 259484,
+      "sha256": "c9dbcafb8fa82ee7386519dc02bd504def55ecd8ee0fa9e29a92407ea472e427"
+    },
+    {
+      "file": "docs/qa/v04/before/mobile.png",
+      "bytes": 72624,
+      "sha256": "9446f7ec86a912848622243b3e45b48a7d177c4734de5a9ca172983e05e70214"
+    },
+    {
+      "file": "docs/qa/v04/before/overview.png",
+      "bytes": 107969,
+      "sha256": "c48428466d94a4ee8a9eb36cdc17d6616d597e1b1e79a45e40369006dbdb0fd7"
+    },
+    {
+      "file": "docs/qa/v04/before/selected-n9.png",
+      "bytes": 305453,
+      "sha256": "9546ae81f5acc5309aadfe5c82eb33baae0c4bd49d77c8b007fd77d6ad3e95b6"
+    },
+    {
+      "file": "docs/qa/v04/browser-health.json",
+      "bytes": 2989,
+      "sha256": "69c3b354dc171c3ad9a49ce24f0f8bfff1b16bc6bc87ae63b033152a2fd10cbe"
+    },
+    {
+      "file": "docs/qa/v04/candidate-preview.png",
+      "bytes": 436218,
+      "sha256": "670720a427f8ffa59789b86b3c506afe908bc9ffee24ad893c002e388d0698db"
+    },
+    {
+      "file": "docs/qa/v04/chromium-e2e.txt",
+      "bytes": 6470,
+      "sha256": "c618fcda646b6507d1beb2fa33251ebf94e68ace8f950fdb20e4f1d3c6ded2c0"
+    },
+    {
+      "file": "docs/qa/v04/community-review.png",
+      "bytes": 264881,
+      "sha256": "4e52a191ad8c791dd47f16932914af01a9ae174bd5d8d283f3e0228f5294db9f"
+    },
+    {
+      "file": "docs/qa/v04/coverage.png",
+      "bytes": 411814,
+      "sha256": "383ac6a817713c0034ee1ac883ce5b8eecd380f2819b38ed4657a9ccb93aaa80"
+    },
+    {
+      "file": "docs/qa/v04/cross-browser-ci.json",
+      "bytes": 1933,
+      "sha256": "521e3d84038660e24ca46e2652ab095eb7500fa432e939f7ff516bf48966a264"
+    },
+    {
+      "file": "docs/qa/v04/mobile-candidate-preview.png",
+      "bytes": 88340,
+      "sha256": "05bf5b7b14c6b91b4e4be69229edc5513b793f1dee0f94f3fb87f6b35fa390de"
+    },
+    {
+      "file": "docs/qa/v04/mobile-landscape.png",
+      "bytes": 95627,
+      "sha256": "42bb117421726b1f89563ea07cc1fca26d64f91c5c868b828a10e06b3413a0e5"
+    },
+    {
+      "file": "docs/qa/v04/mobile-narrow.png",
+      "bytes": 61585,
+      "sha256": "f72c69e2fa02d634ac32895ed1804dff5d65ae5549cb8e3bbc48491eddfe32f6"
+    },
+    {
+      "file": "docs/qa/v04/mobile-portrait.png",
+      "bytes": 83675,
+      "sha256": "5ddfa4fa23b404d00dd93ea7f72274a54387d5b8c5a8cd68a6a50a6dcf60b911"
+    },
+    {
+      "file": "docs/qa/v04/navigation-unverified.png",
+      "bytes": 390011,
+      "sha256": "1c38d2ace084a7fdf9b400f4c1f7c991c573e024c0ef6c664783e7c40e95f626"
+    },
+    {
+      "file": "docs/qa/v04/night.png",
+      "bytes": 295351,
+      "sha256": "8f0f1bd74129b80133d8f9e511b891f56a13131befe7d11454d18f6a98ee71a0"
+    },
+    {
+      "file": "docs/qa/v04/npm-audit.json",
+      "bytes": 382,
+      "sha256": "25b2a7b35dda8132689a711fbaf06e0a8e5db8f86a2e95ecfeb35758851778bf"
+    },
+    {
+      "file": "docs/qa/v04/overview.png",
+      "bytes": 652330,
+      "sha256": "52e374688c2054614a21279d90a56622eaa6e9085378c443f6cbfef8013c40cc"
+    },
+    {
+      "file": "docs/qa/v04/performance-exploratory.json",
+      "bytes": 3287,
+      "sha256": "86a26706d9a23b7a9c2c47c3cfb98983c953881548ed58005170a19e9f097766"
+    },
+    {
+      "file": "docs/qa/v04/performance.json",
+      "bytes": 3366,
+      "sha256": "8e6b8d0c307daeb6494fbe9e5fdfc516e013146ed5044aed7f0666f08a9c549b"
+    },
+    {
+      "file": "docs/qa/v04/poi-details.png",
+      "bytes": 449960,
+      "sha256": "9b38100f9fdf1a0496d88f17119aaf60111c2c71d8b884a8bb379b4f7616eab8"
+    },
+    {
+      "file": "docs/qa/v04/poi-search.png",
+      "bytes": 405796,
+      "sha256": "02df6772c96cd228f77882e3fcabd39c3e3068b7225a07f7c1526567dd2c0b11"
+    },
+    {
+      "file": "docs/qa/v04/preview-checks.txt",
+      "bytes": 901,
+      "sha256": "27f62a76f19ef5f43f1d693ef1b9ecfeea6640da195031ada0fee3befccee6a8"
+    },
+    {
+      "file": "docs/qa/v04/selected-n10.png",
+      "bytes": 364305,
+      "sha256": "1fe2eb47d30a3b59c927092f1077b8e7cbc86e07b552d157b998ff6cf1c3f3df"
+    },
+    {
+      "file": "docs/qa/v04/selected-n16.png",
+      "bytes": 390133,
+      "sha256": "3d7ff989a4f5a4022f2211b66afc263d6da01faf3dd0aa8b6ff1d1071c8a7862"
+    },
+    {
+      "file": "docs/qa/v04/selected-n9.png",
+      "bytes": 314605,
+      "sha256": "42e5fbd26ab1ae007a7338a93855f901f27ba39603f63f793ad08ee4672c11bd"
+    },
+    {
+      "file": "docs/qa/v04/small-landscape.png",
+      "bytes": 83542,
+      "sha256": "0946fdb8b67830c1252f5d9cbb0ac545f7f16c2325e7675cbf7ef556ee822fd7"
+    },
+    {
+      "file": "docs/qa/v04/tablet.png",
+      "bytes": 200973,
+      "sha256": "251a3b20c194d5627e7766c31aff9d0c4f761bcad8e5c9f9b9811e89463271fa"
+    },
+    {
+      "file": "docs/qa/v04/unit-tests.txt",
+      "bytes": 4292,
+      "sha256": "f9eda2bdfca6adc6bb64581a6e0292b1d09785c56f5de7d20de5177c652c63a5"
+    },
+    {
+      "file": "docs/qa/v04-review/2d.png",
+      "bytes": 243169,
+      "sha256": "17ab27eff470bfcd845d3262809ddc6b23c694fb4e5e9bd065a9e4618be88d05"
+    },
+    {
+      "file": "docs/qa/v04-review/browser-health.json",
+      "bytes": 2965,
+      "sha256": "e12c4f3c97205d8c5a76dae48ce4d4ee96d9361cc347122d6fc46e8f7367ea34"
+    },
+    {
+      "file": "docs/qa/v04-review/candidate-preview.png",
+      "bytes": 426491,
+      "sha256": "d48b1f7b6475ae8acad7980fd370afc70dbb69cbb66726a1c8884bbd6e3b60be"
+    },
+    {
+      "file": "docs/qa/v04-review/chromium-e2e.txt",
+      "bytes": 7508,
+      "sha256": "87a55a28d0e85abb5afbceeba158d13db21eb567246f8aa627ff3b47b33f87ad"
+    },
+    {
+      "file": "docs/qa/v04-review/community-review.png",
+      "bytes": 243790,
+      "sha256": "18603ec8be48e68cc4a45f8c5917f6db1e1de9bcbe443e6ce9909ea5e4464f3d"
+    },
+    {
+      "file": "docs/qa/v04-review/coverage.png",
+      "bytes": 407341,
+      "sha256": "efd4c5a4bb348bfa3abc94103a4f8ee0cc66be153fab434f8c1a850fa0a545ce"
+    },
+    {
+      "file": "docs/qa/v04-review/current-osm-samples.json",
+      "bytes": 1027,
+      "sha256": "22a816b5ef823fa9c2db0ffa681c398fef032dfb0dbde2c9b11f0bd90b19cf46"
+    },
+    {
+      "file": "docs/qa/v04-review/gis-audit.json",
+      "bytes": 19104,
+      "sha256": "5ae2f5abf0b48b4911be526b0da200d099b8d50f9835b49765d924132638995c"
+    },
+    {
+      "file": "docs/qa/v04-review/mobile-candidate-preview.png",
+      "bytes": 83125,
+      "sha256": "ae5d0f0894460cf14ad320755f558b689df74c0628fdfea56675cb14e07d6f2f"
+    },
+    {
+      "file": "docs/qa/v04-review/mobile-landscape.png",
+      "bytes": 86485,
+      "sha256": "2da4a078280c59b91574d605bb79685c6d38babe289afb2e8c00dc8438eecdb4"
+    },
+    {
+      "file": "docs/qa/v04-review/mobile-narrow.png",
+      "bytes": 54830,
+      "sha256": "8efe27fa21caa81a7121653362afbd240eb3a48e4249a96dda4c658b5c7940fd"
+    },
+    {
+      "file": "docs/qa/v04-review/mobile-portrait.png",
+      "bytes": 76318,
+      "sha256": "bc93a568d82994fa6a336816c0dee7f2c81a6e926e61ab71b0e29731b8717a6c"
+    },
+    {
+      "file": "docs/qa/v04-review/navigation-unverified.png",
+      "bytes": 378551,
+      "sha256": "e710df60a907b6ea08b62bc44e7483c053f41b8c3b71f136b11f39d046bf46de"
+    },
+    {
+      "file": "docs/qa/v04-review/night.png",
+      "bytes": 276631,
+      "sha256": "8140c0e31c9f218ccc0524405211a5c9aec1629e5e32802a5449456d96579e1c"
+    },
+    {
+      "file": "docs/qa/v04-review/npm-audit.json",
+      "bytes": 360,
+      "sha256": "47ed08e2f907170440e368c42e05e926e4fecfc2a73c2b8d855058a6c7d5ab35"
+    },
+    {
+      "file": "docs/qa/v04-review/overview.png",
+      "bytes": 642045,
+      "sha256": "4205482638073828b01b6d09bf84f19bf83d460c59065e4c95f7c6ce10c75535"
+    },
+    {
+      "file": "docs/qa/v04-review/performance.json",
+      "bytes": 77086,
+      "sha256": "f040ddd67784e17a9e660babb347dbadd496a659cd9b16f2a5ca69cc2de309de"
+    },
+    {
+      "file": "docs/qa/v04-review/poi-details.png",
+      "bytes": 430969,
+      "sha256": "d21ba5dc431e650368967397087cd1cee2b4a6f4ad93209fa4ea6e57f9f06d01"
+    },
+    {
+      "file": "docs/qa/v04-review/poi-search.png",
+      "bytes": 403312,
+      "sha256": "6f4a9737cdc3c56ea69240a867d2adea5c04813fe50beb40a1e7bdae55ea8a43"
+    },
+    {
+      "file": "docs/qa/v04-review/production-desktop.png",
+      "bytes": 211181,
+      "sha256": "d4534cad06f53e9fd36604b43f50292365d08483ae947ca5026228369eb0b44f"
+    },
+    {
+      "file": "docs/qa/v04-review/production-landscape.png",
+      "bytes": 73646,
+      "sha256": "c603e59e250b007a27515ce714cc6378cdbe8b2d29468081849a5e7b654956bf"
+    },
+    {
+      "file": "docs/qa/v04-review/production-portrait.png",
+      "bytes": 74587,
+      "sha256": "963e30af69dd01d283196b4af665ecb8f11f15287bedf5a6bb5403c1ad97defb"
+    },
+    {
+      "file": "docs/qa/v04-review/production-recovery.json",
+      "bytes": 507,
+      "sha256": "4fe8ddf614c84be5598efea79b1b9d804c54436bb6a74383d6c83e077ca83c8c"
+    },
+    {
+      "file": "docs/qa/v04-review/production-smoke.json",
+      "bytes": 11027,
+      "sha256": "843afc5c377691262ecdde92e60566178261b4707ca6aa569b0059ebcf1e32b3"
+    },
+    {
+      "file": "docs/qa/v04-review/selected-n10.png",
+      "bytes": 350201,
+      "sha256": "104cf6aa9fd0312e0562ac13b9d43052139dbdad96bb59755f1f8aa42c1a801d"
+    },
+    {
+      "file": "docs/qa/v04-review/selected-n11.png",
+      "bytes": 359343,
+      "sha256": "b5fe1503382203c6b5fd82908113f5f0833df38090d19225eb13e1b069b19932"
+    },
+    {
+      "file": "docs/qa/v04-review/selected-n16.png",
+      "bytes": 379309,
+      "sha256": "023f921ff1110c5e82c1c0c2f77bb2942a92ed959bde6f1fa43cc7f47077d3a4"
+    },
+    {
+      "file": "docs/qa/v04-review/selected-n17.png",
+      "bytes": 378078,
+      "sha256": "87a4c09911ee74f4d8ff11f145f1026463766a8e2eb6ffd50a5296b20821724e"
+    },
+    {
+      "file": "docs/qa/v04-review/selected-n20.png",
+      "bytes": 366710,
+      "sha256": "61bcee159931f58a879356205c434ce48ec49bccb87f70dd7f0de19b1e13c1fe"
+    },
+    {
+      "file": "docs/qa/v04-review/selected-n9.png",
+      "bytes": 298299,
+      "sha256": "0f52245ddc70ed0bf582890da963ac4f95b1292bbe886407156eb44714d6d7f6"
+    },
+    {
+      "file": "docs/qa/v04-review/small-landscape.png",
+      "bytes": 74103,
+      "sha256": "4871ca5f22fcfdb227b0cb7c81f17581c03fcaee254bfa077952d9339fda0765"
+    },
+    {
+      "file": "docs/qa/v04-review/tablet.png",
+      "bytes": 182943,
+      "sha256": "f2684ccdf23703c31801e2b601f885fa83412ed9e0635be8ed5c07a03f1cef89"
+    },
+    {
+      "file": "docs/qa/v04-review/unit-tests.txt",
+      "bytes": 4290,
+      "sha256": "94568d29739d69aa6355feda30660b79d3d5f0dca99825f9621e740059f05804"
+    },
+    {
+      "file": "docs/qa/v04-review/webkit-e2e.txt",
+      "bytes": 3612,
+      "sha256": "6e2434550b381b3dc42969d9c4c177ea912b473061d6466fd9735ca8ff5b6e4f"
+    },
+    {
+      "file": "docs/qa/v05/browser-health.json",
+      "bytes": 2977,
+      "sha256": "80a3205900375835b56c94254c70bae2dd5a4406c77cdd49d291750e6a7adee9"
+    },
+    {
+      "file": "docs/qa/v05/desktop-n9.png",
+      "bytes": 315558,
+      "sha256": "b23b5a43bd5151c44b5c62a251cfeafc5992bbf1b1a10ce85bee2be0e88c2f14"
+    },
+    {
+      "file": "docs/qa/v05/details-browser.txt",
+      "bytes": 2083,
+      "sha256": "fee802f73b79662129a79eac73dc41f85587df481b2ef91ecd8b18a79482aee9"
+    },
+    {
+      "file": "docs/qa/v05/mobile-details.png",
+      "bytes": 80102,
+      "sha256": "7bb6b7607f7b5559a7ee03e636e86d33ce817cd66440d2d5f27d78f042388ca0"
+    },
+    {
+      "file": "docs/qa/v05/optimization.txt",
+      "bytes": 619,
+      "sha256": "03cef7ae569f26c236244a0bb98df77a9346cb78e5816a9bd178376606ae8aa1"
+    },
+    {
+      "file": "docs/qa/v05/performance-exploratory.json",
+      "bytes": 92433,
+      "sha256": "d67e0f85c0aa5b788a28298f2de39dc2c53cf6b2c26fea62ced49f67867c7093"
+    },
+    {
+      "file": "docs/qa/v05/performance.json",
+      "bytes": 94537,
+      "sha256": "8d766b2249b969fd708c66b2bd830cb828170a3ee578430c45b362be2ba73408"
+    },
+    {
+      "file": "docs/qa/v05/readiness-recheck.txt",
+      "bytes": 544,
+      "sha256": "c329424cee4b9bcbf7420fbed423efe51b8f473b622a5cc72c4ad57ceb6c7ab8"
+    },
+    {
+      "file": "docs/qa/v05/synthetic-pixel-extraction.json",
+      "bytes": 663,
+      "sha256": "c6502a474f15018172f69c7bd84de6b1d1376c551ee1227717b7eede62c805a1"
+    },
+    {
+      "file": "docs/qa/v05/unit-tests.txt",
+      "bytes": 5052,
+      "sha256": "4d8fdc674b4b2531f3b9cbffe8ea8a2952b6f0cfb991a585f22d04642793344a"
+    },
+    {
+      "file": "docs/qa/v05-review/desktop-metadata.png",
+      "bytes": 293107,
+      "sha256": "bd8ff3bd7a0c7b9f02949151cec9c5548abfc8e76fd49f2314f17b0f81e1e8bb"
+    },
+    {
+      "file": "docs/qa/v05-review/live-browser-health.json",
+      "bytes": 11102,
+      "sha256": "33538252be9ed216e22e9bb45fd1035b75f163c2095c3ce6969a04704ce26a7d"
+    },
+    {
+      "file": "docs/qa/v05-review/mobile-landscape.png",
+      "bytes": 85523,
+      "sha256": "3b230e565c1bb649b76b0845806430b65352f299571ac1baee1e9eb028d1be9c"
+    },
+    {
+      "file": "docs/qa/v05-review/mobile-narrow.png",
+      "bytes": 54517,
+      "sha256": "2ca92c3718f6b64b9c606ba9695020b415b4452369f011bbc851fc933a1cf15b"
+    },
+    {
+      "file": "docs/qa/v05-review/mobile-portrait.png",
+      "bytes": 71030,
+      "sha256": "ac9b5e4fc454c8d2bac7873823ec6b893571039fd4c423c4c38de2fbb0c5bfa2"
+    },
+    {
+      "file": "docs/qa/v05-review/mobile-street-view.png",
+      "bytes": 69736,
+      "sha256": "0b715cf13b162f22e959c73f1cab092f34b3a1dd42cc4a9ed2dd1f76405d70d1"
+    },
+    {
+      "file": "docs/qa/v05-review/performance-summary.json",
+      "bytes": 3303,
+      "sha256": "24e37e3528d09bbfbb68b90218e8e2b9daa1cc055c92c26c0bbf54ae1c73106d"
+    },
+    {
+      "file": "docs/qa/v05-review/performance.json",
+      "bytes": 92087,
+      "sha256": "7198beeb2086af9b2137e4321e9dbfd6ac4107d8844f2ba19d46a9f050ff0a6f"
+    },
+    {
+      "file": "docs/qa/v05-review/selected-n10.png",
+      "bytes": 352493,
+      "sha256": "9f4e60a98a87ebc8b809e851af41e7ca76a5da740e9bf517db98623c9cc168ce"
+    },
+    {
+      "file": "docs/qa/v05-review/selected-n11.png",
+      "bytes": 361368,
+      "sha256": "c231beea8ec8acde8f5402d0fb9900f7f97703479dc44956f66f83e96d9ca61e"
+    },
+    {
+      "file": "docs/qa/v05-review/selected-n16.png",
+      "bytes": 381525,
+      "sha256": "112adb628f4ce9458eea3e3f0c9f566a0e551fb20c4787427c5d86c156e5096c"
+    },
+    {
+      "file": "docs/qa/v05-review/selected-n17.png",
+      "bytes": 379669,
+      "sha256": "85368bc0d8d623fbfc5a3fc90af7e62457839f71462ed0cc87bb5de8e3f5ce8c"
+    },
+    {
+      "file": "docs/qa/v05-review/selected-n20.png",
+      "bytes": 368136,
+      "sha256": "cafb8b721519e0cf09022ac544aa105cb934774a5e62987107faff522a3d5a0f"
+    },
+    {
+      "file": "docs/qa/v05-review/selected-n9.png",
+      "bytes": 300119,
+      "sha256": "e3758a6eb8f1d5b8f556fa3f461feaf6d53e76a4f6e3d31a2aa4bc38a6e9c46e"
+    },
+    {
+      "file": "docs/qa/v05-review/small-landscape.png",
+      "bytes": 72725,
+      "sha256": "3f6a505b2f80ff7dc82c74d0e9fb9571f77b40ea2feaec5af3c07d8ca2795327"
+    },
+    {
+      "file": "docs/qa/v05-review/tablet.png",
+      "bytes": 182562,
+      "sha256": "9348d03e50b1898cb829d1b1fc6ffc89672740604442176272bedea854fb2654"
+    },
+    {
+      "file": "docs/ROADMAP.md",
+      "bytes": 1466,
+      "sha256": "d73973950094b191e852ab0a61bf0399f9b9f3c27a51cf54c1079ca8861dd2ae"
+    },
+    {
+      "file": "docs/SECURITY-REVIEW.md",
+      "bytes": 4766,
+      "sha256": "cda90c42eaf0720e87f1416c1f9dc07ffde34b73c485bd453881b2f1bbc55695"
+    },
+    {
+      "file": "docs/SPEC.md",
+      "bytes": 2609,
+      "sha256": "e261ea8cb32784cc7122b3c8a7e6a72aef3c92f2417edd11c27cc1ea263e494f"
+    },
+    {
+      "file": "docs/TEST-RESULTS.md",
+      "bytes": 6748,
+      "sha256": "44903a00880fc357d5771ba05a05be59a66d3839bfe5c92bf3d3e8b925a59e08"
+    },
+    {
+      "file": "docs/UNIVERSITY-COLLABORATION.md",
+      "bytes": 3117,
+      "sha256": "3fa6d468787ab777ab1f8352927035e51386935bfb408600787105543caed690"
+    },
+    {
+      "file": "docs/V04-INDEPENDENT-RELEASE-REPORT.md",
+      "bytes": 19710,
+      "sha256": "bb0c2dad34ef6a1fa2c885e93232e3b64a7d2fe7efb38f111e1aadcaf0e1dd4b"
+    },
+    {
+      "file": "docs/V05-IMPLEMENTATION-HANDOFF.md",
+      "bytes": 13904,
+      "sha256": "309c2556a45723c7bdbdb698c2c8f728f53139d0b45cf730ba7f39647ec13ab5"
+    },
+    {
+      "file": "favicon.svg",
+      "bytes": 298,
+      "sha256": "65d74cbb78d5b3f306e13e8ec48cedeba2250bfb2fc5519dfb034810d33670e5"
+    },
+    {
+      "file": "index.html",
+      "bytes": 18578,
+      "sha256": "66b10e419398260aae67f89d87feb1ec3dd4a9172d4cd6cee43a7b331d900613"
+    },
+    {
+      "file": "LICENSE",
+      "bytes": 1121,
+      "sha256": "8c9a54496c2e8d5809f8b41ede587d8b021cf8fbfc3df2c85d59351c0f363b49"
+    },
+    {
+      "file": "src/building-detail.mjs",
+      "bytes": 3875,
+      "sha256": "ab6ef7f137bc41cdf7f50ec644f28173f21fc34d5af6b3b25e9812b980f73d5e"
+    },
+    {
+      "file": "src/building-evidence.mjs",
+      "bytes": 4838,
+      "sha256": "3bf0e30f4dcc0143877c0f4072a457402be61789f95d345874cffddd41edecac"
+    },
+    {
+      "file": "src/community-ui.mjs",
+      "bytes": 5317,
+      "sha256": "a94d6550ab436d994df9b376f26ac567f2a200d55dd72d5295ccb04e8efdbf3c"
+    },
+    {
+      "file": "src/contributions.mjs",
+      "bytes": 3186,
+      "sha256": "3d72c1337c452876815b3146f608bbdb89f294fbe94da2e9aa905a37abf1e61e"
+    },
+    {
+      "file": "src/data.mjs",
+      "bytes": 9847,
+      "sha256": "4f91866a867a2e96b3ef5ba5d870b47d069e8e400410aed40607e270e8657170"
+    },
+    {
+      "file": "src/geometry.mjs",
+      "bytes": 955,
+      "sha256": "a64c0efbea8ef1d6cb3466d1e5a445f7d04b939df4b6ff1bc0e28242ea2d5d25"
+    },
+    {
+      "file": "src/heights.mjs",
+      "bytes": 3489,
+      "sha256": "e4396f8d610adf62aa2ac2cbfa3303c95e95314df0f0cc5a37c9f59d1af4caa5"
+    },
+    {
+      "file": "src/main.mjs",
+      "bytes": 43485,
+      "sha256": "d95bc9d55b74b6ecff970e205899d4c08775b4ba467d990730be7b37ed028cb1"
+    },
+    {
+      "file": "src/map.mjs",
+      "bytes": 6166,
+      "sha256": "1b26e0ec90e9f99fbaf80420ec05bb25ca1fa4183fbcdda09f7530e871009447"
+    },
+    {
+      "file": "src/mapping.mjs",
+      "bytes": 4146,
+      "sha256": "0421f56ce88e0099e4521985c2c6f10a1ca5aaf1ebed61368995f056eec70f77"
+    },
+    {
+      "file": "src/navigation.mjs",
+      "bytes": 8400,
+      "sha256": "9137081f604e50813216d45b8247b505935aa66cf6e91c049b36f01bceda7bca"
+    },
+    {
+      "file": "src/places.mjs",
+      "bytes": 6078,
+      "sha256": "0bba794e808785742ec8fa555a8dc453a2a646b87c47ed1b23ee6d2b2e8b025e"
+    },
+    {
+      "file": "src/quality.mjs",
+      "bytes": 2090,
+      "sha256": "3610d787692aba84b3e74d561d11203045176729526879b7dcedd0d497143350"
+    },
+    {
+      "file": "src/search.mjs",
+      "bytes": 2062,
+      "sha256": "8b8a2aca1df8c5697cb0c29e3259f3b442f7f1b146df78037c3e098da976454c"
+    },
+    {
+      "file": "src/sharing.mjs",
+      "bytes": 674,
+      "sha256": "c85f7c7f81e59e7453e7f0125dbe48a20281a269d249e3f11b944985ed177759"
+    },
+    {
+      "file": "src/styles.css",
+      "bytes": 25019,
+      "sha256": "9cea53786362321931783d50e48861439cfc4b9380bd4d3d69b9b961bcd2fed4"
+    },
+    {
+      "file": "vendor/maplibre-gl/LICENSE.txt",
+      "bytes": 5984,
+      "sha256": "ee5fc05a0677eaf69601d2c7db0d9ecd6cc27c3abc1d0733bc9ed34707cf8ef2"
+    },
+    {
+      "file": "vendor/maplibre-gl/manifest.json",
+      "bytes": 989,
+      "sha256": "78cf532a11a142639465b7751e57ba972596200fa62cedcf84192bc4eab422b7"
+    },
+    {
+      "file": "vendor/maplibre-gl/maplibre-gl-worker.mjs",
+      "bytes": 519372,
+      "sha256": "0bf06492bdb7ba3d4132b78e435621bfba60d5250967991c02b1a73affea8cd5"
+    },
+    {
+      "file": "vendor/maplibre-gl/maplibre-gl.css",
+      "bytes": 71596,
+      "sha256": "a90798a1953017790e590f7e1bd35ff103a8a4263972cb47290b78adf86f8c20"
+    },
+    {
+      "file": "vendor/maplibre-gl/maplibre-gl.mjs",
+      "bytes": 1108049,
+      "sha256": "fbbdf8ddd9a48e49059a4be6795a4f214a711314bb5809f72d3730b48e7897e3"
+    }
+  ]
+}

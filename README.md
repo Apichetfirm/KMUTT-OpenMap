@@ -6,11 +6,11 @@ Open-source, community-driven 3D campus map for KMUTT Bangmod.
 
 This is a student community project, **not an official KMUTT service**. Original application code is MIT licensed; imported geodata has separate licenses.
 
-## v0.4 community preview
+## v0.5 community preview
 
-Independent review findings, corrected tests and release status: [v0.4 independent release report](docs/V04-INDEPENDENT-RELEASE-REPORT.md).
+Independent review findings, corrected tests and release status: [v0.5 independent release report](docs/V05-INDEPENDENT-RELEASE-REPORT.md). The [v0.4 report](docs/V04-INDEPENDENT-RELEASE-REPORT.md) remains historical evidence.
 
-Search → inspect → find services → get supported directions → share. PR #9 was independently reviewed, corrected, merged and verified on GitHub Pages as a community preview. This is not a verified campus navigation service.
+Search → inspect → find services → get supported directions → share. PR #14 was independently reviewed, corrected and merged as the v0.5 building-evidence infrastructure community preview. This is not a verified campus navigation service.
 
 - All original 35 building codes and URLs remain compatible. Thai/English names, abbreviations, partial matches and single English typos are searchable; exact codes rank first.
 - Source-aware building details and `?building=N9` links retain the GitHub Pages path. Unknown locations remain searchable and explicitly unresolved.
@@ -40,7 +40,7 @@ Search → inspect → find services → get supported directions → share. PR 
 Serve the committed runtime without npm installation:
 
 ```sh
-python -m http.server 8080
+python -m http.server 8080 --bind 127.0.0.1
 # http://localhost:8080/
 ```
 
@@ -65,7 +65,7 @@ The build stages allowlisted static assets in `.site/`; no node_modules, credent
 OPENMAP_CHROMIUM=/usr/bin/chromium npx playwright test --project=desktop --project=mobile
 ```
 
-Final candidate CI passes **88/88 browser checks**, including real WebGL2 in all four projects; 47 unit tests also pass. Chromium sandboxing is enabled; CI uses Ubuntu 22.04 because the downloaded browser sandbox is blocked by the Ubuntu 24.04 AppArmor host policy. On a compatible Linux host, the CI rendering setup is reproducible with `CI=1 LIBGL_ALWAYS_SOFTWARE=1 MOZ_WEBRENDER=1 xvfb-run --auto-servernum npm run test:e2e` after installing browser dependencies. This does not substitute for physical-device tests.
+Final v0.5 candidate CI passes **108/108 browser checks**, including real WebGL2 in all four projects, **55 Node tests and 4 Python image-tool tests**. Chromium sandboxing is enabled; CI uses Ubuntu 22.04 because the downloaded browser sandbox is blocked by the Ubuntu 24.04 AppArmor host policy. On a compatible Linux host, the CI rendering setup is reproducible with `CI=1 LIBGL_ALWAYS_SOFTWARE=1 MOZ_WEBRENDER=1 xvfb-run --auto-servernum npm run test:e2e` after installing browser dependencies. This does not substitute for physical-device tests.
 
 [Actual browser results and screenshots](docs/TEST-RESULTS.md) distinguish fixture checks, live providers and unavailable physical devices/other engines. [Complete engineering handoff](docs/COMPLETE-IMPLEMENTATION-HANDOFF.md) identifies every phase and blocker.
 
@@ -85,6 +85,10 @@ npm run validate-data
 
 Review upstream name/version changes and every derived diff. Geodata: © OpenStreetMap contributors, ODbL; see [DATA-LICENSES.md](DATA-LICENSES.md). No KMUTNB source code, models, photos or protected university map images are reused. The public main site is https://apichetfirm.github.io/KMUTT-OpenMap/. The independent report records the accepted application SHA and deployed byte verification.
 
-## v0.5 building evidence candidate
+## v0.5 building evidence infrastructure
 
 [Implementation handoff](docs/V05-IMPLEMENTATION-HANDOFF.md): reusable visual building cards, official Street View search links with explicit unknown coverage, reviewed media metadata for every code, offline image optimization and evidence matching, and a local-only evidence review/export tool. No building photo has established publication rights yet; the app shows an honest unavailable state. No runtime AI or automatically accepted GIS associations. `npm run validate-media` verifies approved image files; private analysis and `/admin/` are excluded from production builds.
+
+The independent v0.5 review fixes private-output directory-link bypasses, optimizer sidecar placement, malformed reviewer imports the offline Pillow dependency and local development-server exposure. Software infrastructure is complete within this release scope; genuine licensed photography, actual Vision observations, field verification and physical-device validation remain incomplete. See the release report for production verification and the prioritized photography plan.
+
+Offline image tools require Python 3.11 or newer (CI uses 3.14), patched Pillow 13.0.0 and the strict Python dependency audit. The v0.5 report records the late audit finding and corrective follow-up #15; Node advisory checks alone do not cover Python.

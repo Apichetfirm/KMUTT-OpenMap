@@ -1,5 +1,7 @@
 # v0.5 implementation handoff
 
+Historical implementation record. See [Codex A independent release report](V05-INDEPENDENT-RELEASE-REPORT.md) for review corrections, Python security upgrade, final tests and actual deployment status.
+
 Initiated by Firm Impulse · FIBO FRAB11. Base: latest main `8973cf7`. Independent Codex A review required; no self-merge or major release.
 
 ## Actual delivery and status
@@ -19,6 +21,8 @@ Initiated by Firm Impulse · FIBO FRAB11. Base: latest main `8973cf7`. Independe
 ## Reproduction
 
 Serve the repository with `node scripts/serve.mjs . 8080` and open `/admin/` for local evidence review. The tool requires no login/backend but is intentionally absent from `.site/`; do not deploy the development root as an admin service. Private analysis stays in memory; export before closing. Exported decisions must undergo a separate independent PR approval before accepted GIS changes.
+
+Offline image tools now require Python >=3.11 and patched Pillow 13.0.0; CI explicitly selects Python 3.14 and runs a strict advisory audit. The original results below are historical.
 
 For a legally reusable photo obtain explicit identity/rights review first. Required metadata: id, meaningful alt text, photographer, allowed license, source, attribution, checked_on, publication reviewer/reviewed_on, width/height, nullable capture_date/camera_coordinates/camera_heading and optimized variants. Permission-only/unlisted licenses require deliberate policy extension and documented grants; do not bypass validation by inventing a CC license.
 
@@ -59,7 +63,7 @@ Photo rights/identity, licensed source inputs, actual vision-model evaluation, c
 
 ### Measured results
 
-Six alternating pairs of fresh contexts on system Chromium 156, sandbox enabled, 1440×1000, software WebGL, real OpenFreeMap, no throttling or concurrent local browser QA. Comparison is latest main `8973cf7` versus v0.5 runtime at `64b401c`. The measured runtime includes compact metadata and the retry readiness fix. Later changes add private pixel-extraction tooling, tests and documentation; they do not change startup/photo behavior. Browser process/proxy/OS/provider caches are uncontrolled; these samples do not establish a causal speedup.
+Six alternating pairs of fresh contexts on system Chromium 154.0.8037.57 (raw JSON is authoritative), sandbox enabled, 1440×1000, software WebGL, real OpenFreeMap, no throttling or concurrent local browser QA. Comparison is latest main `8973cf7` versus v0.5 runtime at `64b401c`. The measured runtime includes compact metadata and the retry readiness fix. Later changes add private pixel-extraction tooling, tests and documentation; they do not change startup/photo behavior. Browser process/proxy/OS/provider caches are uncontrolled; these samples do not establish a causal speedup.
 
 | Median metric | main | v0.5 |
 | --- | ---: | ---: |

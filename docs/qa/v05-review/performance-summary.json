@@ -1,0 +1,133 @@
+{
+  "environment": {
+    "implementation_commit": "4ef4d0c6636a5601b508fb7222d42aeafe2d9806",
+    "browser": "156.0.8078.4",
+    "viewport": "1440x1000",
+    "network": "Live OpenFreeMap, no throttling, fresh browser context each sample; provider and OS caches uncontrolled; proxy only if HTTPS_PROXY is set.",
+    "ordering": "Six pairs, alternating baseline/final and final/baseline; browser process reused, contexts isolated.",
+    "rendering": "Headless Chromium with sandbox enabled and software WebGL (SwiftShader); no concurrent QA processes.",
+    "physical_device": false,
+    "date": "2026-11-02",
+    "os": "10.0.26200",
+    "cpu": "11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz",
+    "logical_cpus": 12,
+    "ram_gib": 23.744049072265625,
+    "baseline_commit": "8973cf7b8b5104c743b5ebcc0dba5fd4fd4ba5b6"
+  },
+  "versions": {
+    "baseline": {
+      "n": 6,
+      "map_median_ms": 1794.699999999255,
+      "map_range_ms": [
+        1462.1999999955297,
+        1975
+      ],
+      "catalog_median_ms": 194.69999999925494,
+      "detail_sync_median_ms": 16.600000001490116,
+      "detail_two_frames_median_ms": 167.09999999776483,
+      "search_sync_median_ms": 0.3999999985098839,
+      "heap_median_mib": 27.179718017578125,
+      "heap_range_mib": [
+        23.365020751953125,
+        29.754638671875
+      ],
+      "image_transfer_bytes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "main_resource_counts": [
+        28,
+        28,
+        28,
+        28,
+        28,
+        28
+      ],
+      "same_origin_transfer_median_bytes": 2042835,
+      "max_long_tasks_ms": [
+        344,
+        345,
+        459,
+        413,
+        434,
+        527
+      ],
+      "cls": [
+        0.048744444444444444,
+        0.048744444444444444,
+        0.048744444444444444,
+        0.048744444444444444,
+        0.048744444444444444,
+        0.048744444444444444
+      ],
+      "errors": []
+    },
+    "final": {
+      "n": 6,
+      "map_median_ms": 1560.0000000037253,
+      "map_range_ms": [
+        1218,
+        2082.7999999970198
+      ],
+      "catalog_median_ms": 178.5,
+      "detail_sync_median_ms": 16.99999999627471,
+      "detail_two_frames_median_ms": 153.69999999552965,
+      "search_sync_median_ms": 0.5,
+      "heap_median_mib": 29.754638671875,
+      "heap_range_mib": [
+        23.365020751953125,
+        33.473968505859375
+      ],
+      "image_transfer_bytes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "main_resource_counts": [
+        31,
+        31,
+        31,
+        31,
+        31,
+        31
+      ],
+      "same_origin_transfer_median_bytes": 2075410,
+      "max_long_tasks_ms": [
+        482,
+        338,
+        483,
+        502,
+        464,
+        509
+      ],
+      "cls": [
+        0.048744444444444444,
+        0.048744444444444444,
+        0.048744444444444444,
+        0.048744444444444444,
+        0.048744444444444444,
+        0.048744444444444444
+      ],
+      "errors": []
+    }
+  },
+  "comparison": {
+    "paired_deltas_ms": [
+      -685.6999999955297,
+      107.79999999701977,
+      -226.39999999850988,
+      198.50000000745058,
+      -229.10000000149012,
+      -147.60000000149012
+    ],
+    "mean_delta_ms": -163.74999999875823,
+    "sign_flip_two_sided_p": 0.25
+  }
+}

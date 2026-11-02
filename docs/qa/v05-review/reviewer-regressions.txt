@@ -1,0 +1,34 @@
+[WebServer] (node:41276) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 15 tests using 2 workers
+
+(node:43612) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:15600) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [desktop] › tests\e2e\building-details.spec.mjs:2:1 › invalid private analysis preserves previous review state and hostile text stays literal (1.0s)
+  ok  3 [desktop] › tests\e2e\building-details.spec.mjs:15:1 › media loading is independent and empty index causes no image downloads (2.9s)
+  ok  2 [desktop] › tests\e2e\building-details.spec.mjs:14:1 › building visual detail, unknown photo, supported Street View and URL compatibility (4.4s)
+  ok  4 [desktop] › tests\e2e\building-details.spec.mjs:16:1 › review tool records decision and refuses same author/reviewer (1.3s)
+  ok  5 [desktop] › tests\e2e\building-details.spec.mjs:18:1 › reviewed image renders lazily and broken image has a visible fallback (1.8s)
+(node:27504) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:37604) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  6 [mobile] › tests\e2e\building-details.spec.mjs:2:1 › invalid private analysis preserves previous review state and hostile text stays literal (784ms)
+  ok  8 [mobile] › tests\e2e\building-details.spec.mjs:15:1 › media loading is independent and empty index causes no image downloads (1.7s)
+  ok  9 [mobile] › tests\e2e\building-details.spec.mjs:16:1 › review tool records decision and refuses same author/reviewer (1.4s)
+  ok  7 [mobile] › tests\e2e\building-details.spec.mjs:14:1 › building visual detail, unknown photo, supported Street View and URL compatibility (3.6s)
+(node:29952) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 10 [mobile] › tests\e2e\building-details.spec.mjs:18:1 › reviewed image renders lazily and broken image has a visible fallback (1.7s)
+(node:40568) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 11 [webkit] › tests\e2e\building-details.spec.mjs:2:1 › invalid private analysis preserves previous review state and hostile text stays literal (1.0s)
+  ok 13 [webkit] › tests\e2e\building-details.spec.mjs:15:1 › media loading is independent and empty index causes no image downloads (1.8s)
+  ok 12 [webkit] › tests\e2e\building-details.spec.mjs:14:1 › building visual detail, unknown photo, supported Street View and URL compatibility (3.3s)
+  ok 14 [webkit] › tests\e2e\building-details.spec.mjs:16:1 › review tool records decision and refuses same author/reviewer (1.8s)
+  ok 15 [webkit] › tests\e2e\building-details.spec.mjs:18:1 › reviewed image renders lazily and broken image has a visible fallback (1.6s)
+
+  15 passed (21.2s)

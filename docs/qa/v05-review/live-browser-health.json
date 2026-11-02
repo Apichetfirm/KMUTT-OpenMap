@@ -1,0 +1,365 @@
+{
+  "commit": "4ef4d0c6636a5601b508fb7222d42aeafe2d9806",
+  "url": "http://127.0.0.1:8082/KMUTT-OpenMap/",
+  "browser": "156.0.8078.4",
+  "sandbox": true,
+  "buildings": [
+    {
+      "code": "S1",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "unknown",
+      "street_view": "disabled",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "S2",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "unknown",
+      "street_view": "disabled",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "S3",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "approximate",
+      "street_view": "supported-panorama-search",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "S4",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "approximate",
+      "street_view": "supported-panorama-search",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "S5",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "approximate",
+      "street_view": "supported-panorama-search",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "S6",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "unknown",
+      "street_view": "disabled",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "S7",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "approximate",
+      "street_view": "supported-panorama-search",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "S8",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "unknown",
+      "street_view": "disabled",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "S9",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "approximate",
+      "street_view": "supported-panorama-search",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "S10",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "approximate",
+      "street_view": "supported-panorama-search",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "S11",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "approximate",
+      "street_view": "supported-panorama-search",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "S12",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "approximate",
+      "street_view": "supported-panorama-search",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "S13",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "approximate",
+      "street_view": "supported-panorama-search",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "S14",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "unknown",
+      "street_view": "disabled",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "S15",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "approximate",
+      "street_view": "supported-panorama-search",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "N1",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "unknown",
+      "street_view": "disabled",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "N2",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "approximate",
+      "street_view": "supported-panorama-search",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "N3",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "approximate",
+      "street_view": "supported-panorama-search",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "N4",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "unknown",
+      "street_view": "disabled",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "N5",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "approximate",
+      "street_view": "supported-panorama-search",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "N6",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "unknown",
+      "street_view": "disabled",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "N7",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "unknown",
+      "street_view": "disabled",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "N8",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "unknown",
+      "street_view": "disabled",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "N9",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "approximate",
+      "street_view": "supported-panorama-search",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "N10",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "approximate",
+      "street_view": "supported-panorama-search",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "N11",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "approximate",
+      "street_view": "supported-panorama-search",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "N12",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "unknown",
+      "street_view": "disabled",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "N13",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "unknown",
+      "street_view": "disabled",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "N14",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "unknown",
+      "street_view": "disabled",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "N15",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "approximate",
+      "street_view": "supported-panorama-search",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "N16",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "approximate",
+      "street_view": "supported-panorama-search",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "N17",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "approximate",
+      "street_view": "supported-panorama-search",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "N18",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "unknown",
+      "street_view": "disabled",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "N19",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "unknown",
+      "street_view": "disabled",
+      "canonical_height": true,
+      "share_url": true
+    },
+    {
+      "code": "N20",
+      "name_matches": true,
+      "missing_photo": true,
+      "coordinates": "approximate",
+      "street_view": "supported-panorama-search",
+      "canonical_height": true,
+      "share_url": true
+    }
+  ],
+  "image_requests": [],
+  "errors": [],
+  "console_errors": [],
+  "warnings": [
+    "[.WebGL-0x5a2c00c5b000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x5a2c00c5b000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+    "layers[highway-shield-non-us].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
+    "layers[highway-shield-us-interstate].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
+    "layers[road_shield_us].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
+    "Image \"office\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+    "Image \"sports_centre\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+    "Image \"lift_gate\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+    "Image \"swimming_pool\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+    "Image \"gate\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+    "Image \"running\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+    "Image \"motorcycle_parking\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style."
+  ],
+  "failed": [],
+  "screenshots": [
+    "selected-n9.png",
+    "selected-n10.png",
+    "selected-n11.png",
+    "selected-n16.png",
+    "selected-n17.png",
+    "selected-n20.png",
+    "desktop-metadata.png",
+    "mobile-portrait.png",
+    "mobile-street-view.png",
+    "mobile-narrow.png",
+    "mobile-landscape.png",
+    "small-landscape.png",
+    "tablet.png"
+  ],
+  "street_view_dispatched": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=13.65439%2C100.49433",
+  "internal_routes_disabled": true,
+  "csp_violations": [],
+  "production_exclusions": {
+    "admin/": 404,
+    "admin/index.html": 404,
+    "work/": 404
+  },
+  "status": "passed"
+}

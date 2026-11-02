@@ -1,0 +1,1005 @@
+{
+  "date": "2026-11-02",
+  "merged_commit": "a854d90488c3377840edd1a506a3639ddfba9cb0",
+  "url": "https://apichetfirm.github.io/KMUTT-OpenMap/",
+  "browser": "156.0.8078.4",
+  "resources": [
+    {
+      "file": "DATA-LICENSES.md",
+      "status": 200,
+      "sha256": "75a495a64bc363b05793910dcd9ab290ed52504c12624ef838480b55df70eee1",
+      "matches_merged": true
+    },
+    {
+      "file": "LICENSE",
+      "status": 200,
+      "sha256": "4ca3409d56a195526e40ea1038b75688a78d56864a811ebb3ec8eab53cd0f6b1",
+      "matches_merged": true
+    },
+    {
+      "file": "data/README.md",
+      "status": 200,
+      "sha256": "27aa63ec63d8e7ac1879bfe9de1c10d0808f17db9f735da043bb03ff04a6a218",
+      "matches_merged": true
+    },
+    {
+      "file": "data/building-footprint-candidates.geojson",
+      "status": 200,
+      "sha256": "0c36789fb0bc7304f5755f1cad7de00f2c822bc4e85caaeac08440a108dbd06f",
+      "matches_merged": true
+    },
+    {
+      "file": "data/building-footprints.geojson",
+      "status": 200,
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1",
+      "matches_merged": true
+    },
+    {
+      "file": "data/building-media.json",
+      "status": 200,
+      "sha256": "79c6bcd014a457850c68292328a5ce8132c397aba453ad32ebd8f8d3d3b6d10b",
+      "matches_merged": true
+    },
+    {
+      "file": "data/building-rendering.json",
+      "status": 200,
+      "sha256": "0f6b83b97dbd5e055394bdd5da35c3818336a2d9c820b4f737f7e5a62e8cff12",
+      "matches_merged": true
+    },
+    {
+      "file": "data/buildings-geocoded.geojson",
+      "status": 200,
+      "sha256": "e85c0a3a73115c8d7062ae9ed73d4052d770fd8a621f01011d2a73ebcbff4d94",
+      "matches_merged": true
+    },
+    {
+      "file": "data/buildings.json",
+      "status": 200,
+      "sha256": "9b4a75fbf72cca80e3fc0457712a28bf2740392d78db87a28aa7fe4754c02d30",
+      "matches_merged": true
+    },
+    {
+      "file": "data/coverage-report.json",
+      "status": 200,
+      "sha256": "4c036cd308e24ed785883c3f040c857ee9a9ddf584cc6f48e2ba0b296b8af055",
+      "matches_merged": true
+    },
+    {
+      "file": "data/evidence/building-photography-coverage.json",
+      "status": 200,
+      "sha256": "415a3e3c29f2d938f35afcf70e52d08587f0f4d0229982faa37b29b867b46fef",
+      "matches_merged": true
+    },
+    {
+      "file": "data/evidence/osm-campus-snapshot.json",
+      "status": 200,
+      "sha256": "7fae570a5c3ed9485c4d5fbafef6e7cdc5d4c399c0cbadb8afed010c8a640bbf",
+      "matches_merged": true
+    },
+    {
+      "file": "data/evidence/photography-research.json",
+      "status": 200,
+      "sha256": "8f4b879e8177fa4546127a05176ba90c11424c7d27123c93c5f97b2a38bad3a2",
+      "matches_merged": true
+    },
+    {
+      "file": "data/evidence/source-review.json",
+      "status": 200,
+      "sha256": "b744e92db965c839a8de8325ab48c48a131106bfb5181afb9297430c145b8af0",
+      "matches_merged": true
+    },
+    {
+      "file": "data/height-overrides.json",
+      "status": 200,
+      "sha256": "d232561045edcd17cae77461f00fe1d39c5b9fac16f5e1725c0552e2ef6fcc0b",
+      "matches_merged": true
+    },
+    {
+      "file": "data/mapping-status.csv",
+      "status": 200,
+      "sha256": "743eb3ca572e3480834d6e4416c355cd012b917186f8abf448c365a98b96781b",
+      "matches_merged": true
+    },
+    {
+      "file": "data/pedestrian-graph-candidates.json",
+      "status": 200,
+      "sha256": "b5cb4b294c6630c66edfd4bebace414d52060117e849f21109093b973b731305",
+      "matches_merged": true
+    },
+    {
+      "file": "data/pedestrian-graph.json",
+      "status": 200,
+      "sha256": "5a14136cb4bc4cc93ec7e3d24da00b1886b987e64576d48cdfe305533fad697b",
+      "matches_merged": true
+    },
+    {
+      "file": "data/places.geojson",
+      "status": 200,
+      "sha256": "074caa4652f3f26f9a53273e48562bee47e7d816a955eeb5ce8ab056296d7355",
+      "matches_merged": true
+    },
+    {
+      "file": "data/walkway-candidates.geojson",
+      "status": 200,
+      "sha256": "c48c84e8714f526a1f1a0f23f46dfcba574156a6ead421cad1c629d6e6a8a3e8",
+      "matches_merged": true
+    },
+    {
+      "file": "data/walkways.geojson",
+      "status": 200,
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1",
+      "matches_merged": true
+    },
+    {
+      "file": "favicon.svg",
+      "status": 200,
+      "sha256": "7b8ef5429d07bbb3705bb867f8d522a5f3455fc6c632beb542f73ddd3a7c7fe3",
+      "matches_merged": true
+    },
+    {
+      "file": "index.html",
+      "status": 200,
+      "sha256": "fe3b2bf5a49168d57cb6411c837e7b8b349d7dd0b92a8dbdfe967775977b0987",
+      "matches_merged": true
+    },
+    {
+      "file": "src/building-detail.mjs",
+      "status": 200,
+      "sha256": "fc7ca4387cfe7cfa0c4e9befd8f2b5345f63d98c562d88fee6b96494757b140e",
+      "matches_merged": true
+    },
+    {
+      "file": "src/building-evidence.mjs",
+      "status": 200,
+      "sha256": "5bedd5826fd76831c11491c83ac4aec61e8241064291f7f4aaddbcb583674947",
+      "matches_merged": true
+    },
+    {
+      "file": "src/community-ui.mjs",
+      "status": 200,
+      "sha256": "93cda5dc809d9feda9ba55f713f3a31f9d64e468ba38f89d9eeb0d21e1ef8dd9",
+      "matches_merged": true
+    },
+    {
+      "file": "src/contributions.mjs",
+      "status": 200,
+      "sha256": "828f96211dd46f81ac100a2b2b632d8ebc0d920621f6d7d742390628ded35f09",
+      "matches_merged": true
+    },
+    {
+      "file": "src/data.mjs",
+      "status": 200,
+      "sha256": "9fd6829a2c8698806a86d8151aa676cb418ad52a3097a182de00215b3efe1665",
+      "matches_merged": true
+    },
+    {
+      "file": "src/geometry.mjs",
+      "status": 200,
+      "sha256": "51c4e4e62c5773dfb6ad9e6c07ef308316c4ff2db9a6f1b413db2874cba8501a",
+      "matches_merged": true
+    },
+    {
+      "file": "src/heights.mjs",
+      "status": 200,
+      "sha256": "fb2c158002367561fc8ae105ef01b59a78f50fbc621d87bc89f4c93b57e5c071",
+      "matches_merged": true
+    },
+    {
+      "file": "src/main.mjs",
+      "status": 200,
+      "sha256": "a66ecb8d17b687275cfbf8d45d7353ab1e48a46ce8e50a3f7a2aca8d3e241097",
+      "matches_merged": true
+    },
+    {
+      "file": "src/map.mjs",
+      "status": 200,
+      "sha256": "72322fb3b655603f743ad7032f1a90bd13610f55eff5534551f44ffdbaf3a288",
+      "matches_merged": true
+    },
+    {
+      "file": "src/mapping.mjs",
+      "status": 200,
+      "sha256": "74c36ab42d7fa778e26dbd1b3a212eda1810a0c641793dffe64c8a8393285627",
+      "matches_merged": true
+    },
+    {
+      "file": "src/navigation.mjs",
+      "status": 200,
+      "sha256": "242c73963ac000011520644de3739130f22c21ff4921a5ef2aa96faba86dd95f",
+      "matches_merged": true
+    },
+    {
+      "file": "src/places.mjs",
+      "status": 200,
+      "sha256": "636b2f0b69d4e5fb73a41739c4abe3f98be681b79611f6411b2869392b133fb0",
+      "matches_merged": true
+    },
+    {
+      "file": "src/quality.mjs",
+      "status": 200,
+      "sha256": "ac4a7a6741be91e12615fa5220b4c971abd954dd25b52d525cee345a90a8845f",
+      "matches_merged": true
+    },
+    {
+      "file": "src/search.mjs",
+      "status": 200,
+      "sha256": "2e4ec0c1eb006fd9c8b6b763b20100c311ff1bc54683ca68dd7337c18e697793",
+      "matches_merged": true
+    },
+    {
+      "file": "src/sharing.mjs",
+      "status": 200,
+      "sha256": "4fa1623a66f8a2c6f743bca228126dc33ac6845c9ca164b0033b21c3bc7de799",
+      "matches_merged": true
+    },
+    {
+      "file": "src/styles.css",
+      "status": 200,
+      "sha256": "64f6cefee2084702239c9eb499195d2f04d1e6a9627cd93384d605e07a75634e",
+      "matches_merged": true
+    },
+    {
+      "file": "vendor/maplibre-gl/LICENSE.txt",
+      "status": 200,
+      "sha256": "ee5fc05a0677eaf69601d2c7db0d9ecd6cc27c3abc1d0733bc9ed34707cf8ef2",
+      "matches_merged": true
+    },
+    {
+      "file": "vendor/maplibre-gl/manifest.json",
+      "status": 200,
+      "sha256": "78cf532a11a142639465b7751e57ba972596200fa62cedcf84192bc4eab422b7",
+      "matches_merged": true
+    },
+    {
+      "file": "vendor/maplibre-gl/maplibre-gl-worker.mjs",
+      "status": 200,
+      "sha256": "0bf06492bdb7ba3d4132b78e435621bfba60d5250967991c02b1a73affea8cd5",
+      "matches_merged": true
+    },
+    {
+      "file": "vendor/maplibre-gl/maplibre-gl.css",
+      "status": 200,
+      "sha256": "a90798a1953017790e590f7e1bd35ff103a8a4263972cb47290b78adf86f8c20",
+      "matches_merged": true
+    },
+    {
+      "file": "vendor/maplibre-gl/maplibre-gl.mjs",
+      "status": 200,
+      "sha256": "fbbdf8ddd9a48e49059a4be6795a4f214a711314bb5809f72d3730b48e7897e3",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/ARCHITECTURE.md",
+      "status": 200,
+      "sha256": "152bf4f276c1516a4f44302463e37d7e5d8ca702295ec97a37dbd3f187077e74",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/BASELINE-AUDIT.md",
+      "status": 200,
+      "sha256": "3e8b9c3e20b9fc17683dca6930134fddb505382a086b70b7f4fefbd5ca27d922",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/COMMUNITY-GUIDE.md",
+      "status": 200,
+      "sha256": "83d2dc238baf4807cd11497d459f47cba3e55b7e97df757ed14ec1f8c2934de6",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/COMPLETE-IMPLEMENTATION-HANDOFF.md",
+      "status": 200,
+      "sha256": "b1607f40b7f2bbb1d63f7bb1dbbb5720256f4d61b9bd9248d8a2dab1d7f0014e",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/DATA-COVERAGE.md",
+      "status": 200,
+      "sha256": "c436766d789d4d98d61d039ea6ee8c36e0167b29323c8c8c4e42864fd8ce6deb",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/DATA-MODEL.md",
+      "status": 200,
+      "sha256": "ed14170618530a1e0d555b7ef4e659494c587a71ca5cbbb5cbf2a013b9c5376a",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/DATA-STATUS.md",
+      "status": 200,
+      "sha256": "33777e3db5215db433660778746cf8fb03221bf211ecdb166233945e3828e1f5",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/FIELD-SURVEY.md",
+      "status": 200,
+      "sha256": "8c847e6f1af043035ad6572d3663fb080fa1967fd50057d31ffaac83e0347659",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/HEIGHT-QA.md",
+      "status": 200,
+      "sha256": "034de24a0378ab96e32ebab708d4820c11a4cb789481103c32b85b3e98b34fee",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/IMPLEMENTATION-HANDOFF.md",
+      "status": 200,
+      "sha256": "25cfa8e02323cf848bf285c2ac6276665bb3b69468615934844c899400fd249a",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/INDEPENDENT-REVIEW.md",
+      "status": 200,
+      "sha256": "5f078db371fdf3aea159388b18a481c3e24dda671fbcb432a00c99531efd6eb8",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/MAPPING-METHODOLOGY.md",
+      "status": 200,
+      "sha256": "057ddc77bef27bf89158014817937f2eae71dac033c9a308b5a16f01e38ae8c2",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/NAVIGATION-METHODOLOGY.md",
+      "status": 200,
+      "sha256": "fa491f67296b9f23dd9b8733b8f161d937ee43a176a3dd5e34d7e197519c618e",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/PERFORMANCE.md",
+      "status": 200,
+      "sha256": "e4adb9a16066d0ea1bf9dcecfcd4c171f1925af84729a7626ef45742c3263164",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/PUBLISH-GITHUB.md",
+      "status": 200,
+      "sha256": "61e18cea2dbf4afd61841b15ca0c793368676f48cab1a7b8458761922482f2f7",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/ROADMAP.md",
+      "status": 200,
+      "sha256": "76003e7cae5f3aa4054c3c5ea7567d1a042fe7c7b950017cc874a9b528112305",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/SECURITY-REVIEW.md",
+      "status": 200,
+      "sha256": "d89c4c520cdeb5419f940fb7e4f30699030d3259be2c842aae6d37731bdf87d4",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/SPEC.md",
+      "status": 200,
+      "sha256": "8eeb676a95334b99e70468c1d48185fd8066797831d95dbdb81f46b25f0b058f",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/TEST-RESULTS.md",
+      "status": 200,
+      "sha256": "bc920400a7eac16e8d6c4fcc90dede1913a39c398cbe43da5368ccffdb2e0178",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/UNIVERSITY-COLLABORATION.md",
+      "status": 200,
+      "sha256": "0e9005931e65addabf5d088a55a38156ab4842a4714d786227091ad1e0ad06aa",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/V04-INDEPENDENT-RELEASE-REPORT.md",
+      "status": 200,
+      "sha256": "bb0c2dad34ef6a1fa2c885e93232e3b64a7d2fe7efb38f111e1aadcaf0e1dd4b",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/V05-IMPLEMENTATION-HANDOFF.md",
+      "status": 200,
+      "sha256": "a9089645c93c7aee9ce0abaa5836fc777d26fbded697d40eae3861a1ab30823e",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/2d-desktop.png",
+      "status": 200,
+      "sha256": "2f45819aed6611ec263e6b2c6f47037383c0429c74ca09d7b2f4e179ba0882e9",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/after-desktop.png",
+      "status": 200,
+      "sha256": "a4e6ef02f4eddf71ab19a420d155a8b834adea97c72851a70bf84a30d8874980",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/after-mobile.png",
+      "status": 200,
+      "sha256": "b9ff82b3bd62ddd93b765b54adcd23db2e7491e5a527f36243dc3b177604ae5b",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/before-desktop.png",
+      "status": 200,
+      "sha256": "0c137394b7d5c21b6b0ad212599c130608d16b28cfd89e2b4e1dd8b6702e1591",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/before-mobile.png",
+      "status": 200,
+      "sha256": "a80fbf683bf498d21c0bd093a96befaed5cb8349751543f2ce1c084aa3b55ba8",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/landscape.png",
+      "status": 200,
+      "sha256": "8f629865f1304ed243b1462002ae3deec26c243fb09fed7907d95e6607a557db",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/live-metrics.json",
+      "status": 200,
+      "sha256": "6bac0662c8787dc778f3c51335be748c8f25e49744d2ed30e6c58f01a355fec1",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/night-desktop.png",
+      "status": 200,
+      "sha256": "04073d294097e6c32e0051eb5d3a16b31aa4d1bd7f54679cd260d6793725df3c",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/proposal-mobile.png",
+      "status": 200,
+      "sha256": "e3421b335ded04a02453abbd9ff2cbdc7df33b558147e400cb3aa764450976f6",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/review/desktop-2d.png",
+      "status": 200,
+      "sha256": "8f4f738bb69989293d2b0e84af3b10f18aca1e97db2d1d29fd9c4a32d5982b2b",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/review/desktop-night.png",
+      "status": 200,
+      "sha256": "8a237197f31fa5980b1d9abd966835861d9212d3a6f1e23c6d885dcd64a9e353",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/review/desktop-selected.png",
+      "status": 200,
+      "sha256": "661798c50dfe0a930c41d841bc53f0b93430866a289ef956476acbc81f70dfbe",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/review/live-metrics.json",
+      "status": 200,
+      "sha256": "65ac1caa0f25e5bbd270b9c037834a7d7d661906a1c0d8c4e6afbf3993e3fd4f",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/review/mobile-landscape.png",
+      "status": 200,
+      "sha256": "02e70620dd6dd118eb9f5a89407cac44923d520b7415c888877bc42f7b38ef20",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/review/mobile-narrow.png",
+      "status": 200,
+      "sha256": "69bdb440ab9dc6d01295f0069a0f6a20e335a48b598d9003a28bb4017d8a77dc",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/review/mobile-portrait.png",
+      "status": 200,
+      "sha256": "25f3d44016559d7dda9d310c1dde25b79a35629fec92c414f14e1cf96313d47a",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/review/small-landscape.png",
+      "status": 200,
+      "sha256": "c5f82b0f7023237aada745ace0f17e771c63b85c7d491149dada577429cd698e",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/review/tablet.png",
+      "status": 200,
+      "sha256": "0e43f28e1e4a08aefad97b4efa4628e679ab42d5dd767cf7a187d9b3c78bf063",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/selected-desktop.png",
+      "status": 200,
+      "sha256": "2ff8515ca82a2f112b04921c7cdf6d4199d448ef5eb52832fb8458ed1276c838",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/selected-mobile.png",
+      "status": 200,
+      "sha256": "7acdb3d7b40cff2708e7d519c8e657de8fe1ece108d47189d2b174dc379b106a",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/2d.png",
+      "status": 200,
+      "sha256": "17ab27eff470bfcd845d3262809ddc6b23c694fb4e5e9bd065a9e4618be88d05",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/browser-health.json",
+      "status": 200,
+      "sha256": "e12c4f3c97205d8c5a76dae48ce4d4ee96d9361cc347122d6fc46e8f7367ea34",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/candidate-preview.png",
+      "status": 200,
+      "sha256": "d48b1f7b6475ae8acad7980fd370afc70dbb69cbb66726a1c8884bbd6e3b60be",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/chromium-e2e.txt",
+      "status": 200,
+      "sha256": "8621486abd968c4e5bef00beb2322f706960726dfe9d4e1ff4be1f9b6783bbca",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/community-review.png",
+      "status": 200,
+      "sha256": "18603ec8be48e68cc4a45f8c5917f6db1e1de9bcbe443e6ce9909ea5e4464f3d",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/coverage.png",
+      "status": 200,
+      "sha256": "efd4c5a4bb348bfa3abc94103a4f8ee0cc66be153fab434f8c1a850fa0a545ce",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/current-osm-samples.json",
+      "status": 200,
+      "sha256": "48f3070bc7b7f7bf284f0007667aaeaa75962d45a3d099a751cc55248f95fc76",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/gis-audit.json",
+      "status": 200,
+      "sha256": "58868885a0e25a0a07c7dce105d5c0f33b3919bf462cdcb42a8771cd72a7194c",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/mobile-candidate-preview.png",
+      "status": 200,
+      "sha256": "ae5d0f0894460cf14ad320755f558b689df74c0628fdfea56675cb14e07d6f2f",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/mobile-landscape.png",
+      "status": 200,
+      "sha256": "2da4a078280c59b91574d605bb79685c6d38babe289afb2e8c00dc8438eecdb4",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/mobile-narrow.png",
+      "status": 200,
+      "sha256": "8efe27fa21caa81a7121653362afbd240eb3a48e4249a96dda4c658b5c7940fd",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/mobile-portrait.png",
+      "status": 200,
+      "sha256": "bc93a568d82994fa6a336816c0dee7f2c81a6e926e61ab71b0e29731b8717a6c",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/navigation-unverified.png",
+      "status": 200,
+      "sha256": "e710df60a907b6ea08b62bc44e7483c053f41b8c3b71f136b11f39d046bf46de",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/night.png",
+      "status": 200,
+      "sha256": "8140c0e31c9f218ccc0524405211a5c9aec1629e5e32802a5449456d96579e1c",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/npm-audit.json",
+      "status": 200,
+      "sha256": "47ed08e2f907170440e368c42e05e926e4fecfc2a73c2b8d855058a6c7d5ab35",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/overview.png",
+      "status": 200,
+      "sha256": "4205482638073828b01b6d09bf84f19bf83d460c59065e4c95f7c6ce10c75535",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/performance.json",
+      "status": 200,
+      "sha256": "f040ddd67784e17a9e660babb347dbadd496a659cd9b16f2a5ca69cc2de309de",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/poi-details.png",
+      "status": 200,
+      "sha256": "d21ba5dc431e650368967397087cd1cee2b4a6f4ad93209fa4ea6e57f9f06d01",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/poi-search.png",
+      "status": 200,
+      "sha256": "6f4a9737cdc3c56ea69240a867d2adea5c04813fe50beb40a1e7bdae55ea8a43",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/production-desktop.png",
+      "status": 200,
+      "sha256": "d4534cad06f53e9fd36604b43f50292365d08483ae947ca5026228369eb0b44f",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/production-landscape.png",
+      "status": 200,
+      "sha256": "c603e59e250b007a27515ce714cc6378cdbe8b2d29468081849a5e7b654956bf",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/production-portrait.png",
+      "status": 200,
+      "sha256": "963e30af69dd01d283196b4af665ecb8f11f15287bedf5a6bb5403c1ad97defb",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/production-recovery.json",
+      "status": 200,
+      "sha256": "4fe8ddf614c84be5598efea79b1b9d804c54436bb6a74383d6c83e077ca83c8c",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/production-smoke.json",
+      "status": 200,
+      "sha256": "843afc5c377691262ecdde92e60566178261b4707ca6aa569b0059ebcf1e32b3",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/selected-n10.png",
+      "status": 200,
+      "sha256": "104cf6aa9fd0312e0562ac13b9d43052139dbdad96bb59755f1f8aa42c1a801d",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/selected-n11.png",
+      "status": 200,
+      "sha256": "b5fe1503382203c6b5fd82908113f5f0833df38090d19225eb13e1b069b19932",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/selected-n16.png",
+      "status": 200,
+      "sha256": "023f921ff1110c5e82c1c0c2f77bb2942a92ed959bde6f1fa43cc7f47077d3a4",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/selected-n17.png",
+      "status": 200,
+      "sha256": "87a4c09911ee74f4d8ff11f145f1026463766a8e2eb6ffd50a5296b20821724e",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/selected-n20.png",
+      "status": 200,
+      "sha256": "61bcee159931f58a879356205c434ce48ec49bccb87f70dd7f0de19b1e13c1fe",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/selected-n9.png",
+      "status": 200,
+      "sha256": "0f52245ddc70ed0bf582890da963ac4f95b1292bbe886407156eb44714d6d7f6",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/small-landscape.png",
+      "status": 200,
+      "sha256": "4871ca5f22fcfdb227b0cb7c81f17581c03fcaee254bfa077952d9339fda0765",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/tablet.png",
+      "status": 200,
+      "sha256": "f2684ccdf23703c31801e2b601f885fa83412ed9e0635be8ed5c07a03f1cef89",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/unit-tests.txt",
+      "status": 200,
+      "sha256": "8fa523cec8eba90beb0a3b59ac477f280b607a4117d5917e486071f9fd29c7dd",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04-review/webkit-e2e.txt",
+      "status": 200,
+      "sha256": "c2490c813d7aab8b6b5fda71884635496381c1929971ba735ee59793f3dfffd8",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/2d.png",
+      "status": 200,
+      "sha256": "c9dbcafb8fa82ee7386519dc02bd504def55ecd8ee0fa9e29a92407ea472e427",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/before/mobile.png",
+      "status": 200,
+      "sha256": "9446f7ec86a912848622243b3e45b48a7d177c4734de5a9ca172983e05e70214",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/before/overview.png",
+      "status": 200,
+      "sha256": "c48428466d94a4ee8a9eb36cdc17d6616d597e1b1e79a45e40369006dbdb0fd7",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/before/selected-n9.png",
+      "status": 200,
+      "sha256": "9546ae81f5acc5309aadfe5c82eb33baae0c4bd49d77c8b007fd77d6ad3e95b6",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/browser-health.json",
+      "status": 200,
+      "sha256": "59e5effe5ddf3857cc74196d8925745aeaa22dccb600b8e9fafa935e20db9433",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/candidate-preview.png",
+      "status": 200,
+      "sha256": "670720a427f8ffa59789b86b3c506afe908bc9ffee24ad893c002e388d0698db",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/chromium-e2e.txt",
+      "status": 200,
+      "sha256": "21be283d097667a60ce8b4449a779946364791e78b112db9994b34c368ef9e99",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/community-review.png",
+      "status": 200,
+      "sha256": "4e52a191ad8c791dd47f16932914af01a9ae174bd5d8d283f3e0228f5294db9f",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/coverage.png",
+      "status": 200,
+      "sha256": "383ac6a817713c0034ee1ac883ce5b8eecd380f2819b38ed4657a9ccb93aaa80",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/cross-browser-ci.json",
+      "status": 200,
+      "sha256": "fc6f184ada4d99b09ab764dedf222776ff5af6d0f1384d7d4902bc9bd573760f",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/mobile-candidate-preview.png",
+      "status": 200,
+      "sha256": "05bf5b7b14c6b91b4e4be69229edc5513b793f1dee0f94f3fb87f6b35fa390de",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/mobile-landscape.png",
+      "status": 200,
+      "sha256": "42bb117421726b1f89563ea07cc1fca26d64f91c5c868b828a10e06b3413a0e5",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/mobile-narrow.png",
+      "status": 200,
+      "sha256": "f72c69e2fa02d634ac32895ed1804dff5d65ae5549cb8e3bbc48491eddfe32f6",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/mobile-portrait.png",
+      "status": 200,
+      "sha256": "5ddfa4fa23b404d00dd93ea7f72274a54387d5b8c5a8cd68a6a50a6dcf60b911",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/navigation-unverified.png",
+      "status": 200,
+      "sha256": "1c38d2ace084a7fdf9b400f4c1f7c991c573e024c0ef6c664783e7c40e95f626",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/night.png",
+      "status": 200,
+      "sha256": "8f0f1bd74129b80133d8f9e511b891f56a13131befe7d11454d18f6a98ee71a0",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/npm-audit.json",
+      "status": 200,
+      "sha256": "47ed08e2f907170440e368c42e05e926e4fecfc2a73c2b8d855058a6c7d5ab35",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/overview.png",
+      "status": 200,
+      "sha256": "52e374688c2054614a21279d90a56622eaa6e9085378c443f6cbfef8013c40cc",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/performance-exploratory.json",
+      "status": 200,
+      "sha256": "a8a99371a8536f9b839914a17687de944f05f2dbc83185a520e63f998ab5e0ba",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/performance.json",
+      "status": 200,
+      "sha256": "f9d58eceabc16021535793efdebf4966cfec60201989102e398f4f43aeae6710",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/poi-details.png",
+      "status": 200,
+      "sha256": "9b38100f9fdf1a0496d88f17119aaf60111c2c71d8b884a8bb379b4f7616eab8",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/poi-search.png",
+      "status": 200,
+      "sha256": "02df6772c96cd228f77882e3fcabd39c3e3068b7225a07f7c1526567dd2c0b11",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/preview-checks.txt",
+      "status": 200,
+      "sha256": "059566889effc0c3fce7df614587bac4d374fecf632ffb18feca707d9b40fe76",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/selected-n10.png",
+      "status": 200,
+      "sha256": "1fe2eb47d30a3b59c927092f1077b8e7cbc86e07b552d157b998ff6cf1c3f3df",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/selected-n16.png",
+      "status": 200,
+      "sha256": "3d7ff989a4f5a4022f2211b66afc263d6da01faf3dd0aa8b6ff1d1071c8a7862",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/selected-n9.png",
+      "status": 200,
+      "sha256": "42e5fbd26ab1ae007a7338a93855f901f27ba39603f63f793ad08ee4672c11bd",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/small-landscape.png",
+      "status": 200,
+      "sha256": "0946fdb8b67830c1252f5d9cbb0ac545f7f16c2325e7675cbf7ef556ee822fd7",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/tablet.png",
+      "status": 200,
+      "sha256": "251a3b20c194d5627e7766c31aff9d0c4f761bcad8e5c9f9b9811e89463271fa",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v04/unit-tests.txt",
+      "status": 200,
+      "sha256": "d0bfbda2418733e3a32e7f467dbf41081051dc5f8bef335125de09aaffdeab52",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v05/browser-health.json",
+      "status": 200,
+      "sha256": "de02a2b6476a041d1137a486fafafaefa9482ec22b63432c325fc8dcc79ceb76",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v05/desktop-n9.png",
+      "status": 200,
+      "sha256": "b23b5a43bd5151c44b5c62a251cfeafc5992bbf1b1a10ce85bee2be0e88c2f14",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v05/details-browser.txt",
+      "status": 200,
+      "sha256": "2e69a48ca3554e390fc76fc432f2b4334dfe698916ffd6a31938bfb0d902749e",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v05/mobile-details.png",
+      "status": 200,
+      "sha256": "7bb6b7607f7b5559a7ee03e636e86d33ce817cd66440d2d5f27d78f042388ca0",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v05/optimization.txt",
+      "status": 200,
+      "sha256": "721eeeba5ac9a4250a2f4bf4908bd83b951afa2c385cb5cf4cd59861fa264539",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v05/performance-exploratory.json",
+      "status": 200,
+      "sha256": "125217ce768dee52427d8bddd8d46eb548010d4a4d9bc84d103e3c573c0c9432",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v05/performance.json",
+      "status": 200,
+      "sha256": "5dc0656df950818db2229c4c0d543fcade4e54e5e446280f7be546ac2179e980",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v05/readiness-recheck.txt",
+      "status": 200,
+      "sha256": "4f320b5dae2963ac1a6de649c85ff0a6d24de86651e2ca9ad090350eb377a426",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v05/synthetic-pixel-extraction.json",
+      "status": 200,
+      "sha256": "5aaefac2dc22f739f170cc7d19920da74e4a2e531602b354312e5b15db9fc1a6",
+      "matches_merged": true
+    },
+    {
+      "file": "docs/qa/v05/unit-tests.txt",
+      "status": 200,
+      "sha256": "531dca32370ab9bca0148fcbb79b8eb01bd85ea65c18b6d33b3b94f1ffc54d86",
+      "matches_merged": true
+    }
+  ],
+  "image_requests": [],
+  "checks": [
+    "All published source, vendor, data, HTML, favicon and license bytes match merged commit exactly",
+    "All 35 building cards/names/missing-photo states and 20 supported/15 disabled Street View states pass; zero building-image requests",
+    "Search FIBO → N9; shared URL reload selects N9",
+    "Live night and 2D controls respond",
+    "Expanded desktop contribution details keep theme/GPS controls reachable",
+    "Local-only proposal preview/save/export validation/delete; published location unchanged",
+    "Production POI search, stale-hour warning and shared URL reload",
+    "Production portrait library selection, clear pin and reachable attribution",
+    "Production landscape library selection, clear pin and reachable attribution"
+  ],
+  "errors": [],
+  "warnings": [
+    "[.WebGL-0x349400d69400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x349400d69400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+    "layers[highway-shield-non-us].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
+    "layers[highway-shield-us-interstate].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
+    "layers[road_shield_us].filter[1]: Expected value to be of type number, but found null instead. Falling back to false.",
+    "Image \"gate\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+    "Image \"lift_gate\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+    "Image \"office\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+    "Image \"swimming_pool\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+    "Image \"running\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+    "Image \"motorcycle_parking\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+    "Image \"sports_centre\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style.",
+    "Image \"wood-pattern\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style."
+  ],
+  "screenshots": [
+    "production-desktop.png",
+    "production-portrait.png",
+    "production-landscape.png"
+  ],
+  "map_loaded_ms": 3554.5999999940395,
+  "csp_violations": [],
+  "excluded_paths": {
+    "admin/": 404,
+    "admin/index.html": 404,
+    "work/": 404,
+    "work/building-analysis.json": 404,
+    "scripts/analyze-building-evidence.mjs": 404
+  },
+  "status": "passed"
+}
