@@ -19,7 +19,7 @@ export function readCommunity(store) {
 export function saveCommunity(store,drafts,expectedRaw) {
  if(!store)throw Error('พื้นที่จัดเก็บในเบราว์เซอร์ไม่พร้อม');
  if(drafts.length>100||drafts.some(p=>!validateContribution(p))||new Set(drafts.map(p=>p.id)).size!==drafts.length)throw Error('Invalid contributions');
- if(store.getItem(COMMUNITY_KEY)!==expectedRaw)throw Error('ข้อมูลเปลี่ยนจากแท็บอื่น โปรดส่งออกข้อมูลแล้วโหลดหน้าใหม่');
+ if(store.getItem(COMMUNITY_KEY)!==expectedRaw)throw Error('ข้อมูลเปลี่ยนระหว่างรอบันทึกหรือจากแท็บอื่น โปรดส่งออกข้อมูลแล้วโหลดหน้าใหม่');
  if(readCommunity(store).warning)throw Error('ข้อมูลเดิมอ่านไม่ได้ กรุณาส่งออกสำเนากู้คืนก่อน ไม่เขียนทับข้อมูล');
  store.setItem(COMMUNITY_KEY,JSON.stringify(drafts));
 }

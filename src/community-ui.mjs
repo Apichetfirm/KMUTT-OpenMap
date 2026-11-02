@@ -15,7 +15,8 @@ export function setupCommunity({toast,download,getContext}) {
   $('community-export-all').disabled=!drafts.length;
  }
  async function persist(next){
-  try{if(!navigator.locks)throw Error('การบันทึกต้องใช้ Web Locks บน HTTPS หรือ localhost');await navigator.locks.request(COMMUNITY_KEY,()=>{saveCommunity(store,next,revision);drafts=next;revision=JSON.stringify(next);});saved=readCommunity(store);render();notify('บันทึกข้อเสนอในเครื่องแล้ว ยังไม่ได้ส่งหรือแก้ข้อมูลเผยแพร่');return true;}
+  const expectedRevision=revision;
+  try{if(!navigator.locks)throw Error('การบันทึกต้องใช้ Web Locks บน HTTPS หรือ localhost');await navigator.locks.request(COMMUNITY_KEY,()=>{saveCommunity(store,next,expectedRevision);drafts=next;revision=JSON.stringify(next);});saved=readCommunity(store);render();notify('บันทึกข้อเสนอในเครื่องแล้ว ยังไม่ได้ส่งหรือแก้ข้อมูลเผยแพร่');return true;}
   catch(e){notify('บันทึกไม่สำเร็จ: '+e.message);return false;}
  }
  function open(p){

@@ -66,3 +66,19 @@ test('browser provides a real WebGL2 context for campus rendering',async({page,b
  console.log('Rendering capability',browserName,JSON.stringify(capability));
  expect(capability.webgl2,JSON.stringify(capability)).toBe(true);
 });
+
+test('queued community deletions cannot restore an already deleted report',async({page})=>{
+ await fixture(page);
+ await page.addInitScript(()=>{
+  const report=id=>({id,type:'building-correction',title:id,details:'Synthetic review fixture',target_id:'N9',source_url:null,coordinates:null,review_status:'community-reported-unreviewed',created_at:'2026-11-02T00:00:00Z'});
+  localStorage.setItem('kmutt-openmap-community-v1',JSON.stringify([report('review-a'),report('review-b')]));
+ });
+ await page.goto('/');await expect(page.locator('.place')).toHaveCount(35);await page.locator('#open-community').click();
+ await page.evaluate(()=>{navigator.locks.request('kmutt-openmap-community-v1',()=>new Promise(resolve=>window.releaseReviewLock=resolve));});
+ await expect.poll(()=>page.evaluate(()=>typeof window.releaseReviewLock)).toBe('function');
+ await page.locator('.community-row').filter({hasText:'review-a'}).getByRole('button',{name:'ลบ'}).click();
+ await page.locator('.community-row').filter({hasText:'review-b'}).getByRole('button',{name:'ลบ'}).click();
+ await page.evaluate(()=>window.releaseReviewLock());
+ await expect(page.locator('#community-feedback')).toContainText('บันทึกไม่สำเร็จ');
+ expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('kmutt-openmap-community-v1')).map(p=>p.id))).toEqual(['review-b']);
+});
