@@ -14,11 +14,14 @@ Linux managed workspace, Node 24.19.0, npm 11.9.0, Playwright 1.64.1, system Chr
 | `npm test` | **46 passed, 0 failed** |
 | `npm run verify-vendor` | Pass; module, separate worker, CSS, license match manifest and locked npm bytes |
 | `OPENMAP_CHROMIUM=/usr/bin/chromium npx playwright test --project=desktop --project=mobile` | **40 passed, 0 failed**, 4.1 minutes |
+| CI full browser matrix at `5825099` | **84 passed, 0 failed**, 21 per engine/project, 2.8 minutes; [successful run](https://github.com/Apichetfirm/KMUTT-OpenMap/actions/runs/41391049480) |
 | `npm run build` | Pass; vendor verified and allowlisted Pages assets staged |
 | `npm audit --json` | Baseline and final: **0 advisories** |
 | `npx playwright install firefox webkit` / separate WebKit attempt | BLOCKED — TECHNICAL: download endpoints denied HTTP 403 by environment policy |
 
 Baseline from latest main `0bdeadd63d668d359fbe780fd5aef0acf98a25df`: 34 Node tests and 22 Chromium desktop/mobile browser tests passed. The release candidate expands to 46 and 40. Intermediate failures exposed stale expectations after data expansion, a popup fixture needing a local response, and the initially missing vendored worker; these were corrected before the final passes. They are not omitted failures from the final command.
+
+The initial full CI run had **67 passes and 13 Firefox map failures**. Running Firefox headed under Xvfb with software Mesa and explicit WebGL preferences resolved those checks. The new capability test confirms a real WebGL2 context in all four projects. Final CI at `5825099` passes all **84/84** tests (Chromium desktop 21, Chromium mobile 21, Firefox 21, WebKit 21), all 46 unit tests, integrity/data checks and the staged build. GitHub annotations expose future failures through the API; a GitHub connector retrieved the decoded CI logs after the local log-download host was blocked. [Structured CI evidence](qa/v04/cross-browser-ci.json).
 
 After the final preview-framing refinement, the focused desktop/mobile candidate test is rerun with a new explicit non-overlap assertion; result: **2/2 passed**; see `qa/v04/preview-checks.txt`.
 
@@ -44,6 +47,6 @@ Actual screenshots use the unmodified local application and live OpenFreeMap/OSM
 
 ## Limits and release gates
 
-Firefox/WebKit projects are configured in Playwright and CI, but local binary downloads are denied; this report does not claim a local pass for either engine. The actual production/reference GitHub Pages domains are also denied by this environment. Local same-source/live-provider results are not production-site tests. No physical Android/iOS, Safari hardware, screen-reader session, thermal/memory soak or mid-range Android FPS was performed. No independent WCAG certification is claimed.
+Firefox/WebKit projects are configured in Playwright and CI, and **both pass in the successful full CI run**. Local binary downloads remain denied; this report does not claim a local execution pass for either engine. CI Firefox uses Xvfb/software Mesa; CI WebKit is a Linux browser backend, not actual Safari hardware. The actual production/reference GitHub Pages domains are also denied by this environment. Local same-source/live-provider results are not production-site tests. No physical Android/iOS, Safari hardware, screen-reader session, thermal/memory soak or mid-range Android FPS was performed. No independent WCAG certification is claimed.
 
 Sequential actual-provider load/search measurements are in `qa/v04/performance.json` and PERFORMANCE.md. Software-rendered headless results do not satisfy the physical-device 30 FPS target. Independent reviewer must inspect CI at the final SHA and perform the listed physical/live-release checks. No phase depending on these checks is labeled complete.

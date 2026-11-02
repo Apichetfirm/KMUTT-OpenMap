@@ -63,6 +63,8 @@ The build stages allowlisted static assets in `.site/`; no node_modules, credent
 OPENMAP_CHROMIUM=/usr/bin/chromium npx playwright test --project=desktop --project=mobile
 ```
 
+The full CI matrix passes **84/84 browser checks**, including real WebGL2 in all four projects; 46 unit tests also pass. On Linux, the CI rendering setup is reproducible with `CI=1 LIBGL_ALWAYS_SOFTWARE=1 MOZ_WEBRENDER=1 xvfb-run --auto-servernum npm run test:e2e` after installing browser dependencies. This does not substitute for physical-device tests.
+
 [Actual browser results and screenshots](docs/TEST-RESULTS.md) distinguish fixture checks, live providers and unavailable physical devices/other engines. [Complete engineering handoff](docs/COMPLETE-IMPLEMENTATION-HANDOFF.md) identifies every phase and blocker.
 
 ## Data and maintenance
