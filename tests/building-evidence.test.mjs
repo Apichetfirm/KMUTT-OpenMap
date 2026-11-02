@@ -8,3 +8,6 @@ test('decisions require independent reviewer and sources and never publish geome
 
 
 test('review thumbnails preserve footprint proportions instead of stretching every shape',async()=>{const {footprintPreview}=await import('../admin/footprint.mjs');const lat=13.652,dy=0.0001,dx=dy/Math.cos((lat+dy/2)*Math.PI/180),ring=[[100.493,lat],[100.493+dx,lat],[100.493+dx,lat+dy],[100.493,lat+dy],[100.493,lat]],points=footprintPreview({type:'Polygon',coordinates:[ring]}).split(' ').map(s=>s.split(',').map(Number));assert.ok(Math.abs((points[1][0]-points[0][0])/(points[1][1]-points[2][1])-1)<1e-6);});
+
+
+test('private output cannot enter any production directory on POSIX or Windows',async()=>{const {privateEvidenceOutput}=await import('../scripts/evidence-paths.mjs');const {posix,win32}=await import('node:path');for(const [paths,root] of [[posix,'/repo'],[win32,'C:\\repo']]){for(const name of ['src/private.json','data/private.json','vendor/private.json','.site/private.json','docs/private.json','index.html'])assert.throws(()=>privateEvidenceOutput(name,root,paths));assert.ok(privateEvidenceOutput('work/private.json',root,paths).endsWith('private.json'));}});

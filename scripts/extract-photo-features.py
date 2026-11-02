@@ -5,7 +5,8 @@ p=argparse.ArgumentParser();p.add_argument('image');p.add_argument('metadata');p
 m=json.loads(pathlib.Path(a.metadata).read_text());allowed={'CC0-1.0','CC-BY-4.0','CC-BY-SA-4.0','CC-BY-3.0','CC-BY-SA-3.0'}
 if m.get('license') not in allowed or m.get('review_status')!='approved-for-publication' or not all(m.get(k) for k in ['id','photographer','source','attribution','reviewer','reviewed_on']):raise ValueError('Reviewed reusable photo rights required')
 out=pathlib.Path(a.output).resolve()
-if any(part in {'.site','data','assets','docs'} for part in out.parts):raise ValueError('Unreviewed visual features must remain outside public assets')
+repo=pathlib.Path(__file__).resolve().parents[1]
+if out.is_relative_to(repo) and out.relative_to(repo).parts[:1]!=('work',):raise ValueError('Unreviewed output inside the repository must remain under work/')
 with Image.open(a.image) as original:
  image=ImageOps.exif_transpose(original).convert('RGB');width,height=image.size;image.thumbnail((128,128));quantized=image.quantize(colors=5);palette=quantized.getpalette();counts=sorted(quantized.getcolors(),reverse=True)
  colors=[{'rgb':palette[i*3:i*3+3],'pixel_fraction':count/(image.width*image.height)} for count,i in counts]
