@@ -1,5 +1,5 @@
 import unittest,tempfile,pathlib,json,subprocess,sys,shutil
-from PIL import Image
+from PIL import Image,__version__ as pillow_version
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 class ImageTools(unittest.TestCase):
  def test_optimized_derivatives_and_private_pixel_features(self):
@@ -11,7 +11,7 @@ class ImageTools(unittest.TestCase):
    for file in (root/'derivatives').glob('*.webp'):
     with Image.open(file) as result:self.assertFalse(result.getexif());self.assertLess(file.stat().st_size,120000)
    output=root/'features.json';subprocess.run([sys.executable,str(ROOT/'scripts/extract-photo-features.py'),str(source),str(meta),str(output)],check=True,capture_output=True)
-   features=json.loads(output.read_text());self.assertEqual(features['width'],1200);self.assertEqual(len(features['image_sha256']),64);self.assertAlmostEqual(sum(x['pixel_fraction'] for x in features['dominant_image_colors']),1)
+   features=json.loads(output.read_text());self.assertEqual(features['width'],1200);self.assertEqual(len(features['image_sha256']),64);self.assertAlmostEqual(sum(x['pixel_fraction'] for x in features['dominant_image_colors']),1);self.assertTrue(features['extractor'].startswith('Pillow '+pillow_version+' /'))
  def test_unreviewed_rights_are_rejected(self):
   with tempfile.TemporaryDirectory() as tmp:
    root=pathlib.Path(tmp);meta=root/'metadata.json';meta.write_text('{}')

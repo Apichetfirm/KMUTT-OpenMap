@@ -20,8 +20,13 @@ jobs:
         run: npm run verify-vendor && npm run check && npm run validate-data
       - name: Unit and map integration tests
         run: npm test
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.14'
+      - name: Audit offline image dependency
+        run: python -m pip install -r scripts/requirements-images.txt pip-audit==2.10.1 && python -m pip_audit --strict -r scripts/requirements-images.txt
       - name: Offline image tools
-        run: python -m pip install -r scripts/requirements-images.txt && python -m unittest discover -s tests -p 'test_*.py'
+        run: python -m unittest discover -s tests -p 'test_*.py'
       - name: Install browser engines
         run: npx playwright install --with-deps chromium firefox webkit
       - name: Desktop/mobile and Firefox/WebKit browser fixtures
