@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "initialFailure": "deliberately aborted runtime module in fresh context",
+  "catalogAvailable": true,
+  "retryRestoredLiveMap": true,
+  "selectedCode": "N9",
+  "viewport": [
+    390,
+    844
+  ]
+}

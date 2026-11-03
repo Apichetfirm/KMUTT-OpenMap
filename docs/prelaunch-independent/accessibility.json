@@ -1,0 +1,32 @@
+{
+  "controls": {
+    "search": {
+      "aria": "- searchbox \"ค้นหาชื่อหรือรหัสอาคาร\"",
+      "height": 44
+    },
+    "close-detail": {
+      "aria": "- button \"ปิดรายละเอียด\": ×",
+      "height": 44
+    },
+    "directions": {
+      "aria": "- button \"Google Maps · เดิน\"",
+      "height": 44
+    },
+    "share-building": {
+      "aria": "- button \"คัดลอกลิงก์\"",
+      "height": 44
+    },
+    "reset-view": {
+      "aria": "- button \"กลับมุมเริ่มต้น\": กลับมุมเริ่มต้น⌂",
+      "height": 44
+    },
+    "locate": {
+      "aria": "- button \"แสดงตำแหน่งปัจจุบัน\": ◎",
+      "height": 44
+    }
+  },
+  "focusVisible": true,
+  "focusReturn": true,
+  "keyboardSnaps": true,
+  "physicalAssistiveTechnology": false
+}

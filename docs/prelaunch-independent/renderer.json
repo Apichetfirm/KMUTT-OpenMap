@@ -1,0 +1,34 @@
+{
+  "base": {
+    "extrusions": [
+      {
+        "id": "campus-3d",
+        "sourceType": "vector",
+        "sourceLayer": "building",
+        "opacity": 1
+      }
+    ],
+    "accepted": 0,
+    "selectedFilter": [
+      "==",
+      [
+        "get",
+        "building_code"
+      ],
+      "N9"
+    ]
+  },
+  "preview": {
+    "extrusions": [
+      {
+        "id": "campus-candidate-3d",
+        "sourceType": "geojson",
+        "opacity": 0.42
+      }
+    ],
+    "geometry": "Polygon",
+    "accepted": 0
+  },
+  "errors": [],
+  "instrumentation": "Local source response exposed the live MapLibre instance only. Actual provider data."
+}
