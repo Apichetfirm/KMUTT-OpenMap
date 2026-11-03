@@ -1318,6 +1318,7 @@ dialog button {
     max-height:calc(100dvh - 128px - env(safe-area-inset-top));
     border-radius:22px 22px 0 0;
     padding:0 18px 20px;
+    clip-path:inset(0 round 22px 22px 0 0);
     transition:height .2s ease;
     scroll-padding:45px
   }
@@ -1561,6 +1562,9 @@ dialog button {
   .detail-label {
     margin-top:0
   }
+  #detail .detail-label {
+    display:none
+  }
   .detail-en {
     margin:4px 0
   }
@@ -1568,7 +1572,11 @@ dialog button {
     padding:6px 8px
   }
   .detail-actions {
-    margin:8px 0
+    margin:6px 0
+  }
+  .detail-actions>* {
+    font-size:10px;
+    padding:6px
   }
 }
 .directory-peek {
