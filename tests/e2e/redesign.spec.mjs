@@ -1,6 +1,15 @@
 import {test,expect} from '@playwright/test';
 import {fixture} from './fixture.mjs';
 
+test('short landscape keeps attribution, map tools and primary actions clear',async({page})=>{
+ await fixture(page);await page.setViewportSize({width:667,height:375});await page.goto('/?building=N16');
+ await expect(page.locator('#toggle3d')).toBeEnabled();
+ for(const selector of ['#directions','#share-building','#reset-view','#locate','.maplibregl-ctrl-attrib a']){
+  const target=page.locator(selector).first();await expect(target).toBeInViewport({ratio:1});
+  expect(await target.evaluate(e=>{const r=e.getBoundingClientRect();return e.contains(document.elementFromPoint(r.x+r.width/2,r.y+r.height/2));})).toBe(true);
+ }
+});
+
 test('daylight UI, GIS disclosure, theme and home camera survive style changes',async({page})=>{
  const errors=await fixture(page);await page.goto('/KMUTT-OpenMap/');await expect(page.locator('#toggle3d')).toBeEnabled();
  await expect(page.locator('.place').first()).toHaveAttribute('data-code','N9');

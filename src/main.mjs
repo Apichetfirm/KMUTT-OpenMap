@@ -251,7 +251,7 @@ async function initMap() {
       const runtime=await import(`../vendor/maplibre-gl/maplibre-gl.mjs${attempt?'?retry='+attempt:''}`);
       if(attempt!==mapAttempt-1)return;state.maplibre=runtime;
       const map=new state.maplibre.Map({container:'map',style:state.dark?STYLES.dark:STYLES.light,center:HOME,...OVERVIEW,pitch:state.is3d?OVERVIEW.pitch:0,padding:mobile()?{top:80,right:30,bottom:200,left:20}:{top:70,right:60,bottom:40,left:370},minZoom:11,maxZoom:20,
-        canvasContextAttributes:{antialias:!mobile()},attributionControl:{compact:matchMedia('(max-width:900px)').matches}});state.map=map;
+        canvasContextAttributes:{antialias:!mobile()},attributionControl:{compact:false}});state.map=map;
       map.on('click',onMapClick);
       map.on('style.load',()=>{
         if(state.map!==map)return;
