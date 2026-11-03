@@ -15,8 +15,9 @@ export function extrusionBase(mode='guarded') {
 export function zoomHeight(expression) {
   return ['interpolate',['linear'],['zoom'],14.8,0,15.6,expression];
 }
-export function extrusionColor() {
-  return ['interpolate',['linear'],['to-number',['coalesce',['get','render_height'],4],4],0,'#c0d4cd',12,'#9fbbb3',30,'#7da49d',55,'#6e9499',110,'#628692'];
+export function extrusionColor(dark=false) {
+  const colors=dark?['#b7b5a7','#a5aaa5','#8e9b9e','#798b96','#70848f']:['#e8ddc8','#d8c9ad','#c4b99e','#a6afa9','#8d9da4'];
+  return ['interpolate',['linear'],['to-number',['coalesce',['get','render_height'],4],4],0,colors[0],12,colors[1],30,colors[2],55,colors[3],110,colors[4]];
 }
 export function numericVisualHeight(meters,mode='guarded') {
   const p=HEIGHT_PRESETS[mode];if(!p)throw Error(`Unsupported height mode: ${mode}`);

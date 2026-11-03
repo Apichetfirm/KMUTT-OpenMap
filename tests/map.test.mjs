@@ -39,3 +39,19 @@ test('candidate previews are the only visible extrusion while editing and stay s
  installMapLayers(map,{...state,candidatePreview});assert.equal(map.getLayer('campus-3d').layout.visibility,'none');assert.equal(map.getLayer('campus-candidate-3d').layout.visibility,'visible');assert.equal(map.getStyle().sources['campus-footprints'].data.features.length,0);
  installMapLayers(map,{...state,candidatePreview:{type:'FeatureCollection',features:[]}});assert.equal(map.getLayer('campus-3d').layout.visibility,'visible');assert.equal(map.getLayer('campus-candidate-3d').layout.visibility,'none');
 });
+
+test('architectural materials use provider polygons with no catalog identity assumptions',()=>{
+ const map=fakeMap();installMapLayers(map,state);
+ const extrusion=map.getLayer('campus-3d'),ground=map.getLayer('campus-grounding');
+ assert.equal(extrusion.source,'basemap');assert.equal(extrusion['source-layer'],'building');
+ assert.equal(extrusion.paint['fill-extrusion-opacity'],1);assert.equal(extrusion.paint['fill-extrusion-vertical-gradient'],true);
+ assert.equal(ground.source,extrusion.source);assert.equal(ground['source-layer'],'building');
+ assert.equal(map.getStyle().sources['campus-buildings'].data.features.length,0);
+ assert.equal(map.getLayer('campus-candidate-3d').paint['fill-extrusion-opacity'],0.42);
+ assert.equal(map.getStyle().sources['campus-footprints'].data.features.length,0);
+ // No invented per-building codes, roof heights or selected tile IDs appear in the material expression.
+ const color=JSON.stringify(extrusion.paint['fill-extrusion-color']);assert.ok(color.includes('render_height'));assert.ok(!color.includes('building_code'));
+ const day=extrusion.paint['fill-extrusion-color'];const night=fakeMap();installMapLayers(night,{...state,dark:true});
+ assert.notDeepEqual(day,night.getLayer('campus-3d').paint['fill-extrusion-color']);
+ assert.deepEqual(validateStyleMin(map.getStyle()),[]);assert.deepEqual(validateStyleMin(night.getStyle()),[]);
+});

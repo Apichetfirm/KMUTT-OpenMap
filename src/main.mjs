@@ -1,10 +1,11 @@
+import {setupSheets} from './sheets.mjs';
 import {searchBuildings,validCoordinates} from './search.mjs';
 import {validateCandidateFootprints,validateCatalog,validateFootprints,safeURL,coverage} from './data.mjs';
 import {candidateRendering,HEIGHT_PRESETS} from './heights.mjs';
 import {readDraftState,saveDrafts,putDraft,proposalFor,exportPackage,DRAFT_STORAGE_KEY,RECOVERY_STORAGE_KEY} from './mapping.mjs';
 import {placeURL,sharedPlace,buildingURL,sharedBuilding} from './sharing.mjs';
 import {PLACE_CATEGORIES,validatePlaces,filterPlaces,openingStatus} from './places.mjs';
-import {HOME,STYLES,installMapLayers,applyHeights,updateSelection,cameraOptions} from './map.mjs';
+import {HOME,OVERVIEW,STYLES,installMapLayers,applyHeights,updateSelection,cameraOptions} from './map.mjs';
 
 import {setupCommunity} from './community-ui.mjs';
 import {reviewIssueURL} from './contributions.mjs';
@@ -33,12 +34,19 @@ function download(text,name) {
   const url=URL.createObjectURL(new Blob([text],{type:'application/json'})),a=element('a');
   a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
+function syncPanels() {
+  const details=[$('detail'),$('poi-detail')].filter(panel=>!panel.classList.contains('hidden'));
+  $('app').classList.toggle('detail-active',!!details.length);
+  const full=mobile()&&!state.mapping&&(details.length?details.some(panel=>panel.dataset.snap==='full'):document.querySelector('.sidebar').dataset.snap==='full');
+  $('map').inert=full;document.querySelector('.map-tools').inert=full;
+}
 function setDrawer(collapsed) {
   if(mobile())document.querySelector('.sidebar-scroll').scrollTop=0;
   document.querySelector('.sidebar').classList.toggle('collapsed',collapsed);
   $('mobile-drawer').setAttribute('aria-expanded',String(!collapsed));
+  document.querySelector('.sidebar').dataset.snap=collapsed?'peek':'half';
   if(collapsed&&document.querySelector('.directory-body').contains(document.activeElement))$('mobile-drawer').focus();
-  document.querySelector('.directory-body').inert=mobile()&&collapsed;
+  document.querySelector('.directory-body').inert=mobile()&&collapsed;syncPanels();
 }
 function syncMap() {
   if(!state.mapReady)return;
@@ -46,6 +54,10 @@ function syncMap() {
 }
 function renderList() {
   state.results=searchBuildings(state.official,$('search').value,state.filter);
+  if(!$('search').value.trim()&&state.filter==='all'){
+    const featured=['N9','N10','N11','N16','N17','N20'];
+    state.results.sort((a,b)=>(featured.includes(a.id)?featured.indexOf(a.id):featured.length)-(featured.includes(b.id)?featured.indexOf(b.id):featured.length));
+  }
   $('results-label').textContent=state.results.length+' อาคาร';
   $('empty').classList.toggle('hidden',!!state.results.length);
   const fragment=document.createDocumentFragment();
@@ -93,11 +105,11 @@ function renderDetail() {
   $('entrance-status').textContent=b.entrances.length?`${b.entrances.length} ทางเข้าในข้อมูล · ตรวจหลักฐานก่อนเดินทาง`:'ยังไม่มีทางเข้าสาธารณะที่สำรวจยืนยัน';
   renderNavigation();
   $('detail-provenance').replaceChildren();
-  showSource($('detail-provenance'),'ชื่ออาคาร: มจธ. ↗',b.name_source);
-  if(mapped)showSource($('detail-provenance'),'พิกัดอ้างอิง ↗',b.location_source);
+  showSource($('detail-provenance'),'ชื่ออาคาร: มจธ.',b.name_source);
+  if(mapped)showSource($('detail-provenance'),'พิกัดอ้างอิง',b.location_source);
   if(b.mapping.evidence)$('detail-provenance').append(element('span','',`ตรวจแหล่งพิกัด ${b.mapping.evidence.checked_on} · ${b.mapping.confidence}`));
   if(b.mapping.unresolved_reason)$('detail-provenance').append(element('span','',b.mapping.unresolved_reason));
-  if(b.floor_count_source)showSource($('detail-provenance'),'จำนวนชั้น ↗',b.floor_count_source);
+  if(b.floor_count_source)showSource($('detail-provenance'),'จำนวนชั้น',b.floor_count_source);
   $('detail-provenance').append(element('span','',`ตรวจชื่อ ${b.name_checked_on} · สำรวจตำแหน่ง: ${b.mapping.last_verified_on||'ยังไม่ยืนยัน'}`));
   $('draft-info').textContent=draft?`◇ ข้อเสนอในเครื่อง: ${draft.coordinates[1]}, ${draft.coordinates[0]} · ยังไม่ยืนยัน`:'ยังไม่มีข้อเสนอในเครื่องสำหรับอาคารนี้';
   $('map-delete').classList.toggle('hidden',!draft);$('view-proposal').classList.toggle('hidden',!draft);
@@ -105,9 +117,9 @@ function renderDetail() {
 function select(b,{from=null,move=true,updateURL=true}={}) {
   if(!b)return;
   if(state.mapping)cancelMapping();
-  if(state.selected?.id!==b.id){document.querySelector('.contribution-detail').open=false;$('share-url').classList.add('hidden');}
+  if(state.selected?.id!==b.id){$('detail').dataset.snap='half';$('detail').scrollTop=0;$('detail').querySelector('.sheet-resize').setAttribute('aria-expanded','false');document.querySelector('.contribution-detail').open=false;$('share-url').classList.add('hidden');}
   state.selectedPlace=null;$('poi-detail').classList.add('hidden');state.route=emptyCollection();state.selected=b;state.returnFocus=from;renderList();renderDetail();$('detail').classList.remove('hidden');
-  if(mobile())setDrawer(true);
+  if(mobile())setDrawer(true);syncPanels();
   updateSelection(state.map,state.selected);renderSelectedMarker();
   if(updateURL)history.pushState({},'',buildingURL(location.href,b.id));
   if(move)focusBuilding(b);
@@ -118,7 +130,7 @@ function closeDetail() {
   $('detail').classList.add('hidden');$('poi-detail').classList.add('hidden');state.selected=null;state.selectedPlace=null;state.route=emptyCollection();
   const url=new URL(location.href);url.searchParams.delete('building');url.searchParams.delete('poi');history.pushState({},'',url);
   updateSelection(state.map,null);state.selectedMarker?.remove();state.selectedMarker=null;
-  renderList();syncMap();
+  syncPanels();if(mobile())setDrawer(false);renderList();syncMap();
   const button=state.returnFocus?.dataset?.code?document.querySelector(`[data-code="${state.returnFocus.dataset.code}"]`):null;
   (button||$('search')).focus({preventScroll:true});
 }
@@ -131,9 +143,10 @@ function focusBuilding(b) {
     const map=$('map').getBoundingClientRect(),detail=activePanel.getBoundingClientRect(),tools=document.querySelector('.map-tools').getBoundingClientRect();
     const sidebar=document.querySelector('.sidebar').getBoundingClientRect();
     // The selected marker is bottom-anchored: reserve its height above the camera target.
-    options.padding={left:mobile()?12:sidebar.right-map.left+12,
-      right:mobile()?12:map.right-detail.left+12,top:Math.max(20,tools.bottom-map.top+60),
-      bottom:mobile()?Math.max(120,map.bottom-detail.top+12):20};
+    const availableBottom=Math.max(80,map.bottom-detail.top+12);
+    options.padding={left:mobile()?20:sidebar.right-map.left+12,
+      right:mobile()?76:map.right-detail.left+12,top:mobile()?120:Math.max(20,Math.min(tools.bottom-map.top+60,160)),
+      bottom:mobile()?Math.min(availableBottom,map.height-210):20};
   }
   state.map.flyTo(options);
 }
@@ -167,10 +180,10 @@ function showPlace(feature,{updateURL=true}={}) {
   $('poi-hours').textContent=hours.label+(hours.stale?' · ตารางเก่าเกิน 90 วัน โปรดตรวจสอบอีกครั้ง':'')+' · วันหยุดอาจต่างจากตาราง';
   const days=['อา.','จ.','อ.','พ.','พฤ.','ศ.','ส.'];
   $('poi-schedule').textContent=p.opening_hours?days.map((day,i)=>day+' '+(p.opening_hours.weekly[i]===undefined?'ไม่ทราบ':p.opening_hours.weekly[i].length?p.opening_hours.weekly[i].map(pair=>pair.join('–')).join(', '):'ปิด')).join('\n'):'ยังไม่มีตารางเวลาที่ตีความได้';
-  $('poi-provenance').replaceChildren();showSource($('poi-provenance'),'ข้อมูลสถานที่: OpenStreetMap ↗',p.evidence.source);
+  $('poi-provenance').replaceChildren();showSource($('poi-provenance'),'ข้อมูลสถานที่: OpenStreetMap',p.evidence.source);
   $('poi-provenance').append(element('span','',`ดึงแหล่งข้อมูล ${p.evidence.checked_on} · แหล่งข้อมูลลงวันที่ ${p.evidence.source_date||p.evidence.source_timestamp?.slice(0,10)||'ไม่ระบุ'} · ยังไม่สำรวจยืนยัน`));
   $('poi-share-url').classList.add('hidden');$('poi-focus').disabled=!state.mapReady;
-  if(mobile())setDrawer(true);renderList();updateSelection(state.map,null);renderSelectedMarker();focusBuilding({coordinates:feature.geometry.coordinates});syncMap();
+  if(mobile())setDrawer(true);syncPanels();renderList();updateSelection(state.map,null);renderSelectedMarker();focusBuilding({coordinates:feature.geometry.coordinates});syncMap();
   if(updateURL)history.pushState({},'',placeURL(location.href,feature.id));$('poi-name').focus({preventScroll:true});
 }
 function renderNavigation() {
@@ -237,8 +250,8 @@ async function initMap() {
     try {
       const runtime=await import(`../vendor/maplibre-gl/maplibre-gl.mjs${attempt?'?retry='+attempt:''}`);
       if(attempt!==mapAttempt-1)return;state.maplibre=runtime;
-      const map=new state.maplibre.Map({container:'map',style:state.dark?STYLES.dark:STYLES.light,center:HOME,zoom:16,pitch:state.is3d?48:0,bearing:-20,minZoom:11,maxZoom:20,
-        canvasContextAttributes:{antialias:!mobile()},attributionControl:{compact:matchMedia('(max-width:900px)').matches}});state.map=map;
+      const map=new state.maplibre.Map({container:'map',style:state.dark?STYLES.dark:STYLES.light,center:HOME,...OVERVIEW,pitch:state.is3d?OVERVIEW.pitch:0,padding:mobile()?{top:80,right:30,bottom:200,left:20}:{top:70,right:60,bottom:40,left:370},minZoom:11,maxZoom:20,
+        canvasContextAttributes:{antialias:!mobile()},attributionControl:{compact:false}});state.map=map;
       map.on('click',onMapClick);
       map.on('style.load',()=>{
         if(state.map!==map)return;
@@ -272,7 +285,7 @@ async function loadData() {
     try {state.storage=localStorage;}catch{state.storage=null;}
     const saved=readDraftState(state.storage,codes());state.drafts=saved.drafts;state.draftRevision=saved.raw;
     if(saved.warning||!state.storage){$('storage-warning').textContent='ข้อเสนอในเครื่องอ่านไม่ได้ ข้อมูลเดิมจะถูกเก็บไว้เมื่อบันทึกใหม่ หรือส่งออกสำเนากู้คืนได้';$('storage-warning').classList.remove('hidden');}
-    $('count-total').textContent=String(state.official.length);renderList();renderDraftStatus();performance.mark('openmap-catalog-ready');
+    $('count-total').textContent=String(state.official.length);$('peek-count').textContent=String(state.official.length);renderList();renderDraftStatus();performance.mark('openmap-catalog-ready');
     const shared=sharedBuilding(location.href,state.official);
     if(shared.building)select(shared.building,{updateURL:false});else if(shared.requested)toast('ไม่พบรหัสอาคารในลิงก์: '+shared.requested);
     const report=coverage(state.official,state.footprints);$('coverage').textContent=`${report.total} อาคาร · ${report.coordinates} พิกัดโดยประมาณ · ${report.unmapped} ยังไม่ทราบตำแหน่ง`;
@@ -296,7 +309,7 @@ async function loadData() {
 }
 function setupEvents() {
   $('search').addEventListener('input',()=>{setDrawer(false);renderList();});
-  $('search').addEventListener('focus',()=>{setDrawer(false);if(mobile()){$('detail').classList.add('hidden');$('poi-detail').classList.add('hidden');}});
+  $('search').addEventListener('focus',()=>{setDrawer(false);if(mobile()){$('detail').classList.add('hidden');$('poi-detail').classList.add('hidden');syncPanels();}});
   for(const button of document.querySelectorAll('[data-filter]'))button.addEventListener('click',()=>{
     state.filter=button.dataset.filter;
     for(const b of document.querySelectorAll('[data-filter]')){b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));}renderList();
@@ -326,13 +339,13 @@ function setupEvents() {
     for(const f of state.candidates.features.filter(f=>f.properties.building_code===b.id)){const o=element('option','',f.properties.osm_name+' · รอตรวจสอบ');o.value=f.id;$('candidate-footprint').append(o);}
     $('candidate-source').replaceChildren();$('proposal-lng').value=old?.coordinates[0]??'';$('proposal-lat').value=old?.coordinates[1]??'';$('proposal-preview').textContent='แตะบนแผนที่ หรือกรอกพิกัด แล้วดูตัวอย่างก่อนยืนยัน';
     $('confirm-mapping').disabled=true;$('map-editor-banner').classList.remove('hidden');$('map').style.cursor='crosshair';
-    $('detail').classList.add('hidden');renderSelectedMarker();if(mobile())setDrawer(true);focusBuilding(state.selected);
+    $('detail').classList.add('hidden');syncPanels();renderSelectedMarker();if(mobile())setDrawer(true);focusBuilding(state.selected);
     $('proposal-lat').focus({preventScroll:true});
   });
   $('candidate-footprint').addEventListener('change',()=>{
     const f=state.candidates.features.find(f=>f.id===$('candidate-footprint').value);$('candidate-source').replaceChildren();
     if(!f){state.candidatePreview=emptyCollection();state.pending=null;$('confirm-mapping').disabled=true;syncMap();return;}
-    showSource($('candidate-source'),'แหล่งรูปทรง OSM · ยังไม่รับรอง ↗',f.properties.evidence.source);
+    showSource($('candidate-source'),'แหล่งรูปทรง OSM · ยังไม่รับรอง',f.properties.evidence.source);
     $('proposal-evidence').value=`Candidate ${f.id}; ${f.properties.evidence.association_basis}`;previewPoint(f.properties.reference_point,f);focusBuilding({coordinates:f.properties.reference_point});
   });
   $('mapping-github').addEventListener('click',()=>{
@@ -340,7 +353,7 @@ function setupEvents() {
     window.open(reviewIssueURL({title:`[Mapping] ${draft.building_code} location proposal`,body:exportPackage([draft])}),'_blank','noopener,noreferrer');
   });
   $('preview-coordinates').addEventListener('click',()=>previewPoint([Number($('proposal-lng').value),Number($('proposal-lat').value)]));
-  $('cancel-mapping').addEventListener('click',()=>{cancelMapping();if(state.selected){$('detail').classList.remove('hidden');focusBuilding(state.selected);$('map-propose').focus();}});
+  $('cancel-mapping').addEventListener('click',()=>{cancelMapping();if(state.selected){$('detail').classList.remove('hidden');syncPanels();focusBuilding(state.selected);$('map-propose').focus();}});
   $('proposal-form').addEventListener('submit',async event=>{
     event.preventDefault();if(!state.pending)return;
     try {
@@ -348,7 +361,7 @@ function setupEvents() {
       if(Number($('proposal-lng').value)!==state.pending.coordinates[0]||Number($('proposal-lat').value)!==state.pending.coordinates[1])throw Error('โปรดดูตัวอย่างพิกัดใหม่ก่อนยืนยัน');
       const proposal={...state.pending,evidence:$('proposal-evidence').value.trim().slice(0,2000)||state.pending.evidence};
       const next=putDraft(state.drafts,proposal,codes());await persistDrafts(next);
-      cancelMapping();renderDraftStatus();syncMap();renderDetail();$('detail').classList.remove('hidden');focusBuilding(state.selected);toast('บันทึกข้อเสนอในเครื่องแล้ว · ตำแหน่งเผยแพร่ยังรอตรวจสอบ');
+      cancelMapping();renderDraftStatus();syncMap();renderDetail();$('detail').classList.remove('hidden');syncPanels();focusBuilding(state.selected);toast('บันทึกข้อเสนอในเครื่องแล้ว · ตำแหน่งเผยแพร่ยังรอตรวจสอบ');
     }catch(error){toast('บันทึกไม่สำเร็จ: '+error.message);}
   });
   for(const id of ['proposal-lng','proposal-lat'])$(id).addEventListener('input',()=>{$('confirm-mapping').disabled=true;});
@@ -364,11 +377,13 @@ function setupEvents() {
   $('height-mode').addEventListener('change',event=>{if(HEIGHT_PRESETS[event.target.value]){state.heightMode=event.target.value;applyHeights(state.map,state.heightMode);}});
   $('toggle3d').addEventListener('click',()=>{
     state.is3d=!state.is3d;$('toggle3d').classList.toggle('active',state.is3d);$('toggle3d').setAttribute('aria-pressed',String(state.is3d));
-    state.map?.easeTo({pitch:state.is3d?48:0,duration:reducedMotion()?0:600});syncMap();
+    state.map?.easeTo({pitch:state.is3d?OVERVIEW.pitch:0,duration:reducedMotion()?0:600});syncMap();
   });
-  $('reset-view').addEventListener('click',()=>state.map?.flyTo({...cameraOptions(HOME,{is3d:state.is3d,reducedMotion:reducedMotion(),mobile:mobile()}),zoom:16}));
+  $('reset-view').addEventListener('click',()=>state.map?.flyTo({...cameraOptions(HOME,{is3d:state.is3d,reducedMotion:reducedMotion(),mobile:mobile()}),...OVERVIEW,pitch:state.is3d?OVERVIEW.pitch:0,padding:mobile()?{top:80,right:30,bottom:200,left:20}:{top:70,right:60,bottom:40,left:370}}));
   $('theme-toggle').addEventListener('click',()=>{
-    state.dark=!state.dark;$('theme-toggle').textContent=state.dark?'☀':'☾';$('theme-toggle').setAttribute('aria-pressed',String(state.dark));
+    state.dark=!state.dark;document.documentElement.dataset.theme=state.dark?'dark':'light';
+    document.querySelector('meta[name="theme-color"]').content=state.dark?'#172b35':'#f4f1ea';
+    $('theme-toggle').setAttribute('aria-label',state.dark?'แผนที่กลางวัน':'แผนที่กลางคืน');$('theme-toggle').textContent=state.dark?'☀':'☾';$('theme-toggle').setAttribute('aria-pressed',String(state.dark));
     state.mapReady=false;setMapControls(false);state.map?.setStyle(state.dark?STYLES.dark:STYLES.light);
   });
   $('locate').addEventListener('click',()=>{
@@ -391,12 +406,16 @@ function setupEvents() {
   $('suggest-place').addEventListener('click',()=>{
     const url=new URL('https://github.com/Apichetfirm/KMUTT-OpenMap/issues/new');url.searchParams.set('template','place-data.yml');window.open(url,'_blank','noopener,noreferrer');
   });
-  $('mobile-drawer').addEventListener('click',()=>setDrawer(!document.querySelector('.sidebar').classList.contains('collapsed')));
-  window.addEventListener('resize',()=>{setDrawer(document.querySelector('.sidebar').classList.contains('collapsed'));state.map?.resize();focusBuilding(state.mapping&&state.pending?{coordinates:state.pending.coordinates}:state.selected||state.selectedPlace&&{coordinates:state.selectedPlace.geometry.coordinates});});
+  for(const panel of document.querySelectorAll('.sidebar,.detail'))panel.addEventListener('transitionend',event=>{if(event.propertyName==='height')focusBuilding(state.selected||state.selectedPlace&&{coordinates:state.selectedPlace.geometry.coordinates});});
+  setupSheets({onChange:(panel,snap)=>{
+    if(panel.classList.contains('sidebar')){panel.classList.toggle('collapsed',snap==='peek');document.querySelector('.directory-body').inert=mobile()&&snap==='peek';$('mobile-drawer').setAttribute('aria-expanded',String(snap!=='peek'));}
+    syncPanels();focusBuilding(state.selected||state.selectedPlace&&{coordinates:state.selectedPlace.geometry.coordinates});
+  }});
+  window.addEventListener('resize',()=>{document.querySelector('.directory-body').inert=mobile()&&document.querySelector('.sidebar').classList.contains('collapsed');syncPanels();state.map?.resize();focusBuilding(state.mapping&&state.pending?{coordinates:state.pending.coordinates}:state.selected||state.selectedPlace&&{coordinates:state.selectedPlace.geometry.coordinates});});
   window.addEventListener('popstate',()=>{
     const poi=sharedPlace(location.href,state.places);if(poi.place){showPlace(poi.place,{updateURL:false});return;}
     const shared=sharedBuilding(location.href,state.official);
-    if(shared.building)select(shared.building,{updateURL:false});else {state.route=emptyCollection();state.selectedPlace=null;$('poi-detail').classList.add('hidden');state.selected=null;$('detail').classList.add('hidden');renderSelectedMarker();updateSelection(state.map,null);renderList();if(shared.requested)toast('ไม่พบรหัสอาคารในลิงก์');}
+    if(shared.building)select(shared.building,{updateURL:false});else {state.route=emptyCollection();state.selectedPlace=null;$('poi-detail').classList.add('hidden');state.selected=null;$('detail').classList.add('hidden');renderSelectedMarker();updateSelection(state.map,null);renderList();syncPanels();if(shared.requested)toast('ไม่พบรหัสอาคารในลิงก์');}
   });
   window.addEventListener('offline',()=>{$('map-status').textContent='ออฟไลน์ · ค้นหารายชื่อที่โหลดแล้วได้';});
   window.addEventListener('online',()=>toast('เชื่อมต่อแล้ว · หากแผนที่ขาดหายให้กดโหลดใหม่'));
@@ -404,7 +423,7 @@ function setupEvents() {
     if($('community-dialog').open)return;
     const typing=['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName);
     if(event.key==='/'&&!typing){event.preventDefault();setDrawer(false);$('search').focus();}
-    if(event.key==='Escape'){if(state.mapping){cancelMapping();$('detail').classList.remove('hidden');focusBuilding(state.selected);$('map-propose').focus();}else closeDetail();}
+    if(event.key==='Escape'){if(state.mapping){cancelMapping();$('detail').classList.remove('hidden');syncPanels();focusBuilding(state.selected);$('map-propose').focus();}else closeDetail();}
     if(event.key==='Enter'&&document.activeElement===$('search')&&state.results[0]){event.preventDefault();select(state.results[0]);}
     if(event.key==='ArrowDown'&&document.activeElement===$('search')){event.preventDefault();document.querySelector('.place')?.focus();}
   });
