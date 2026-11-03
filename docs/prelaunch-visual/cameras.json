@@ -1,0 +1,456 @@
+{
+  "captured_at_utc": "2026-11-03T18:29:35.984Z",
+  "notes": "Original PNG screenshots, no postprocessing, no generated map/photos, no fixture responses. Same center/zoom/pitch/bearing/padding for each matched comparison; original and redesigned canvas bounds differ with their actual app layouts. Local module instrumentation only adds window.__map for camera control/recording. Live OpenFreeMap provider responses via the session proxy; geographic/provider accuracy is not independently established by screenshots.",
+  "comparisons": {
+    "overview": {
+      "center": [
+        100.4937,
+        13.652
+      ],
+      "zoom": 16.85,
+      "pitch": 54,
+      "bearing": -24,
+      "padding": {
+        "top": 70,
+        "right": 60,
+        "bottom": 40,
+        "left": 370
+      }
+    },
+    "selected": {
+      "center": [
+        100.49406407203125,
+        13.65213625
+      ],
+      "zoom": 17.8,
+      "pitch": 58,
+      "bearing": -24,
+      "padding": {
+        "top": 160,
+        "right": 382,
+        "bottom": 20,
+        "left": 374
+      }
+    },
+    "mobile": {
+      "center": [
+        100.49389,
+        13.65278
+      ],
+      "zoom": 17.8,
+      "pitch": 58,
+      "bearing": -24,
+      "padding": {
+        "top": 120,
+        "right": 76,
+        "bottom": 451,
+        "left": 20
+      }
+    }
+  },
+  "cameras": [
+    {
+      "file": "before-campus-overview.png",
+      "version": "baseline",
+      "url": "http://127.0.0.1:8081/KMUTT-OpenMap/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "center": [
+        100.4937,
+        13.652
+      ],
+      "zoom": 16.85,
+      "pitch": 54,
+      "bearing": -24,
+      "padding": {
+        "top": 70,
+        "bottom": 40,
+        "left": 370,
+        "right": 60
+      },
+      "canvas_bounds": {
+        "x": 0,
+        "y": 70,
+        "width": 1440,
+        "height": 796
+      },
+      "title": "KMUTT OpenMap · Explore Bangmod",
+      "selection": "",
+      "theme": "light"
+    },
+    {
+      "file": "before-building-n16.png",
+      "version": "baseline",
+      "url": "http://127.0.0.1:8081/KMUTT-OpenMap/?building=N16",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "center": [
+        100.49406407203125,
+        13.65213625
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 160,
+        "bottom": 20,
+        "left": 374,
+        "right": 382
+      },
+      "canvas_bounds": {
+        "x": 0,
+        "y": 70,
+        "width": 1440,
+        "height": 796
+      },
+      "title": "KMUTT OpenMap · Explore Bangmod",
+      "selection": "N16",
+      "theme": "light"
+    },
+    {
+      "file": "before-dark.png",
+      "version": "baseline",
+      "url": "http://127.0.0.1:8081/KMUTT-OpenMap/?building=N16",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "center": [
+        100.49406407203125,
+        13.65213625
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 160,
+        "bottom": 20,
+        "left": 374,
+        "right": 382
+      },
+      "canvas_bounds": {
+        "x": 0,
+        "y": 70,
+        "width": 1440,
+        "height": 796
+      },
+      "title": "KMUTT OpenMap · Explore Bangmod",
+      "selection": "N16",
+      "theme": "dark"
+    },
+    {
+      "file": "before-mobile.png",
+      "version": "baseline",
+      "url": "http://127.0.0.1:8081/KMUTT-OpenMap/?building=N10",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "center": [
+        100.49389,
+        13.65278
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 120,
+        "bottom": 451,
+        "left": 20,
+        "right": 76
+      },
+      "canvas_bounds": {
+        "x": 0,
+        "y": 60,
+        "width": 390,
+        "height": 756
+      },
+      "title": "KMUTT OpenMap · Explore Bangmod",
+      "selection": "N10",
+      "theme": "light"
+    },
+    {
+      "file": "launch-campus-overview.png",
+      "version": "redesign",
+      "url": "http://127.0.0.1:8080/KMUTT-OpenMap/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "center": [
+        100.4937,
+        13.652
+      ],
+      "zoom": 16.85,
+      "pitch": 54,
+      "bearing": -24,
+      "padding": {
+        "top": 70,
+        "bottom": 40,
+        "left": 370,
+        "right": 60
+      },
+      "canvas_bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 868
+      },
+      "title": "KMUTT OpenMap · Explore Bangmod",
+      "selection": "",
+      "theme": "light"
+    },
+    {
+      "file": "launch-building-n16.png",
+      "version": "redesign",
+      "url": "http://127.0.0.1:8080/KMUTT-OpenMap/?building=N16",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "center": [
+        100.49406407203125,
+        13.65213625
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 160,
+        "bottom": 20,
+        "left": 374,
+        "right": 382
+      },
+      "canvas_bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 868
+      },
+      "title": "KMUTT OpenMap · Explore Bangmod",
+      "selection": "N16",
+      "theme": "light"
+    },
+    {
+      "file": "dark-theme.png",
+      "version": "redesign",
+      "url": "http://127.0.0.1:8080/KMUTT-OpenMap/?building=N16",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "center": [
+        100.49406407203125,
+        13.65213625
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 160,
+        "bottom": 20,
+        "left": 374,
+        "right": 382
+      },
+      "canvas_bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 868
+      },
+      "title": "KMUTT OpenMap · Explore Bangmod",
+      "selection": "N16",
+      "theme": "dark"
+    },
+    {
+      "file": "launch-mobile.png",
+      "version": "redesign",
+      "url": "http://127.0.0.1:8080/KMUTT-OpenMap/?building=N10",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "center": [
+        100.49389,
+        13.65278
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 120,
+        "bottom": 451,
+        "left": 20,
+        "right": 76
+      },
+      "canvas_bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 816
+      },
+      "title": "KMUTT OpenMap · Explore Bangmod",
+      "selection": "N10",
+      "theme": "light"
+    },
+    {
+      "file": "qa-360x640.png",
+      "version": "redesign",
+      "url": "http://127.0.0.1:8080/KMUTT-OpenMap/?building=N10",
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "center": [
+        100.49388999999996,
+        13.652780000000007
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 120,
+        "bottom": 344.796875,
+        "left": 20,
+        "right": 76
+      },
+      "canvas_bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 612
+      },
+      "title": "KMUTT OpenMap · Explore Bangmod",
+      "selection": "N10",
+      "theme": "light"
+    },
+    {
+      "file": "qa-667x375.png",
+      "version": "redesign",
+      "url": "http://127.0.0.1:8080/KMUTT-OpenMap/?building=N10",
+      "viewport": {
+        "width": 667,
+        "height": 375
+      },
+      "center": [
+        100.49388999999996,
+        13.652780000000007
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 134,
+        "bottom": 20,
+        "left": 252,
+        "right": 252
+      },
+      "canvas_bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 667,
+        "height": 343
+      },
+      "title": "KMUTT OpenMap · Explore Bangmod",
+      "selection": "N10",
+      "theme": "light"
+    },
+    {
+      "file": "qa-768x1024.png",
+      "version": "redesign",
+      "url": "http://127.0.0.1:8080/KMUTT-OpenMap/?building=N10",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "center": [
+        100.49388999999996,
+        13.652780000000007
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 160,
+        "bottom": 20,
+        "left": 310,
+        "right": 314
+      },
+      "canvas_bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 992
+      },
+      "title": "KMUTT OpenMap · Explore Bangmod",
+      "selection": "N10",
+      "theme": "light"
+    },
+    {
+      "file": "mobile-directory.png",
+      "version": "redesign",
+      "url": "http://127.0.0.1:8080/KMUTT-OpenMap/?building=N10",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "center": [
+        100.49388999999996,
+        13.652780000000007
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 120,
+        "bottom": 450.875,
+        "left": 20,
+        "right": 76
+      },
+      "canvas_bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 816
+      },
+      "title": "KMUTT OpenMap · Explore Bangmod",
+      "selection": "N10",
+      "theme": "light"
+    },
+    {
+      "file": "mobile-full-sheet.png",
+      "version": "redesign",
+      "url": "http://127.0.0.1:8080/KMUTT-OpenMap/?building=N10",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "center": [
+        100.49388999999996,
+        13.652780000000007
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 120,
+        "bottom": 606,
+        "left": 20,
+        "right": 76
+      },
+      "canvas_bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 816
+      },
+      "title": "KMUTT OpenMap · Explore Bangmod",
+      "selection": "N10",
+      "theme": "light"
+    }
+  ]
+}

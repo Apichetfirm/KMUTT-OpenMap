@@ -24,7 +24,7 @@ test('style reloads preserve selection with one extrusion and working height/2D 
   await page.locator('#theme-toggle').click();await expect(page.locator('#theme-toggle')).toBeEnabled();
   expect(await page.evaluate(()=>window.__map.getStyle().layers.filter(l=>l.type==='fill-extrusion'&&l.layout?.visibility!=='none').length)).toBe(1);
  }
- await page.locator('#height-mode').selectOption('osm');await page.locator('#toggle3d').click();
+ await page.locator('#search').focus();if(await page.locator('.data-gis').getAttribute('open')===null)await page.locator('.data-gis > summary').click();await page.locator('#height-mode').selectOption('osm');await page.locator('#toggle3d').click();
  expect(await page.evaluate(()=>window.__map.getLayoutProperty('campus-3d','visibility'))).toBe('none');
  await page.locator('#toggle3d').click();await expect(page.locator('.selected-pin')).toHaveCount(1);expect(errors).toEqual([]);
 });
@@ -40,7 +40,7 @@ test('proposal preview, confirmation, reload, export and deletion preserve offic
  expect(await page.evaluate(()=>window.__camera.center)).toEqual(legacy.coordinates);
  await page.reload();await page.locator('.contribution-detail summary').click();await expect(page.locator('#draft-info')).toContainText('13.6541');
  await page.locator('#close-detail').click();await page.locator('#search').focus();
- const download=page.waitForEvent('download');await page.locator('#export-drafts').click();expect((await download).suggestedFilename()).toContain('unverified');
+ const download=page.waitForEvent('download');if(await page.locator('.data-gis').getAttribute('open')===null)await page.locator('.data-gis > summary').click();await page.locator('#export-drafts').click();expect((await download).suggestedFilename()).toContain('unverified');
  await searchSelect(page);await page.locator('.contribution-detail summary').click();await page.locator('#map-delete').click();await expect(page.locator('#map-delete')).toBeHidden();expect(errors).toEqual([]);
 });
 test('catalog survives runtime/storage failures, invalid URLs and POI empty filters',async({page})=>{
@@ -62,14 +62,14 @@ test('reduced motion, responsive panels and denied geolocation',async({page,isMo
  const zoom=await page.evaluate(()=>window.__map.getZoom());await page.getByRole('button',{name:'Zoom in',exact:true}).click();
  await expect.poll(()=>page.evaluate(()=>window.__map.getZoom())).toBeGreaterThan(zoom);
  if(isMobile){
-  const detail=await page.locator('#detail').boundingBox(),sidebar=await page.locator('.sidebar').boundingBox();expect(detail.y+detail.height).toBeLessThan(sidebar.y);
+  const detail=await page.locator('#detail').boundingBox();await expect(page.locator('.directory-body')).toBeHidden();expect(detail.y+detail.height).toBeLessThanOrEqual((await page.viewportSize()).height-28);
   await expect.poll(async()=>{const pin=await page.locator('.selected-pin').boundingBox();return pin&&pin.y>=60&&pin.y+pin.height<detail.y;}).toBe(true);
   await page.locator('#search').focus();await expect(page.locator('#mobile-drawer')).toHaveAttribute('aria-expanded','true');
  }
  if(!isMobile)await page.locator('#close-detail').click();else await expect(page.locator('#detail')).toBeHidden();await page.locator('#locate').click();await expect(page.locator('#toast')).toContainText('ไม่ได้รับอนุญาต');
  await page.setViewportSize({width:844,height:390});await searchSelect(page,'N10');
  const search=await page.locator('#search').boundingBox();expect(search.y).toBeGreaterThanOrEqual(70);expect(search.y+search.height).toBeLessThan(355);
- const tools=await page.locator('.map-tools').boundingBox(),detail=await page.locator('#detail').boundingBox();expect(tools.x+tools.width).toBeLessThanOrEqual(detail.x);expect(errors).toEqual([]);
+ const tools=await page.locator('.map-tools').boundingBox(),detail=await page.locator('#detail').boundingBox();expect(tools.y+tools.height).toBeLessThanOrEqual(detail.y);expect(errors).toEqual([]);
 });
 
 test('stale tabs cannot overwrite newer local proposals',async({page,context})=>{

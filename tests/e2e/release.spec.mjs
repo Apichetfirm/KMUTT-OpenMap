@@ -22,11 +22,11 @@ test('candidate footprint preview shows explicit height assumptions and never pu
  expect(await page.evaluate(()=>window.__camera.center)).toEqual(published.find(b=>b.id==='N16').coordinates);expect(errors).toEqual([]);
 });
 test('community review, local save, export, edit invalidation, reload and delete',async({page})=>{
- const errors=await fixture(page);await page.goto('/');await expect(page.locator('.place')).toHaveCount(35);await page.locator('#search').focus();await page.locator('#open-community').click();
+ const errors=await fixture(page);await page.goto('/');await expect(page.locator('.place')).toHaveCount(35);await page.locator('#search').focus();if(await page.locator('.data-gis').getAttribute('open')===null)await page.locator('.data-gis > summary').click();await page.locator('#open-community').click();
  await page.locator('#community-type').selectOption('closed-business');await page.locator('#community-title').fill('Synthetic test report');await page.locator('#community-details').fill('Test only. Do not publish this synthetic report.');await page.locator('#community-source').fill('https://example.org/evidence');
  await expect(page.locator('#community-save')).toBeDisabled();await page.locator('#community-form button[type=submit]').click();await expect(page.locator('#community-preview')).toContainText('UNREVIEWED');await page.locator('#community-save').click();await expect(page.locator('.community-row')).toHaveCount(1);
  const download=page.waitForEvent('download');await page.locator('#community-export').click();expect((await download).suggestedFilename()).toBe('kmutt-community-unreviewed.json');
- await page.locator('#community-title').fill('Changed after review');await expect(page.locator('#community-export')).toBeDisabled();await page.reload();await page.locator('#search').focus();await page.locator('#open-community').click();await expect(page.locator('.community-row')).toContainText('Synthetic test report');
+ await page.locator('#community-title').fill('Changed after review');await expect(page.locator('#community-export')).toBeDisabled();await page.reload();await page.locator('#search').focus();if(await page.locator('.data-gis').getAttribute('open')===null)await page.locator('.data-gis > summary').click();await page.locator('#open-community').click();await expect(page.locator('.community-row')).toContainText('Synthetic test report');
  await page.locator('.community-row').getByRole('button',{name:'แก้ไข'}).click();await expect(page.locator('#community-title')).toHaveValue('Synthetic test report');await page.locator('.community-row').getByRole('button',{name:'ลบ'}).click();await expect(page.locator('.community-row')).toHaveCount(0);expect(errors).toEqual([]);
 });
 test('map module can recover after an initial asset failure without losing the directory',async({page})=>{
@@ -35,7 +35,7 @@ test('map module can recover after an initial asset failure without losing the d
 });
 test('quality dashboard and navigation keep candidates separate from verified data',async({page})=>{
  await fixture(page);await page.goto('/?building=N9');await page.locator('.navigation-panel summary').click();await expect(page.locator('#route-plan')).toBeDisabled();await expect(page.locator('#navigation-status')).toContainText('ยังไม่มี');
- await page.locator('#close-detail').click();await page.locator('#search').focus();await page.locator('.quality-panel summary').click();await expect(page.locator('#quality-metrics')).toContainText('73');await expect(page.locator('#quality-metrics')).toContainText('18');await expect(page.locator('#unresolved-buildings button')).toHaveCount(15);
+ await page.locator('#close-detail').click();await page.locator('#search').focus();if(await page.locator('.data-gis').getAttribute('open')===null)await page.locator('.data-gis > summary').click();await page.locator('.quality-panel summary').click();await expect(page.locator('#quality-metrics')).toContainText('73');await expect(page.locator('#quality-metrics')).toContainText('18');await expect(page.locator('#unresolved-buildings button')).toHaveCount(15);
 });
 test('real vendored module and worker run under CSP at the Pages base path',async({page})=>{
  const errors=await fixture(page,{realRuntime:true});const workers=[];page.on('response',r=>{if(r.url().includes('/vendor/maplibre-gl/maplibre-gl-worker.mjs'))workers.push(r.status());});
@@ -73,7 +73,7 @@ test('queued community deletions cannot restore an already deleted report',async
   const report=id=>({id,type:'building-correction',title:id,details:'Synthetic review fixture',target_id:'N9',source_url:null,coordinates:null,review_status:'community-reported-unreviewed',created_at:'2026-11-02T00:00:00Z'});
   localStorage.setItem('kmutt-openmap-community-v1',JSON.stringify([report('review-a'),report('review-b')]));
  });
- await page.goto('/');await expect(page.locator('.place')).toHaveCount(35);await page.locator('#open-community').click();
+ await page.goto('/');await expect(page.locator('.place')).toHaveCount(35);if(await page.locator('.data-gis').getAttribute('open')===null)await page.locator('.data-gis > summary').click();await page.locator('#open-community').click();
  await page.evaluate(()=>{navigator.locks.request('kmutt-openmap-community-v1',()=>new Promise(resolve=>window.releaseReviewLock=resolve));});
  await expect.poll(()=>page.evaluate(()=>typeof window.releaseReviewLock)).toBe('function');
  await page.locator('.community-row').filter({hasText:'review-a'}).getByRole('button',{name:'ลบ'}).click();

@@ -1,0 +1,98 @@
+{
+  "health": [
+    {
+      "version": "baseline",
+      "engine": "154.0.8037.57",
+      "errors": [],
+      "warnings": [
+        {
+          "type": "warning",
+          "text": "[.WebGL-0x1acc000f8800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+        },
+        {
+          "type": "warning",
+          "text": "[.WebGL-0x1acc000f8800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+        },
+        {
+          "type": "warning",
+          "text": "[.WebGL-0x1acc000f8800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+        },
+        {
+          "type": "warning",
+          "text": "[.WebGL-0x1acc000f8800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+        },
+        {
+          "type": "warning",
+          "text": "layers[highway-shield-non-us].filter[1]: Expected value to be of type number, but found null instead. Falling back to false."
+        },
+        {
+          "type": "warning",
+          "text": "layers[highway-shield-us-interstate].filter[1]: Expected value to be of type number, but found null instead. Falling back to false."
+        },
+        {
+          "type": "warning",
+          "text": "layers[road_shield_us].filter[1]: Expected value to be of type number, but found null instead. Falling back to false."
+        },
+        {
+          "type": "warning",
+          "text": "Image \"office\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style."
+        },
+        {
+          "type": "warning",
+          "text": "Image \"sports_centre\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style."
+        },
+        {
+          "type": "warning",
+          "text": "Image \"lift_gate\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style."
+        },
+        {
+          "type": "warning",
+          "text": "Image \"swimming_pool\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style."
+        },
+        {
+          "type": "warning",
+          "text": "Image \"gate\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style."
+        },
+        {
+          "type": "warning",
+          "text": "Image \"running\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style."
+        },
+        {
+          "type": "warning",
+          "text": "Image \"motorcycle_parking\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style."
+        },
+        {
+          "type": "warning",
+          "text": "Image \"wood-pattern\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style."
+        },
+        {
+          "type": "warning",
+          "text": "layers[road_shield_us].filter[1]: Expected value to be of type number, but found null instead. Falling back to false."
+        },
+        {
+          "type": "warning",
+          "text": "layers[highway-shield-us-interstate].filter[1]: Expected value to be of type number, but found null instead. Falling back to false."
+        },
+        {
+          "type": "warning",
+          "text": "layers[highway-shield-non-us].filter[1]: Expected value to be of type number, but found null instead. Falling back to false."
+        }
+      ],
+      "failed": [],
+      "csp_violations": []
+    },
+    {
+      "version": "redesign",
+      "engine": "154.0.8037.57",
+      "errors": [],
+      "warnings": [
+        {
+          "type": "warning",
+          "text": "Image \"wood-pattern\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style."
+        }
+      ],
+      "failed": [],
+      "csp_violations": []
+    }
+  ]
+}
