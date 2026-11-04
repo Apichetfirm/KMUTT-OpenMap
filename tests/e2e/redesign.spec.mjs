@@ -12,7 +12,8 @@ test('short landscape keeps attribution, map tools and primary actions clear',as
   await page.locator('#search').fill(code);await page.locator('#search').press('Enter');
   await expect(page.locator('#detail-code')).toHaveText(code);
   await expect.poll(()=>page.locator('#detail').evaluate(e=>({top:e.scrollTop,left:e.scrollLeft})),{message:`${code}: new card starts at both scroll origins`}).toEqual({top:0,left:0});
-  expect(await page.locator('#detail').evaluate(e=>e.scrollWidth<=e.clientWidth),`${code}: card has no horizontal overflow`).toBe(true);
+  const widths=await page.locator('#detail').evaluate(e=>({scrollWidth:e.scrollWidth,clientWidth:e.clientWidth,children:[...e.querySelectorAll('.building-media,.detail-title-line,.detail-actions,#street-view')].map(n=>({class:n.className,id:n.id,width:n.getBoundingClientRect().width,scrollWidth:n.scrollWidth}))}));
+  expect(widths.scrollWidth<=widths.clientWidth,`${code}: card has no horizontal overflow; ${JSON.stringify(widths)}`).toBe(true);
   for(const selector of ['#directions','#share-building']){
    const geometry=await page.locator(selector).evaluate(e=>{const p=e.closest('.detail'),r=e.getBoundingClientRect(),box=p.getBoundingClientRect();return {target:{x:r.x,y:r.y,width:r.width,height:r.height},panel:{x:box.x,y:box.y,width:box.width,height:box.height},scrollTop:p.scrollTop,scrollLeft:p.scrollLeft,scrollWidth:p.scrollWidth,clientWidth:p.clientWidth};});
    await expect(page.locator(selector),`${code} ${selector} must remain fully visible; ${JSON.stringify(geometry)}`).toBeInViewport({ratio:1});
