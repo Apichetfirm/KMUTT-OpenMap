@@ -117,13 +117,16 @@ function renderDetail() {
 function select(b,{from=null,move=true,updateURL=true}={}) {
   if(!b)return;
   if(state.mapping)cancelMapping();
-  if(state.selected?.id!==b.id){$('detail').dataset.snap='half';$('detail').scrollTop=0;$('detail').querySelector('.sheet-resize').setAttribute('aria-expanded','false');document.querySelector('.contribution-detail').open=false;$('share-url').classList.add('hidden');}
+  const changed=state.selected?.id!==b.id;
+  if(changed){$('detail').dataset.snap='half';$('detail').querySelector('.sheet-resize').setAttribute('aria-expanded','false');document.querySelector('.contribution-detail').open=false;$('share-url').classList.add('hidden');}
   state.selectedPlace=null;$('poi-detail').classList.add('hidden');state.route=emptyCollection();state.selected=b;state.returnFocus=from;renderList();renderDetail();$('detail').classList.remove('hidden');
   if(mobile())setDrawer(true);syncPanels();
   updateSelection(state.map,state.selected);renderSelectedMarker();
   if(updateURL)history.pushState({},'',buildingURL(location.href,b.id));
   if(move)focusBuilding(b);
   $('detail-name').focus({preventScroll:true});
+  // Reset after rendering and camera layout reads; Firefox may anchor the old card during replacement.
+  if(changed){$('detail').scrollTop=0;$('detail').scrollLeft=0;}
 }
 function closeDetail() {
   if(!state.selected&&!state.selectedPlace)return;

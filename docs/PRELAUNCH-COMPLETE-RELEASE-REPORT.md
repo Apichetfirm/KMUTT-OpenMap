@@ -29,6 +29,8 @@ The upstream `35bc03e` correction already fixed the previously recorded Firefox 
 
 No canonical geometry, building name, floor count, height, image approval, entrance, route or data license was changed.
 
+The next matrix (run 41778094447) passed 127 cases and exposed one Firefox failure after consecutive N9→N10 selection: the new short card could retain an anchored scroll offset. The detail panel now disables automatic scroll anchoring, constrains horizontal overflow with wrapping/shrinking flex text, and resets both scroll axes after rendering, focus and camera layout reads. A focused Firefox gate runs before the full matrix for faster feedback; the complete 128-case matrix remains mandatory. The regression explicitly verifies zero scroll offset and includes target/panel geometry in failures; the fully-visible assertion remains unchanged.
+
 ## Implementation, visual and product review
 
 Retain the warm architectural materials, opaque shaded provider polygons, restrained contact wash, daylight/dark interface, floating explorer, source-based labels, orange approximate markers, 16:9/generic media, and mutually exclusive portrait sheets. The map remains MapLibre and uses real provider geography. The generic illustration explicitly does not depict the selected building. The owner’s compact-layout and always-visible attribution work is retained. A persistent, compact unofficial-community subtitle now also appears on mobile, so first-time visitors can see the project status without opening Data & GIS.
@@ -55,9 +57,9 @@ Production verification uses no basemap, catalog, media or provider fixtures. It
 
 Six alternating pairs, fresh browser contexts, 1440×900, one sandboxed headless Chromium process with software SwiftShader, actual provider responses through the session proxy. No other QA browser was running during these samples. Baseline is `6e410b7`; final app source hashes are in [release-performance.json](prelaunch-visual/release-performance.json). Historical measurements are retained independently.
 
-Observed median map readiness: **2777.60 ms baseline → 2606.80 ms release**. Resource entries remain 32 and the canvas count remains 1. Median observable transfer is 2,067,752 → 2,079,906 bytes. Median synchronous search is 0.55 → 0.50 ms. Coarse JS heap is 24,801,110 → 21,062,240 bytes; long-task totals are 2373.5 → 2108.5 ms. No sample timed out or reported an application error. This shows no material startup regression in this sample, not a causal speedup or physical-device result. Cross-origin wire bytes and GPU/process memory are not fully observable.
+Observed median map readiness: **2455.00 ms baseline → 2149.95 ms release**. Resource entries remain 32 and the canvas count remains 1. Median observable transfer is 2,067,752 → 2,080,231 bytes. Median synchronous search is 0.60 → 0.55 ms. Coarse JS heap is 25,210,284 → 19,130,826 bytes; long-task totals are 2080.0 → 1854.0 ms. No sample timed out or reported an application error. This shows no material startup regression in this sample, not a causal speedup or physical-device result. Cross-origin wire bytes and GPU/process memory are not fully observable.
 
-[release-interactions.json](prelaunch-visual/release-interactions.json) records detail-render observations of 9.0–19.9 ms desktop and 8.8–26.2 ms at a mobile-sized viewport. Camera settling, including a 250ms quiet guard, ranged 1615.0–1773.2 ms desktop and 1281.1–1509.0 ms mobile. Headless software animation callbacks are recorded as observations, not a 60 FPS, physical-phone, battery or thermal claim.
+[release-interactions.json](prelaunch-visual/release-interactions.json) records detail-render observations of 5.8–49.4 ms desktop and 6.8–30.6 ms at a mobile-sized viewport. Camera settling, including a 250ms quiet guard, ranged 1494.9–1610.1 ms desktop and 1286.4–1545.0 ms mobile. Headless software animation callbacks are recorded as observations, not a 60 FPS, physical-phone, battery or thermal claim.
 
 ## Release state
 

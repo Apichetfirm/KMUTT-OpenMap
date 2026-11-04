@@ -2,7 +2,7 @@
   "url": "http://127.0.0.1:8080/KMUTT-OpenMap/",
   "mode": "release-smoke",
   "expected_commit": null,
-  "captured_at_utc": "2026-11-04T05:13:24.047Z",
+  "captured_at_utc": "2026-11-04T05:28:25.259Z",
   "checks": [
     {
       "name": "published assets match expected source",
@@ -105,7 +105,7 @@
     },
     "src/main.mjs": {
       "path": "src/main.mjs",
-      "sha256": "a8dee0735d37b26c06ea8399b982875a0d51326cecda2c1dcb78393b1e4cb96e",
+      "sha256": "9725b359df50bd24ad95c4addff0980ba161c6802ff852f5d4fd62774a647ded",
       "match": true
     },
     "src/map.mjs": {
@@ -150,7 +150,7 @@
     },
     "src/styles.css": {
       "path": "src/styles.css",
-      "sha256": "5c6e1655aee9909e0330558a8ca2e9011e8e0f1f2bd7e393ffa43323b57452fc",
+      "sha256": "9afcf67485ca52ff775453d5255f88bb4fa10079f08a1bc4d2f3f19a808a43f4",
       "match": true
     },
     "data/building-footprint-candidates.geojson": {
@@ -240,7 +240,7 @@
     },
     "docs/PRELAUNCH-COMPLETE-RELEASE-REPORT.md": {
       "path": "docs/PRELAUNCH-COMPLETE-RELEASE-REPORT.md",
-      "sha256": "3ebb9411c1291ae2ccf7c51aa3f27a3d98bf63b14328c2e3fcbcd60ea87aad06",
+      "sha256": "47305713dbaf2a1d8fb8bc2f36a1b9db8b0ba6d852bcc898f860d480270b9383",
       "match": true
     }
   },
@@ -417,10 +417,10 @@
   "errors": [],
   "console_errors": [],
   "warnings": [
-    "[.WebGL-0x2ee4000ff400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[.WebGL-0x2ee4000ff400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[.WebGL-0x2ee4000ff400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[.WebGL-0x2ee4000ff400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+    "[.WebGL-0x118c000fee00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x118c000fee00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x118c000fee00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x118c000fee00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
     "Image \"wood-pattern\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style."
   ],
   "csp_violations": [],
