@@ -1,19 +1,48 @@
-<!-- firm-impulse-showcase:v1 -->
-<div align="center">
+# KMUTT OpenMap — แผนที่ 3D มจธ. บางมด
 
-# 🗺️ KMUTT OpenMap
+**แผนที่มหาวิทยาลัยแบบโอเพนซอร์สที่นักศึกษาทำขึ้น เพื่อช่วยค้นหาอาคารและสถานที่ต่าง ๆ ภายใน มจธ. บางมด**
 
-**An open-source 3D campus explorer, built with the community in mind.**
+[**เปิดแผนที่**](https://apichetfirm.github.io/KMUTT-OpenMap/) · [วิธีร่วมแก้ไขข้อมูล](docs/COMMUNITY-GUIDE.md) · [รายละเอียดทางเทคนิค (English)](#english-technical-details)
 
-<img alt="Status: Community preview" src="https://img.shields.io/badge/Status-Community%20preview-2563EB?style=flat-square" /> <img alt="Built with: JavaScript" src="https://img.shields.io/badge/Built%20with-JavaScript-1F2937?style=flat-square" /> <img alt="Built with: MapLibre" src="https://img.shields.io/badge/Built%20with-MapLibre-1F2937?style=flat-square" /> <img alt="Built with: OpenStreetMap" src="https://img.shields.io/badge/Built%20with-OpenStreetMap-1F2937?style=flat-square" />
+> **โปรเจกต์ของนักศึกษา ไม่ใช่เว็บไซต์หรือบริการอย่างเป็นทางการของ มจธ.** ข้อมูลพิกัด อาคาร ทางเข้า และเส้นทางจำนวนมากยังไม่ได้สำรวจยืนยันจากสถานที่จริง จึงไม่ควรใช้แทนแผนที่หรือคำแนะนำด้านความปลอดภัยของมหาวิทยาลัย
 
-[Live Map](https://apichetfirm.github.io/KMUTT-OpenMap/) · [Data Coverage](docs/DATA-COVERAGE.md) · [Development](#development)
+## ใช้ทำอะไรได้บ้าง
 
-<sub>Part of the Firm Impulse engineering portfolio.</sub>
+- **ค้นหาอาคาร:** ค้นจากชื่อไทย/อังกฤษ รหัสอาคาร หรือคำใกล้เคียง พร้อมเปิดดูข้อมูลที่มีแหล่งอ้างอิง
+- **สำรวจสถานที่ใกล้เคียง:** ดูจุดบริการและสถานที่ต่าง ๆ ที่นำเข้าจาก OpenStreetMap โดยอาจมีข้อมูลเก่าหรือคลาดเคลื่อน
+- **แชร์ตำแหน่ง:** ส่งลิงก์สถานที่ที่พบให้คนอื่นดูต่อได้
+- **ช่วยปรับปรุงแผนที่:** ส่งข้อมูลที่ควรแก้ไขหรือเสนอจุดใหม่เพื่อนำไปตรวจสอบก่อนเผยแพร่
 
-</div>
+### สถานะข้อมูลที่ควรรู้
+
+| รายการ | สถานะ |
+| --- | --- |
+| ข้อมูลอาคารในระบบ | 35 อาคาร |
+| จุดบริการ/สถานที่ที่รวบรวมจาก OSM | 73 รายการ (ยังไม่ยืนยันภาคสนาม) |
+| พิกัดอาคาร | มีตำแหน่งอ้างอิงโดยประมาณ 20 อาคาร; อีก 15 อาคารยังไม่มีพิกัด |
+| เส้นทางเดินภายในมหาวิทยาลัย | **ยังไม่เปิดใช้งาน** เพราะไม่มีโครงข่ายและทางเข้าอาคารที่ผ่านการตรวจสอบ |
+
+ตัวเลขเป็นสถานะข้อมูลใน Repository ไม่ใช่การรับรองตำแหน่งจริง ดูข้อมูลล่าสุดใน [รายงานความครอบคลุม](docs/DATA-COVERAGE.md)
+
+## อยากช่วยให้แผนที่แม่นขึ้น?
+
+ไม่จำเป็นต้องเขียนโค้ดก็ช่วยได้ เช่น แจ้งชื่ออาคารผิด พิกัดคลาดเคลื่อน สถานที่ปิด หรือทางเดินที่ไม่สามารถผ่านได้
+
+1. [เข้าแผนที่](https://apichetfirm.github.io/KMUTT-OpenMap/) แล้วเลือกอาคารหรือสถานที่
+2. เลือกปุ่มแจ้งแก้ไข/เสนอข้อมูล กรอกรายละเอียดและแหล่งอ้างอิงที่ตรวจสอบได้
+3. ตรวจทานข้อมูลแล้วส่งเป็น GitHub Issue ตามขั้นตอนใน [คู่มือสำหรับชุมชน](docs/COMMUNITY-GUIDE.md) (ไม่มีการส่งรายงานขึ้นระบบโดยอัตโนมัติ)
+
+สำหรับคนอยากช่วยพัฒนาโค้ด: อ่าน [CONTRIBUTING.md](CONTRIBUTING.md) และรายละเอียดด้านล่าง
+
+## ร่วมสนับสนุนโครงการ
+
+หากโครงการมีประโยชน์ การช่วยตรวจข้อมูลหรือส่ง Pull Request เป็นประโยชน์มากอยู่แล้ว หากต้องการสนับสนุนค่าใช้จ่ายในการพัฒนาเพิ่มเติม ดู [ช่องทางสนับสนุนของผู้พัฒนา](https://github.com/Apichetfirm/Apichetfirm/blob/main/SUPPORT.md)
+
+**หมายเหตุ:** ช่องทางรับเงิน PayPal ยังอยู่ระหว่างตรวจสอบและยังไม่มีลิงก์รับเงินที่ยืนยันแล้ว การสนับสนุนเป็นความสมัครใจ และไม่ได้เป็นการบริจาคให้มหาวิทยาลัย
 
 ---
+
+## English — technical details
 
 Open-source, community-driven 3D campus map for KMUTT Bangmod.
 
