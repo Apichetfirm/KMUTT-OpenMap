@@ -16,7 +16,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
@@ -36,3 +36,18 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+
+      - name: Install Chromium for real production verification
+        run: npx playwright install --with-deps chromium
+      - name: Verify published application and source assets
+        env:
+          OPENMAP_PRODUCTION_COMMIT: ${{ github.sha }}
+          OPENMAP_SMOKE_EVIDENCE: work/production-smoke
+        run: node scripts/verify-production.mjs
+      - name: Retain production verification evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: production-smoke-${{ github.sha }}
+          path: work/production-smoke/
+          retention-days: 30

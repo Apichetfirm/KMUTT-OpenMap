@@ -1,0 +1,431 @@
+{
+  "url": "http://127.0.0.1:8080/KMUTT-OpenMap/",
+  "mode": "release-smoke",
+  "expected_commit": null,
+  "captured_at_utc": "2026-11-04T04:58:54.889Z",
+  "checks": [
+    {
+      "name": "published assets match expected source",
+      "result": "passed"
+    },
+    {
+      "name": "homepage and actual MapLibre WebGL scene",
+      "result": "passed"
+    },
+    {
+      "name": "all 35 canonical building identities and uncertainty",
+      "result": "passed"
+    },
+    {
+      "name": "2D/3D switching",
+      "result": "passed"
+    },
+    {
+      "name": "dark/daylight theme and selection",
+      "result": "passed"
+    },
+    {
+      "name": "Street View remains an approximate-coordinate search",
+      "result": "passed"
+    },
+    {
+      "name": "external Google Maps destination",
+      "result": "passed"
+    },
+    {
+      "name": "sharing fallback preserves production URL",
+      "result": "passed"
+    },
+    {
+      "name": "community report entry uses selected canonical building",
+      "result": "passed"
+    },
+    {
+      "name": "internal routing and accepted geography remain guarded",
+      "result": "passed"
+    },
+    {
+      "name": "required responsive viewports",
+      "result": "passed"
+    },
+    {
+      "name": "map error and recovery retain selection",
+      "result": "passed"
+    },
+    {
+      "name": "runtime and CSP health",
+      "result": "passed"
+    }
+  ],
+  "asset_sha256": {
+    "index.html": {
+      "path": "index.html",
+      "sha256": "2ab583fe33a810b9a057e35c5591bf2c7e2f0a0a2bc2fa56a09b32f71607fb58",
+      "match": true
+    },
+    "favicon.svg": {
+      "path": "favicon.svg",
+      "sha256": "7b8ef5429d07bbb3705bb867f8d522a5f3455fc6c632beb542f73ddd3a7c7fe3",
+      "match": true
+    },
+    "src/building-detail.mjs": {
+      "path": "src/building-detail.mjs",
+      "sha256": "c020b225bc456911de6f8ff0f48ab61ca071159ef394323837459c0e2e30019c",
+      "match": true
+    },
+    "src/building-evidence.mjs": {
+      "path": "src/building-evidence.mjs",
+      "sha256": "5bedd5826fd76831c11491c83ac4aec61e8241064291f7f4aaddbcb583674947",
+      "match": true
+    },
+    "src/community-ui.mjs": {
+      "path": "src/community-ui.mjs",
+      "sha256": "93cda5dc809d9feda9ba55f713f3a31f9d64e468ba38f89d9eeb0d21e1ef8dd9",
+      "match": true
+    },
+    "src/contributions.mjs": {
+      "path": "src/contributions.mjs",
+      "sha256": "828f96211dd46f81ac100a2b2b632d8ebc0d920621f6d7d742390628ded35f09",
+      "match": true
+    },
+    "src/data.mjs": {
+      "path": "src/data.mjs",
+      "sha256": "9fd6829a2c8698806a86d8151aa676cb418ad52a3097a182de00215b3efe1665",
+      "match": true
+    },
+    "src/geometry.mjs": {
+      "path": "src/geometry.mjs",
+      "sha256": "51c4e4e62c5773dfb6ad9e6c07ef308316c4ff2db9a6f1b413db2874cba8501a",
+      "match": true
+    },
+    "src/heights.mjs": {
+      "path": "src/heights.mjs",
+      "sha256": "7a47117cc1784e64cd8245b0a7387700ed97f13ca158aec971f6e78e5cb392ea",
+      "match": true
+    },
+    "src/main.mjs": {
+      "path": "src/main.mjs",
+      "sha256": "a8dee0735d37b26c06ea8399b982875a0d51326cecda2c1dcb78393b1e4cb96e",
+      "match": true
+    },
+    "src/map.mjs": {
+      "path": "src/map.mjs",
+      "sha256": "fb187716d9109c604ac15a3a6b50b8a408974bf257031727dedb5fc64c986898",
+      "match": true
+    },
+    "src/mapping.mjs": {
+      "path": "src/mapping.mjs",
+      "sha256": "74c36ab42d7fa778e26dbd1b3a212eda1810a0c641793dffe64c8a8393285627",
+      "match": true
+    },
+    "src/navigation.mjs": {
+      "path": "src/navigation.mjs",
+      "sha256": "242c73963ac000011520644de3739130f22c21ff4921a5ef2aa96faba86dd95f",
+      "match": true
+    },
+    "src/places.mjs": {
+      "path": "src/places.mjs",
+      "sha256": "636b2f0b69d4e5fb73a41739c4abe3f98be681b79611f6411b2869392b133fb0",
+      "match": true
+    },
+    "src/quality.mjs": {
+      "path": "src/quality.mjs",
+      "sha256": "ac4a7a6741be91e12615fa5220b4c971abd954dd25b52d525cee345a90a8845f",
+      "match": true
+    },
+    "src/search.mjs": {
+      "path": "src/search.mjs",
+      "sha256": "2e4ec0c1eb006fd9c8b6b763b20100c311ff1bc54683ca68dd7337c18e697793",
+      "match": true
+    },
+    "src/sharing.mjs": {
+      "path": "src/sharing.mjs",
+      "sha256": "4fa1623a66f8a2c6f743bca228126dc33ac6845c9ca164b0033b21c3bc7de799",
+      "match": true
+    },
+    "src/sheets.mjs": {
+      "path": "src/sheets.mjs",
+      "sha256": "0d1e08184e3fef087a57aa1fd1b7b4031ebe40884a4cb7ef0af6616379c20c01",
+      "match": true
+    },
+    "src/styles.css": {
+      "path": "src/styles.css",
+      "sha256": "4b48d495834ecc849fbe28b0497dfdb87730eed015bb75b40d12dcb44552e76e",
+      "match": true
+    },
+    "data/building-footprint-candidates.geojson": {
+      "path": "data/building-footprint-candidates.geojson",
+      "sha256": "0c36789fb0bc7304f5755f1cad7de00f2c822bc4e85caaeac08440a108dbd06f",
+      "match": true
+    },
+    "data/building-footprints.geojson": {
+      "path": "data/building-footprints.geojson",
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1",
+      "match": true
+    },
+    "data/building-media.json": {
+      "path": "data/building-media.json",
+      "sha256": "79c6bcd014a457850c68292328a5ce8132c397aba453ad32ebd8f8d3d3b6d10b",
+      "match": true
+    },
+    "data/building-rendering.json": {
+      "path": "data/building-rendering.json",
+      "sha256": "0f6b83b97dbd5e055394bdd5da35c3818336a2d9c820b4f737f7e5a62e8cff12",
+      "match": true
+    },
+    "data/buildings-geocoded.geojson": {
+      "path": "data/buildings-geocoded.geojson",
+      "sha256": "e85c0a3a73115c8d7062ae9ed73d4052d770fd8a621f01011d2a73ebcbff4d94",
+      "match": true
+    },
+    "data/buildings.json": {
+      "path": "data/buildings.json",
+      "sha256": "9b4a75fbf72cca80e3fc0457712a28bf2740392d78db87a28aa7fe4754c02d30",
+      "match": true
+    },
+    "data/coverage-report.json": {
+      "path": "data/coverage-report.json",
+      "sha256": "4c036cd308e24ed785883c3f040c857ee9a9ddf584cc6f48e2ba0b296b8af055",
+      "match": true
+    },
+    "data/height-overrides.json": {
+      "path": "data/height-overrides.json",
+      "sha256": "d232561045edcd17cae77461f00fe1d39c5b9fac16f5e1725c0552e2ef6fcc0b",
+      "match": true
+    },
+    "data/pedestrian-graph-candidates.json": {
+      "path": "data/pedestrian-graph-candidates.json",
+      "sha256": "b5cb4b294c6630c66edfd4bebace414d52060117e849f21109093b973b731305",
+      "match": true
+    },
+    "data/pedestrian-graph.json": {
+      "path": "data/pedestrian-graph.json",
+      "sha256": "5a14136cb4bc4cc93ec7e3d24da00b1886b987e64576d48cdfe305533fad697b",
+      "match": true
+    },
+    "data/places.geojson": {
+      "path": "data/places.geojson",
+      "sha256": "074caa4652f3f26f9a53273e48562bee47e7d816a955eeb5ce8ab056296d7355",
+      "match": true
+    },
+    "data/walkway-candidates.geojson": {
+      "path": "data/walkway-candidates.geojson",
+      "sha256": "c48c84e8714f526a1f1a0f23f46dfcba574156a6ead421cad1c629d6e6a8a3e8",
+      "match": true
+    },
+    "data/walkways.geojson": {
+      "path": "data/walkways.geojson",
+      "sha256": "b3049ad7a1062091e169bd352424d59721a26b8b6229942aef26d11b0c6a96e1",
+      "match": true
+    },
+    "vendor/maplibre-gl/maplibre-gl.mjs": {
+      "path": "vendor/maplibre-gl/maplibre-gl.mjs",
+      "sha256": "fbbdf8ddd9a48e49059a4be6795a4f214a711314bb5809f72d3730b48e7897e3",
+      "match": true
+    },
+    "vendor/maplibre-gl/maplibre-gl-worker.mjs": {
+      "path": "vendor/maplibre-gl/maplibre-gl-worker.mjs",
+      "sha256": "0bf06492bdb7ba3d4132b78e435621bfba60d5250967991c02b1a73affea8cd5",
+      "match": true
+    },
+    "vendor/maplibre-gl/maplibre-gl.css": {
+      "path": "vendor/maplibre-gl/maplibre-gl.css",
+      "sha256": "a90798a1953017790e590f7e1bd35ff103a8a4263972cb47290b78adf86f8c20",
+      "match": true
+    },
+    "docs/FB-LAUNCH-COPY-TH.md": {
+      "path": "docs/FB-LAUNCH-COPY-TH.md",
+      "sha256": "f403daa6bdc6d1fd58c132289559d38cd95070467f27dffec870d5cc7f64999e",
+      "match": true
+    },
+    "docs/PRELAUNCH-COMPLETE-RELEASE-REPORT.md": {
+      "path": "docs/PRELAUNCH-COMPLETE-RELEASE-REPORT.md",
+      "sha256": "73046370e7b6b0dec4271053a60d7b2eb444cc79eb50816593b937c588828f43",
+      "match": true
+    }
+  },
+  "cameras": [
+    {
+      "file": "production-campus-overview.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "center": [
+        100.4937,
+        13.652
+      ],
+      "zoom": 16.85,
+      "pitch": 54,
+      "bearing": -24,
+      "padding": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "selected_building": null
+    },
+    {
+      "file": "production-building-n16.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "center": [
+        100.49406407203128,
+        13.652136250000012
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 160,
+        "bottom": 20,
+        "left": 374,
+        "right": 382
+      },
+      "selected_building": "N16"
+    },
+    {
+      "file": "production-360x640.png",
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "center": [
+        100.49388999999996,
+        13.652780000000007
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 120,
+        "bottom": 344.796875,
+        "left": 20,
+        "right": 76
+      },
+      "selected_building": "N10"
+    },
+    {
+      "file": "production-mobile.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "center": [
+        100.49388999999996,
+        13.652780000000007
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 120,
+        "bottom": 450.875,
+        "left": 20,
+        "right": 76
+      },
+      "selected_building": "N10"
+    },
+    {
+      "file": "production-390x844.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "center": [
+        100.49388999999996,
+        13.652780000000007
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 120,
+        "bottom": 450.875,
+        "left": 20,
+        "right": 76
+      },
+      "selected_building": "N10"
+    },
+    {
+      "file": "production-667x375.png",
+      "viewport": {
+        "width": 667,
+        "height": 375
+      },
+      "center": [
+        100.49388999999996,
+        13.652780000000007
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 142,
+        "bottom": 20,
+        "left": 252,
+        "right": 252
+      },
+      "selected_building": "N10"
+    },
+    {
+      "file": "production-768x1024.png",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "center": [
+        100.49388999999996,
+        13.652780000000007
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 160,
+        "bottom": 20,
+        "left": 310,
+        "right": 314
+      },
+      "selected_building": "N10"
+    },
+    {
+      "file": "production-1440x900.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "center": [
+        100.49388999999996,
+        13.652780000000007
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 160,
+        "bottom": 20,
+        "left": 374,
+        "right": 382
+      },
+      "selected_building": "N10"
+    }
+  ],
+  "errors": [],
+  "console_errors": [],
+  "warnings": [
+    "[.WebGL-0x1d1400ca3600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x1d1400ca3600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x1d1400ca3600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x1d1400ca3600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+    "Image \"wood-pattern\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style."
+  ],
+  "csp_violations": [],
+  "instrumentation": "The original production main module hash is verified, then one observational window.__map reference is added for camera and recovery inspection; no map/data/provider fixtures.",
+  "browser": "154.0.8037.57",
+  "catalog_count": 35,
+  "result": "passed"
+}

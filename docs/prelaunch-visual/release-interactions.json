@@ -1,0 +1,91 @@
+{
+  "captured_at_utc": "2026-11-04T04:58:54.440Z",
+  "browser": "154.0.8037.57",
+  "conditions": "One sandboxed headless Chromium process, software SwiftShader rendering, real provider, desktop and mobile-sized viewport. Default camera motion, no throttling. Camera settling includes a 250ms quiet guard to account for sheet-driven camera restarts. Frame intervals are browser QA observations, not physical smartphone FPS, battery or thermal measurements. One observational map hook; no map/data fixtures.",
+  "samples": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "code": "N9",
+      "detail_sync_ms": 35.79999999701977,
+      "camera_settled_ms_with_250ms_guard": 1480.5,
+      "observed_frames": 7,
+      "frame_interval_median_ms": 233.4000000000001,
+      "js_heap_bytes": 28551522,
+      "canvas_count": 1,
+      "selected": "N9"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "code": "N10",
+      "detail_sync_ms": 9.700000002980232,
+      "camera_settled_ms_with_250ms_guard": 1655.7000000029802,
+      "observed_frames": 9,
+      "frame_interval_median_ms": 183.30000000000018,
+      "js_heap_bytes": 29543576,
+      "canvas_count": 1,
+      "selected": "N10"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "code": "N16",
+      "detail_sync_ms": 38.19999999552965,
+      "camera_settled_ms_with_250ms_guard": 1558,
+      "observed_frames": 9,
+      "frame_interval_median_ms": 199.89999999999964,
+      "js_heap_bytes": 32945378,
+      "canvas_count": 1,
+      "selected": "N16"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "code": "N9",
+      "detail_sync_ms": 25.399999998509884,
+      "camera_settled_ms_with_250ms_guard": 1537.7999999970198,
+      "observed_frames": 51,
+      "frame_interval_median_ms": 19.263999999999896,
+      "js_heap_bytes": 24964436,
+      "canvas_count": 1,
+      "selected": "N9"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "code": "N10",
+      "detail_sync_ms": 8.300000004470348,
+      "camera_settled_ms_with_250ms_guard": 1363.3000000044703,
+      "observed_frames": 48,
+      "frame_interval_median_ms": 16.700000000000273,
+      "js_heap_bytes": 23524437,
+      "canvas_count": 1,
+      "selected": "N10"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "code": "N16",
+      "detail_sync_ms": 14,
+      "camera_settled_ms_with_250ms_guard": 1273.1999999955297,
+      "observed_frames": 45,
+      "frame_interval_median_ms": 16.800000000000182,
+      "js_heap_bytes": 28522522,
+      "canvas_count": 1,
+      "selected": "N16"
+    }
+  ]
+}
