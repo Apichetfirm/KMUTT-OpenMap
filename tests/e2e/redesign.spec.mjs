@@ -12,7 +12,7 @@ test('short landscape keeps attribution, map tools and primary actions clear',as
   await page.locator('#search').fill(code);await page.locator('#search').press('Enter');
   await expect(page.locator('#detail-code')).toHaveText(code);
   for(const selector of ['#directions','#share-building']){
-   await expect(page.locator(selector)).toBeInViewport({ratio:1});
+   await expect(page.locator(selector),`${code} ${selector} must remain fully visible`).toBeInViewport({ratio:1});
    await page.locator(selector).click({trial:true});
   }
  }

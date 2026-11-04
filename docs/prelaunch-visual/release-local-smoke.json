@@ -2,7 +2,7 @@
   "url": "http://127.0.0.1:8080/KMUTT-OpenMap/",
   "mode": "release-smoke",
   "expected_commit": null,
-  "captured_at_utc": "2026-11-04T04:58:54.889Z",
+  "captured_at_utc": "2026-11-04T05:13:24.047Z",
   "checks": [
     {
       "name": "published assets match expected source",
@@ -150,7 +150,7 @@
     },
     "src/styles.css": {
       "path": "src/styles.css",
-      "sha256": "4b48d495834ecc849fbe28b0497dfdb87730eed015bb75b40d12dcb44552e76e",
+      "sha256": "5c6e1655aee9909e0330558a8ca2e9011e8e0f1f2bd7e393ffa43323b57452fc",
       "match": true
     },
     "data/building-footprint-candidates.geojson": {
@@ -240,7 +240,7 @@
     },
     "docs/PRELAUNCH-COMPLETE-RELEASE-REPORT.md": {
       "path": "docs/PRELAUNCH-COMPLETE-RELEASE-REPORT.md",
-      "sha256": "73046370e7b6b0dec4271053a60d7b2eb444cc79eb50816593b937c588828f43",
+      "sha256": "3ebb9411c1291ae2ccf7c51aa3f27a3d98bf63b14328c2e3fcbcd60ea87aad06",
       "match": true
     }
   },
@@ -417,10 +417,10 @@
   "errors": [],
   "console_errors": [],
   "warnings": [
-    "[.WebGL-0x1d1400ca3600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[.WebGL-0x1d1400ca3600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[.WebGL-0x1d1400ca3600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[.WebGL-0x1d1400ca3600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+    "[.WebGL-0x2ee4000ff400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x2ee4000ff400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x2ee4000ff400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x2ee4000ff400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
     "Image \"wood-pattern\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style."
   ],
   "csp_violations": [],

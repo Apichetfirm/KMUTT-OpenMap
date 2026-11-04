@@ -6,7 +6,7 @@ Prepared 4 November 2026 (Asia/Bangkok). Attribution: **Initiated by Firm Impuls
 
 When work resumed, PR #16 was already merged by the owner. The accepted application merge is `2717eb0b8c2bebffa1195bb388db9add5737cae6`; current main was `0bd1de40dbb74e206595e1956e2eb039c46e792f`. The independent review and production evidence in [PRELAUNCH-VISUAL-INDEPENDENT-REVIEW.md](PRELAUNCH-VISUAL-INDEPENDENT-REVIEW.md) are retained. Main CI and Pages deployment both passed at that commit (runs [41714542118](https://github.com/Apichetfirm/KMUTT-OpenMap/actions/runs/41714542118) and [41714542306](https://github.com/Apichetfirm/KMUTT-OpenMap/actions/runs/41714542306)). The accepted candidate had 56 Node, 4 Python and 124 browser passes.
 
-The upstream `35bc03e` correction already fixed the previously recorded Firefox clipping and portrait sheet paint escape. Those corrections are preserved; the unpublished alternative layout correction was not applied over them. A focused follow-up completes the persistent production smoke gate, catalog regression, launch draft and this handoff, plus a small persistent unofficial-community subtitle for mobile. No duplicate redesign PR or duplicate geometry work is introduced.
+The upstream `35bc03e` correction already fixed the previously recorded Firefox clipping and portrait sheet paint escape. Those corrections are preserved. The expanded six-building regression subsequently found remaining long-name action clipping on Linux, so identity and actions are now grouped before secondary content in the short rail, while retaining the upstream paint containment and compact sizing. A focused follow-up completes the persistent production smoke gate, catalog regression, launch draft and this handoff, plus a small persistent unofficial-community subtitle for mobile. No duplicate redesign PR or duplicate geometry work is introduced.
 
 ## Baseline
 
@@ -21,7 +21,7 @@ The upstream `35bc03e` correction already fixed the previously recorded Firefox 
 
 | Priority | Finding | Resolution / evidence |
 | --- | --- | --- |
-| P1 | At 667×375 Firefox clipped the Google Maps button: only 72.34% was in the card viewport. | The owner fixed this in `35bc03e` with compact spacing and retained 44px actions. Preserve that fix and extend its strict viewport/hit-testing regression to all six priority buildings. |
+| P1 | At 667×375 Firefox clipped the Google Maps button: only 72.34% was in the card viewport. | The owner fixed the original N16 case in `35bc03e`. The expanded six-building regression found 95.99% button intersection for a longer name in all four Linux projects (run 41776646235: 124 passed, 4 failed). Group full canonical identity and primary actions before confidence/evidence/media in short landscape; preserve 44px targets and the strict fully-visible/hit-testing assertions. |
 | P1 release gate | The current head had failing CI; old passing results did not validate the owner correction. | Require a fresh full matrix on the final head. No bypass of checks or branch protections. |
 | P2 | No exhaustive rendered-card identity regression covered every catalog record. | Add a browser audit of all 35 Thai/English names, codes, source URLs, uncertainty, missing media, safe external actions and disabled internal routes. |
 | P2 | The previous Pages workflow ended after uploading, without opening the published app. | Add actual-production Chromium verification after deployment: compare published asset hashes with the source checkout, exercise critical journeys, retain screenshots and camera/health records. |
@@ -55,9 +55,9 @@ Production verification uses no basemap, catalog, media or provider fixtures. It
 
 Six alternating pairs, fresh browser contexts, 1440×900, one sandboxed headless Chromium process with software SwiftShader, actual provider responses through the session proxy. No other QA browser was running during these samples. Baseline is `6e410b7`; final app source hashes are in [release-performance.json](prelaunch-visual/release-performance.json). Historical measurements are retained independently.
 
-Observed median map readiness: **2650.10 ms baseline → 2535.05 ms release**. Resource entries remain 32 and the canvas count remains 1. Median observable transfer is 2,067,752 → 2,079,603 bytes. Median synchronous search is 0.50 → 0.60 ms. Coarse JS heap observations are 25,804,987 → 20,769,616 bytes; long-task totals are 2231.0 → 2142.5 ms. No sample timed out or reported an application error. These samples reproduce the absence of a material startup regression; they do not establish a causal speedup or physical-device performance. Cross-origin wire bytes and GPU/process memory are not fully observable.
+Observed median map readiness: **2777.60 ms baseline → 2606.80 ms release**. Resource entries remain 32 and the canvas count remains 1. Median observable transfer is 2,067,752 → 2,079,906 bytes. Median synchronous search is 0.55 → 0.50 ms. Coarse JS heap is 24,801,110 → 21,062,240 bytes; long-task totals are 2373.5 → 2108.5 ms. No sample timed out or reported an application error. This shows no material startup regression in this sample, not a causal speedup or physical-device result. Cross-origin wire bytes and GPU/process memory are not fully observable.
 
-[release-interactions.json](prelaunch-visual/release-interactions.json) records detail-render observations of 9.7–38.2 ms at desktop and 8.3–25.4 ms at a mobile-sized viewport. Camera settling, including a 250ms quiet guard, ranged 1480.5–1655.7 ms desktop and 1273.2–1537.8 ms mobile. The headless software renderer’s animation callbacks are recorded as observations, not a 60 FPS, physical-phone, battery or thermal claim.
+[release-interactions.json](prelaunch-visual/release-interactions.json) records detail-render observations of 9.0–19.9 ms desktop and 8.8–26.2 ms at a mobile-sized viewport. Camera settling, including a 250ms quiet guard, ranged 1615.0–1773.2 ms desktop and 1281.1–1509.0 ms mobile. Headless software animation callbacks are recorded as observations, not a 60 FPS, physical-phone, battery or thermal claim.
 
 ## Release state
 
@@ -77,7 +77,7 @@ Before submission, a separate pass verified that the UI corrections preserve the
 
 Existing palette contrast observations remain applicable: white/orange 5.29:1; light primary/surface 14.18:1; light secondary/surface 5.94:1; dark primary/surface 11.80:1. Thai line height, keyboard snap equivalents, focus restoration and reduced motion remain intact. Portrait touch controls are 44px; compact landscape map zoom controls are 34px, above the WCAG 2.2 AA minimum of 24px and below the preferred 44px. Physical assistive-technology verification is not claimed.
 
-Confirmed P0 findings: none. The confirmed short-landscape P1 and portrait paint P1 were fixed upstream and passed candidate CI before PR #16 merged. This follow-up preserves those accepted fixes. No known unresolved P0/P1 is introduced; its expanded matrix is verified on its final head before merging. Missing surveys/photos and physical-device measurements remain documented preview limitations, not automatic blockers.
+Confirmed P0 findings: none. The confirmed short-landscape P1 and portrait paint P1 were fixed upstream and passed candidate CI before PR #16 merged. This follow-up preserves those accepted fixes. The expanded Linux check found and corrected an additional long-name clipping P1, without shortening canonical names or weakening tests. Its final matrix is verified before merging. Missing surveys/photos and physical-device measurements remain documented preview limitations, not automatic blockers.
 
 ## Remaining limitations and post-launch priorities
 

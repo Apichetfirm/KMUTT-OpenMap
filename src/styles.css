@@ -1581,6 +1581,17 @@ dialog button {
     font-size:10px;
     padding:6px
   }
+  /* Long canonical names must not push primary actions below a short card.
+     Keep identity and actions together; confidence, evidence and media scroll after them. */
+  #detail .detail-title-line {
+    order:-3
+  }
+  #detail .detail-en {
+    order:-2
+  }
+  #detail .detail-actions {
+    order:-1
+  }
 }
 .directory-peek {
   display:none
