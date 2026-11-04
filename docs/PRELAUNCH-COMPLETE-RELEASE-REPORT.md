@@ -47,9 +47,9 @@ There are no approved building photographs in the current media index. Existing 
 
 ## Validation and evidence
 
-Fresh local checks: 56 Node and 4 Python tests passed; data/media/vendor checks and the static build passed; npm audit reported 0 vulnerabilities. Six focused desktop/mobile landscape/card/sheet regressions passed. The production smoke script rehearsal passed all 13 checks against the actual local app and provider, with no map/data/provider fixtures. Final cross-engine CI and public production results are recorded below once observed. A test is not considered passed merely because it is configured. Local Chromium is available; local Firefox/WebKit downloads remain disallowed, so their final execution is verified in CI.
+Fresh local checks: 56 Node and 4 Python tests passed; data/media/vendor checks and the static build passed; npm audit reported 0 vulnerabilities. Six focused desktop/mobile landscape/card/sheet regressions passed. The production smoke script rehearsal passed all 13 checks against the actual local app and provider, with no map/data/provider fixtures. Final-head CI then passed 56 Node, 4 Python, 128 browser cases and one focused Firefox preflight, with 0 failures. Both JavaScript and offline image dependency audits reported no known vulnerabilities. Local Chromium is available; local Firefox/WebKit downloads remain disallowed, so their execution is verified in CI.
 
-Expected full browser matrix after the new card audit: 128 cases across Chromium desktop/mobile, Firefox and WebKit. Required layouts: 360×640, 390×844, 667×375, 768×1024 and 1440×900. Node and Python baselines remain 56 and 4.
+The completed full browser matrix contains 128 cases across Chromium desktop/mobile, Firefox and WebKit. The focused Firefox preflight repeats one critical case before that full matrix; it is not a 129th unique case. Required layouts: 360×640, 390×844, 667×375, 768×1024 and 1440×900. Node and Python totals remain 56 and 4. Evidence: [final candidate CI 41780170906](https://github.com/Apichetfirm/KMUTT-OpenMap/actions/runs/41780170906), exact head `b050e06e74f3c78a32ce4d367425072493d8587f`.
 
 Production verification uses no basemap, catalog, media or provider fixtures. Its only module hook exposes the live map for camera recording and recovery inspection after checking the unmodified module hash. Sharing exercises the application’s clipboard-unavailable fallback. External directions record the native `window.open` target while a real popup opens; Google’s subsequent document load/redirect is outside the application contract; no claim is made about Google’s route accuracy or Street View image coverage.
 
@@ -63,13 +63,37 @@ Observed median map readiness: **2522.40 ms baseline → 2312.95 ms release**. R
 
 ## Release state
 
-PR #16 is merged and its deployment succeeded. A narrow release-verification follow-up is pending final CI and production smoke verification. This section is finalized from the actual follow-up merge and deployment evidence at completion.
+**Release: Complete. Deployment: Verified. Facebook launch: Ready for the owner to post.** No unresolved P0/P1 defect remains in the tested release.
+
+- [PR #16](https://github.com/Apichetfirm/KMUTT-OpenMap/pull/16): merged at `2717eb0b8c2bebffa1195bb388db9add5737cae6`.
+- [PR #17](https://github.com/Apichetfirm/KMUTT-OpenMap/pull/17): merged normally after the exact head passed CI, with no protection bypass or unresolved review thread.
+- Final application release on main: [`1fc004883a8bbb13e947193b135779baa74176c5`](https://github.com/Apichetfirm/KMUTT-OpenMap/commit/1fc004883a8bbb13e947193b135779baa74176c5). The subsequent documentation-only commit preserves this application source; its SHA is identified by this file's [commit history](https://github.com/Apichetfirm/KMUTT-OpenMap/commits/main/docs/PRELAUNCH-COMPLETE-RELEASE-REPORT.md) and the final handoff.
+- [Pages deployment and actual production verification 41781070544](https://github.com/Apichetfirm/KMUTT-OpenMap/actions/runs/41781070544): **success**, with expected commit `1fc004883a8bbb13e947193b135779baa74176c5`.
+- [Live application](https://apichetfirm.github.io/KMUTT-OpenMap/): all **13 production smoke checks passed, 0 failed**. All **37 inspected app/data/vendor/document assets matched SHA-256** from the merged checkout. Chromium 156.0.8078.4 on the ordinary Ubuntu 22.04 Actions runner rendered the actual public MapLibre scene. No application, console or CSP error was recorded.
+- [Raw public release results](prelaunch-visual/release-production-smoke.json) retain the exact commit, source hashes, all 35 identities, five viewports, eight screenshot/camera records, checks and browser health. The deployment artifact `production-smoke-1fc004883a8bbb13e947193b135779baa74176c5` retains the actual public-site PNGs for 30 days; repository launch PNGs remain durable.
+- Before merging, the [read-only public baseline](prelaunch-visual/release-production-baseline.json) passed **5 checks, 0 failed**, with **35 assets matching** base `0bd1de40dbb74e206595e1956e2eb039c46e792f`. The reference website also loaded successfully on that runner; its screenshot is in the baseline artifact. Local Pages/benchmark access remained denied by the managed proxy.
+
+The 13 public checks cover source equality, homepage/WebGL, all canonical identities and uncertainty, 2D/3D, dark/daylight, Street View search, actual external Google Maps popup target, production sharing fallback, community form entry, disabled internal routing/empty accepted geometry, responsive sheet keyboard/inert behavior, map recovery and runtime/CSP health. Public checks do not submit a community proposal or confirm a third-party walking route/Street View panorama.
+
+The evidence-only documentation successor runs through the same deployment and verification workflows, including hash verification of this report and the launch draft. The final handoff records its exact SHA and observed results; [main CI history](https://github.com/Apichetfirm/KMUTT-OpenMap/actions/workflows/test.yml?query=branch%3Amain) and [Pages history](https://github.com/Apichetfirm/KMUTT-OpenMap/actions/workflows/pages.yml?query=branch%3Amain) retain the corresponding checks. Application evidence above remains pinned to its actual release commit.
 
 ## Screenshots and launch draft
 
 Historical before/after evidence: `docs/prelaunch-visual/before-*.png`, original `launch-*.png`, `cameras.json`, `browser-health.json` and `performance.json`. These are retained without overwriting them.
 
 New actual-app launch candidates: `release-campus-overview.png`, `release-building-n16.png`, `release-mobile.png` under `docs/prelaunch-visual/`, with a separate release camera/health record. Production workflow evidence additionally retains public-site PNGs, source hashes, exact expected commit, camera parameters and browser results as GitHub Actions artifacts.
+
+| Scene | Before | Release |
+| --- | --- | --- |
+| Campus overview | [Original](prelaunch-visual/before-campus-overview.png) | [Release overview](prelaunch-visual/release-campus-overview.png) |
+| N16 detail | [Original](prelaunch-visual/before-building-n16.png) | [Release N16](prelaunch-visual/release-building-n16.png) |
+| Mobile | [Original](prelaunch-visual/before-mobile.png) | [Release mobile](prelaunch-visual/release-mobile.png) |
+
+![Actual release campus overview](prelaunch-visual/release-campus-overview.png)
+
+![Actual release N16 detail](prelaunch-visual/release-building-n16.png)
+
+![Actual release mobile](prelaunch-visual/release-mobile.png)
 
 Thai Facebook draft: [FB-LAUNCH-COPY-TH.md](FB-LAUNCH-COPY-TH.md). The owner will post it; no automatic Facebook publication is performed.
 
@@ -79,7 +103,7 @@ Before submission, a separate pass verified that the UI corrections preserve the
 
 Existing palette contrast observations remain applicable: white/orange 5.29:1; light primary/surface 14.18:1; light secondary/surface 5.94:1; dark primary/surface 11.80:1. Thai line height, keyboard snap equivalents, focus restoration and reduced motion remain intact. Portrait touch controls are 44px; compact landscape map zoom controls are 34px, above the WCAG 2.2 AA minimum of 24px and below the preferred 44px. Physical assistive-technology verification is not claimed.
 
-Confirmed P0 findings: none. The confirmed short-landscape P1 and portrait paint P1 were fixed upstream and passed candidate CI before PR #16 merged. This follow-up preserves those accepted fixes. The expanded Linux check found and corrected an additional long-name clipping P1, without shortening canonical names or weakening tests. Its final matrix is verified before merging. Missing surveys/photos and physical-device measurements remain documented preview limitations, not automatic blockers.
+Confirmed P0 findings: none. The confirmed short-landscape P1 and portrait paint P1 were fixed upstream and passed candidate CI before PR #16 merged. This follow-up preserves those accepted fixes. The expanded Linux check found and corrected an additional long-name clipping P1, without shortening canonical names or weakening tests. Its final 128-case matrix and focused Firefox gate passed before merging. Missing surveys/photos and physical-device measurements remain documented preview limitations, not automatic blockers.
 
 ## Remaining limitations and post-launch priorities
 
