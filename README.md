@@ -1,4 +1,19 @@
-# KMUTT OpenMap
+<!-- firm-impulse-showcase:v1 -->
+<div align="center">
+
+# 🗺️ KMUTT OpenMap
+
+**An open-source 3D campus explorer, built with the community in mind.**
+
+<img alt="Status: Community preview" src="https://img.shields.io/badge/Status-Community%20preview-2563EB?style=flat-square" /> <img alt="Built with: JavaScript" src="https://img.shields.io/badge/Built%20with-JavaScript-1F2937?style=flat-square" /> <img alt="Built with: MapLibre" src="https://img.shields.io/badge/Built%20with-MapLibre-1F2937?style=flat-square" /> <img alt="Built with: OpenStreetMap" src="https://img.shields.io/badge/Built%20with-OpenStreetMap-1F2937?style=flat-square" />
+
+[Live Map](https://apichetfirm.github.io/KMUTT-OpenMap/) · [Data Coverage](docs/DATA-COVERAGE.md) · [Development](#development)
+
+<sub>Part of the Firm Impulse engineering portfolio.</sub>
+
+</div>
+
+---
 
 Open-source, community-driven 3D campus map for KMUTT Bangmod.
 
