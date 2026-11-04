@@ -1,0 +1,177 @@
+{
+  "captured_at_utc": "2026-11-04T05:35:13.239Z",
+  "source": "Actual local release application and live OpenFreeMap, no map/data fixtures, no photo generation or postprocessing. One window.__map observation hook records cameras.",
+  "cameras": [
+    {
+      "file": "release-campus-overview.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "center": [
+        100.4937,
+        13.652
+      ],
+      "zoom": 16.85,
+      "pitch": 54,
+      "bearing": -24,
+      "padding": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "selected_building": null
+    },
+    {
+      "file": "release-building-n16.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "center": [
+        100.49406407203128,
+        13.652136250000012
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 160,
+        "bottom": 20,
+        "left": 374,
+        "right": 382
+      },
+      "selected_building": "N16"
+    },
+    {
+      "file": "release-dark.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "center": [
+        100.49406407203128,
+        13.652136250000012
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 160,
+        "bottom": 20,
+        "left": 374,
+        "right": 382
+      },
+      "selected_building": "N16"
+    },
+    {
+      "file": "release-360x640.png",
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "center": [
+        100.49388999999996,
+        13.652780000000007
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 120,
+        "bottom": 344.796875,
+        "left": 20,
+        "right": 76
+      },
+      "selected_building": "N10"
+    },
+    {
+      "file": "release-mobile.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "center": [
+        100.49388999999996,
+        13.652780000000007
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 120,
+        "bottom": 450.875,
+        "left": 20,
+        "right": 76
+      },
+      "selected_building": "N10"
+    },
+    {
+      "file": "release-667x375.png",
+      "viewport": {
+        "width": 667,
+        "height": 375
+      },
+      "center": [
+        100.49388999999996,
+        13.652780000000007
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 142,
+        "bottom": 20,
+        "left": 252,
+        "right": 252
+      },
+      "selected_building": "N10"
+    },
+    {
+      "file": "release-768x1024.png",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "center": [
+        100.49388999999996,
+        13.652780000000007
+      ],
+      "zoom": 17.8,
+      "pitch": 58.00000000000001,
+      "bearing": -24,
+      "padding": {
+        "top": 160,
+        "bottom": 20,
+        "left": 310,
+        "right": 314
+      },
+      "selected_building": "N10"
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    {
+      "type": "warning",
+      "text": "[.WebGL-0xcdc000fa600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0xcdc000fa600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0xcdc000fa600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0xcdc000fa600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    },
+    {
+      "type": "warning",
+      "text": "Image \"wood-pattern\" could not be loaded. Please make sure you have added the image before it is needed with map.addImage(), resolved it with map.setMissingStyleImageResolver(), or included it in a \"sprite\" property in your style."
+    }
+  ],
+  "csp": []
+}

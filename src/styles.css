@@ -628,8 +628,11 @@ kbd {
   display:flex;
   flex-direction:column;
   gap:0;
-  overflow:auto;
+  overflow-x:hidden;
+  overflow-y:auto;
+  overflow-wrap:anywhere;
   overscroll-behavior:contain;
+  overflow-anchor:none;
   scrollbar-width:thin;
   scroll-padding:20px;
   z-index:6;
@@ -672,6 +675,8 @@ kbd {
   padding-right:0
 }
 .detail-title-line h2 {
+  min-width:0;
+  overflow-wrap:anywhere;
   font-size:17px;
   line-height:1.6;
   letter-spacing:-.2px;
@@ -751,7 +756,9 @@ kbd {
   background:var(--surface-soft)
 }
 .detail-actions>* {
-  flex:1
+  flex:1;
+  min-width:0;
+  overflow-wrap:anywhere
 }
 .external-directions {
   width:100%;
@@ -1164,7 +1171,10 @@ dialog button {
     letter-spacing:-.4px
   }
   .brand-subtitle {
-    display:none
+    display:block;
+    font-size:9px;
+    line-height:1.5;
+    letter-spacing:0
   }
   .header-right {
     display:none
@@ -1479,7 +1489,14 @@ dialog button {
   .detail .building-media {
     order:0;
     margin:8px 0 0;
-    min-height:130px
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    min-height:0
+  }
+  .detail .building-visual>* {
+    min-width:0;
+    max-width:100%
   }
   .detail .detail-en {
     font-size:10px
@@ -1577,6 +1594,17 @@ dialog button {
   .detail-actions>* {
     font-size:10px;
     padding:6px
+  }
+  /* Long canonical names must not push primary actions below a short card.
+     Keep identity and actions together; confidence, evidence and media scroll after them. */
+  #detail .detail-title-line {
+    order:-3
+  }
+  #detail .detail-en {
+    order:-2
+  }
+  #detail .detail-actions {
+    order:-1
   }
 }
 .directory-peek {

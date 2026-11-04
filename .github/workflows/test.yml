@@ -18,6 +18,8 @@ jobs:
       - run: npm ci
       - name: Syntax and data integrity
         run: npm run verify-vendor && npm run check && npm run validate-data
+      - name: Audit JavaScript dependencies
+        run: npm audit --audit-level=high
       - name: Unit and map integration tests
         run: npm test
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
@@ -29,6 +31,11 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_*.py'
       - name: Install browser engines
         run: npx playwright install --with-deps chromium firefox webkit
+      - name: Critical Firefox consecutive-selection layout gate
+        env:
+          LIBGL_ALWAYS_SOFTWARE: '1'
+          MOZ_WEBRENDER: '1'
+        run: xvfb-run --auto-servernum npm run test:e2e -- --project=firefox --grep 'short landscape'
       - name: Desktop/mobile and Firefox/WebKit browser fixtures
         env:
           LIBGL_ALWAYS_SOFTWARE: '1'
@@ -36,6 +43,25 @@ jobs:
         run: xvfb-run --auto-servernum npm run test:e2e
       - name: Stage GitHub Pages assets
         run: npm run build
+      - name: Read-only current production baseline audit
+        if: github.event_name == 'pull_request'
+        env:
+          OPENMAP_BASELINE_SHA: ${{ github.event.pull_request.base.sha }}
+          OPENMAP_SOURCE_ROOT: work/production-base
+          OPENMAP_PRODUCTION_COMMIT: ${{ github.event.pull_request.base.sha }}
+          OPENMAP_SMOKE_MODE: audit
+          OPENMAP_SMOKE_EVIDENCE: work/production-baseline
+        run: |
+          git fetch --no-tags --depth=1 origin "$OPENMAP_BASELINE_SHA"
+          git worktree add --detach work/production-base "$OPENMAP_BASELINE_SHA"
+          node scripts/verify-production.mjs
+      - name: Retain production baseline evidence
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: production-baseline-evidence
+          path: work/production-baseline/
+          retention-days: 14
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: failure()
         with:
