@@ -64,7 +64,7 @@ Windows ใช้ `work\venv\Scripts\python.exe` และ `npm run test:e2e` �
 npm run handoff
 ```
 
-ผลอยู่ใต้ `work/handoff-<UTC>/` โดยไม่ทับชุดก่อนหน้า:
+ผลอยู่ใต้ `work/handoff-<UTC>/` โดยไม่ทับชุดก่อนหน้า และ CI จะเก็บชุดเดียวกันเป็น artifact ชื่อ `kmutt-openmap-handoff-<SHA>` นาน 30 วัน ดาวน์โหลดได้จากหน้า Actions ของ commit นั้น แล้วสำรองในพื้นที่ของทีมก่อนหมดอายุ:
 
 | รายการ | ใช้ทำอะไร |
 | --- | --- |
