@@ -79,6 +79,10 @@ Search → inspect → find services → get supported directions → share. PR 
 
 [Generated coverage and building review queue](docs/DATA-COVERAGE.md) is computed from the source data. S1/S6/N19 conflicts persist; comparison also found swapped S1/S2 image-map labels in BGM material. No dormitory gender/use claims were inferred. No physical survey or university endorsement is claimed.
 
+## รับช่วงพัฒนาและดูแลต่อ
+
+เริ่มจาก [คู่มือรับมอบภาษาไทย](docs/HANDOVER-TH.md) และ [คู่มือดูแล/กู้คืน](docs/OPERATIONS-TH.md) ตรวจซอฟต์แวร์ด้วย `npm run verify`; จัดชุด source + static site + CSV คิวสำรวจด้วย `npm run handoff` ผลอยู่ใน `work/` และไม่เผยแพร่อัตโนมัติ การเผยแพร่ Pages รอ full CI ของ commit เดียวกันก่อน deploy
+
 ## Development
 
 Serve the committed runtime without npm installation:

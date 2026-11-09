@@ -11,7 +11,14 @@ concurrency:
   group: pages
   cancel-in-progress: true
 jobs:
+  checks:
+    # Publishing must wait for the complete browser and dependency gates at this SHA.
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: read
+    uses: ./.github/workflows/test.yml
   deploy:
+    needs: checks
     if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
@@ -26,7 +33,7 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Validate and stage static assets
-        run: npm run verify-vendor && npm run check && npm run validate-data && npm test && npm run build
+        run: npm run verify
       - name: Configure Pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
       - name: Upload static site

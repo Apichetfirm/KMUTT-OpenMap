@@ -5,6 +5,9 @@
   "description": "Open-source 3D campus map for KMUTT Bangmod",
   "type": "module",
   "scripts": {
+    "verify": "npm run check && npm run validate-data && npm run validate-media && npm test && npm run build && npm run verify-site",
+    "verify-site": "node scripts/verify-site.mjs",
+    "handoff": "npm run verify && node scripts/prepare-handoff.mjs",
     "test": "node --test tests/*.test.mjs",
     "check": "node scripts/check.mjs",
     "dev": "python -m http.server 8080 --bind 127.0.0.1",
