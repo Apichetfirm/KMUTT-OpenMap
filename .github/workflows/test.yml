@@ -2,6 +2,7 @@ name: CI
 on:
   push:
   pull_request:
+  workflow_call:
 permissions:
   contents: read
 jobs:
@@ -43,6 +44,15 @@ jobs:
         run: xvfb-run --auto-servernum npm run test:e2e
       - name: Stage GitHub Pages assets
         run: npm run build
+      - name: Prepare verified source, site and survey handoff
+        run: node scripts/prepare-handoff.mjs
+      - name: Retain complete handoff
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: kmutt-openmap-handoff-${{ github.sha }}
+          path: work/handoff-*/
+          retention-days: 30
+          include-hidden-files: true
       - name: Read-only current production baseline audit
         if: github.event_name == 'pull_request'
         env:
